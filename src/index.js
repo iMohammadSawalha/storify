@@ -1,13 +1,24 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Home from './Pages/Home/Home.jsx';
+import Profile from './Pages/Profile/Profile.jsx';
+import Login from './Pages/Login/Login.jsx';
 
-import App from "./App";
 
-const rootElement = document.getElementById("root");
-const root = createRoot(rootElement);
-
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <StrictMode>
-    <App />
-  </StrictMode>
+  <React.StrictMode>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/home' index element={Home}/>
+        <Route path='/login' element={Profile}/>
+        <Route path='/profile' element={Login}/>
+      </Routes>
+    </BrowserRouter>
+    <Home/>
+  </React.StrictMode>
 );
+
+
