@@ -1,0 +1,42 @@
+[
+    {
+      "id": 1,
+      "ComName": "Jenny Chan", 
+     "email": "jenny.chan@email.com",
+      "address": "3 waterfoot road",
+      "phone": "333-962-7516",
+      "Comtype":"clothes"
+    },
+    {
+      "id": 2,
+      "ComName": "Jenny Chan", 
+      "email": "jenny.chan@email.com",
+       "address": "3 waterfoot road",
+       "phone": "333-962-7516",
+       "Comtype":"clothes"  
+      },
+    {
+      "id": 3,
+      "ComName": "Jenny lol", 
+      "email": "jenny.chan@email.com",
+       "address": "3 waterfoot road",
+       "phone": "333-962-7516",
+       "Comtype":"clothes"   
+     },
+    {
+      "id": 4,
+      "ComName": " Chan", 
+      "email": "jenny.chan@email.com",
+       "address": "3 waterfoot road",
+       "phone": "333-962-7516",
+       "Comtype":"clothes"
+        },
+    {
+      "id": 5,
+      "ComName": "Jenny pinj", 
+      "email": "jenny.chan@email.com",
+       "address": "3 waterfoot road",
+       "phone": "333-962-7516",
+       "Comtype":"clothes"
+        }
+  ]
