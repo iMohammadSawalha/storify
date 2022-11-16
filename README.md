@@ -1,1 +1,2 @@
-Stroify's Sidebar
+This is the first attempt Mohammed AbuZhara edit 
+=======
