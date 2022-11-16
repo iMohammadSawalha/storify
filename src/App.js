@@ -1,11 +1,13 @@
 import React from "react";
-import Navbar from "./Components/Navbar";
+import Navbar from "./components/Navbar.js";
+import Analysis from "./pages/Analysis/Analysis";
 
 function App() {
   return (
-    // Using the newly created Header
-    // component in this main component
+    <div className="container">
     <Navbar />
+    <Analysis/>
+    </div>
     );
 }
 export default App;
