@@ -7,8 +7,8 @@ const Analysis = () => {
   return (
     <div className='Analysis'>
       <div className='row'>
-      <DoughnutChartCard/>
-      <RadarChartCard/>
+        <DoughnutChartCard/>
+        <RadarChartCard/>
       </div>
       <div className='row'>
         <AreaLineChartCard/>
