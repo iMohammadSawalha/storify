@@ -8,10 +8,8 @@ const Analysis = () => {
     <div className='Analysis'>
       <div className='row'>
         <DoughnutChartCard/>
-        <RadarChartCard/>
-      </div>
-      <div className='row'>
         <AreaLineChartCard/>
+        <RadarChartCard/>
       </div>
     </div>
 )}
