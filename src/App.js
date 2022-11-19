@@ -1,12 +1,19 @@
 import React from "react";
-import Navbar from "./components/Navbar.js";
+import Navbar from "./components/Navbar/Navbar";
 import Analysis from "./pages/Analysis/Analysis";
+import SideBar from "./components/sidebar/Sidebar"
+import "./App.css"
 
 function App() {
   return (
-    <div className="container">
-    <Navbar />
-    <Analysis/>
+    <div>
+      <Navbar/>
+      <div className="d-flex">
+        <SideBar/>
+        <div className="pageinfo">
+          <Analysis/>
+        </div>
+      </div>
     </div>
     );
 }

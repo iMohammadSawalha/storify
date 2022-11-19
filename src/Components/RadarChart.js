@@ -89,7 +89,7 @@ import {
   
           const RadarChartCard = () => {
               return (
-              <div className='col-lg-6 ps-lg-2 mb-3'>
+              <div className='col-lg-3 col-md-6 col-sm-8 col-xs-12 ps-lg-2 mb-3'>
                   <div className='card card-chart'>
               <div class="card-header">
                         <div class="row flex-between-center">
