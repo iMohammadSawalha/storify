@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "./components/Navbar/Navbar";
+import Navbar from "./Components/Navbar/Navbar";
 import Analysis from "./pages/Analysis/Analysis";
-import SideBar from "./components/sidebar/Sidebar"
+import SideBar from "./Components/sidebar/Sidebar"
 import "./App.css"
 
 function App() {

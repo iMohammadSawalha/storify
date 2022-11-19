@@ -12,7 +12,7 @@ import StoreMallDirectoryOutlinedIcon from '@mui/icons-material/StoreMallDirecto
 
 
 
-export const Sidebar = () => {
+const Sidebar = () => {
   return (
     <div className='sidebar'>
         <div className="top">
@@ -82,3 +82,5 @@ export const Sidebar = () => {
 
   );
 }
+
+export default Sidebar;
