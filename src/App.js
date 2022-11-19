@@ -3,6 +3,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import Analysis from "./pages/Analysis/Analysis";
 import SideBar from "./Components/sidebar/Sidebar"
 import "./App.css"
+import Invoice from "./pages/Invoices/Invoices";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       <div className="d-flex">
         <SideBar/>
         <div className="pageinfo">
-          <Analysis/>
+          <Invoice/>
         </div>
       </div>
     </div>
