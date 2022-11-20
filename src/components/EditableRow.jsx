@@ -1,6 +1,8 @@
 import React from 'react'
+import savephoto from './savephoto.png'
+import cancelphoto from './cancelphoto.png'
 
-export const EditableRow = ({ editFormData, handleEditFormChange, handleCancelClick }) => {
+export const EditableRow = ({ editFormData, handleEditFormChange, handleCancelClick,handleEditFromSubmit }) => {
     return (
         <>
             <tr>
@@ -18,8 +20,8 @@ export const EditableRow = ({ editFormData, handleEditFormChange, handleCancelCl
                 <td> <input type="text" name="comptype" defaultValue={editFormData.comptype} onChange={handleEditFormChange} /></td>
 
                 <td>
-                    <button type="submit" >save</button>
-                    <button type="button" onClick={handleCancelClick}>cancel</button>
+                  <img src={savephoto} onClick={handleEditFromSubmit}/>  
+                  <img src={cancelphoto} onClick={handleCancelClick}/>  
 
                 </td>
             </tr>

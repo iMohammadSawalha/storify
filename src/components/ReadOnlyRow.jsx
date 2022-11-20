@@ -1,5 +1,7 @@
 import React from 'react'
-
+import editPhoto from './Editphoto.png'
+import deletephoto from './Deletephoto.png'
+import './ReadOnlyRow.css'
 const ReadOnlyRow = ({ companyData, handleEditClick, handleDeleteClick }) => {
     return (
         <tr>
@@ -10,9 +12,8 @@ const ReadOnlyRow = ({ companyData, handleEditClick, handleDeleteClick }) => {
             <td>{companyData.phone}</td>
             <td>{companyData.comptype}</td>
             <td>
-                <button type="button" onClick={(event) => handleEditClick(event, companyData)}>Edit</button>
-                <button type="button" onClick={() => handleDeleteClick(companyData.id)}>Delete</button>
-
+                <img src={editPhoto} onClick={(event) => handleEditClick(event, companyData)}  />
+                <img src={deletephoto} onClick={() => handleDeleteClick(companyData.id)} />
             </td>
         </tr>
     )

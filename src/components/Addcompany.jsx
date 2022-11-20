@@ -71,7 +71,7 @@ function AddCompany(props) {
 		return (
 			<>
 				<Fragment>
-					{EditcompanyDataId === companyData.id ? (<EditableRow editFormData={editFormData} handleEditFormChange={handleEditFormChange} handleCancelClick={handleCancelClick} />) : (<ReadOnlyRow companyData={companyData} handleEditClick={handleEditClick} handleDeleteClick={handleDeleteClick} />)}
+					{EditcompanyDataId === companyData.id ? (<EditableRow editFormData={editFormData} handleEditFormChange={handleEditFormChange} handleCancelClick={handleCancelClick} handleEditFromSubmit={handleEditFromSubmit} />) : (<ReadOnlyRow companyData={companyData} handleEditClick={handleEditClick} handleDeleteClick={handleDeleteClick} />)}
 				</Fragment>
 			</>
 		);
@@ -96,7 +96,7 @@ function AddCompany(props) {
 
 			</div>
 			<div className="card-body">
-				<form onSubmit={handleEditFromSubmit}>
+				
 					<table className="table table-stripped">
 						<thead>
 							<th>Name</th>
@@ -109,7 +109,7 @@ function AddCompany(props) {
 						</thead>
 						<tbody>{tableRows}</tbody>
 					</table>
-				</form>
+				
 			</div>
 		</div>
 	);
