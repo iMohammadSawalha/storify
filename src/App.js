@@ -5,7 +5,7 @@ import SideBar from "./Components/sidebar/Sidebar";
 import "./App.css";
 //import CardItem from "./Components/Cards/CardItem";
 //import Invoice from "./pages/Invoices/Invoices";
-import Home from "./pages/Home/Home";
+import Home from "./pages/DashboardHome/Home";
 
 
 function App() {
