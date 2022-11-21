@@ -4,4 +4,4 @@ invoices of their orders are often complex and also time-consuming processes.
 Here at Storify, we’re trying to solve this day-to-day challenge, with Storify we use 
 technology to combine a multitude of business processes and enable the flow of data 
 between them. To build one of the best online admin management tools. So you can 
-eliminate manual processes with our help! 
+eliminate manual processes with our help!
