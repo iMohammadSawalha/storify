@@ -1,3 +1,8 @@
+to run : 
+install chartjs : "npm install --save chart.js react-chartjs-2" .
+
+
+
 Many sellers use paper as their day-to-day business management activities, their process 
 ow is slow, unreliable and they often end up losing a huge percentage of their data, and 
 invoices of their orders are often complex and also time-consuming processes.
