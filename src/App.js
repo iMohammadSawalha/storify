@@ -1,11 +1,11 @@
 import React from "react";
-import Navbar from "./Components/Navbar/Navbar";
-import SideBar from "./Components/sidebar/Sidebar";
+import Home from "./Pages/DashboardHome/Home";
+import SideBar from "./components/sidebar/Sidebar";
+import Navbar from "./components/Navbar/Navbar";
 //import AddCompany from "./Components/Addcompany/Addcompany";
 import "./App.css";
 //import CardItem from "./Components/Cards/CardItem";
 //import Invoice from "./pages/Invoices/Invoices";
-import Home from "./pages/DashboardHome/Home";
 
 
 function App() {

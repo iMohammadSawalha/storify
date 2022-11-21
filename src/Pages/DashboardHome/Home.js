@@ -1,5 +1,5 @@
-import Card from "../../Components/Cards/CardItem";
 import './Home.css';
+import Card from "../../components/Cards/CardItem";
 
 
 const Home = () => {
