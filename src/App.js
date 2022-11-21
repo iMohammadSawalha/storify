@@ -1,7 +1,21 @@
-import AddCompany from './components/Addcompany';
+import React from "react";
+import Navbar from "./Components/Navbar/Navbar";
+import Invoice from "./pages/Invoices/Invoices";
+import SideBar from "./Components/sidebar/Sidebar"
+import "./App.css"
+//import Invoice from "./pages/Invoices/Invoices";
+
 function App() {
-    return (  
-   <AddCompany />
-    )
+  return (
+    <div>
+      <Navbar/>
+      <div className="d-flex">
+        <SideBar/>
+        <div className="pageinfo">
+          <Invoice/>
+        </div>
+      </div>
+    </div>
+    );
 }
 export default App;

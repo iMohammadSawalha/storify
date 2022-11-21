@@ -1,3 +1,6 @@
+.pageinfo{
+    flex:10;
+}
 .App {
   text-align: center;
 }
@@ -36,4 +39,3 @@
     transform: rotate(360deg);
   }
 }
-
