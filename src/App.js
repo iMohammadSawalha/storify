@@ -6,19 +6,20 @@ import Navbar from "./Components/Navbar/Navbar";
 import "./App.css";
 //import CardItem from "./Components/Cards/CardItem";
 //import Invoice from "./pages/Invoices/Invoices";
+import List from "./Components/Add product/List";
 
 
 function App() {
   return (
-    <div>
+    <>
       <Navbar/>
       <div className="d-flex">
         <SideBar/>
         <div className="pageinfo">
-           <Home/>
+          <List/>
         </div>
       </div>
-    </div>
+    </>
     );
 }
 export default App;
