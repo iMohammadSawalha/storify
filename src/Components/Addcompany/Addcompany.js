@@ -7,6 +7,7 @@ import EditableRow from './EditableRow';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import { Card, Table } from 'react-bootstrap';
+
 function AddCompany() {
 	const [editFormData, setEditFormData] = useState({
 		compname: "",
