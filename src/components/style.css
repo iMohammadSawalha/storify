@@ -3,14 +3,10 @@
 * {
     font-family: 'Cormorant Garamond', serif;
     font-family: 'Montserrat', sans-serif;
-
-    /* max-height: 50; */
-    /* background-color: #f1f1f1; */
 }
 
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-        monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 .info {
@@ -59,8 +55,7 @@ ul {
     position: relative;
 }
 
-/* .tax,
-.total {
-    position: absolute;
-
-} */
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+}
