@@ -2,7 +2,7 @@ import React from "react";
 import SideBar from "./Components/sidebar/Sidebar";
 import Navbar from "./Components/Navbar/Navbar";
 import "./App.css";
-import AddCompany from "./Components/Addcompany/Addcompany";
+import Invoice from "./Pages/Invoices/Invoices";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <div className="d-flex">
         <SideBar/>
         <div className="pageinfo">
-          <AddCompany/>
+          <Invoice/>
         </div>
       </div>
     </>
