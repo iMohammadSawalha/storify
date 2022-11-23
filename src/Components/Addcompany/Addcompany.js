@@ -4,7 +4,10 @@ import jsonData from './mock-data.json';
 import './AddCompany.css';
 import ReadOnlyRow from './ReadOnlyRow';
 import EditableRow from './EditableRow';
-function AddCompany(props) {
+import Form from 'react-bootstrap/Form';
+import InputGroup from 'react-bootstrap/InputGroup';
+import { Card, Table } from 'react-bootstrap';
+function AddCompany() {
 	const [editFormData, setEditFormData] = useState({
 		compname: "",
 		email: "",
@@ -14,6 +17,25 @@ function AddCompany(props) {
 	})
 	const [companyData, setCompanyData] = useState(jsonData);
 	const [EditcompanyDataId, setEditcompanyDataId] = useState(null);
+	const [companyDataLength, setCompanyDataLength] = useState(companyData.length + 1);
+	const [search, setSearch] = useState('');
+	const [order, setOrder] = useState("ASC");
+	const sorting = (col) => {
+		if (order === "ASC") {
+			const sorted = [...companyData].sort((a, b) =>
+				a[col].toLowerCase() > b[col].toLowerCase() ? 1 : -1
+			);
+			setCompanyData(sorted);
+			setOrder("DSC");
+		}
+		if (order === "DSC") {
+			const sorted = [...companyData].sort((a, b) =>
+				a[col].toLowerCase() < b[col].toLowerCase() ? 1 : -1
+			);
+			setCompanyData(sorted);
+			setOrder("ASC");
+		}
+	}
 	const handleDeleteClick = (companyDataId) => {
 		const newCompanyData = [...companyData];
 
@@ -22,6 +44,7 @@ function AddCompany(props) {
 		newCompanyData.splice(index, 1);
 
 		setCompanyData(newCompanyData);
+
 	}
 	const handleEditFromSubmit = (event) => {
 		event.preventDefault();
@@ -67,51 +90,56 @@ function AddCompany(props) {
 
 		setEditFormData(formValues)
 	};
-	const tableRows = companyData.map((companyData) => {
+	const tableRows = companyData.filter((item) => { return (search.toLowerCase() === '') || (search.toUpperCase() === '') ? item : (item.compname.toLowerCase().includes(search)) || (item.compname.toUpperCase().includes(search)) }).map((companyData) => {
 		return (
 			<>
 				<Fragment>
-					{EditcompanyDataId === companyData.id ? (<EditableRow editFormData={editFormData} handleEditFormChange={handleEditFormChange} handleCancelClick={handleCancelClick} />) : (<ReadOnlyRow companyData={companyData} handleEditClick={handleEditClick} handleDeleteClick={handleDeleteClick} />)}
+					{EditcompanyDataId === companyData.id ? (<EditableRow editFormData={editFormData} handleEditFormChange={handleEditFormChange} handleCancelClick={handleCancelClick} handleEditFromSubmit={handleEditFromSubmit} />) : (<ReadOnlyRow companyData={companyData} handleEditClick={handleEditClick} handleDeleteClick={handleDeleteClick} />)}
 				</Fragment>
 			</>
 		);
 	});
-
-
-
 	const addRows = (data) => {
-		const totalCompanies = companyData.length;
-		data.id = totalCompanies + 1;
+		setCompanyDataLength(companyDataLength + 1);
+		data.id = companyDataLength;
 		const updatedcompanyData = [...companyData];
 		updatedcompanyData.push(data);
 		setCompanyData(updatedcompanyData);
 	};
-
 	return (
-		<div className="card shadow mb-4">
-			<div className="card-header py-3">
-				<h6 >
-					<strong>Other Companies</strong></h6>
-				<div id="btn"><AddCompanyBtn name="Add Company" func={addRows} /></div>
+		<Card>
+			<Card.Header>
+				<h5>
+					<strong> Companies</strong>
+				</h5>
 
-			</div>
-			<div className="card-body">
-				<form onSubmit={handleEditFromSubmit}>
-					<table className="table table-stripped">
-						<thead>
-							<th>Name</th>
-							<th>Email</th>
-							<th>Address</th>
-							<th>Phone</th>
-							<th>Comptype</th>
-							<th></th>
-							<th></th>
-						</thead>
-						<tbody>{tableRows}</tbody>
-					</table>
-				</form>
-			</div>
-		</div>
+			</Card.Header>
+			<Card.Body>
+
+				<InputGroup className="mb-3">
+					<AddCompanyBtn name="Add Company" func={addRows} />
+
+					<Form.Control onChange={(e) => setSearch(e.target.value)}
+						aria-label="Example text with button addon"
+						aria-describedby="basic-addon1"
+					/>
+				</InputGroup>
+
+				<Table >
+					<thead>
+						<th onClick={() => { sorting("compname") }}>Name</th>
+						<th onClick={() => { sorting("email") }}>Email</th>
+						<th onClick={() => { sorting("address") }}>Address</th>
+						<th onClick={() => { sorting("phone") }}>Phone</th>
+						<th onClick={() => { sorting("comptype") }}>Comptype</th>
+						<th></th>
+						<th></th>
+					</thead>
+					<tbody>{tableRows}</tbody>
+				</Table>
+
+			</Card.Body>
+		</Card>
 	);
 }
 export default AddCompany;
