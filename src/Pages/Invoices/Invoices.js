@@ -8,9 +8,9 @@ import './style.css'
 const Invoice = () => {
   return (
     <div className='container'>
-      <ClientDetails name="Client Name" email="example@gmail.com" mobileNum="+972-000-0000" address="Nablus, Rafydia St" />
+      <ClientDetails data={{Fname:"Client Name", email:"example@gmail.com", mobileNum:"+972-000-0000", address:"Nablus, Rafydia St", total:9999}}/>
       <InvocieTable />
-      <Footer total="520" tax="154" />
+      <Footer data={{total:"520" ,tax:"154"}} />
     </div>
   );
 }

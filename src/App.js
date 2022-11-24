@@ -11,7 +11,7 @@ function App() {
       <div className="d-flex">
         <SideBar/>
         <div className="pageinfo">
-          <Invoice/>
+        <Invoice/>
         </div>
       </div>
     </>
