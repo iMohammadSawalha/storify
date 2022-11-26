@@ -1,6 +1,6 @@
+import AreaLineChartCard from '../../Components/AreaLineChart';
 import DoughnutChartCard from '../../Components/DoughnutChart';
 import RadarChartCard from '../../Components/RadarChart';
-import AreaLineChartCard from '../../Components/AreaLineChart';
 import './Analysis.css';
 
 const Analysis = () => {

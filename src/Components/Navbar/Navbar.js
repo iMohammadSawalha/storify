@@ -1,14 +1,7 @@
 //Import
+import { ChatBubbleOutlineOutlined, LanguageOutlined, ListOutlined, NotificationsNoneOutlined, SearchOutlined } from "@mui/icons-material"
+import { Avatar } from "@mui/material"
 import "./Navbar.css"
-import { SearchOutlined } from "@mui/icons-material"
-import { LanguageOutlined } from "@mui/icons-material"
-import { DarkModeOutlined } from "@mui/icons-material"
-import { FullscreenExitOutlined } from "@mui/icons-material"
-import { NotificationsNoneOutlined } from "@mui/icons-material"
-import { ChatBubbleOutlineOutlined } from "@mui/icons-material"
-import { ListOutlined } from "@mui/icons-material"
-import { Avatar, Icon } from "@mui/material"
-import IconButton from "@mui/material"
 //Function
 const Navbar = () => {
     return (

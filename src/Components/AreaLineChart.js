@@ -1,33 +1,13 @@
 import {
-    Chart,
-    ArcElement,
-    LineElement,
-    BarElement,
-    PointElement,
-    BarController,
-    BubbleController,
-    DoughnutController,
-    LineController,
-    PieController,
-    PolarAreaController,
-    RadarController,
-    ScatterController,
-    CategoryScale,
-    LinearScale,
-    LogarithmicScale,
-    RadialLinearScale,
-    TimeScale,
-    TimeSeriesScale,
-    Decimation,
-    Filler,
-    Legend,
-    Title,
-    Tooltip,
-    SubTitle
-  } from 'chart.js';
-  import{Line} from 'react-chartjs-2'
-  import React ,{useState,useEffect} from 'react';
-  import './components.css'
+  ArcElement, BarController, BarElement, BubbleController, CategoryScale, Chart, Decimation, DoughnutController, Filler,
+  Legend, LinearScale, LineController, LineElement, LogarithmicScale, PieController, PointElement, PolarAreaController,
+  RadarController, RadialLinearScale, ScatterController, SubTitle, TimeScale,
+  TimeSeriesScale, Title,
+  Tooltip
+} from 'chart.js';
+import React, { useEffect, useState } from 'react';
+import { Line } from 'react-chartjs-2';
+import './components.css';
 
   Chart.register(
     ArcElement,

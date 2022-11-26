@@ -1,8 +1,8 @@
 import React from "react";
+import "./App.css";
 import Navbar from "./Components/Navbar/Navbar";
+import SideBar from "./Components/sidebar/Sidebar";
 import Analysis from "./pages/Analysis/Analysis";
-import SideBar from "./Components/sidebar/Sidebar"
-import "./App.css"
 
 function App() {
   return (

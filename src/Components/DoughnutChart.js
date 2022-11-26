@@ -1,12 +1,10 @@
 import {
-    Chart,
-    ArcElement,
-    Legend,
-    Tooltip,
-  } from 'chart.js';
-  import{Doughnut} from 'react-chartjs-2'
-  import React ,{useState,useEffect} from 'react';
-  import './components.css'
+  ArcElement, Chart, Legend,
+  Tooltip
+} from 'chart.js';
+import React, { useEffect, useState } from 'react';
+import { Doughnut } from 'react-chartjs-2';
+import './components.css';
   
   Chart.register(
     ArcElement,
