@@ -11,7 +11,8 @@
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@mui/icons-material": "5.10.9",
-    "@mui/material": "^5.10.13",
+    "@mui/material": "^5.10.15",
+    "@mui/x-data-grid": "^5.17.13",
     "bootstrap": "^5.2.2",
     "chart.js": "^4.0.1",
     "mdb-react-ui-kit": "5.0.0",
@@ -22,7 +23,8 @@
     "react-icons": "4.6.0",
     "react-native-paper": "4.12.5",
     "react-native-web": "0.18.10",
-    "react-scripts": "4.0.0"
+    "react-scripts": "4.0.0",
+    "sass": "^1.56.1"
   },
   "devDependencies": {
     "@babel/runtime": "7.13.8",
