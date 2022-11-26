@@ -1,4 +1,23 @@
-input.me-1.form-control{
-    padding: 2px;
-    size: 2px;
+.dropdown-toggle::after{
+    content: none;
+}
+.navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
+    display: contents;
+    align-items: stretch;
+    justify-content: space-between;
+}
+.navbar-nav {
+    --bs-nav-link-padding-x: 1;
+}
+.navbar-brand {
+    padding-top: 0;
+}
+.navbar {
+    --bs-navbar-padding-x: 1;
+}
+input{
+    font-size: 15px;
+}
+#profile{
+    font-size: 33px;
 }
