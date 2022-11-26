@@ -14,7 +14,7 @@ const NavBar = () => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="white" variant="white" >
       <Container>
-        <Navbar.Brand href="#home"> 
+        <Navbar.Brand> 
         <Form className="d-flex">
             <Form.Control
               type="search"
@@ -29,7 +29,7 @@ const NavBar = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
 
         <Nav className="me-auto">
-            <Nav.Link href="#features"><LanguageOutlined/>English</Nav.Link>
+            <Nav.Link ><LanguageOutlined/>English</Nav.Link>
  
           </Nav>
 
@@ -38,21 +38,21 @@ const NavBar = () => {
 
              
             <NavDropdown  title=<ChatBubbleOutline/> id="notification" align="end"  >
-              <NavDropdown.Item href="#action/3.1">Ahmed sent a message (3)min ago</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.1">Saeed sent a message (58)min ago</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.1">Husam sent a message (2)hour ago</NavDropdown.Item>
+              <NavDropdown.Item >Ahmed sent a message (3)min ago</NavDropdown.Item>
+              <NavDropdown.Item >Saeed sent a message (58)min ago</NavDropdown.Item>
+              <NavDropdown.Item >Husam sent a message (2)hour ago</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
+              <NavDropdown.Item >
                 Inbox
               </NavDropdown.Item>
             </NavDropdown>
               <NavDropdown  alignleft  title=<NotificationsNoneOutlined/> id="notifications" align="end"> 
-              <NavDropdown.Item  href="#action/3.5">Ahmed Added Product (3)min ago</NavDropdown.Item>
+              <NavDropdown.Item  >Ahmed Added Product (3)min ago</NavDropdown.Item>
               
-              <NavDropdown.Item href="#action/3.6">Saeed Added Product (58)min ago</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.7">Husam Added Product (2)hour ago</NavDropdown.Item>
+              <NavDropdown.Item >Saeed Added Product (58)min ago</NavDropdown.Item>
+              <NavDropdown.Item >Husam Added Product (2)hour ago</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.8">
+              <NavDropdown.Item >
                 Inbox
               </NavDropdown.Item>
             </NavDropdown>
@@ -60,12 +60,12 @@ const NavBar = () => {
 
             <NavDropdown title=<Avatar/> id="profile" align="end">
               
-              <NavDropdown.Item href="#action/3.2">
+              <NavDropdown.Item href="#action 1">
                 Profile
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Change Password </NavDropdown.Item>
+              <NavDropdown.Item href="#action 2">Change Password </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
+              <NavDropdown.Item href="#action 3">
                 Logout
               </NavDropdown.Item>
             </NavDropdown>
