@@ -6,38 +6,40 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { ChatBubbleOutline, LanguageOutlined, NotificationsActiveOutlined, NotificationsNoneOutlined } from '@mui/icons-material';
+import { ChatBubbleOutline, LanguageOutlined, NotificationsActiveOutlined, NotificationsNoneOutlined, SearchOffOutlined, SearchOutlined } from '@mui/icons-material';
 import { Avatar } from '@mui/material';
 
-//import "./Navbar.css"
+import "./Navbar.css"
 const NavBar = () => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="white" variant="white" >
       <Container>
-        <Navbar.Brand> 
-        <Form className="d-flex">
+        <Navbar.Brand>
+          <Form className="d-flex">
             <Form.Control
+            border="0.5px"
               type="search"
-              placeholder="Search"
-              className="me-2"
+              placeholder="Search..."
+              className="me-1"
               aria-label="Search"
             />
-            <Button variant="outline-success">Search</Button>
+            <Button variant="outline-dark"><SearchOutlined /></Button>
           </Form></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        
+
         <Navbar.Collapse id="responsive-navbar-nav">
 
-        <Nav className="me-auto">
-            <Nav.Link ><LanguageOutlined/>English</Nav.Link>
- 
+          <Nav className="me-auto">
+
           </Nav>
 
 
           <Nav>
 
-             
-            <NavDropdown  title=<ChatBubbleOutline/> id="notification" align="end"  >
+            <Nav.Link ><LanguageOutlined />English</Nav.Link>
+
+
+            <NavDropdown title=<ChatBubbleOutline /> id="notification" align="end"  >
               <NavDropdown.Item >Ahmed sent a message (3)min ago</NavDropdown.Item>
               <NavDropdown.Item >Saeed sent a message (58)min ago</NavDropdown.Item>
               <NavDropdown.Item >Husam sent a message (2)hour ago</NavDropdown.Item>
@@ -46,9 +48,9 @@ const NavBar = () => {
                 Inbox
               </NavDropdown.Item>
             </NavDropdown>
-              <NavDropdown  alignleft  title=<NotificationsNoneOutlined/> id="notifications" align="end"> 
+            <NavDropdown alignleft title=<NotificationsNoneOutlined /> id="notifications" align="end">
               <NavDropdown.Item  >Ahmed Added Product (3)min ago</NavDropdown.Item>
-              
+
               <NavDropdown.Item >Saeed Added Product (58)min ago</NavDropdown.Item>
               <NavDropdown.Item >Husam Added Product (2)hour ago</NavDropdown.Item>
               <NavDropdown.Divider />
@@ -56,10 +58,10 @@ const NavBar = () => {
                 Inbox
               </NavDropdown.Item>
             </NavDropdown>
-            
 
-            <NavDropdown title=<Avatar/> id="profile" align="end">
-              
+
+            <NavDropdown title=<Avatar /> id="profile" align="end">
+
               <NavDropdown.Item href="#action 1">
                 Profile
               </NavDropdown.Item>
@@ -70,7 +72,7 @@ const NavBar = () => {
               </NavDropdown.Item>
             </NavDropdown>
 
-            
+
           </Nav>
         </Navbar.Collapse>
       </Container>
