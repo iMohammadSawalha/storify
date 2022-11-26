@@ -1,8 +1,9 @@
 import React from "react";
-import Navbar from "./Components/Navbar/Navbar";
+import CollapsibleExample from "./Components/Navbar/Navbar";
+import NavBar from "./Components/Navbar/Navbar";
 function App() {
   return (
-    <Navbar />
+<NavBar/>
     );
 }
 export default App;
