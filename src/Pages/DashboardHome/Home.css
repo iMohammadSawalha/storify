@@ -1,5 +1,12 @@
 .cardsDiv{
-    margin-top:2%;
+    width: 100%;
     justify-content: space-evenly;
+    padding-top: 1%;
 }
 
+.pageinfo{
+    align-items: center;
+    margin-top:3.5%;
+    padding-left: 2%;
+    padding-right: 1%;
+}

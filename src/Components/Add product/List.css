@@ -1,0 +1,36 @@
+.list{
+    display:flex;
+    flex-direction: column;
+    margin-top: 8%;
+    overflow-x: auto;
+}
+#protitle {
+    margin-top: 3%;
+    margin-left: 3%;
+   
+}
+#t1{
+    font-size: xx-large;
+}
+#t2{
+    font-size: x-small;
+    margin-left: 1%;
+    color: gray;
+}
+#search{
+    margin-left: 65%;
+}
+#resetBtn{
+   margin-left: 1%;
+   width: 7%;
+   height: 40px;
+   margin-top: 1%;
+}
+.listbar{
+    display: flex;
+    flex-direction: row;
+}
+ .tab th,
+ .tab td {
+  padding: 8px 35px; 
+ }
