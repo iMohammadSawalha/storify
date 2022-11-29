@@ -1,25 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap');
 
 * {
-    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2vw;
     font-family: 'Montserrat', sans-serif;
 }
 
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-}
-
-.info {
-    position: absolute;
-    right: 18%;
-}
-
 thead {
-    color: #3030cd;
+    color: #29aed6;
 }
 
 nav span {
-    position: absolute;
+    /* position: absolute; */
     text-transform: uppercase;
     font-size: xxx-large;
 }
@@ -28,6 +19,9 @@ ul {
     list-style-type: none;
 }
 
+.total {
+    justify-content: center;
+}
 
 .date-invoice,
 .invoice-num {
@@ -41,9 +35,8 @@ ul {
 
 .invoice-total {
     font-weight: initial;
-    color: #3030cd;
+    color: #29aed6;
     font-size: xx-large;
-    position: absolute;
     right: 21%;
 }
 
