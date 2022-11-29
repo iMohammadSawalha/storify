@@ -7,3 +7,21 @@
     .space{
         height: 20px;
     }
+
+
+    @media only screen and (min-width: 768px)and (max-width:1366px){
+        #btn{
+            width: 120%;
+            height: 40px;
+            font-size: small;
+        }
+        
+    }
+    @media only screen and (min-width: 360px)and (max-width:640px){
+        #btn{
+            width: 120%;
+            height: 40px;
+            font-size: small;
+        }
+        
+    }

@@ -9,9 +9,7 @@
     margin-left: 3%;
    
 }
-#t1{
-    font-size: xx-large;
-}
+
 #t2{
     font-size: x-small;
     margin-left: 1%;
@@ -32,5 +30,27 @@
 }
  .tab th,
  .tab td {
-  padding: 8px 35px; 
+  max-width: 80%; 
  }
+
+ @media only screen and (min-width: 768px)and (max-width:1366px){
+    #resetBtn{
+       width:30%;
+       font-size: smaller;
+       margin-top: 2%;
+    }
+    #search{ 
+        width:100%;
+    }
+    
+}
+@media only screen and (min-width: 360px)and (max-width:640px){
+    #resetBtn{
+        width:30%;
+        font-size: smaller;
+     }
+     #search{ 
+         width:100%;
+     }
+    
+}
