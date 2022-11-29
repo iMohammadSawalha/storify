@@ -18,13 +18,14 @@ h2{
 .bar{
     display:flex;
     flex-direction: row;
-    height: 78px;}
-.d-flex{
+    height: 78px;
+}
+/* .d-flex{
     margin-left:60%; 
     margin-top:10%; 
    width: 30px;
    height: 30px;
-}
+} */
 .Customer{
     margin-top: 50px;
 }

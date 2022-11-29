@@ -7,13 +7,14 @@
 
 }
 
-.body{
+/* .body{
     width: 600px;
     height: 400px;;
     
    display: flex;
     position: relative;
-}
+} */
+
 .form-style{
     display: flex;
     flex-direction: column;
