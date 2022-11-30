@@ -1,10 +1,9 @@
-import List from "./components/Add product/List";
-
+import AddProduct from "./components/Add product/Products";
 
 function App() {
   return (
     <>
-    <List/>
+    <AddProduct/>
     </> 
   );
 }
