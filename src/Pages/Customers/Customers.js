@@ -1,4 +1,4 @@
-//import Table from '../../Components/Addcustomer/Table';
+import Table from '../../Components/Addcustomer/Table';
 
 
 const Customers = () => {
