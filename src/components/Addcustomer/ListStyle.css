@@ -1,12 +1,11 @@
 .styled-table {
     border-collapse: collapse;
     margin: 20px 0;
-    margin-left:40px;
+    margin-left:20px;
     font-size: 0.9em;
     font-family: sans-serif;
-   
-   
-    
+
+
 }
 h2{
     position: relative;
@@ -18,7 +17,7 @@ h2{
 .bar{
     display:flex;
     flex-direction: row;
-    height: 78px;}
+    height: 75px;}
 .d-flex{
     margin-left:60%; 
     margin-top:10%; 
@@ -37,21 +36,25 @@ p{
 .all{
     background-color: white; 
     overflow-x: auto;
+    
 }
-.styled-table th,
-.styled-table td {
-    padding: 8px 35px;
-}
+
 
 tbody{
     background-color: #eff4f4;
+  
 }
 thead{
     background-color: #eff4f4;
     font-size: 13px;
     text-transform: uppercase;
-   
+  
 }
 #search{
     margin-left: 60%;
+}
+tr:hover td{
+    color: rgb(31, 81, 112);
+    cursor: pointer;
+    background-color: #eff4f4;
 }

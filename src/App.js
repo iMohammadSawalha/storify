@@ -1,15 +1,12 @@
 
-import Table from './components/Addcustomer/Table';
 
-
-
+import ListC from "./components/Addcustomer/ListCu";
 
 function App() {
   return (
-    
-  <Table/>
-   // <Popup/>
-  // <Test/>
+    <ListC/>
+
+
   );
 }
 

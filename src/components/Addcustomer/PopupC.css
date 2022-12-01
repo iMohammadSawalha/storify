@@ -1,19 +1,20 @@
 #add{
     margin-top: 23px;
-    margin-left: 2%;
+    margin-left: 4%;
     width: 12%;
     height: 45px;
    font-size:small;
 
 }
 
-.body{
+.bodyM{
     width: 600px;
-    height: 400px;;
+    height: 500px;;
     
    display: flex;
     position: relative;
 }
+
 .form-style{
     display: flex;
     flex-direction: column;
@@ -56,7 +57,7 @@
     border-color: #d3d3d3;
 }
 #citty{
-    width: 13%;
+    width: 20%;
     height: 8%;
     margin-left: 6%;
     border-radius: 10px;
@@ -88,3 +89,32 @@
     border-radius: 10px;
     border-color: #d3d3d3;
 }
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    #add{
+        margin-top: 23px;
+        margin-left: 4%;
+        width: 13%;
+        height: 35px;
+       font-size:11px;
+    
+    }
+
+}
+@media only screen and (max-width: 767px) {
+    #add{
+        margin-top: 23px;
+        margin-left: 10%;
+        width: 60%;
+        height: 30px;
+       font-size:10px;
+    
+    }
+    .body{
+        width: 500px;
+        height: 320px;;
+       display: flex;
+        position: relative;
+    }
+
+}
+

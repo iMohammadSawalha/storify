@@ -55,7 +55,7 @@ return(
     <Button  variant="primary" id ="add" onClick={handleShow} >
     Add Customer +</Button>
 
-    <Modal className=''
+    <Modal className='form'
       show={show}
       onHide={handleClose}
       backdrop="static"
@@ -64,8 +64,8 @@ return(
       <Modal.Header closeButton>
         <Modal.Title>Customer Details:</Modal.Title>
       </Modal.Header>
-      <Modal.Body  >
-      <div className='body'> 
+      <Modal.Body className='bodyM' >
+     
    <form className='form-style'>
      <label className='lab'> Username :</label>
      <input value={title} onChange={(e)=>settitle(e.target.value)} name='title' type="text" id="title" placeholder='Add Name'/>
@@ -86,7 +86,7 @@ return(
 
     
      <div className='flex'></div>
-      <label for="interest-select" className='lab'> Interest :</label>
+      <label htmlFor="interest-select" className='lab'> Interest :</label>
       <select value= {interset} name="rest" id="rest" onChange={changeinterset}>
       <option >select</option>
           <option value="Sport">Sport</option>
@@ -97,7 +97,7 @@ return(
           <option value="Beauty">Beauty</option>
      </select>
      <div className='flex'></div>
-      <label for="gender-select" className='lab' > Gender :</label>
+      <label htmlFor="gender-select" className='lab' > Gender :</label>
       <select value={gender} name="rest" id="rest"  onChange={(e)=>setgender(e.target.value)}>
       <option >select</option>
           <option value="Male">Male</option>
@@ -108,7 +108,7 @@ return(
 
      <div className='flex'></div>
    </form>        
-   </div>
+ 
   
 
       </Modal.Body>
