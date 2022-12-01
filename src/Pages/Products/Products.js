@@ -1,4 +1,4 @@
-import List from '../../Components/Add product/List';
+//import List from '../../Components/Add product/List';
 
 
 const Products = () => {
