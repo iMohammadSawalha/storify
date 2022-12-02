@@ -72,7 +72,7 @@ useEffect(() => {
     },
     title: {
       display: true,
-      text: 'Chart.js Line Chart',
+      text:'Orders Comparison',
     },
   },
     });
@@ -83,17 +83,8 @@ useEffect(() => {
   }
   const AreaLineChartCard = () => {
     return (
-    <div className='col-lg-4 col-md-6 col-sm-8 col-xs-12 ps-lg-2 mb-3'>
+    <div className='col-lg-6 col-md-8 col-sm-12 col-xs-12 ps-lg-2 mb-3'>
         <div className='card card-chart'>
-    <div class="card-header">
-              <div class="row flex-between-center">
-                <div class="col-auto">
-                  <h6 class="mb-0">AreaLineChart</h6>
-                </div>
-                <div class="col-auto d-flex">
-                  </div>
-                </div>
-              </div>
               <div className='card-body h-100 pe-0'>
             <AreaLineChart/>
             </div>
