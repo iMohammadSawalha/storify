@@ -1,33 +1,13 @@
 import {
-    Chart,
-    ArcElement,
-    LineElement,
-    BarElement,
-    PointElement,
-    BarController,
-    BubbleController,
-    DoughnutController,
-    LineController,
-    PieController,
-    PolarAreaController,
-    RadarController,
-    ScatterController,
-    CategoryScale,
-    LinearScale,
-    LogarithmicScale,
-    RadialLinearScale,
-    TimeScale,
-    TimeSeriesScale,
-    Decimation,
-    Filler,
-    Legend,
-    Title,
-    Tooltip,
-    SubTitle
-  } from 'chart.js';
-  import{Line} from 'react-chartjs-2'
-  import React ,{useState,useEffect} from 'react';
-  import './components.css'
+  ArcElement, BarController, BarElement, BubbleController, CategoryScale, Chart, Decimation, DoughnutController, Filler,
+  Legend, LinearScale, LineController, LineElement, LogarithmicScale, PieController, PointElement, PolarAreaController,
+  RadarController, RadialLinearScale, ScatterController, SubTitle, TimeScale,
+  TimeSeriesScale, Title,
+  Tooltip
+} from 'chart.js';
+import React, { useEffect, useState } from 'react';
+import { Line } from 'react-chartjs-2';
+import './components.css';
 
   Chart.register(
     ArcElement,
@@ -92,7 +72,7 @@ useEffect(() => {
     },
     title: {
       display: true,
-      text: 'Chart.js Line Chart',
+      text:'Orders Comparison',
     },
   },
     });
@@ -103,17 +83,8 @@ useEffect(() => {
   }
   const AreaLineChartCard = () => {
     return (
-    <div className='col-lg-4 col-md-6 col-sm-8 col-xs-12 ps-lg-2 mb-3'>
+    <div className='col-lg-6 col-md-8 col-sm-12 col-xs-12 ps-lg-2 mb-3'>
         <div className='card card-chart'>
-    <div class="card-header">
-              <div class="row flex-between-center">
-                <div class="col-auto">
-                  <h6 class="mb-0">AreaLineChart</h6>
-                </div>
-                <div class="col-auto d-flex">
-                  </div>
-                </div>
-              </div>
               <div className='card-body h-100 pe-0'>
             <AreaLineChart/>
             </div>
