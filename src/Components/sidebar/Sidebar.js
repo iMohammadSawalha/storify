@@ -2,7 +2,7 @@ import AddHomeOutlinedIcon from '@mui/icons-material/AddHomeOutlined';
 import AddShoppingCartOutlinedIcon from '@mui/icons-material/AddShoppingCartOutlined';
 import AnalyticsOutlinedIcon from '@mui/icons-material/AnalyticsOutlined';
 import BadgeOutlinedIcon from '@mui/icons-material/BadgeOutlined';
-import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
+import ApartmentIcon from '@mui/icons-material/Apartment';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import PeopleOutlineOutlinedIcon from '@mui/icons-material/PeopleOutlineOutlined';
 import ReceiptLongOutlinedIcon from '@mui/icons-material/ReceiptLongOutlined';
@@ -50,10 +50,12 @@ const Sidebar = () => {
                     </li>
                 </Link>
 
+                <Link to="/companies">
                 <li>
-                    <CalendarMonthOutlinedIcon className="icon"/>
-                    <span>Calendar</span>
+                    <ApartmentIcon className="icon"/>
+                    <span>Companies</span>
                 </li>
+                </Link>
 
             <p className="title">DATA</p>
             <Link to="/invoices">
