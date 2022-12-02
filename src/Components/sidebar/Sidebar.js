@@ -9,7 +9,7 @@ import ReceiptLongOutlinedIcon from '@mui/icons-material/ReceiptLongOutlined';
 import SettingsSuggestOutlinedIcon from '@mui/icons-material/SettingsSuggestOutlined';
 import StoreMallDirectoryOutlinedIcon from '@mui/icons-material/StoreMallDirectoryOutlined';
 import "./sidebar.scss";
-
+import { Link } from 'react-router-dom';
 
 
 const Sidebar = () => {
@@ -29,40 +29,46 @@ const Sidebar = () => {
                     <AddHomeOutlinedIcon className="icon"/>
                     <span>Home</span>
                 </li>
+                <Link to="/dashboard">
                 <li>
                 <DashboardIcon className="icon"/>
-                    <span>Dashbaord</span>
+                    <span>Dashboard</span>
                 </li>
+                </Link>
                 <p className="title">SCOPE</p>
-
+                <Link to="/products">
                 <li>
                     <AddShoppingCartOutlinedIcon className="icon"/>
                     <span>Products</span>
                 </li>
+                </Link>
 
-
-                <li>
+                <Link to="/customers">
+                    <li>
                         <PeopleOutlineOutlinedIcon className="icon"/>
-                    <span>Customers</span>
-                </li>
+                        <span>Customers</span>
+                    </li>
+                </Link>
 
                 <li>
                     <CalendarMonthOutlinedIcon className="icon"/>
                     <span>Calendar</span>
                 </li>
 
-
             <p className="title">DATA</p>
-
+            <Link to="/invoices">
                 <li>
                     <ReceiptLongOutlinedIcon className="icon"/>
                     <span>Invoices</span>
                 </li>
+            </Link>
 
+            <Link to="/analysis">
                 <li>
                     <AnalyticsOutlinedIcon className="icon"/>
                     <span>Analysis</span>
                 </li>
+            </Link>
 
             <p className="title">SETTINGS</p>
 

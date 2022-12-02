@@ -3,11 +3,8 @@
     margin: 20px 0;
     margin-left:40px;
     font-size: 0.9em;
-    font-family: sans-serif;
-   
-   
-    
 }
+
 h2{
     position: relative;
     top: 50px;
@@ -20,12 +17,7 @@ h2{
     flex-direction: row;
     height: 78px;
 }
-/* .d-flex{
-    margin-left:60%; 
-    margin-top:10%; 
-   width: 30px;
-   height: 30px;
-} */
+
 .Customer{
     margin-top: 50px;
 }
