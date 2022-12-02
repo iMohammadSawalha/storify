@@ -1,6 +1,7 @@
 //Imports
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./Navbar.css"
+import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -14,7 +15,8 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
 import VpnKeyIcon from '@mui/icons-material/VpnKey';
 import LogoutIcon from '@mui/icons-material/Logout';
-import { NavLink } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+
 //Function
 const NavBar = () => {
   return (
@@ -54,11 +56,12 @@ const NavBar = () => {
             </NavDropdown>
 
             <NavDropdown align="end" title=<AccountCircleIcon id="profile" /> >
-            <NavDropdown.Item ><AccountCircleIcon /> Profile</NavDropdown.Item>
-              <NavDropdown.Item ><VpnKeyIcon /> Change Password </NavDropdown.Item>
+            <NavDropdown.Item  as={Link} to="/profile"><AccountCircleIcon />Profile</NavDropdown.Item>
+
+              <NavDropdown.Item as={Link} to="/profile"><VpnKeyIcon /> Change Password </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item ><LogoutIcon /> Logout</NavDropdown.Item>
-            </NavDropdown>Hi User &nbsp;&nbsp;
+            </NavDropdown>Hi,Mohammed &nbsp;&nbsp;
           </Nav>
         </Navbar.Collapse>
       </Container>

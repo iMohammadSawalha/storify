@@ -8,6 +8,7 @@ import Home from "./Pages/DashboardHome/Home";
 import Analysis from "./Pages/Analysis/Analysis";
 import Invoice from "./Pages/Invoices/Invoices";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Profile from "./Pages/Profile/Profile";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
@@ -20,6 +21,7 @@ root.render(
             <Route path="/dashboard" index element={<Home/>} />
             <Route path="/analysis" element={<Analysis/>} />
             <Route path="/invoices" element={<Invoice/>} />
+            <Route path="/profile" element={<Profile/>} />
         </Routes>
       </BrowserRouter>
     <App />
