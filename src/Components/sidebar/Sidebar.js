@@ -1,15 +1,15 @@
-import "./sidebar.scss"
-import DashboardIcon from '@mui/icons-material/Dashboard';
 import AddHomeOutlinedIcon from '@mui/icons-material/AddHomeOutlined';
 import AddShoppingCartOutlinedIcon from '@mui/icons-material/AddShoppingCartOutlined';
+import AnalyticsOutlinedIcon from '@mui/icons-material/AnalyticsOutlined';
+import BadgeOutlinedIcon from '@mui/icons-material/BadgeOutlined';
+import ApartmentIcon from '@mui/icons-material/Apartment';
+import DashboardIcon from '@mui/icons-material/Dashboard';
 import PeopleOutlineOutlinedIcon from '@mui/icons-material/PeopleOutlineOutlined';
 import ReceiptLongOutlinedIcon from '@mui/icons-material/ReceiptLongOutlined';
-import BadgeOutlinedIcon from '@mui/icons-material/BadgeOutlined';
 import SettingsSuggestOutlinedIcon from '@mui/icons-material/SettingsSuggestOutlined';
-import AnalyticsOutlinedIcon from '@mui/icons-material/AnalyticsOutlined';
-import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
 import StoreMallDirectoryOutlinedIcon from '@mui/icons-material/StoreMallDirectoryOutlined';
-
+import "./sidebar.scss";
+import { Link } from 'react-router-dom';
 
 
 const Sidebar = () => {
@@ -29,40 +29,48 @@ const Sidebar = () => {
                     <AddHomeOutlinedIcon className="icon"/>
                     <span>Home</span>
                 </li>
+                <Link to="/dashboard">
                 <li>
                 <DashboardIcon className="icon"/>
-                    <span>Dashbaord</span>
+                    <span>Dashboard</span>
                 </li>
+                </Link>
                 <p className="title">SCOPE</p>
-
+                <Link to="/products">
                 <li>
                     <AddShoppingCartOutlinedIcon className="icon"/>
                     <span>Products</span>
                 </li>
+                </Link>
 
-
-                <li>
+                <Link to="/customers">
+                    <li>
                         <PeopleOutlineOutlinedIcon className="icon"/>
-                    <span>Customers</span>
-                </li>
+                        <span>Customers</span>
+                    </li>
+                </Link>
 
+                <Link to="/companies">
                 <li>
-                    <CalendarMonthOutlinedIcon className="icon"/>
-                    <span>Calendar</span>
+                    <ApartmentIcon className="icon"/>
+                    <span>Companies</span>
                 </li>
-
+                </Link>
 
             <p className="title">DATA</p>
-
+            <Link to="/invoices">
                 <li>
                     <ReceiptLongOutlinedIcon className="icon"/>
                     <span>Invoices</span>
                 </li>
+            </Link>
 
+            <Link to="/analysis">
                 <li>
                     <AnalyticsOutlinedIcon className="icon"/>
                     <span>Analysis</span>
                 </li>
+            </Link>
 
             <p className="title">SETTINGS</p>
 

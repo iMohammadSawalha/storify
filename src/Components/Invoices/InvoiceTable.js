@@ -1,5 +1,6 @@
-import React from "react";
 import Table from 'react-bootstrap/Table';
+import React from "react";
+
 
 const InvocieTable = () => {
     return (
@@ -37,5 +38,7 @@ const InvocieTable = () => {
         </Table>
     )
 }
+
+
 
 export default InvocieTable;

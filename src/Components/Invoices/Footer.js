@@ -1,4 +1,5 @@
 import React from "react";
+import Button from 'react-bootstrap/Button';
 
 const Footer = ({ data }) => {
     const btnPrint = () => {
@@ -10,9 +11,7 @@ const Footer = ({ data }) => {
                 <div className="container-fluid">
                     <p className="fw-bold col-4">Sub Total: <span>{data.total}$</span> </p>
                     <p className="fw-bold col-4">Tax: <span>{data.tax}$</span> </p>
-                    <div className="buttons ">
-                        <button className="btn col-1 btn-outline-primary" onClick={btnPrint}>Print</button>
-                    </div>
+                    <Button variant="btn col-1 btn-outline-primary" onClick={btnPrint}>Print</Button>
                 </div>
             </div>
         </footer>

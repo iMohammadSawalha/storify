@@ -1,12 +1,10 @@
 import {
-    Chart,
-    ArcElement,
-    Legend,
-    Tooltip,
-  } from 'chart.js';
-  import{Doughnut} from 'react-chartjs-2'
-  import React ,{useState,useEffect} from 'react';
-  import './components.css'
+  ArcElement, Chart, Legend,
+  Tooltip
+} from 'chart.js';
+import React, { useEffect, useState } from 'react';
+import { Doughnut } from 'react-chartjs-2';
+import './components.css';
   
   Chart.register(
     ArcElement,
@@ -52,15 +50,6 @@ import {
 
             <div className='col-lg-3 col-md-6 col-sm-8 col-xs-12 ps-lg-2 mb-3'>
                 <div className='card card-chart'>
-            <div class="card-header">
-                      <div class="row flex-between-center">
-                        <div class="col-auto">
-                          <h6 class="mb-0">Customers in the last month:</h6>
-                        </div>
-                        <div class="col-auto d-flex">
-                          </div>
-                        </div>
-                      </div>
                       <div className='card-body h-100 pe-0'>
                     <DoughnutChart/>
                     </div>

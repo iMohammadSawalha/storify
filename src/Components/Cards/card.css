@@ -4,15 +4,13 @@
 }
 
 #cardTitle{
-    color: #3030cd;    
-}
-
-.cardBody{
-    display: flex;
-}
-
-.parentBox{
-    margin-top: auto;
+    margin-top:auto;
     margin-bottom: auto;
-    align-items: center;
+    color: #29aed6;
 }
+
+
+/* .cardBody{
+    display: flex;
+    justify-content: center;
+} */

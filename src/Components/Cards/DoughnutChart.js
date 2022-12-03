@@ -5,15 +5,14 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 const data = {
 
-  labels: ['Red', 'Blue', 'Yellow'],
+  // labels: ['Red', 'Blue'],
   datasets: [
     {
       label: '# of Votes',
-      data: [12, 19, 3],
+      data: [12, 19],
       backgroundColor: [
         'rgba(255, 99, 132, 0.2)',
         'rgba(54, 162, 235, 0.2)',
-        'rgba(255, 206, 86, 0.2)',
       ],
     },
   ],
@@ -21,8 +20,8 @@ const data = {
 
 export default function DoughnutChart({dimension}) {
     return <Doughnut data={data} 
-    height="150px"
-    width="200px"
-    options={{ maintainAspectRatio: false }}
+      height={200}
+      width={200}
+    options={{ maintainAspectRatio: false}}
     />;
   }
