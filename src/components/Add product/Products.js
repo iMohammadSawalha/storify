@@ -7,6 +7,7 @@ import EditRow from './EditRow';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import {Table } from 'react-bootstrap';
+import {TbSortAscendingLetters ,TbSortAscendingNumbers} from "react-icons/tb"
 
 function AddProduct() {
 	const [editFormData, setEditFormData] = useState({
@@ -161,11 +162,11 @@ function AddProduct() {
               <tr>
                 <th>#</th>
                 <th>pic</th>
-                <th onClick={() => { sorting("name") }}>Product</th>
-                <th onClick={() => { sorting("desc") }}>Describtion</th>
-                <th onClick={() => { sorting("categ") }}>Category</th>
-                <th onClick={() => { sorting("price") }}>Price</th>
-                <th onClick={() => { sorting("status") }}>Status</th>
+                <th>Product  <TbSortAscendingLetters onClick={() => { sorting("name") }}/> </th>
+                <th>Describtion <TbSortAscendingLetters onClick={() => { sorting("desc") }}/></th>
+                <th>Category <TbSortAscendingLetters onClick={() => { sorting("categ") }}/></th>
+                <th>Price <TbSortAscendingNumbers onClick={() => { sorting("price") }}/></th>
+                <th>Status <TbSortAscendingLetters onClick={() => { sorting("status") }}/></th>
               </tr>
             </thead>
             <br />
