@@ -1,5 +1,4 @@
-const OrdersData = [{"id":70,"name":"Chloe Duffet","order_total":"239.07","date":"25-05-2018","country":"Portugal"},
-{"id":932,"name":"Bartram Tugwell","order_total":"243.82","date":"18-02-2018","country":"China"},
+[{"id":932,"name":"Bartram Tugwell","order_total":"243.82","date":"18-02-2018","country":"China"},
 {"id":662,"name":"Wendel Averall","order_total":"778.52","date":"17-04-2017","country":"Russia"},
 {"id":512,"name":"Berkley Jeanenet","order_total":"234.66","date":"15-10-2017","country":"China"},
 {"id":258,"name":"Oberon Authers","order_total":"301.65","date":"23-03-2019","country":"France"},
@@ -97,6 +96,4 @@ const OrdersData = [{"id":70,"name":"Chloe Duffet","order_total":"239.07","date"
 {"id":595,"name":"Genovera Walford","order_total":"572.83","date":"06-06-2019","country":"Philippines"},
 {"id":428,"name":"Bobbye Garstang","order_total":"397.99","date":"21-05-2017","country":"Brazil"},
 {"id":591,"name":"Vere Simeon","order_total":"618.12","date":"29-08-2017","country":"Sweden"},
-{"id":78,"name":"Bella Saller","order_total":"806.84","date":"22-07-2017","country":"Bulgaria"}];
-
-export default OrdersData;
+{"id":78,"name":"Bella Saller","order_total":"806.84","date":"22-07-2017","country":"Bulgaria"}]
