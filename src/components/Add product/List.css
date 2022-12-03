@@ -21,9 +21,6 @@
     padding-bottom: 2%;
 }
 
-/*.searchForm{
-    margin-top: 20%;
-}*/
 .bttn{
 width: auto;
 height: 55px;
@@ -42,33 +39,4 @@ height: 55px;
     padding-bottom: 10%;
     margin-left:150px ;  
 }
-@media only screen and (min-width: 600px) and (max-width :768px)
-{
 
-}
-/*.listbar{
-    display: flex;
-    flex-direction: row;
-}
-
- @media only screen and (min-width: 768px)and (max-width:1366px){
-    #resetBtn{
-       width:30%;
-       font-size: smaller;
-       margin-top: 2%;
-    }
-    #search{ 
-        width:100%;
-    }
-    
-}
-@media only screen and (min-width: 375px)and (max-width:667px){
-    #resetBtn{
-        width:20%;
-        font-size: small;
-     }
-     #search{ 
-         width:100%;
-     }
-    
-}*/

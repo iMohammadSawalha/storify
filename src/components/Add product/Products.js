@@ -6,8 +6,7 @@ import ReadOnlyRow from './ReadOnlyEditValues';
 import EditRow from './EditRow';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import InputGroup from 'react-bootstrap/InputGroup';
-import { Card, Table } from 'react-bootstrap';
+import {Table } from 'react-bootstrap';
 
 function AddProduct() {
 	const [editFormData, setEditFormData] = useState({
@@ -134,29 +133,29 @@ function AddProduct() {
         </div>
         <div className='list' >
         <section className='listbar'>
-          <div className='container-fluid'>
+          <div className='container-fluid Btns' >
 			<div className='row'>
 				
 				<div className='col lg-4 md-4  sm-4 addPro'>
             <Add func={addRows} />
 			</div>
 			
-			<div className='col lg-4 md-4 sm-4 searchFormm'>
-            <Form className='searchForm' >
-              <InputGroup className='my-3' >
-                <Form.Control 
-				onChange={(e) => setSearch(e.target.value)}
-                  placeholder='Search product ...'
-                />
-              </InputGroup>
-			  <Button className='searchButtonn' variant="primary" >Search</Button>
-            </Form>
+			<div className='col lg-8 md-8 sm-8 searchFormm'>
+            <Form className="d-flex">
+            <Form.Control
+              type="search"
+              placeholder="Search product..."
+              className="me-2"
+              aria-label="Search"
+			  onChange={(e) => setSearch(e.target.value)}
+            />
+            <Button variant="primary">Search</Button>
+          </Form>
 			</div>
 			</div>
           </div>
 		  </section>
           <div className='space'></div>
-          <Card>
           <Table striped bordered hover className='tab'>
             <thead>
               <tr>
@@ -172,7 +171,51 @@ function AddProduct() {
             <br />
             <tbody className='tab'>{tableRows} </tbody>
           </Table>
-          </Card>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </div>
       </>
 	);
