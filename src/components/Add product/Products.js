@@ -128,23 +128,33 @@ function AddProduct() {
         <>
 
         <div id="protitle">
+
           <h1 > Product List</h1>
           <p id="t2"> Dashbourd --- Add Product</p>
         </div>
-  
         <div className='list' >
-          <div className='listbar'>
+        <section className='listbar'>
+          <div className='container-fluid'>
+			<div className='row'>
+				
+				<div className='col lg-4 md-4  sm-4 addPro'>
             <Add func={addRows} />
-            <Form id='search'>
-              <InputGroup className='my-3'>
-                <Form.Control
-                  onChange={(e) => setSearch(e.target.value)}
+			</div>
+			
+			<div className='col lg-4 md-4 sm-4 searchFormm'>
+            <Form className='searchForm' >
+              <InputGroup className='my-3' >
+                <Form.Control 
+				onChange={(e) => setSearch(e.target.value)}
                   placeholder='Search product ...'
                 />
               </InputGroup>
+			  <Button className='searchButtonn' variant="primary" >Search</Button>
             </Form>
-            <Button id="resetBtn"> Reset</Button>
+			</div>
+			</div>
           </div>
+		  </section>
           <div className='space'></div>
           <Card>
           <Table striped bordered hover className='tab'>
@@ -152,11 +162,11 @@ function AddProduct() {
               <tr>
                 <th>#</th>
                 <th>pic</th>
-                <th>Product</th>
-                <th>Describtion</th>
-                <th>Category</th>
-                <th>Price</th>
-                <th>Status</th>
+                <th onClick={() => { sorting("name") }}>Product</th>
+                <th onClick={() => { sorting("desc") }}>Describtion</th>
+                <th onClick={() => { sorting("categ") }}>Category</th>
+                <th onClick={() => { sorting("price") }}>Price</th>
+                <th onClick={() => { sorting("status") }}>Status</th>
               </tr>
             </thead>
             <br />

@@ -67,7 +67,7 @@ function Add(props) {
   };
   return (
     <>
-      <Button  onClick={handleShow} id="btn">
+      <Button  onClick={handleShow} className='btn btn-primary bttn'>
         + Add Product
       </Button>
       <Modal
