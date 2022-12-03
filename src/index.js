@@ -12,6 +12,7 @@ import Customers from "./Pages/Customers/Customers";
 import Home from "./Pages/Dashboard/Home";
 import Invoice from "./Pages/Invoices/Invoices";
 import Products from "./Pages/Products/Products";
+import Profile from "./Pages/Profile/Profile";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
@@ -31,6 +32,7 @@ root.render(
               <Route path="/products" element={<Products/>} />
               <Route path="/companies" element={<Companies/>} />
               <Route path="/customers" element={<Customers/>} />
+              <Route path="/profile" element={<Profile/>} />
             </Routes>
           </div>
         </div>
