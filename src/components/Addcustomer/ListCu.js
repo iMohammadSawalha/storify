@@ -14,31 +14,34 @@ import { Table } from 'react-bootstrap';
   const ListC = () => {
     const [editFormData, setEditFormData] = useState({
       
-        title: "",
+        name: "",
         email: "",
         address: "",
         pho: "",
         city: "",
         gender:"",
-        interset:""
+        password:""
       })
       const [customerData, setcustomerData] = useState(jsonData);
       const [EditcustomerDataId, setEditcustomerDataId] = useState(null);
       const [CustomerDataLength, setCustomerDataLength] = useState(customerData.length + 1);
       const [search, setSearch] = useState('');
+   
       // sort......
       const onSorterDow =(e)=>{
     
         const sortedData=[...customerData]
-          sortedData.sort((a,b)=>a.title < b.title ? 1 : -1)
+          sortedData.sort((a,b)=>a.name < b.name ? 1 : -1)
         setcustomerData(sortedData);
        };
        const onSorterUp =(e)=>{
        
         const sortedData=[...customerData]
-          sortedData.sort((a,b)=>a.title < b.title ? -1 : 1)
+          sortedData.sort((a,b)=>a.name < b.name ? -1 : 1)
         setcustomerData(sortedData);
        };
+       
+
        const handleDeleteClick = (customerDataId) => {
 		const newCustomerData = [...customerData];
 
@@ -53,13 +56,13 @@ import { Table } from 'react-bootstrap';
         event.preventDefault();
         const editedcustomerData = {
           ind: EditcustomerDataId,
-          title: editFormData.title,
+          name: editFormData.name,
           email: editFormData.email,
           address: editFormData.address,
           pho: editFormData.pho,
           city: editFormData.city,
           gender: editFormData.gender,
-          interset: editFormData.interset,
+          password: editFormData.passwor,
         }
         const newCustomerData = [...customerData];
       const index = customerData.findIndex((customerData) => customerData.ind === EditcustomerDataId);
@@ -90,20 +93,20 @@ const handleEditFormChange = (event) => {
         setEditcustomerDataId(customerData.ind);
         const formValues = {
         ind:customerData.ind,
-          title: customerData.title,
+          name: customerData.name,
           email: customerData.email,
           address: customerData.address,
           pho: customerData.pho,
           city: customerData.city,
           gender: customerData.gender,
-          interset: customerData.interset
+          password: customerData.password
         }
     
         setEditFormData(formValues)
       }
 
       const tableRows = customerData.filter((item)=>{
-        return (search.toLowerCase() === '') || (search.toUpperCase() === '') ? item : (item.title.toLowerCase().includes(search)) || (item.title.toUpperCase().includes(search)) }).map((customerData) => {
+        return (search.toLowerCase() === '') || (search.toUpperCase() === '') ? item : (item.name.toLowerCase().includes(search)) || (item.name.toUpperCase().includes(search)) }).map((customerData) => {
         return (
 <>
 				<Fragment>
@@ -119,23 +122,27 @@ const handleEditFormChange = (event) => {
 		updatedcustomerData.push(data);
 		setcustomerData(updatedcustomerData);
 	};
-
+  
   return (
     <div className='all'>
         <h2 >Customer List</h2>
-        <p>Dashbourd-- Add Customer</p>
+        <p id='parg'>Dashbourd-- Add Customer</p>
         
        <div className='Customer'> 
+       
        <div className='bar'>
+      
        <PopupCu func={addRows} />
-       <Form id='search'>
+
+      
           <InputGroup className='my-3'>
-            <Form.Control 
+         
+            <Form.Control  className='search'
               onChange={(e) => setSearch(e.target.value)}
               placeholder='Search  ...'
             />
           </InputGroup>
-        </Form>
+          </div>
           </div>
     
           <Table   >
@@ -144,12 +151,12 @@ const handleEditFormChange = (event) => {
               <th>Sr.NO</th>
               <th>
                 Name<BiChevronUp onClick={()=>onSorterUp()}/>< BiChevronDown onClick={()=>onSorterDow()}/> </th>
-              <th>email</th>
+              <th>E-mail</th>
+              <th>password</th>
               <th>City</th>
               <th>Phone</th>
-              <th>addres</th>
+              <th>Addres</th>
               <th>Gender</th>
-              <th>interest</th>
               <th>  </th>
               <th>  </th>
               
@@ -159,7 +166,7 @@ const handleEditFormChange = (event) => {
           <tbody>{tableRows}</tbody>
         </Table>
         </div>
-        </div>
+    
 
   );
 }

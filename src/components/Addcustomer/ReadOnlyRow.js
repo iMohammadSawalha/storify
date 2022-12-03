@@ -6,17 +6,19 @@ const ReadOnlyRow = ({ customerData, handleEditClick, handleDeleteClick }) => {
     return (
         <tr key={customerData.ind}>
             <td> {customerData.ind}</td>
-            <td>{customerData.title}</td>
+            <td>{customerData.name}</td>
             <td>{customerData.email}</td>
+            <td>{customerData.password}</td>
             <td>{customerData.address}</td>
             <td>{customerData.pho}</td>
             <td>{customerData.city}</td>
             <td>{customerData.gender}</td>
-            <td>{customerData.interset}</td>
-            <td>
-                <BsFillPenFill onClick={(event) => handleEditClick(event, customerData)}  />
+           
+            <td><BsFillPenFill onClick={(event) => handleEditClick(event, customerData)}  /></td>
+                <td>
                 <BsFillBackspaceFill onClick={() => handleDeleteClick(customerData.ind)} />
             </td>
+           
         </tr>
     )
 }

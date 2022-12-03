@@ -1,9 +1,9 @@
 #add{
     margin-top: 23px;
     margin-left: 4%;
-    width: 12%;
-    height: 45px;
-   font-size:small;
+    height: 40px;
+   font-size:12px;
+   width: 45%;
 
 }
 
@@ -42,7 +42,7 @@
     padding-left: 6%;
     color: gray; 
 }
-#title{
+#name{
     width: 40%;
     height: 8%;
     margin-left: 6%;
@@ -80,7 +80,17 @@
     border-radius: 10px;
     border-color: #d3d3d3;
 }
+.password{
+    padding-left: 6%;
+    color: gray;
 
+}
+#password{
+    width: 40%;
+    margin-left: 6%;
+    border-radius: 10px;
+    border-color: #d3d3d3;
+}
 
 #rest{
     width: 20%;
@@ -89,32 +99,7 @@
     border-radius: 10px;
     border-color: #d3d3d3;
 }
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    #add{
-        margin-top: 23px;
-        margin-left: 4%;
-        width: 13%;
-        height: 35px;
-       font-size:11px;
-    
-    }
 
-}
-@media only screen and (max-width: 767px) {
-    #add{
-        margin-top: 23px;
-        margin-left: 10%;
-        width: 60%;
-        height: 30px;
-       font-size:10px;
     
-    }
-    .body{
-        width: 500px;
-        height: 320px;;
-       display: flex;
-        position: relative;
-    }
 
-}
 

@@ -11,7 +11,7 @@ import { BsX } from "react-icons/bs";
     
             <tr id='edit'>
             <td>  {editFormData.ind}  </td>
-                <td> <input type="text" name="name" defaultValue={editFormData.title} onChange={handleEditFormChange} /></td>
+                <td> <input type="text" name="name" defaultValue={editFormData.name} onChange={handleEditFormChange} /></td>
 
                 <td> <input type="text" name="email" defaultValue={editFormData.email} onChange={handleEditFormChange} /></td>
 
@@ -24,10 +24,8 @@ import { BsX } from "react-icons/bs";
                 <td> <input type="text" name="interset" defaultValue={editFormData.interset} onChange={handleEditFormChange} /></td>
 
                 <td>
-                  <BsFillBookmarkFill onClick={handleEditFromSubmit}/>  
-                  <BsX onClick={handleCancelClick}/>  
-
-                </td>
+                  <BsFillBookmarkFill onClick={handleEditFromSubmit}/> </td>
+                  <td>  <BsX onClick={handleCancelClick}/> </td>
             </tr>
         </>
     )

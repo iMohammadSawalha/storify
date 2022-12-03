@@ -27,7 +27,7 @@ h2{
 .Customer{
     margin-top: 50px;
 }
-p{
+#parg{
     position: relative;
     top: 50px;
     left: 40px;
@@ -50,11 +50,17 @@ thead{
     text-transform: uppercase;
   
 }
-#search{
-    margin-left: 60%;
-}
+
 tr:hover td{
     color: rgb(31, 81, 112);
     cursor: pointer;
     background-color: #eff4f4;
+}
+
+
+.my-3 {
+   
+    width: 15%;
+    height: 11%;
+    margin-left: 67%;
 }

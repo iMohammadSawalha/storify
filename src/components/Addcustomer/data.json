@@ -1,23 +1,25 @@
 [ 
     {
     "ind":1,
-    "title":"Ahmad",
+    "name":"Ahmad",
     "email":"ahmad@gmail.com",
+    "password":"874530a#",
     "address":"nablus",
     "pho":"059997552",
     "city":"Palestine",
-    "gender":"Male",
-    "interset":"sport"
+    "gender":"Male"
+    
     },
     
     {
     "ind":2,
-    "title":"raghad",
+    "name":"raghad",
     "email":"raghad@gmail.com",
+    "password":"741g*56c",
     "address":"nablus",
     "pho":"0595725170",
     "city":"Palestine",
-    "gender":"Female",
-    "interset":"Beauty"
+    "gender":"Female"
+    
     }
   ]
