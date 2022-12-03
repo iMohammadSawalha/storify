@@ -8,13 +8,14 @@ import PeopleOutlineOutlinedIcon from '@mui/icons-material/PeopleOutlineOutlined
 import ReceiptLongOutlinedIcon from '@mui/icons-material/ReceiptLongOutlined';
 import SettingsSuggestOutlinedIcon from '@mui/icons-material/SettingsSuggestOutlined';
 import StoreMallDirectoryOutlinedIcon from '@mui/icons-material/StoreMallDirectoryOutlined';
-import "./sidebar.scss";
+import "./sidebar.css";
 
 
 
 const Sidebar = () => {
   return (
     <div className='sidebar'>
+
         <div className="top">
             <StoreMallDirectoryOutlinedIcon className="icon-main"/>
             <span className="logo">Gentlemen's Store</span>
