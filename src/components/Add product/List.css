@@ -4,13 +4,12 @@
     margin-top: 8%;
     overflow-x: auto;
 }
-#protitle {
+#pageTitle {
     margin-top: 3%;
     margin-left: 3%;
    
 }
-
-#t2{
+#txt{
     font-size: x-small;
     margin-left: 1%;
     color: gray;
@@ -23,20 +22,9 @@
 
 .bttn{
 width: auto;
-height: 55px;
+height: 40px;
 }
-.searchFormm
-{
-    width: 20%;
-    height: 20%;
-}
-.searchForm
-{
-    width: 20%;
-}q
-.searchButtonn
-{
-    padding-bottom: 10%;
-    margin-left:150px ;  
-}
+
+
+
 

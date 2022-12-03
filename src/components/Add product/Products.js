@@ -127,11 +127,11 @@ function AddProduct() {
     return (
         <>
 
-        <div id="protitle">
-
-          <h1 > Product List</h1>
-          <p id="t2"> Dashbourd --- Add Product</p>
+        <div id="pageTitle">
+          <h1> Product List</h1>
+          <p id="txt"> Dashbourd --- Add Product</p>
         </div>
+
         <div className='list' >
         <section className='listbar'>
           <div className='container-fluid Btns' >
@@ -141,7 +141,7 @@ function AddProduct() {
             <Add func={addRows} />
 			</div>
 			
-			<div className='col lg-8 md-8 sm-8 searchFormm'>
+			<div className='col lg-8 md-8 sm-8 searchForm'>
             <Form className="d-flex">
             <Form.Control
               type="search"
@@ -153,10 +153,12 @@ function AddProduct() {
             <Button variant="primary">Search</Button>
           </Form>
 			</div>
-			</div>
-          </div>
-		  </section>
+
+		</div>
+        </div>
+		</section>
           <div className='space'></div>
+		  
           <Table striped bordered hover className='tab'>
             <thead>
               <tr>
