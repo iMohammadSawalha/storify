@@ -73,11 +73,12 @@ const Sidebar = () => {
             </Link>
 
             <p className="title">SETTINGS</p>
-
+            <Link to="/profile">
                 <li>
                     <BadgeOutlinedIcon className="icon"/>
                     <span>Profile</span>
                 </li>
+            </Link>
                 <li>
                     <SettingsSuggestOutlinedIcon className="icon"/>
                     <span>Settings</span>
