@@ -9,7 +9,7 @@ import './index.css';
 import Analysis from "./Pages/Analysis/Analysis";
 import Companies from "./Pages/Companies/Companies";
 import Customers from "./Pages/Customers/Customers";
-import Home from "./Pages/DashboardHome/Home";
+import Home from "./Pages/Dashboard/Home";
 import Invoice from "./Pages/Invoices/Invoices";
 import Products from "./Pages/Products/Products";
 

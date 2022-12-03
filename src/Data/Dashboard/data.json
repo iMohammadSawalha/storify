@@ -1,0 +1,34 @@
+[
+    {
+        "id":1,
+        "title":"Sales",
+        "subTitle":"",
+        "cardSize":"",
+        "chart":false,
+        "data":""
+    },
+    {
+        "id":2,
+        "title":"Earnings",
+        "subTitle":"",
+        "cardSize":"",
+        "chart":false,
+        "data":""
+    },
+    {
+        "id":3,
+        "title":"Orders",
+        "subTitle":"",
+        "cardSize":"",
+        "chart":false,
+        "data":""
+    },
+    {
+        "id":4,
+        "title":"Growth",
+        "subTitle":"",
+        "cardSize":"",
+        "chart":false,
+        "data":""
+    }
+]

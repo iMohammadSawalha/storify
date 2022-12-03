@@ -5,7 +5,7 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 const data = {
 
-  labels: ['Red', 'Blue'],
+  // labels: ['Red', 'Blue'],
   datasets: [
     {
       label: '# of Votes',
@@ -20,7 +20,8 @@ const data = {
 
 export default function DoughnutChart({dimension}) {
     return <Doughnut data={data} 
-    height={{dimension}}
-    options={{ maintainAspectRatio: false }}
+      height={200}
+      width={200}
+    options={{ maintainAspectRatio: false}}
     />;
   }

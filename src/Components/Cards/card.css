@@ -4,20 +4,13 @@
 }
 
 #cardTitle{
+    margin-top:auto;
+    margin-bottom: auto;
     color: #29aed6;
 }
 
-.cardBody{
+
+/* .cardBody{
     display: flex;
-}
-
-.parentBox{
-    margin-top: auto;
-    margin-bottom: auto;
-    align-items: center;
-}
-
-/* .chartDiv{
-    margin-left:auto;
-    margin-right:1%;
+    justify-content: center;
 } */
