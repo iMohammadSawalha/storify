@@ -1,0 +1,17 @@
+.RBsTable-Headers{
+    background-color :rgb(1, 152, 122) ;
+    color : white;
+}
+.RBsTable-rows{
+    background-color :rgb(255, 255, 255) ;
+    color : rgb(0, 0, 0);
+    font-weight: 400;
+}
+.RBsTable-rows:hover {
+    background-color :rgb(241, 241, 241) ;
+    font-weight: 700;
+    color : rgb(255, 255, 255);
+}
+.RBsTable{
+    border: 1px solid rgb(1, 152, 122);
+}

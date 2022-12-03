@@ -7,11 +7,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import SideBar from "./Components/sidebar/Sidebar";
 import './index.css';
 import Analysis from "./Pages/Analysis/Analysis";
-import Companies from "./Pages/Companies/Companies";
-import Customers from "./Pages/Customers/Customers";
 import Home from "./Pages/DashboardHome/Home";
-import Invoice from "./Pages/Invoices/Invoices";
-import Products from "./Pages/Products/Products";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
@@ -27,10 +23,6 @@ root.render(
               <Route path="/" index element={<Home/>} />
               <Route path="/dashboard" index element={<Home/>} />
               <Route path="/analysis" element={<Analysis/>} />
-              <Route path="/invoices" element={<Invoice/>} />
-              <Route path="/products" element={<Products/>} />
-              <Route path="/companies" element={<Companies/>} />
-              <Route path="/customers" element={<Customers/>} />
             </Routes>
           </div>
         </div>
