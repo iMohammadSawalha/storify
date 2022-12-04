@@ -50,7 +50,7 @@ const PopupCu =(props)=>{
 
 return(
     <>
-    <Button  variant="primary" id ="add" onClick={handleShow} >
+    <Button  variant="primary" id ="addBTN" onClick={handleShow} >
     Add Customer +</Button>
 
     <Modal className='form'

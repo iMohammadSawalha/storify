@@ -6,7 +6,6 @@ import jsonData from './data.json';
 import { BiChevronUp } from "react-icons/bi";
 import { BiChevronDown } from "react-icons/bi";
 import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
 import EditableRow from './EditableRow';
 import ReadOnlyRow from './ReadOnlyRow';
 import { Table } from 'react-bootstrap';
@@ -124,32 +123,36 @@ const handleEditFormChange = (event) => {
 	};
   
   return (
-    <div className='all'>
-        <h2 >Customer List</h2>
+    <>
+        <h2 id='h2'>Customer List</h2>
         <p id='parg'>Dashbourd-- Add Customer</p>
-        
-       <div className='Customer'> 
-       
-       <div className='bar'>
-      
+  
+            <section className='Customer'>
+       <div className='container-fluid'>
+      <div className='row'>
+        <div className='col lg-3 md-4  sm-4 addCus'>
        <PopupCu func={addRows} />
-
-      
-          <InputGroup className='my-3'>
-         
-            <Form.Control  className='search'
+       </div>
+      <div className='col lg-9 md-8 sm-8 searchIf'>
+           <Form className="d-flex ">
+            <Form.Control
+              type="search"
+              placeholder="Search"
+              className="me-2"
+              aria-label="Search"
               onChange={(e) => setSearch(e.target.value)}
-              placeholder='Search  ...'
             />
-          </InputGroup>
+          </Form>
           </div>
           </div>
-    
-          <Table   >
+          </div>
+          </section>
+    <br/>
+          <Table  className='listC' >
            <thead >
             <tr >
-              <th>Sr.NO</th>
-              <th>
+              <th>#</th>
+              <th >
                 Name<BiChevronUp onClick={()=>onSorterUp()}/>< BiChevronDown onClick={()=>onSorterDow()}/> </th>
               <th>E-mail</th>
               <th>password</th>
@@ -165,10 +168,9 @@ const handleEditFormChange = (event) => {
          <br/>
           <tbody>{tableRows}</tbody>
         </Table>
-        </div>
     
-
+        </>
   );
 }
 
-export default ListC
+export default ListC;

@@ -7,60 +7,34 @@
 
 
 }
-h2{
+#h2{
     position: relative;
     top: 50px;
-    left: 40px; 
+    left: 40px;
+    top:15%; 
     
 }
-
+th.listC,td.listC{
+    width: 10px;
+}
 .bar{
     display:flex;
     flex-direction: row;
     height: 75px;}
-.d-flex{
-    margin-left:60%; 
-    margin-top:10%; 
-   width: 30px;
-   height: 30px;
-}
+
 .Customer{
-    margin-top: 50px;
+    display:flex;
+    flex-direction: column;
+    margin-top: 8%;
+    overflow-x: auto;
 }
 #parg{
     position: relative;
     top: 50px;
     left: 40px;
+    top:15%;
 }
 
-.all{
-    background-color: white; 
+.listC{
     overflow-x: auto;
-    
-}
-
-
-tbody{
-    background-color: #eff4f4;
-  
-}
-thead{
-    background-color: #eff4f4;
-    font-size: 13px;
-    text-transform: uppercase;
-  
-}
-
-tr:hover td{
-    color: rgb(31, 81, 112);
-    cursor: pointer;
-    background-color: #eff4f4;
-}
-
-
-.my-3 {
-   
-    width: 15%;
-    height: 11%;
-    margin-left: 67%;
 }
