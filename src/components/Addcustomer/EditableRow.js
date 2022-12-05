@@ -10,7 +10,9 @@ import { BsX } from "react-icons/bs";
         <>
     
             <tr id='edit'>
+       
             <td>  {editFormData.ind}  </td>
+            
                 <td> <input type="text" name="name" defaultValue={editFormData.name} onChange={handleEditFormChange} /></td>
 
                 <td> <input type="text" name="email" defaultValue={editFormData.email} onChange={handleEditFormChange} /></td>

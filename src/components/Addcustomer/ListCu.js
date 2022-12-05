@@ -3,13 +3,12 @@ import { useState ,Fragment} from 'react'
 import './ListStyle.css'
 import PopupCu from './PopupCu';
 import jsonData from './data.json';
-import { BiChevronUp } from "react-icons/bi";
-import { BiChevronDown } from "react-icons/bi";
 import Form from 'react-bootstrap/Form';
 import EditableRow from './EditableRow';
 import ReadOnlyRow from './ReadOnlyRow';
 import { Table } from 'react-bootstrap';
-
+import { BsSortAlphaUp } from "react-icons/bs";
+import { BsSortAlphaDown } from "react-icons/bs";
   const ListC = () => {
     const [editFormData, setEditFormData] = useState({
       
@@ -25,19 +24,24 @@ import { Table } from 'react-bootstrap';
       const [EditcustomerDataId, setEditcustomerDataId] = useState(null);
       const [CustomerDataLength, setCustomerDataLength] = useState(customerData.length + 1);
       const [search, setSearch] = useState('');
-   
+     
+      const [isActive, setIsActive] = useState(true);
+
+
       // sort......
       const onSorterDow =(e)=>{
     
         const sortedData=[...customerData]
           sortedData.sort((a,b)=>a.name < b.name ? 1 : -1)
         setcustomerData(sortedData);
+     
        };
        const onSorterUp =(e)=>{
        
         const sortedData=[...customerData]
           sortedData.sort((a,b)=>a.name < b.name ? -1 : 1)
         setcustomerData(sortedData);
+    
        };
        
 
@@ -151,9 +155,11 @@ const handleEditFormChange = (event) => {
           <Table  className='listC' >
            <thead >
             <tr >
-              <th>#</th>
-              <th >
-                Name<BiChevronUp onClick={()=>onSorterUp()}/>< BiChevronDown onClick={()=>onSorterDow()}/> </th>
+             
+            <th>#</th>
+              <th >  Name <div id='sort'  onClick={() => setIsActive(!isActive)}>
+     {isActive ? <BsSortAlphaUp onClick={()=>onSorterDow()}/> :<BsSortAlphaDown onClick={()=>onSorterUp()}/>}
+   </div> </th>
               <th>E-mail</th>
               <th>password</th>
               <th>City</th>
@@ -174,3 +180,5 @@ const handleEditFormChange = (event) => {
 }
 
 export default ListC;
+
+
