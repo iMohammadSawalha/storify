@@ -9,7 +9,6 @@ import Analysis from "./Pages/Analysis/Analysis";
 import Invoice from "./Pages/Invoices/Invoices";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Profile from "./Pages/Profile/Profile";
-
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 

@@ -13,11 +13,17 @@
     padding-top: 0;
 }
 .navbar {
-    --bs-navbar-padding-x: 1;
+    --bs-navbar-padding-x: 0;
 }
 input{
     font-size: 15px;
 }
 #profile{
     font-size: 33px;
+}
+.nameTxt{
+    color:gray;
+}
+.iconsColor{
+    color:#29aed6;
 }
