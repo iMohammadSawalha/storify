@@ -1,10 +1,10 @@
-import Table from '../../Components/Addcustomer/Table';
+import ListC from "../../Components/Addcustomer/ListCu";
 
 
 const Customers = () => {
   return (
     <>
-        <Table/>
+        <ListC/>
     </>
   );
 }
