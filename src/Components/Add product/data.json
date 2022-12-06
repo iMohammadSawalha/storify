@@ -7,10 +7,33 @@
     "name":"Shirt",
     "pic":"",
     "desc":"Large-white",
-    "categ":"home",
-    "price":"$300",
+    "categ":"Women",
+    "price":"$30",
     "curr":"",
     "status":"active"
+} ,
+{
+    
+    "id":2,
+    "name":"Glasses",
+    "pic":"",
+    "desc":"Black",
+    "categ":"Men",
+    "price":"$15",
+    "curr":"",
+    "status":"active"
+} 
+,
+{
+    
+    "id":3,
+    "name":"Jacket",
+    "pic":"",
+    "desc":"Blue",
+    "categ":"Kids",
+    "price":"$50",
+    "curr":"",
+    "status":"not-active"
 } 
 
 ]

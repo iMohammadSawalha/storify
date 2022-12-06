@@ -1,10 +1,10 @@
-import List from '../../Components/Add product/List';
+import ProductsComponent from '../../Components/Add product/Products';
 
 
 const Products = () => {
   return (
     <>
-        <List/>
+        <ProductsComponent/>
     </>
   );
 }
