@@ -6,7 +6,7 @@ import ReadOnlyRow from './ReadOnlyEditValues';
 import EditRow from './EditRow';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import {Table } from 'react-bootstrap';
+import {Table ,Card} from 'react-bootstrap';
 import {TbSortAscendingLetters ,TbSortAscendingNumbers} from "react-icons/tb"
 
 function AddProduct() {
@@ -123,17 +123,21 @@ function AddProduct() {
 		setproData(updatedProductData);
 	}; //addRows
 
+   /*const dark=()=>{
+	var element = document.body;
+	element.classList.toggle("darkMode");
+   }
+    in return:<Button variant="primary" onClick={dark}>dark</Button>
+   */ 
 
     return (
         <>
-
-        <div id="pageTitle">
-          <h1> Product List</h1>
-          <p id="txt"> Dashbourd --- Add Product</p>
-        </div>
-
         <div className='list' >
-        <section className='listbar'>
+		  <Card id='tableCard'>
+		  <Card.Header>
+		  <h1> Product List</h1>
+          <p id="txt"> Dashbourd --- Add Product</p>
+		  <section className='listbar'>
           <div className='container-fluid Btns' >
 			<div className='row'>
 				
@@ -158,12 +162,12 @@ function AddProduct() {
         </div>
 		</section>
           <div className='space'></div>
-		  
+		  </Card.Header>
+		  <Card.Body>
           <Table striped bordered hover className='tab'>
             <thead>
               <tr>
                 <th>#</th>
-                <th>pic</th>
                 <th>Product  <TbSortAscendingLetters onClick={() => { sorting("name") }}/> </th>
                 <th>Describtion <TbSortAscendingLetters onClick={() => { sorting("desc") }}/></th>
                 <th>Category <TbSortAscendingLetters onClick={() => { sorting("categ") }}/></th>
@@ -174,7 +178,8 @@ function AddProduct() {
             <br />
             <tbody className='tab'>{tableRows} </tbody>
           </Table>
-
+		  </Card.Body>
+          </Card>
 
 
 

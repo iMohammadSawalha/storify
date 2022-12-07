@@ -5,7 +5,6 @@ const ReadOnlyRow = ({ proData, handleEditClick, handleDeleteClick }) => {
     return (
         <tr key={proData.id}>
             <td>{proData.id}</td>
-            <td></td>
             <td>{proData.name}</td>
             <td>{proData.desc}</td>
             <td>{proData.categ}</td>

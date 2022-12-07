@@ -9,7 +9,6 @@ function Add(props) {
    function handleShow() {
     setShow(true)
   };
-  const [pic, setPic] = useState('');
   const [name, setName] = useState('');
   const [desc, setDesc] = useState('');
   const [categ, setCateg] = useState('');
@@ -23,9 +22,6 @@ function Add(props) {
         setStatus('not active')
        }
   }
-  const changePic = (event) => {
-    setPic(event.target.value);
-  };
   const changeName = (event) => {
     setName(event.target.value);
   };
@@ -43,9 +39,12 @@ function Add(props) {
   };
   const transferValue = (event) => {
     event.preventDefault();
-    const val = {
+    //if no values entered:
+    if(name===''||desc===''||categ===''||price===''){
+      alert('PLEASE ENTER VALUES');
+    }
+   else{ const val = {
       name,
-      pic,
       desc,
       categ,
       price,
@@ -53,7 +52,7 @@ function Add(props) {
       status
     };
     props.func(val);
-    clearState();
+    clearState();}
   };
   
   const clearState = () => {
@@ -63,6 +62,7 @@ function Add(props) {
     setPrice('');
     setCurr('');
     setStatus('');
+    setShow(false)
   };
   return (
     <>
@@ -71,7 +71,7 @@ function Add(props) {
       </Button>
       <Modal
         show={show}
-        onHide={handleClose}
+        onHide={clearState}
         backdrop="static"
         keyboard={false}
       >
@@ -87,10 +87,6 @@ function Add(props) {
        <div className='flex'></div>
        <label className='descLabel'> Describtion:</label>
        <textarea value={desc} onChange={changeDesc} name="desc" id="desc" placeholder='Type here'></textarea>
-       
-       <div className='flex'></div>
-        <label className='Labels'> Picture:</label>
-        <input  value={pic} onChange={changePic} type="file" name="pic" id="pic" accept="image/*"/>
 
        <div className='flex'></div>
         <label htmlFor="cat-select" className='Labels'>Category:</label>
