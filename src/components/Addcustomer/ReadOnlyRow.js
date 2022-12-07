@@ -10,7 +10,7 @@ const ReadOnlyRow = ({ customerData, handleEditClick, handleDeleteClick }) => {
             <td>{customerData.email}</td>
             <td>{customerData.password}</td>
             <td>{customerData.address}</td>
-            <td>{customerData.pho}</td>
+            <td>{customerData.phon}</td>
             <td>{customerData.city}</td>
             <td>{customerData.gender}</td>
            

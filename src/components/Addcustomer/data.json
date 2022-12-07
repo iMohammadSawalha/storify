@@ -1,11 +1,11 @@
 [ 
     {
     "ind":1,
-    "name":"Ahmad",
-    "email":"ahmad@gmail.com",
-    "password":"874530a#",
-    "address":"nablus",
-    "pho":"059997552",
+    "name":"Ahmed Khaled ",
+    "email":"ahmadKh2@gmail.com",
+    "password":".637ija47396jb",
+    "address":"Ramallah",
+    "phon":"059997552",
     "city":"Palestine",
     "gender":"Male"
     
@@ -13,13 +13,26 @@
     
     {
     "ind":2,
-    "name":"raghad",
-    "email":"raghad@gmail.com",
-    "password":"741g*56c",
-    "address":"nablus",
-    "pho":"0595725170",
+    "name":"Raghad Zaidan",
+    "email":"raghadZm@gmail.com",
+    "password":".806h972hdaib",
+    "address":"Nablus",
+    "phon":"0595725170",
     "city":"Palestine",
     "gender":"Female"
     
-    }
+    },
+    {
+      "ind":3,
+      "name":"Mahmud ibrahim",
+      "email":"Mahmudibrahim@gmail.com",
+      "password":".871a4129qanz",
+      "address":"Nablus",
+      "phon":"0595415542",
+      "city":"Palestine",
+      "gender":"Male"
+      
+      }
+
+
   ]
