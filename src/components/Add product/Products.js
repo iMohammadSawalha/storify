@@ -167,7 +167,7 @@ function AddProduct() {
           <Table striped bordered hover className='tab'>
             <thead>
               <tr>
-                <th>#</th>
+                <th >#</th>
                 <th>Product  <TbSortAscendingLetters onClick={() => { sorting("name") }}/> </th>
                 <th>Describtion <TbSortAscendingLetters onClick={() => { sorting("desc") }}/></th>
                 <th>Category <TbSortAscendingLetters onClick={() => { sorting("categ") }}/></th>
@@ -176,7 +176,7 @@ function AddProduct() {
               </tr>
             </thead>
             <br />
-            <tbody className='tab'>{tableRows} </tbody>
+            <tbody>{tableRows} </tbody>
           </Table>
 		  </Card.Body>
           </Card>

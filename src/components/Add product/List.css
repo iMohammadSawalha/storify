@@ -25,6 +25,26 @@ height: 40px;
 /*.darkMode{
     background-color: #343434;
 }*/
+@media (max-width:654px) {
+    .table thead{
+        display: none;
+    }
+    .table,
+    .table tbody,
+    .table td,
+    .table tr{
+        display: block;
+        width: 100%;
+    }
+    .table tr{
+        margin-bottom: 15 px;
+    }
+    .table td{
+        text-align: center;
+        position: relative;
+    }
+
+}
 
 
 
