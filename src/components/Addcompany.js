@@ -7,6 +7,7 @@ import EditableRow from './EditableRow';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import { Card, Table } from 'react-bootstrap';
+import { TbSortAscendingLetters, TbSortAscendingNumbers } from "react-icons/tb"; 
 function AddCompany() {
 	const [editFormData, setEditFormData] = useState({
 		compname: "",
@@ -107,12 +108,13 @@ function AddCompany() {
 		setCompanyData(updatedcompanyData);
 	};
 	return (
+
 		<Card>
-			<Card.Header>
+			<Card.Header id="header">
 				<h5>
 					<strong> Companies</strong>
 				</h5>
-
+				
 			</Card.Header>
 			<Card.Body>
 
@@ -121,25 +123,25 @@ function AddCompany() {
 
 					<Form.Control onChange={(e) => setSearch(e.target.value)}
 						aria-label="Example text with button addon"
-						aria-describedby="basic-addon1"
+						aria-describedby="basic-addon1" placeholder="search for a company by its name"
 					/>
 				</InputGroup>
 
-				<Table >
-					<thead>
-						<th onClick={() => { sorting("compname") }}>Name</th>
-						<th onClick={() => { sorting("email") }}>Email</th>
-						<th onClick={() => { sorting("address") }}>Address</th>
-						<th onClick={() => { sorting("phone") }}>Phone</th>
-						<th onClick={() => { sorting("comptype") }}>Comptype</th>
-						<th></th>
-						<th></th>
+				<Table id="table">
+					<thead id="THEAD">
+						<th>Name <TbSortAscendingLetters onClick={() => { sorting("compname") }}/></th>
+						<th>Email <TbSortAscendingLetters onClick={() => { sorting("email") }} /></th>
+						<th>Address <TbSortAscendingLetters onClick={() => { sorting("address") }} /></th>
+						<th>Phone <TbSortAscendingNumbers onClick={() => { sorting("phone") }} /></th>
+						<th>Comptype<TbSortAscendingLetters onClick={() => { sorting("comptype") }} /></th>
+						<th> Actions </th>
 					</thead>
-					<tbody>{tableRows}</tbody>
+					<tbody id="TBODY">{tableRows}</tbody>
 				</Table>
 
 			</Card.Body>
 		</Card>
+
 	);
 }
 export default AddCompany;

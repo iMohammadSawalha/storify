@@ -1,19 +1,6 @@
-#card-header {
-  position: relative;
-}
-.card{
-  width: 98%;
-  position: relative  ;
-  left: 1%;
-  top: 4px;
-}
-#btn {
-  position: absolute  ;
-  right: 2%;
-  top:3%;
-}
-strong {
-  color: rgb(13, 202, 240);
+#header {
+  background-color: rgb(121, 229, 251);
+  border-radius: 12px;
 }
 
 table {
@@ -21,12 +8,11 @@ table {
   width: auto;
 }
 
-th {
-
-
-  padding: 8px;
+th,
+td {
+  padding: 15px;
   text-align: left;
-  border-bottom: 1px solid #DDD;
+  border-color: rgb(121, 229, 251);
 }
 
 tr:hover {
@@ -37,6 +23,6 @@ tbody {
   width: auto;
 }
 
-strong {
-  color: rgb(13, 202, 240);
+thead {
+  background-color: rgb(121, 229, 251);
 }
