@@ -22,5 +22,23 @@
         "description": "The PS5 is a genuine leap forward for console gaming",
         "cost": "559.00",
         "amount": "1"
+    },
+    {
+        "product": "Nintendo Switch Sports - Nintendo Switch",
+        "description": "Swing, kick, spike, and bowl your way to victory in 6 sports",
+        "cost": "49.99",
+        "amount": "2"
+    },
+    {
+        "product": "Nintendo Switch Sports - Nintendo Switch",
+        "description": "Swing, kick, spike, and bowl your way to victory in 6 sports",
+        "cost": "49.99",
+        "amount": "2"
+    },
+    {
+        "product": "Nintendo Switch Sports - Nintendo Switch",
+        "description": "Swing, kick, spike, and bowl your way to victory in 6 sports",
+        "cost": "49.99",
+        "amount": "2"
     }
 ]

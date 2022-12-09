@@ -42,6 +42,9 @@ ul {
     justify-content: space-evenly;
 }
 
+.btn-print {
+    width: auto;
+}
 
 /* Responsive */
 @media screen and (max-width:650px) {
@@ -53,7 +56,10 @@ ul {
     table,
     tbody,
     tr,
-    td {
+    #table-product,
+    #table-product,
+    #table-cost,
+    #table-amount {
         display: block;
         width: 100%;
     }
@@ -64,7 +70,10 @@ ul {
         display: flex;
     }
 
-    td {
+    #table-product,
+    #table-product,
+    #table-cost,
+    #table-amount {
         text-align: center;
         position: relative;
     }
