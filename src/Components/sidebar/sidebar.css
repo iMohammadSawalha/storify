@@ -1,0 +1,96 @@
+.sidebar {
+  flex: 1.5;
+  border-right: 1px solid rgba(124, 123, 123, 0.39);
+  min-height: 100vh;
+  background-color: white;
+  margin-top: 2%;
+}
+.sidebar .top {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sidebar .top .logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #29aed6;
+}
+.sidebar .top .icon-main {
+  size: 22px;
+  color: #29aed6;
+  padding-right: 5px;
+}
+.sidebar hr {
+  height: 0;
+  border: 0.5px solid #e6e3e3;
+}
+.sidebar .centre {
+  padding-left: 10px;
+}
+.sidebar .centre ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.sidebar .centre .title {
+  font-size: 12px;
+  font-weight: bold;
+  color: #999;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+.sidebar .centre .title-main {
+  font-size: 15px;
+  font-weight: bold;
+  color: rgba(153, 153, 153, 0.808);
+  margin-top: 15px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  margin-right: 20px;
+  line-height: 0.1em;
+  flex-direction: row;
+}
+.sidebar .centre title:after {
+  margin-right: 10px;
+}
+.sidebar .centre h1 {
+  display: flex;
+  flex-direction: row;
+}
+.sidebar .centre h1:before, .sidebar .centre h1:after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 2px solid;
+  margin: auto;
+}
+.sidebar .centre h1:before {
+  margin-right: 10px;
+}
+.sidebar .centre h1:after {
+  margin-left: 10px;
+}
+.sidebar .centre li {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  cursor: pointer;
+}
+.sidebar .centre li:hover {
+  background-color: #a4dcff;
+}
+.sidebar .centre li:hover .icon {
+  font-size: 18px;
+  color: #ffffff;
+}
+.sidebar .centre li .icon {
+  font-size: 18px;
+  color: #29aed6;
+}
+.sidebar .centre li span {
+  font-size: 15px;
+  font-weight: 600;
+  color: #29aed6;
+  margin-left: 10px;
+}
