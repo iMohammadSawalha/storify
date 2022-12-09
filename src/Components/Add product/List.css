@@ -1,13 +1,8 @@
 .list{
     display:flex;
     flex-direction: column;
-    margin-top: 8%;
+    margin-top: 2%;
     overflow-x: auto;
-}
-#pageTitle {
-    margin-top: 3%;
-    margin-left: 3%;
-   
 }
 #txt{
     font-size: x-small;
@@ -24,6 +19,33 @@
 width: auto;
 height: 40px;
 }
+#tableCard{
+    width: 100%;
+}
+/*.darkMode{
+    background-color: #343434;
+}*/
+@media (max-width:654px) {
+    .table thead{
+        display: none;
+    }
+    .table,
+    .table tbody,
+    .table td,
+    .table tr{
+        display: block;
+        width: 100%;
+    }
+    .table tr{
+        margin-bottom: 15 px;
+    }
+    .table td{
+        text-align: center;
+        position: relative;
+    }
+
+}
+
 
 
 
