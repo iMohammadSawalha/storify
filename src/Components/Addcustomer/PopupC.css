@@ -15,7 +15,6 @@
 .bodyM{
     width: 600px;
     height: 500px;;
-    
    display: flex;
     position: relative;
 }
@@ -28,24 +27,24 @@
 }
 
 .flex{
-    height: 17px;
+    height: 18px;
     }
 
 .lab{
     padding-left: 6%;
-    color: gray;
+    color: rgb(48, 47, 47);
 }
 .emaill{
     padding-left: 6%;
-    color: gray;
+    color: rgb(48, 47, 47);
 }
 .phone{
     padding-left: 6%;
-    color: gray;
+    color: rgb(48, 47, 47);
 }
 .city{
     padding-left: 6%;
-    color: gray; 
+    color: rgb(48, 47, 47);
 }
 #name{
     width: 40%;
@@ -76,7 +75,7 @@
 }
 .addres{
     padding-left: 6%;
-    color: gray;
+    color: rgb(48, 47, 47);
 
 }
 #address{
@@ -87,7 +86,7 @@
 }
 .password{
     padding-left: 6%;
-    color: gray;
+    color: rgb(48, 47, 47);
 
 }
 #password{
@@ -103,6 +102,15 @@
     margin-left: 6%;
     border-radius: 10px;
     border-color: #d3d3d3;
+}
+
+#gen-pass{
+    width: 13%;
+    height: 52%;
+    font-size: 11px;
+    margin-left: 46%;
+    margin-top: -60px;
+
 }
 
     

@@ -6,15 +6,15 @@ import './PopupC.css'
 
 const PopupCu =(props)=>{
     const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+    const handleClose = () => setShow(false);
     const [name,setname]=useState('');
     const [address,setaddress]=useState('');
-    const [pho,setpho]=useState('');
+    const [phon,setphon]=useState('');
     const [city,setcity]=useState('');
     const [email,setemail]=useState('');
     const [gender,setgender]=useState('');
-    const [password,setpassword]=useState('');
+    const [password,setpassword]=useState("***************");
 
     const changeCity = (event) => {
    setcity(event.target.value);
@@ -23,31 +23,48 @@ const PopupCu =(props)=>{
 
     const transferValue = (event) => {
       event.preventDefault();
-      const val = {
-        name,
-        email,
-        address,
-        pho,
-        city,
-        gender,
-        password
-      };
-      props.func(val);
-      clearState();
+      if (name===""||email===""||address===""||phon===""||city===""||gender===""||password==="") {
+        alert("Please enter the information");
+      }
+      else{
+        const val = {
+          name,
+          email,
+          address,
+          phon,
+          city,
+          gender,
+          password
+        };
+        props.func(val);
+        clearState();
+      }
+      
     };
     
     const clearState = () => {
       setname('');
       setaddress('');
-      setpho('');
+      setphon('');
       setcity('');
       setemail('');
       setgender('');
       setpassword('');
       
-
+      setShow(false);
     };
 
+    const generatePassword = () => {
+      // Create a random password
+      const randomPassword =
+        Math.random().toString(18).slice(1) ;
+    
+      // Set the generated password as state
+      setpassword(randomPassword);
+    
+      // Copy the password to the clipboard
+     navigator.clipboard.writeText(randomPassword);
+    };
 return(
     <>
     <Button  variant="primary" id ="addBTN" onClick={handleShow} >
@@ -69,19 +86,23 @@ return(
      <input value={name} onChange={(e)=>setname(e.target.value)} name='name' type="text" id="name" placeholder='Add Name'/>
      <div className='flex'></div>
 
-    <label className='emaill'> E-mail :</label>
-     <input value={email} onChange={(e)=>setemail(e.target.value)} name='email' type="text" id="email" placeholder='ex:myname@example.com'/>
+    <label className='emaill'> Email :</label>
+     <input value={email} onChange={(e)=>setemail(e.target.value)} name='email' type="text" id="email" placeholder='someone@something.com'/>
      <div className='flex'></div>
-
+ 
 <label className='password'> Password :</label>
+<div className='pass'>
      <input value={password} onChange={(e)=>setpassword(e.target.value)} name='password' type="text" id="password" placeholder='Type here'/>
-     <div className='flex'></div>
+
+    <Button id="gen-pass" variant='outline-secondary'onClick={generatePassword}>Generate</Button>
+    </div>
+    
      <label className='addres'> Address :</label>
      <input value={address} onChange={(e)=>setaddress(e.target.value)} name="addres" id="address" placeholder='Type here'/>
 
      <div className='flex'></div>
      <label className='phone'> Phone Number :</label>
-     <input value={pho} onChange={(e)=>setpho(e.target.value)} name="phone" id="phonen" placeholder='Type here'/>
+     <input value={phon} onChange={(e)=>setphon(e.target.value)} name="phone" id="phonen" placeholder='Type here'/>
 
      <div className='flex'></div>
      <label className='city'> City :</label>
@@ -106,7 +127,7 @@ return(
 
       </Modal.Body>
       <Modal.Footer>
-        <Button variant="secondary" onClick={handleClose}>
+        <Button variant="secondary" onClick={clearState}>
           Close
         </Button>
         <Button onClick={transferValue} variant="primary">Save </Button>

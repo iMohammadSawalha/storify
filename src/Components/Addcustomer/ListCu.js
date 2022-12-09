@@ -15,7 +15,7 @@ import { BsSortAlphaDown } from "react-icons/bs";
         name: "",
         email: "",
         address: "",
-        pho: "",
+        phon: "",
         city: "",
         gender:"",
         password:""
@@ -62,7 +62,7 @@ import { BsSortAlphaDown } from "react-icons/bs";
           name: editFormData.name,
           email: editFormData.email,
           address: editFormData.address,
-          pho: editFormData.pho,
+          phon: editFormData.phon,
           city: editFormData.city,
           gender: editFormData.gender,
           password: editFormData.passwor,
@@ -99,7 +99,7 @@ const handleEditFormChange = (event) => {
           name: customerData.name,
           email: customerData.email,
           address: customerData.address,
-          pho: customerData.pho,
+          phon: customerData.phon,
           city: customerData.city,
           gender: customerData.gender,
           password: customerData.password
@@ -141,7 +141,7 @@ const handleEditFormChange = (event) => {
            <Form className="d-flex ">
             <Form.Control
               type="search"
-              placeholder="Search"
+              placeholder="Search....."
               className="me-2"
               aria-label="Search"
               onChange={(e) => setSearch(e.target.value)}
@@ -163,7 +163,7 @@ const handleEditFormChange = (event) => {
               <th>E-mail</th>
               <th>password</th>
               <th>City</th>
-              <th>Phone</th>
+              <th>phonne</th>
               <th>Addres</th>
               <th>Gender</th>
               <th>  </th>
