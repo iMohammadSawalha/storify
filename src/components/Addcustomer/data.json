@@ -32,7 +32,41 @@
       "city":"Palestine",
       "gender":"Male"
       
-      }
+      },
+      {
+        "ind":4,
+        "name":"Walid Asi",
+        "email":"Walid_Asi@gmail.com",
+        "password":".f72ef7b2bf6f9",
+        "address":"Amman",
+        "phon":"0785424571",
+        "city":"Jordan",
+        "gender":"Male"
+        
+        },
+        {
+          "ind":5,
+          "name":"Noor Mahmoud",
+          "email":"Noor3Mahmoud@gmail.com",
+          "password":".3dgg12dfb683",
+          "address":"Irbid",
+          "phon":"0785374573",
+          "city":"Jordan",
+          "gender":"Female"
+          
+          }
+,
+{
+  "ind":6,
+  "name":"Yousef Saeed",
+  "email":"Yousef31@gmail.com",
+  "password":".9dma12dkb347",
+  "address":"Amman",
+  "phon":"0795529888",
+  "city":"Jordan",
+  "gender":"Male"
+  
+  }
 
 
   ]

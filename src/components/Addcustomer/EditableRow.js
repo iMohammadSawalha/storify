@@ -21,7 +21,7 @@ import { BsX } from "react-icons/bs";
 
                 <td> <input type="text" name="address" defaultValue={editFormData.address} onChange={handleEditFormChange} /></td>
 
-                <td> <input type="text" name="phone" defaultValue={editFormData.pho} onChange={handleEditFormChange} /></td>
+                <td> <input type="text" name="phone" defaultValue={editFormData.phon} onChange={handleEditFormChange} /></td>
 
                 <td> <input type="text" name="city" defaultValue={editFormData.city} onChange={handleEditFormChange} /></td>
                 <td> <input type="text" name="gender" defaultValue={editFormData.gender} onChange={handleEditFormChange} /></td>

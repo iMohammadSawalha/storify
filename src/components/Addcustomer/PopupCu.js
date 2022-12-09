@@ -90,8 +90,8 @@ return(
      <input value={email} onChange={(e)=>setemail(e.target.value)} name='email' type="text" id="email" placeholder='someone@something.com'/>
      <div className='flex'></div>
  
-<label className='password'> Password :</label>
-<div className='pass'>
+    <label className='password'> Password :</label>
+     <div className='pass'>
      <input value={password} onChange={(e)=>setpassword(e.target.value)} name='password' type="text" id="password" placeholder='Type here'/>
 
     <Button id="gen-pass" variant='outline-secondary'onClick={generatePassword}>Generate</Button>
