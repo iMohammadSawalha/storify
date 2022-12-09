@@ -36,7 +36,7 @@ const NavBar = () => {
           <Nav className="me-auto"></Nav>
           <Nav>
 
-            <NavDropdown title=<LanguageOutlined className='iconsColor'/> ><NavDropdown.Item><LanguageOutlined className='iconsColor' /><p className='nameTxt'> No Other Available Language</p></NavDropdown.Item></NavDropdown>
+            <NavDropdown title=<LanguageOutlined className='iconsColor'/> ><NavDropdown.Item><p className='nameTxt'><LanguageOutlined className='iconsColor' /> No Other Available Language</p></NavDropdown.Item></NavDropdown>
             <p className='nameTxt'>English </p>
 
             <NavDropdown title=<ChatIcon className='iconsColor' /> id="messages" align="end"  >
