@@ -13,6 +13,9 @@ import Home from "./Pages/Dashboard/Home";
 import Invoice from "./Pages/Invoices/Invoices";
 import Products from "./Pages/Products/Products";
 import Profile from "./Pages/Profile/Profile";
+import Coupons from "./Pages/Coupons/Coupons";
+import Discounts from "./Pages/Discounts/Discounts";
+
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 
@@ -32,6 +35,8 @@ root.render(
               <Route path="/companies" element={<Companies/>} />
               <Route path="/customers" element={<Customers/>} />
               <Route path="/profile" element={<Profile/>} />
+              <Route path="/coupons" element={<Coupons/>} />
+              <Route path="/discounts" element={<Discounts/>} />
             </Routes>
           </div>
         </div>
