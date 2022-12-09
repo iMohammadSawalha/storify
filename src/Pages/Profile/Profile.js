@@ -14,7 +14,7 @@ const Profile = () => {
         <div className="container-fluid">
           <div className="row">
             <div className="col-12 col-md-9 col-lg-6 ">
-              <div className="d-flex flex-column align-items-center text-center p-3 py-5"><img className="rounded-circle mt-3"
+              <div className="d-flex flex-column align-items-center text-center p-3 py-5"><img className="rounded-circle mt-3" alt=""
                 src="https://media.istockphoto.com/photos/businessman-silhouette-as-avatar-or-default-profile-picture-picture-id476085198?b=1&k=20&m=476085198&s=612x612&w=0&h=Ov2YWXw93vRJNKFtkoFjnVzjy_22VcLLXZIcAO25As4=" />
                 <span><input value={picture} onChange={changePicture} type="file" id="picture1" accept="image/*" /></span>
                 <span className="font-weight-bold" id="fname">Mohammed</span>
