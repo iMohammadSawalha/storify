@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import './FormStyle.css';
 function AddCompanyBtn(props) {
 	const [show, setShow] = useState(false);
 
@@ -29,16 +30,22 @@ function AddCompanyBtn(props) {
 	};
 	const transferValue = (event) => {
 		event.preventDefault();
-		const val = {
-			compname,
-			email,
-			address,
-			phone,
-			comptype
-		};
-		props.func(val);
-		clearState();
-
+		if (compname === "") alert("enter company name"); 
+		else if (email === "") alert("enter company email"); 
+		else if (address === "") alert("enter company address"); 
+		else if (phone === "")alert("enter company phone");
+		else if( comptype === "") alert("enter company type");
+		else {
+			const val = {
+				compname,
+				email,
+				address,
+				phone,
+				comptype
+			};
+			props.func(val);
+			clearState();
+		}
 	};
 	const clearState = () => {
 		setCompname('');
@@ -49,7 +56,7 @@ function AddCompanyBtn(props) {
 	};
 	return (
 		<>
-			<Button variant="outline-info" onClick={handleShow}>
+			<Button variant="outline-dark" onClick={handleShow}>
 				Add Company
 			</Button>
 
@@ -58,33 +65,38 @@ function AddCompanyBtn(props) {
 					<Modal.Title>Company Info</Modal.Title>
 				</Modal.Header>
 				<Modal.Body>
-					<label>Name</label>
-					<input type="text" value={compname} onChange={changeCompname} /><br /><br /><br />
+					<label className='lab'>Name :</label>
+					<br />
+					<input type="text" placeholder="enter the company name" value={compname} onChange={changeCompname} className="FormInput" /><br /><br /><br />
 
+					<label className='lab'>E-mail:</label>
+					<br />
+					<input type="email" placeholder="name@example.com" value={email} onChange={changeEmail} className="FormInput" /><br /><br /><br />
 
-					<label>email</label>
-					<input type="text" value={email} onChange={changeEmail} /><br /><br /><br />
+					<label className='lab'>Address:</label>
+					<br />
+					<input type="text" placeholder="enter the company address" value={address} onChange={changeAddress} className="FormInput" /><br /><br /><br />
 
-					<label>address</label>
-					<input type="text" value={address} onChange={changeAddress} /><br /><br /><br />
+					<label className='lab'>Phone Number:</label>
+					<br />
+					<input type="text" placeholder="enter the company phone" value={phone} onChange={changePhone} className="FormInput" /><br /><br /><br />
 
-					<label>phone</label>
-					<input type="text" value={phone} onChange={changePhone} /><br /><br /><br />
-
-					<label>type</label>
-					<input type="text" value={comptype} onChange={changeComptype} /><br /><br /><br />
+					<label className='lab'> Company Type:</label>
+					<br />
+					<input type="text" placeholder="enter the company type" value={comptype} onChange={changeComptype} className="FormInput" /><br /><br /><br />
 
 				</Modal.Body>
 				<Modal.Footer>
-					<Button variant="secondary" onClick={handleClose}>
+					<Button variant="outline-dark" onClick={handleClose}>
 						Close
 					</Button>
-					<Button variant="primary" onClick={transferValue}>
-					{props.name}
+					<Button variant="outline-info" onClick={transferValue}>
+						{props.name}
 					</Button>
 				</Modal.Footer>
 			</Modal>
-			</>
+		</>
 	)
 }
 export default AddCompanyBtn;
+
