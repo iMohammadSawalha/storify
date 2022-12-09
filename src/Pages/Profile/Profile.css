@@ -53,7 +53,106 @@ input#picture1 {
     color: rgb(0, 208, 255);
 
 }
+@media (min-width: 322px){
+.col-lg-6 {
+flex: 0 0 auto;
+width: 100%;
+}
 
+#firstbox {
+font-size: xxx-large;
+}
+#secondbox {
+font-size: xxx-large;
+}
+#thirdbox {
+font-size: xxx-large;
+}
+#fourthbox {
+font-size: xxx-large;
+}
+#fifthbox {
+font-size: xxx-large;
+}
+#sixthbox {
+font-size: xxx-large;
+}
+#seventhbox {
+font-size: xxx-large;
+}
+#eighthbox {
+font-size: xxx-large;
+}
+
+input#picture1 {
+font-size: small;
+}
+#fname {
+font-size: large;
+}
+#email{
+font-size: large;
+}
+#number{
+font-size: large;
+}
+.rounded-circle{
+width: 350px;
+}
+button.btn.btn-primary.profile-button {
+font-size: xx-large;
+}
+
+}
+@media (min-width: 992px){
+    .col-lg-6 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+    #firstbox {
+        font-size: large;
+    }
+    #secondbox {
+        font-size: large;
+    }
+    #thirdbox {
+        font-size: large;
+    }
+    #fourthbox {
+        font-size: large;
+    }
+    #fifthbox {
+        font-size: large;
+    }
+    #sixthbox {
+        font-size: large;
+    }
+    #seventhbox {
+        font-size: large;
+    }
+    #eighthbox {
+        font-size: large;
+    }
+    input#picture1 {
+        font-size: xx-small;
+    }
+    #fname {
+        font-size: large;
+    }
+    #email {
+        font-size: medium;
+    }
+    #number {
+        font-size: medium;
+    }
+    .rounded-circle{
+        width: 150px;
+    }
+    button.btn.btn-primary.profile-button {
+        font-size: large;
+    }
+            
+}
 
 
 
