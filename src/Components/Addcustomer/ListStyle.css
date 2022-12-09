@@ -1,0 +1,44 @@
+.styled-table {
+    border-collapse: collapse;
+    margin: 20px 0;
+    margin-left:20px;
+    font-size: 0.9em;
+    font-family: sans-serif;
+
+
+}
+#h2{
+    position: relative;
+    top: 50px;
+    left: 40px;
+    top:15%; 
+    
+}
+th.listC,td.listC{
+    width: 10px;
+}
+.bar{
+    display:flex;
+    flex-direction: row;
+    height: 75px;}
+
+.Customer{
+    display:flex;
+    flex-direction: column;
+    margin-top: 8%;
+    overflow-x: auto;
+}
+#parg{
+    position: relative;
+    top: 50px;
+    left: 40px;
+    top:15%;
+}
+
+.listC{
+    overflow-x: auto;
+}
+#sort{
+    margin-left: 52px;
+    margin-top: -23px;
+}

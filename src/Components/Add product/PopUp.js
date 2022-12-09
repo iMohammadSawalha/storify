@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import './Form.css';
-import './AddBtn.css';
  
 function Add(props) {
   const [show, setShow] = useState(false);
@@ -67,10 +66,9 @@ function Add(props) {
   };
   return (
     <>
-      <Button  onClick={handleShow} id="btn">
+      <Button  onClick={handleShow} className='btn btn-primary bttn'>
         + Add Product
       </Button>
-
       <Modal
         show={show}
         onHide={handleClose}
@@ -81,21 +79,21 @@ function Add(props) {
           <Modal.Title>Add Product</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-        <div className='body'> 
+        <div className='formBody'> 
      <form className='form-style'>
-       <label className='lab'> Product title:</label>
+       <label className='Labels'> Product title:</label>
        <input value={name} onChange={changeName} name='title' type="text" id="title" placeholder='Add Title'/>
        
        <div className='flex'></div>
-       <label className='labdesc'> Describtion:</label>
+       <label className='descLabel'> Describtion:</label>
        <textarea value={desc} onChange={changeDesc} name="desc" id="desc" placeholder='Type here'></textarea>
        
        <div className='flex'></div>
-        <label className='lab'> Picture:</label>
+        <label className='Labels'> Picture:</label>
         <input  value={pic} onChange={changePic} type="file" name="pic" id="pic" accept="image/*"/>
 
        <div className='flex'></div>
-        <label for="cat-select" className='lab'>Category:</label>
+        <label htmlFor="cat-select" className='Labels'>Category:</label>
         <select name="categ" id="categ" value={categ} onChange={changeCateg}>
             <option value="">Select</option>
             <option value="women">Women</option>
@@ -106,9 +104,9 @@ function Add(props) {
        </select>
 
        <div className='flex'></div>
-        <label className='lab'> price:</label>
+        <label className='Labels'> price:</label>
         <span>
-        <input  value={price} onChange={changePrice} type="number" name="price" id="price"/>
+        <input  value={price} onChange={changePrice} type="text" name="price" id="price"/>
         <select name="currency" id="currency" value={curr} onChange={changeCurr}>
             <option value="usd">$</option>
             <option value="nis">₪</option>

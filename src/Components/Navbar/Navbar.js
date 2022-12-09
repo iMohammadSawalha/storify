@@ -28,7 +28,7 @@ const NavBar = () => {
             placeholder="Search..."
             className="me-1"
           />
-          <Button variant="outline-dark"><SearchOutlined /></Button>
+          <Button variant="outline-dark" className='iconsColor'><SearchOutlined /></Button>
         </Form>
 
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -36,32 +36,33 @@ const NavBar = () => {
           <Nav className="me-auto"></Nav>
           <Nav>
 
-            <NavDropdown title=<LanguageOutlined /> ><NavDropdown.Item><LanguageOutlined /> No Other Available Language</NavDropdown.Item></NavDropdown>
-            English
+            <NavDropdown title=<LanguageOutlined className='iconsColor'/> ><NavDropdown.Item><LanguageOutlined className='iconsColor' /><p className='nameTxt'> No Other Available Language</p></NavDropdown.Item></NavDropdown>
+            <p className='nameTxt'>English </p>
 
-            <NavDropdown title=<ChatIcon /> id="messages" align="end"  >
-              <NavDropdown.Item >  <AccountCircleIcon />Ahmed sent a message <AccessTimeFilledIcon />3 min ago</NavDropdown.Item>
-              <NavDropdown.Item ><AccountCircleIcon />Saleh sent a message <AccessTimeFilledIcon />58 min ago</NavDropdown.Item>
-              <NavDropdown.Item ><AccountCircleIcon />Husam sent a message <AccessTimeFilledIcon />2 hour ago</NavDropdown.Item>
+            <NavDropdown title=<ChatIcon className='iconsColor' /> id="messages" align="end"  >
+              <NavDropdown.Item > <p className='nameTxt'> <AccountCircleIcon className='iconsColor' />Ahmed sent a message <AccessTimeFilledIcon className='iconsColor' />3 min ago</p></NavDropdown.Item>
+              <NavDropdown.Item ><p className='nameTxt'><AccountCircleIcon className='iconsColor' />Saleh sent a message <AccessTimeFilledIcon className='iconsColor' />58 min ago</p></NavDropdown.Item>
+              <NavDropdown.Item ><p className='nameTxt'><AccountCircleIcon className='iconsColor' />Husam sent a message <AccessTimeFilledIcon className='iconsColor' />2 hour ago</p></NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item ><ChatIcon />Inbox</NavDropdown.Item>
+              <NavDropdown.Item ><p className='nameTxt'><ChatIcon className='iconsColor' />Inbox</p></NavDropdown.Item>
             </NavDropdown>
 
-            <NavDropdown title=<NotificationsIcon /> id="notifications" align="end">
-            <NavDropdown.Item  ><AccountCircleIcon />Samer Added Product <AccessTimeFilledIcon />3 min ago</NavDropdown.Item>
-              <NavDropdown.Item ><AccountCircleIcon />Hamza Added Product <AccessTimeFilledIcon />58 min ago</NavDropdown.Item>
-              <NavDropdown.Item ><AccountCircleIcon />Mazen Added Product <AccessTimeFilledIcon />2 hour ago</NavDropdown.Item>
+            <NavDropdown title=<NotificationsIcon className='iconsColor' /> id="notifications" align="end">
+            <NavDropdown.Item  ><p className='nameTxt'><AccountCircleIcon className='iconsColor' />Samer Added Product <AccessTimeFilledIcon className='iconsColor' />3 min ago</p></NavDropdown.Item>
+              <NavDropdown.Item ><p className='nameTxt'><AccountCircleIcon className='iconsColor' />Hamza Added Product <AccessTimeFilledIcon className='iconsColor' />58 min ago</p></NavDropdown.Item>
+              <NavDropdown.Item ><p className='nameTxt'><AccountCircleIcon className='iconsColor' />Mazen Added Product <AccessTimeFilledIcon className='iconsColor' />2 hour ago</p></NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item ><NotificationsIcon />All Notifications</NavDropdown.Item>
+              <NavDropdown.Item ><p className='nameTxt'><NotificationsIcon className='iconsColor' />All Notifications</p></NavDropdown.Item>
             </NavDropdown>
 
-            <NavDropdown align="end" title=<AccountCircleIcon id="profile" /> >
-            <NavDropdown.Item  as={Link} to="/profile"><AccountCircleIcon />Profile</NavDropdown.Item>
+            <NavDropdown align="end" title=<AccountCircleIcon id="profile" className='iconsColor' /> >
+            <NavDropdown.Item  as={Link} to="/profile"><p className='nameTxt'><AccountCircleIcon className='iconsColor' />Profile</p></NavDropdown.Item>
 
-              <NavDropdown.Item as={Link} to="/profile"><VpnKeyIcon /> Change Password </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/profile"><p className='nameTxt'><VpnKeyIcon className='iconsColor' /> Change Password</p> </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item ><LogoutIcon /> Logout</NavDropdown.Item>
-            </NavDropdown>Hi,Mohammed &nbsp;&nbsp;
+              <NavDropdown.Item ><p className='nameTxt'><LogoutIcon className='iconsColor' /> Logout</p></NavDropdown.Item>
+            </NavDropdown>
+            <p className='nameTxt'>Hi,Mohammed &nbsp;&nbsp;</p>
           </Nav>
         </Navbar.Collapse>
       </Container>

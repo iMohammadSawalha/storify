@@ -8,54 +8,52 @@ const PopupCu =(props)=>{
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    const [title,settitle]=useState('');
+    const [name,setname]=useState('');
     const [address,setaddress]=useState('');
     const [pho,setpho]=useState('');
     const [city,setcity]=useState('');
     const [email,setemail]=useState('');
     const [gender,setgender]=useState('');
-    const [interset,setinterset]=useState('');
+    const [password,setpassword]=useState('');
 
     const changeCity = (event) => {
    setcity(event.target.value);
     };
-    const changeinterset = (event) => {
-      setinterset(event.target.value);
-       };
+    
 
     const transferValue = (event) => {
       event.preventDefault();
       const val = {
-        title,
+        name,
         email,
         address,
         pho,
         city,
         gender,
-        interset
+        password
       };
       props.func(val);
       clearState();
     };
     
     const clearState = () => {
-      settitle('');
+      setname('');
       setaddress('');
       setpho('');
       setcity('');
       setemail('');
       setgender('');
-      setinterset('');
+      setpassword('');
       
 
     };
 
 return(
     <>
-    <Button  variant="primary" id ="add" onClick={handleShow} >
+    <Button  variant="primary" id ="addBTN" onClick={handleShow} >
     Add Customer +</Button>
 
-    <Modal className=''
+    <Modal className='form'
       show={show}
       onHide={handleClose}
       backdrop="static"
@@ -64,14 +62,19 @@ return(
       <Modal.Header closeButton>
         <Modal.Title>Customer Details:</Modal.Title>
       </Modal.Header>
-      <Modal.Body  >
-      <div className='body'> 
+      <Modal.Body className='bodyM' >
+     
    <form className='form-style'>
      <label className='lab'> Username :</label>
-     <input value={title} onChange={(e)=>settitle(e.target.value)} name='title' type="text" id="title" placeholder='Add Name'/>
+     <input value={name} onChange={(e)=>setname(e.target.value)} name='name' type="text" id="name" placeholder='Add Name'/>
      <div className='flex'></div>
+
     <label className='emaill'> E-mail :</label>
      <input value={email} onChange={(e)=>setemail(e.target.value)} name='email' type="text" id="email" placeholder='ex:myname@example.com'/>
+     <div className='flex'></div>
+
+<label className='password'> Password :</label>
+     <input value={password} onChange={(e)=>setpassword(e.target.value)} name='password' type="text" id="password" placeholder='Type here'/>
      <div className='flex'></div>
      <label className='addres'> Address :</label>
      <input value={address} onChange={(e)=>setaddress(e.target.value)} name="addres" id="address" placeholder='Type here'/>
@@ -85,19 +88,9 @@ return(
      <input value={city} onChange={changeCity} name="city" id="citty" />
 
     
+      
      <div className='flex'></div>
-      <label for="interest-select" className='lab'> Interest :</label>
-      <select value= {interset} name="rest" id="rest" onChange={changeinterset}>
-      <option >select</option>
-          <option value="Sport">Sport</option>
-          <option value="Clothing">Clothing</option>
-          <option value="Shoes">Shoes</option>
-          <option value="Accessorie">Accessorie</option>
-          <option value="Home & Pets">Home & Pets</option>
-          <option value="Beauty">Beauty</option>
-     </select>
-     <div className='flex'></div>
-      <label for="gender-select" className='lab' > Gender :</label>
+      <label htmlFor="gender-select" className='lab' > Gender :</label>
       <select value={gender} name="rest" id="rest"  onChange={(e)=>setgender(e.target.value)}>
       <option >select</option>
           <option value="Male">Male</option>
@@ -108,7 +101,7 @@ return(
 
      <div className='flex'></div>
    </form>        
-   </div>
+ 
   
 
       </Modal.Body>

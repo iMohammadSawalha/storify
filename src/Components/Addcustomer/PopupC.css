@@ -1,19 +1,24 @@
-#add{
+#addBTN{
     margin-top: 23px;
-    margin-left: 2%;
-    width: 12%;
-    height: 45px;
-   font-size:small;
+    margin-left: 4%;
+    height: 35px;
+   font-size:12px;
+   width: auto;
+   margin: auto;
 
 }
+.searchIf
+{
+    margin-top: 15%;
+}
 
-/* .body{
+.bodyM{
     width: 600px;
-    height: 400px;;
+    height: 500px;;
     
    display: flex;
     position: relative;
-} */
+}
 
 .form-style{
     display: flex;
@@ -42,7 +47,7 @@
     padding-left: 6%;
     color: gray; 
 }
-#title{
+#name{
     width: 40%;
     height: 8%;
     margin-left: 6%;
@@ -57,7 +62,7 @@
     border-color: #d3d3d3;
 }
 #citty{
-    width: 13%;
+    width: 20%;
     height: 8%;
     margin-left: 6%;
     border-radius: 10px;
@@ -80,7 +85,17 @@
     border-radius: 10px;
     border-color: #d3d3d3;
 }
+.password{
+    padding-left: 6%;
+    color: gray;
 
+}
+#password{
+    width: 40%;
+    margin-left: 6%;
+    border-radius: 10px;
+    border-color: #d3d3d3;
+}
 
 #rest{
     width: 20%;
@@ -89,3 +104,7 @@
     border-radius: 10px;
     border-color: #d3d3d3;
 }
+
+    
+
+

@@ -4,33 +4,27 @@
     margin-top: 8%;
     overflow-x: auto;
 }
-#protitle {
+#pageTitle {
     margin-top: 3%;
     margin-left: 3%;
    
 }
-#t1{
-    font-size: xx-large;
-}
-#t2{
+#txt{
     font-size: x-small;
     margin-left: 1%;
     color: gray;
 }
 #search{
-    margin-left: 65%;
+    width: 30%;  
+    margin-left: 70%;
+    padding-bottom: 2%;
 }
-#resetBtn{
-   margin-left: 1%;
-   width: 7%;
-   height: 40px;
-   margin-top: 1%;
+
+.bttn{
+width: auto;
+height: 40px;
 }
-.listbar{
-    display: flex;
-    flex-direction: row;
-}
- .tab th,
- .tab td {
-  padding: 8px 35px; 
- }
+
+
+
+
