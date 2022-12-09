@@ -1,0 +1,52 @@
+    .form-control:focus {
+        box-shadow: none;
+        border-color:rgb(0, 208, 255);
+    }
+    
+    .profile-button {
+        background: rgb(0, 208, 255);
+        box-shadow: none;
+        border: none
+    }
+    
+    .profile-button:hover {
+        background: rgb(0, 208, 255)
+    }
+    
+    .profile-button:focus {
+        background: rgb(0, 208, 255);
+        box-shadow: none
+    }
+    
+    .profile-button:active {
+        background:rgb(0, 208, 255);
+        box-shadow: none
+    }
+    
+    .back:hover {
+        color: rgb(0, 208, 255);
+        cursor: pointer
+    }
+    
+    .labels {
+        font-size: 11px
+    }
+    
+    .add-experience:hover {
+        background:rgb(0, 208, 255);
+        color: #fff;
+        cursor: pointer;
+        border: solid 1px rgb(0, 208, 255)
+    }
+    input#picture1 {
+        font-size: 8px;
+        margin: auto;
+        padding-left: 60px;
+    }
+   
+    .d-flex.flex-column.align-items-center.text-center.p-3.py-5{
+        margin-right: 150px;
+    }
+
+
+
