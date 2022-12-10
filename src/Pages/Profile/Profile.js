@@ -14,7 +14,7 @@ const Profile = () => {
         <div className="container-fluid">
           <div className="row">
             <div className="col-12 col-md-9 col-lg-6 custom-profile-col">
-              <div className="d-flex flex-column align-items-center text-center p-3 py-5"><img className="rounded-circle mt-3" alt=""
+              <div className="d-flex flex-column align-items-center text-center p-3 py-5" id="photo_and_its_components"><img className="rounded-circle mt-3" alt=""
                 src="https://media.istockphoto.com/photos/businessman-silhouette-as-avatar-or-default-profile-picture-picture-id476085198?b=1&k=20&m=476085198&s=612x612&w=0&h=Ov2YWXw93vRJNKFtkoFjnVzjy_22VcLLXZIcAO25As4=" />
                 <span><input value={picture} onChange={changePicture} type="file" id="picture1" accept="image/*" /></span>
                 <span className="font-weight-bold" id="fname">Mohammed</span>
@@ -30,7 +30,7 @@ const Profile = () => {
                   <h4 id='titlecol'>Profile Settings</h4>
                 </div>
                 <div className="row">
-                  <div className="col-12 col-md-9 col-lg-6 custom-profile-col"><label className="labelscol">Name</label><input type="text" className="form-control" id="firstbox"  placeholder="Mohammed" /></div>
+                  <div className="col-12 col-md-9 col-lg-6 custom-profile-col"><label className="labelscol">Name</label><input type="text" className="form-control" id="firstbox" placeholder="Mohammed" /></div>
                   <div className="col-12 col-md-9 col-lg-6 custom-profile-col"><label className="labelscol">Surname</label><input type="text" className="form-control" id="secondbox" placeholder="AbuZahra" /></div>
                 </div>
 
@@ -43,7 +43,7 @@ const Profile = () => {
                 </div>
 
                 <div className="row">
-                  <div className="col-12 col-md-9 col-lg-6 custom-profile-col"><label className="labelscol">Country</label><input type="text" className="form-control" id="seventhbox"  placeholder="Palestine" /></div>
+                  <div className="col-12 col-md-9 col-lg-6 custom-profile-col"><label className="labelscol">Country</label><input type="text" className="form-control" id="seventhbox" placeholder="Palestine" /></div>
                   <div className="col-12 col-md-9 col-lg-6 custom-profile-col"><label className="labelscol">City</label><input type="text" className="form-control" id="eighthbox" placeholder="Nablus" />
                   </div>
                 </div>
