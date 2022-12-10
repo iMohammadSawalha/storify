@@ -1,47 +1,71 @@
-
-thead {
+/* Public */
+thead,
+#sub-total,
+#tax {
     color: #29aed6;
-}
-
-nav span {
-    text-transform: uppercase;
-    font-size: xxx-large;
 }
 
 ul {
     list-style-type: none;
 }
 
+/* End of public */
+
+
+/* Main Part - Client Details */
 .total {
     justify-content: center;
 }
 
-.date-invoice,
-.invoice-num {
-    font-weight: bold;
-}
-
-.invoice-table,
-.dates {
+.invoice-column,
+.date-column {
     margin-top: 6%;
 }
 
 .invoice-total {
+    position: relative;
     font-weight: initial;
     color: #29aed6;
     font-size: xx-large;
-    right: 21%;
+    left: 1%;
 }
 
-.row {
-    color: #262626;
-}
-
-.money li {
+.invoice-table {
     position: relative;
+    top: 4.2rem;
 }
+
+/* End of Client Details */
 
 .footer {
     display: flex;
     justify-content: space-evenly;
+}
+
+
+/* Responsive */
+@media screen and (max-width:650px) {
+
+    Table thead {
+        display: flex;
+    }
+
+    table,
+    tbody,
+    tr,
+    td {
+        display: block;
+        width: 100%;
+    }
+
+    tr {
+        margin-bottom: 15px;
+        justify-content: center;
+        display: flex;
+    }
+
+    td {
+        text-align: center;
+        position: relative;
+    }
 }

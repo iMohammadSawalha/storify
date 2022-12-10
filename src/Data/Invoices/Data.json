@@ -1,0 +1,26 @@
+[
+    {
+        "product": "PlayStation PS5 Console",
+        "description": "The PS5 is a genuine leap forward for console gaming",
+        "cost": "559.00",
+        "amount": "1"
+    },
+    {
+        "product": "Logitech G920 Driving Force Racing Wheel",
+        "description": "Steering Wheel Cover for Xbox Series X|S, Xbox One, PC, Mac - Black",
+        "cost": "299.00",
+        "amount": "1"
+    },
+    {
+        "product": "Nintendo Switch Sports - Nintendo Switch",
+        "description": "Swing, kick, spike, and bowl your way to victory in 6 sports",
+        "cost": "49.99",
+        "amount": "2"
+    },
+    {
+        "product": "PlayStation PS5 Console",
+        "description": "The PS5 is a genuine leap forward for console gaming",
+        "cost": "559.00",
+        "amount": "1"
+    }
+]
