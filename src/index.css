@@ -1,18 +1,23 @@
+:root {
+	--primary: #0091ff;
+	--dark: #a6abaf;
+	--gray: #756388;
+	--light: #ffffff;
+}
 *{
   margin: 0;
   font-family: 'Nunito', sans-serif ;
-  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-    font-family: "Nunito", sans-serif;
     margin: 0;
 }
+
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+
 }
 
 .pageinfo{
@@ -21,4 +26,8 @@ code {
   margin-top:3.5%;
   padding-left: 2%;
   padding-right: 1%;
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
 }
