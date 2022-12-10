@@ -54,17 +54,16 @@
           "city":"Jordan",
           "gender":"Female"
           
-          }
-,
-{
-  "ind":6,
-  "name":"Yousef Saeed",
-  "email":"Yousef31@gmail.com",
-  "password":".9dma12dkb347",
-  "address":"Amman",
-  "phon":"0795529888",
-  "city":"Jordan",
-  "gender":"Male"
+          },
+  {
+   "ind":6,
+   "name":"Yousef Saeed",
+   "email":"Yousef31@gmail.com",
+   "password":".9dma12dkb347",
+   "address":"Amman",
+   "phon":"0795529888",
+   "city":"Jordan",
+   "gender":"Male"
   
   }
 

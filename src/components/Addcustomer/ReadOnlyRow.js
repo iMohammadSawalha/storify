@@ -14,9 +14,10 @@ const ReadOnlyRow = ({ customerData, handleEditClick, handleDeleteClick }) => {
             <td>{customerData.city}</td>
             <td>{customerData.gender}</td>
            
-            <td><BsFillPenFill onClick={(event) => handleEditClick(event, customerData)}  /></td>
+            <td>< BsFillPenFill id="penfill" data-tip="edit" onClick={(event) => handleEditClick(event, customerData)}  /></td>
+        
                 <td>
-                <BsFillBackspaceFill onClick={() => handleDeleteClick(customerData.ind)} />
+                <BsFillBackspaceFill id="backspace" data-tooltip-content="delete" onClick={() => handleDeleteClick(customerData.ind)} />
             </td>
            
         </tr>

@@ -1,41 +1,23 @@
-.styled-table {
-    border-collapse: collapse;
-    margin: 20px 0;
-    margin-left:20px;
-    font-size: 0.9em;
-    font-family: sans-serif;
-
-
-}
 #h2{
     position: relative;
     left: 40px;
-  margin-top: 3%;
-    
-}
-th.listC,td.listC{
-    width: 10px;
 }
 .bar{
-    display:flex;
-    flex-direction: row;
-    height: 75px;}
-
-.Customer{
-    display:flex;
-    flex-direction: column;
-    margin-top: 8%;
-    overflow-x: auto;
+    margin-top: 3%;
+}
+.addCus{
+  margin-left: 2%; 
+ margin-top: 5%;
 }
 #parg{
     position: relative;
     left: 40px;
-    
-
 }
-
 .listC{
-    overflow-x: auto;
+    display:flex;
+    flex-direction: column;
+    margin-top:3%;
+   
 }
 #sort{
     margin-left: 52px;
@@ -46,15 +28,18 @@ th.listC,td.listC{
     width: 84%;
 }
 #tableCard{
-    width: 100%;
+    width: 105%;
 }
-
-@media only screen and  (width:768px) {
+@media (width:820px)  {
     #tableCard{
-        width: 135%;
+        width: max-content
     }
 }
-
+@media (width:768px) {
+    #tableCard{
+        width: max-content;
+    }
+}
 @media (max-width:654px) {
     .table thead{
         display: none;
@@ -75,7 +60,6 @@ th.listC,td.listC{
         position: relative;
        
     }
-   
 
 }
         
