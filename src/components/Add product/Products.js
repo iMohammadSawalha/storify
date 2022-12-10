@@ -164,7 +164,7 @@ function AddProduct() {
           <div className='space'></div>
 		  </Card.Header>
 		  <Card.Body>
-          <Table striped bordered hover className='tab'>
+          <Table striped hover className='tab'>
             <thead>
               <tr>
                 <th >#</th>
