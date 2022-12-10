@@ -104,11 +104,11 @@ function Add(props) {
         <span>
         <input  value={price} onChange={changePrice} type="text" name="price" id="price"/>
         <select name="currency" id="currency" value={curr} onChange={changeCurr}>
-            <option value="usd">$</option>
-            <option value="nis">₪</option>
-            <option value="nis">€</option>
-            <option value="jds">£</option>
-            <option value="jds">¥</option>
+            <option value="$">$</option>
+            <option value="₪">₪</option>
+            <option value="€">€</option>
+            <option value="£">£</option>
+            <option value="¥">¥</option>
        </select>
        </span>
         <div className='flex'></div>

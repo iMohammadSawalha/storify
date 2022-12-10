@@ -8,7 +8,7 @@ const ReadOnlyRow = ({ proData, handleEditClick, handleDeleteClick }) => {
             <td>{proData.name}</td>
             <td>{proData.desc}</td>
             <td>{proData.categ}</td>
-            <td>{proData.price}</td>
+            <td>{proData.curr}{proData.price}</td>
             <td>{proData.status}</td>
             <td><BsFillPenFill onClick={(event) => handleEditClick(event, proData)}/></td>
           <td><BsFillBackspaceFill onClick={() => handleDeleteClick(proData.id)} /></td>
