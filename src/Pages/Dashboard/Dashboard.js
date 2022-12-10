@@ -5,9 +5,6 @@ import data from "../../Data/Dashboard/data.json";
 
 const Dashboard = () => {
   const [cardData,setCardData] = useState(data);
-  let counter =0;
-  // setCardData({data});
-  // const [first, setfirst] = useState({});
   return (
     <>
       <div className='row dashboardBox'>
