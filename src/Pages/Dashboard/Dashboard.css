@@ -1,0 +1,12 @@
+
+.dashboardBox{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.dashboardBox > .card{
+    margin-bottom: 2%;
+    width:23%;
+    height: 250px;
+}

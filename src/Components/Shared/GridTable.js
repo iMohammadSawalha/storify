@@ -2,7 +2,7 @@ import Box from '@mui/material/Box';
 import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 
 
-export  default function GridTableGridTable({name,columns,data}){
+export default function GridTableGridTable({name,columns,data}){
     return (
       <Box sx={{ height: '83%', width: '100%' }}>
         {name}
