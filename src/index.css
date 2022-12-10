@@ -1,15 +1,14 @@
 :root {
-	--primary: #0091ff;
-	--dark: #a6abaf;
-	--gray: #756388;
+	--primary: #7a7b7c;
+	--dark: #aec8d4;
+	--gray: #9c96a3;
 	--light: #ffffff;
 }
+
 *{
   margin: 0;
   font-family: 'Nunito', sans-serif ;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-    margin: 0;
+  
 }
 
 
