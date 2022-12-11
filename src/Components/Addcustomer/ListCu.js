@@ -6,7 +6,7 @@ import jsonData from './data.json';
 import Form from 'react-bootstrap/Form';
 import EditableRow from './EditableRow';
 import ReadOnlyRow from './ReadOnlyRow';
-import { Table } from 'react-bootstrap';
+import { Table ,Card} from 'react-bootstrap';
 import { BsSortAlphaUp } from "react-icons/bs";
 import { BsSortAlphaDown } from "react-icons/bs";
   const ListC = () => {
@@ -24,7 +24,6 @@ import { BsSortAlphaDown } from "react-icons/bs";
       const [EditcustomerDataId, setEditcustomerDataId] = useState(null);
       const [CustomerDataLength, setCustomerDataLength] = useState(customerData.length + 1);
       const [search, setSearch] = useState('');
-     
       const [isActive, setIsActive] = useState(true);
 
 
@@ -44,7 +43,7 @@ import { BsSortAlphaDown } from "react-icons/bs";
     
        };
        
-
+//delete row:
        const handleDeleteClick = (customerDataId) => {
 		const newCustomerData = [...customerData];
 
@@ -55,6 +54,7 @@ import { BsSortAlphaDown } from "react-icons/bs";
 		setcustomerData(newCustomerData);
 
 	}
+  //save info after edit:
     const handleEditFromSubmit = (event) => {
         event.preventDefault();
         const editedcustomerData = {
@@ -67,6 +67,7 @@ import { BsSortAlphaDown } from "react-icons/bs";
           gender: editFormData.gender,
           password: editFormData.passwor,
         }
+
         const newCustomerData = [...customerData];
       const index = customerData.findIndex((customerData) => customerData.ind === EditcustomerDataId);
       newCustomerData[index] = editedcustomerData;
@@ -74,7 +75,7 @@ import { BsSortAlphaDown } from "react-icons/bs";
       setEditcustomerDataId(null);
     
     }
-
+// cancel the edit operation:
     const handleCancelClick = () => {
         setEditcustomerDataId(null);
       }
@@ -90,6 +91,7 @@ const handleEditFormChange = (event) => {
   
       setEditFormData(newFormData);
     }
+    //edit row:
     const handleEditClick = (event, customerData) => {
         event.preventDefault();
     
@@ -118,6 +120,7 @@ const handleEditFormChange = (event) => {
 			</>
 		);
 	});
+  //addRows
     const addRows = (data) => {
 		setCustomerDataLength(CustomerDataLength + 1);
 		data.ind = CustomerDataLength;
@@ -127,18 +130,21 @@ const handleEditFormChange = (event) => {
 	};
   
   return (
-    <>
+    <div className='col lg-3 md-4  sm-4 addCus'>
+     <Card id='tableCard'>
+		  <Card.Header>
         <h2 id='h2'>Customer List</h2>
         <p id='parg'>Dashbourd-- Add Customer</p>
-  
+        </Card.Header>
             <section className='Customer'>
        <div className='container-fluid'>
       <div className='row'>
         <div className='col lg-3 md-4  sm-4 addCus'>
        <PopupCu func={addRows} />
        </div>
+      
       <div className='col lg-9 md-8 sm-8 searchIf'>
-           <Form className="d-flex ">
+           <Form className="search ">
             <Form.Control
               type="search"
               placeholder="Search....."
@@ -151,31 +157,34 @@ const handleEditFormChange = (event) => {
           </div>
           </div>
           </section>
-    <br/>
-          <Table  className='listC' >
+   
+  
+    <Card.Body>
+          <Table striped bordered hover  className='listC' >
            <thead >
             <tr >
              
-            <th>#</th>
+              <th>#</th>
               <th >  Name <div id='sort'  onClick={() => setIsActive(!isActive)}>
-     {isActive ? <BsSortAlphaUp onClick={()=>onSorterDow()}/> :<BsSortAlphaDown onClick={()=>onSorterUp()}/>}
-   </div> </th>
+                   {isActive ? <BsSortAlphaUp onClick={()=>onSorterDow()}/> :<BsSortAlphaDown onClick={()=>onSorterUp()}/>}
+              </div> </th>
               <th>E-mail</th>
               <th>password</th>
               <th>City</th>
               <th>phonne</th>
               <th>Addres</th>
               <th>Gender</th>
-              <th>  </th>
-              <th>  </th>
-              
+              <th> Edit </th>
+              <th>Delete </th>
+               
             </tr>
-          </thead>
-         <br/>
-          <tbody>{tableRows}</tbody>
-        </Table>
-    
-        </>
+           </thead>
+           <br/>
+           <tbody>{tableRows}</tbody>
+          </Table>
+        </Card.Body>
+        </Card>
+        </div>
   );
 }
 

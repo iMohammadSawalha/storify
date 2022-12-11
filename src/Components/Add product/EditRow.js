@@ -5,7 +5,6 @@ const EditRow = ({ editFormData, handleEditFormChange, handleCancelClick,handleE
         <>
             <tr>
                 <td>{editFormData.id}</td>
-                <td></td>
                 <td> <input type="text" name="name" defaultValue={editFormData.name} onChange={handleEditFormChange}/></td>
                 <td> <input type="text" name="desc" value={editFormData.desc} onChange={handleEditFormChange}/></td>
                 <td> <input type="text" name="categ" value={editFormData.categ} onChange={handleEditFormChange}/></td>

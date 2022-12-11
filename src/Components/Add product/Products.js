@@ -164,7 +164,7 @@ function AddProduct() {
           <div className='space'></div>
 		  </Card.Header>
 		  <Card.Body>
-          <Table striped bordered hover className='tab'>
+          <Table striped hover className='tab'>
             <thead>
               <tr>
                 <th >#</th>
@@ -173,6 +173,8 @@ function AddProduct() {
                 <th>Category <TbSortAscendingLetters onClick={() => { sorting("categ") }}/></th>
                 <th>Price <TbSortAscendingNumbers onClick={() => { sorting("price") }}/></th>
                 <th>Status <TbSortAscendingLetters onClick={() => { sorting("status") }}/></th>
+				<th>Edit</th>
+				<th>Delete</th>
               </tr>
             </thead>
             <br />
@@ -180,50 +182,6 @@ function AddProduct() {
           </Table>
 		  </Card.Body>
           </Card>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         </div>
       </>
 	);

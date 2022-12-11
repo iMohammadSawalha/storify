@@ -7,8 +7,8 @@
         "name":"Trouser",
         "desc":"High Waisted Ripped Wide Leg Jeans Medium wash",
         "categ":"Women",
-        "price":"$30",
-        "curr":"",
+        "price":"30",
+        "curr":"$",
         "status":"active"
  }  ,
 {
@@ -17,8 +17,8 @@
     "name":"Glasses",
     "desc":"Acrylic Frame Fashion Glasses",
     "categ":"Accessories",
-    "price":"$4",
-    "curr":"",
+    "price":"4",
+    "curr":"$",
     "status":"active"
 } 
 ,
@@ -28,8 +28,8 @@
     "name":"Hair Band",
     "desc":" Baby Bow Decor Hair Band",
     "categ":"Kids",
-    "price":"$50",
-    "curr":"",
+    "price":"50",
+    "curr":"₪",
     "status":"not-active"
 } ,
 {
@@ -38,8 +38,8 @@
     "name":"Towel",
     "desc":"Meteor Embroidery Hair Drying Cap",
     "categ":"Home",
-    "price":"$5",
-    "curr":"",
+    "price":"5",
+    "curr":"¥",
     "status":"active"
 } ,
 {
@@ -48,8 +48,8 @@
     "name":"Hoodie",
     "desc":"White mountain And Letter Graphic Drawstring Thermal Lined",
     "categ":"Men",
-    "price":"$25",
-    "curr":"",
+    "price":"25",
+    "curr":"$",
     "status":"active"
 } ,
 {
@@ -58,8 +58,8 @@
     "name":"Pants",
     "desc":"Paperbag Waist Belted Pants",
     "categ":"Women",
-    "price":"$18",
-    "curr":"",
+    "price":"18",
+    "curr":"€",
     "status":"not-active"
 } ,
 {
@@ -68,8 +68,8 @@
     "name":"Dress",
     "desc":"Heather Knit Mini Sweatshirt Dress",
     "categ":"Women",
-    "price":"$10",
-    "curr":"",
+    "price":"10",
+    "curr":"$",
     "status":"active"
 } ,
 {
@@ -77,8 +77,8 @@
     "name":"Glasses",
     "desc":"Men Round Frame Fashion Glasses",
     "categ":"Accessories",
-    "price":"$5",
-    "curr":"",
+    "price":"5",
+    "curr":"£",
     "status":"active"
 },
 {
@@ -87,8 +87,8 @@
     "name":"Dress",
     "desc":"Toddler Girls Floral Ruffle Trim Swing Dress",
     "categ":"Kids",
-    "price":"$10",
-    "curr":"",
+    "price":"10",
+    "curr":"$",
     "status":"active"
 } ,
 {
@@ -97,8 +97,8 @@
     "name":"Wall Decor",
     "desc":"3pcs Geometric Pattern Unframed Painting",
     "categ":"Home",
-    "price":"$23",
-    "curr":"",
+    "price":"30",
+    "curr":"₪",
     "status":"not-active"
 } 
 
