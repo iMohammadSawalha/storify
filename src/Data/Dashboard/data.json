@@ -2,29 +2,25 @@
     {
         "id":1,
         "title":"Sales",
-        "cardSize":"",
-        "chart":false,
-        "data":"19480$"
+        "Dashboard":true,
+        "data":"$27027"
     },
     {
         "id":2,
         "title":"Earnings",
-        "cardSize":"",
-        "chart":false,
-        "data":"8876$"
+        "Dashboard":true,
+        "data":"$6020"
     },
     {
         "id":3,
         "title":"Orders",
-        "cardSize":"",
-        "chart":false,
+        "Dashboard":true,
         "data":"192"
     },
     {
         "id":4,
         "title":"Growth",
-        "cardSize":"",
-        "chart":false,
+        "Dashboard":true,
         "data":"49%"
     }
 ]
