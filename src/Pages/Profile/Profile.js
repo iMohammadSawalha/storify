@@ -30,7 +30,7 @@ const Profile = () => {
                   <h4 id='titlecol'>Profile Settings</h4>
                 </div>
                 <div className="row">
-                  <div className="col-12 col-md-9 col-lg-6"><label className="labelscol">Name</label><input type="text" className="form-control" id="firstbox" placeholder="Mohammed" /></div>
+                  <div className="col-12 col-md-9 col-lg-6"><label className="labelscol">Name</label><input type="text" className="form-control" id="firstbox" placeholder="Mohammed"  /></div>
                   <div className="col-12 col-md-9 col-lg-6"><label className="labelscol">Surname</label><input type="text" className="form-control" id="secondbox" placeholder="AbuZahra" /></div>
                 </div>
 
