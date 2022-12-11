@@ -10,7 +10,7 @@
 	transition: 0.4s;
 }
 .side-nav-container-NX {
-	width: 85px;
+	width: 95px;
 }
 
 .nav-upper,
@@ -20,21 +20,29 @@
 .nav-footer {
 	/* border: 2px solid white; */
 	display: grid;
+	
 }
 
 .nav-heading {
-	grid-template-columns: 2fr 1fr;
+	grid-template-columns: 3fr 3fr;
 	grid-template-rows: 1fr;
-	height: 75px;
+	height: 65px;
+	margin-top: -10px;
 }
 
 .nav-brand {
 	display: flex;
+	margin-top: 9px;
 	color: var(--light);
+	margin-bottom: 10px;
+
+
 }
 .nav-brand img {
-	width: 40px;
-	padding: 0 10px;
+	margin-top: 3px;
+	width: 30px;
+	padding: 0px;
+
 }
 
 .hamburger {
@@ -64,16 +72,17 @@
 	transform: translateY(4px) rotate(-25deg);
 }
 .hamburger-in:hover span:nth-child(2) {
-	width: 40px;
+	width: 30px;
 }
 .hamburger-in:hover span:nth-child(3) {
 	width: 25px;
 	transform: translateY(-4px) rotate(25deg);
 }
-/* ///////////////////// */
-/* ///////////////////// */
-/* ///////////////////// */
-/* ///////////////////// */
+
+
+/* Expanded */
+
+
 .hamburger-out {
 	margin-left: 24px;
 }
@@ -91,25 +100,28 @@
 
 .nav-menu {
 	grid-template-rows: repeat(7, 1fr);
-	margin-top: 50px;
+	margin-top: 60px;
 }
 
 .menu-item {
-	height: 60px;
+	height: 70px;
 	display: flex;
 	color: var(--light);
 	text-decoration: none;
 	text-transform: uppercase;
-	margin: auto 20px;
+	margin: auto 30px;
 	border-radius: 10px;
+	margin-top: 3px;
 }
 
 .menu-item-NX {
 	margin: auto;
 }
+
 .menu-item:hover {
 	background-color: var(--primary);
 }
+
 .menu-item img {
 	width: 30px;
 	padding: 0px;
@@ -138,15 +150,15 @@
 }
 
 .nav-footer-user-position {
-	margin-top: -15px;
-	color: var(--gray);
+	margin-top: -20px;
+	color: #ffff;
 }
 .logout-icon {
 	width: 70px;
 	margin: auto;
 	border-radius: 90px;
 	padding: 10px;
-	margin-left: 5px;
+	margin-left: 10px;
 }
 .logout-icon:hover {
 	background-color: var(--primary);

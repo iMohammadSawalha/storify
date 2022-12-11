@@ -9,11 +9,13 @@ const Sidebar = () => {
         {
 			text: "Dashboard",
 			icon: "icons/grid.svg",
+			to: "/dasboard"
 		
 		},
 		{
 			text: "Products",
 			icon: "icons/shopping-cart.svg",
+			to: "/products",
 		},
 		{
 			text: "Customers",
@@ -49,7 +51,7 @@ const Sidebar = () => {
 				<div className="nav-heading">
 					{isExpanded && (
 						<div className="nav-brand">
-							<img src="../icons/Logo.svg" alt="" srcset="" />
+							<img src="/icons/Logo.svg" alt="" srcset="" />
 							<h2>Storify</h2>
 						</div>
 					)}
@@ -68,11 +70,14 @@ const Sidebar = () => {
 					{menuItems.map(({ text, icon }) => (
 						<a
 							className={isExpanded ? "menu-item" : "menu-item menu-item-NX"}
-							href="#"
+							href="/customers"
+
 						>
+
 							<img className="menu-item-icon" src={icon} alt="" srcset="" />
 							{isExpanded && <p>{text}</p>}
 						</a>
+						
 					))}
 				</div>
 			</div>
