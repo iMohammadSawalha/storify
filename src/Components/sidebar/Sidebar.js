@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./sidebar.css";
 
+
 const Sidebar = () => {
     const [isExpanded, setExpendState] = useState(false);
 	const menuItems = [
@@ -48,7 +49,7 @@ const Sidebar = () => {
 				<div className="nav-heading">
 					{isExpanded && (
 						<div className="nav-brand">
-							<img src="icons/Logo.svg" alt="" srcset="" />
+							<img src="../icons/Logo.svg" alt="" srcset="" />
 							<h2>Storify</h2>
 						</div>
 					)}
