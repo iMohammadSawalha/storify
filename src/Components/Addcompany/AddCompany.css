@@ -12,11 +12,11 @@ th,
 td {
   padding: 15px;
   text-align: left;
-  border-color: rgb(121, 229, 251);
+  border-color: rgb(62, 148, 167);
 }
 
 tr:hover {
-  background-color: rgb(121, 229, 251);
+  background-color: rgba(41, 116, 132, 0.4);
 }
 
 tbody {
@@ -24,5 +24,5 @@ tbody {
 }
 
 thead {
-  background-color: rgb(121, 229, 251);
+  /* background-color: rgb(121, 229, 251); */
 }
