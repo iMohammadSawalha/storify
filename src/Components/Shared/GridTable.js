@@ -8,8 +8,6 @@ export default function GridTableGridTable({name,columns,data}){
         {name}
         <DataGrid
           rows={data}
-          disableColumnFilter
-          disableColumnSelector
           disableDensitySelector
           columns={columns}
           components={{ Toolbar: GridToolbar }}

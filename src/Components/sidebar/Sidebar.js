@@ -24,11 +24,13 @@ const Sidebar = () => {
         <ul>
                 <h1 className="title-main">Main Menu</h1>
                 <p className="title">MAIN</p>
-
+                
+                <Link to="/home">
                 <li>
                     <AddHomeOutlinedIcon className="icon"/>
                     <span>Home</span>
                 </li>
+                </Link>
                 <Link to="/dashboard">
                 <li>
                 <DashboardIcon className="icon"/>
