@@ -1,6 +1,6 @@
 //Imports
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "./Navbar.css"
+import "./Navbar.css";
 import React from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -15,7 +15,6 @@ import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
 import VpnKeyIcon from '@mui/icons-material/VpnKey';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { Link } from 'react-router-dom';
-
 //Function
 const NavBar = () => {
   return (
