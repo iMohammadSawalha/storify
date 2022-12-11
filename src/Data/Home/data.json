@@ -1,1 +1,20 @@
-[]
+[
+    {
+        "id":1,
+        "title":"Your balance",
+        "Dashboard":false,
+        "data":"$21512"
+    },
+    {
+        "id":2,
+        "title":"Your income",
+        "Dashboard":false,
+        "data":"$7996"
+    },
+    {
+        "id":3,
+        "title":"Your expenses",
+        "Dashboard":false,
+        "data":"$1501"
+    }
+]
