@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import './Style.css';
 import './FormStyle.css';
 function AddCompanyBtn(props) {
 	const [show, setShow] = useState(false);
@@ -56,7 +57,7 @@ function AddCompanyBtn(props) {
 	};
 	return (
 		<>
-			<Button variant="outline-dark" onClick={handleShow}>
+			<Button  className='bttn' onClick={handleShow} >
 				Add Company
 			</Button>
 
@@ -90,7 +91,7 @@ function AddCompanyBtn(props) {
 					<Button variant="outline-dark" onClick={handleClose}>
 						Close
 					</Button>
-					<Button variant="outline-info" onClick={transferValue}>
+					<Button className='bttn' onClick={transferValue}>
 						{props.name}
 					</Button>
 				</Modal.Footer>

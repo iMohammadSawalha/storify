@@ -1,13 +1,13 @@
 import React, { Fragment, useState } from 'react';
 import AddCompanyBtn from './AddCompanyBtn';
 import jsonData from './mock-data.json';
-import './AddCompany.css';
+import './Style.css';
 import ReadOnlyRow from './ReadOnlyRow';
 import EditableRow from './EditableRow';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import { Card, Table } from 'react-bootstrap';
-import { TbSortAscendingLetters, TbSortAscendingNumbers } from "react-icons/tb"; 
+import { TbSortAscendingLetters, TbSortAscendingNumbers } from "react-icons/tb";
 function AddCompany() {
 	const [editFormData, setEditFormData] = useState({
 		compname: "",
@@ -108,40 +108,51 @@ function AddCompany() {
 		setCompanyData(updatedcompanyData);
 	};
 	return (
+		<div className='list'>
+			<Card className='tableCard'>
+				<Card.Header className="header">
+					<h1>
+						Companies
+					</h1>
+					<br />
+					<section className='listbar'>
+						<div className='container-fluclassName Btns' >
+							<div className='row'>
 
-		<Card>
-			<Card.Header id="header">
-				<h5>
-					<strong> Companies</strong>
-				</h5>
-				
-			</Card.Header>
-			<Card.Body>
+								<div className='col lg-4 md-4  sm-4 addPro'>
+									<AddCompanyBtn name="Add Company" func={addRows} />
+								</div>
+								<div className='col lg-8 md-8 sm-8 searchForm'>
+									<InputGroup className="SRCH" >
+										<Form.Control onChange={(e) => setSearch(e.target.value)}
+											aria-label="Example text with button addon"
+											aria-describedby="basic-addon1" placeholder="search for a company by its name"
+										/>
+										<br />
+									</InputGroup>
+								</div>
+							</div>
+						</div>
+					</section>
+					<br />
+				</Card.Header>
+				<Card.Body>
+					<Table striped className="TABLE">
+						<thead className="THEAD">
+							<th className="TH">Name <TbSortAscendingLetters className='icon' onClick={() => { sorting("compname") }} /></th>
+							<th className="TH">Email <TbSortAscendingLetters className='icon' onClick={() => { sorting("email") }} /></th>
+							<th className="TH">Address <TbSortAscendingLetters className='icon' onClick={() => { sorting("address") }} /></th>
+							<th className="TH">Phone <TbSortAscendingNumbers className='icon' onClick={() => { sorting("phone") }} /></th>
+							<th className="TH">Comptype <TbSortAscendingLetters className='icon' onClick={() => { sorting("comptype") }} /></th>
+							<th className="TH"></th>
+							<th className="TH"></th>
+						</thead>
+						<tbody className="TBODY">{tableRows}</tbody>
+					</Table>
 
-				<InputGroup className="mb-3">
-					<AddCompanyBtn name="Add Company" func={addRows} />
-
-					<Form.Control onChange={(e) => setSearch(e.target.value)}
-						aria-label="Example text with button addon"
-						aria-describedby="basic-addon1" placeholder="search for a company by its name"
-					/>
-				</InputGroup>
-
-				<Table id="table">
-					<thead id="THEAD">
-						<th>Name <TbSortAscendingLetters onClick={() => { sorting("compname") }}/></th>
-						<th>Email <TbSortAscendingLetters onClick={() => { sorting("email") }} /></th>
-						<th>Address <TbSortAscendingLetters onClick={() => { sorting("address") }} /></th>
-						<th>Phone <TbSortAscendingNumbers onClick={() => { sorting("phone") }} /></th>
-						<th>Comptype<TbSortAscendingLetters onClick={() => { sorting("comptype") }} /></th>
-						<th> Actions </th>
-					</thead>
-					<tbody id="TBODY">{tableRows}</tbody>
-				</Table>
-
-			</Card.Body>
-		</Card>
-
+				</Card.Body>
+			</Card>
+		</div>
 	);
-}
+};
 export default AddCompany;
