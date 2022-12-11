@@ -2,6 +2,7 @@ import React from 'react'
 import { FaDollarSign } from 'react-icons/fa';
 import { FiArrowUp , FiPackage } from 'react-icons/fi';
 import { BsReceiptCutoff } from 'react-icons/bs';
+
 function CardIcon({options}) {
     const icons=[
         <BsReceiptCutoff size='30px' color='skyblue' className='ms-auto me-3 mt-auto mb-auto'/>,

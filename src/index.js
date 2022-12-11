@@ -27,7 +27,7 @@ root.render(
         <div className="d-flex">
           <SideBar/>
           <div className="pageinfo">
-            <Routes>            
+            <Routes>        
               <Route path="/" index element={<Home/>} />
               <Route path="/home" element={<Home/>} />
               <Route path="/dashboard" index element={<Dashboard/>} />
