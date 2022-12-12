@@ -1,6 +1,6 @@
 import React from 'react'
-import { BsFillBackspaceFill } from "react-icons/bs";
 import { BsFillPenFill } from "react-icons/bs";
+import DeleteWarning from './Warning'
 const ReadOnlyRow = ({ proData, handleEditClick, handleDeleteClick }) => {
     return (
         <tr key={proData.id}>
@@ -11,7 +11,7 @@ const ReadOnlyRow = ({ proData, handleEditClick, handleDeleteClick }) => {
             <td>{proData.curr}{proData.price}</td>
             <td>{proData.status}</td>
             <td><BsFillPenFill onClick={(event) => handleEditClick(event, proData)}/></td>
-          <td><BsFillBackspaceFill onClick={() => handleDeleteClick(proData.id)} /></td>
+            <td><DeleteWarning handleDeleteClick={handleDeleteClick} proData={proData}/></td>
         </tr>
     )
 }

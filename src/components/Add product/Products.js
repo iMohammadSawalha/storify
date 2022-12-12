@@ -12,6 +12,7 @@ import {TbSortAscendingLetters ,TbSortAscendingNumbers} from "react-icons/tb"
 function AddProduct() {
 	const [editFormData, setEditFormData] = useState({
 	name: "",
+	pic:"",
     desc: "",
     categ: "",
     price: "",
@@ -123,19 +124,16 @@ function AddProduct() {
 		setproData(updatedProductData);
 	}; //addRows
 
-   /*const dark=()=>{
+  /* const dark=()=>{
 	var element = document.body;
 	element.classList.toggle("darkMode");
-   }
-    in return:<Button variant="primary" onClick={dark}>dark</Button>
-   */ 
-
+   } in return:<Button variant="primary" onClick={dark}>dark</Button>*/
     return (
         <>
         <div className='list' >
 		  <Card id='tableCard'>
 		  <Card.Header>
-		  <h1> Product List</h1>
+		  <h1> Products List</h1>
           <p id="txt"> Dashbourd --- Add Product</p>
 		  <section className='listbar'>
           <div className='container-fluid Btns' >
