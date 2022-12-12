@@ -1,40 +1,3 @@
-.list {
-  display: flex;
-  flex-direction: column;
-  margin-top: 2%;
-  overflow-x: auto;
-}
-
-.SRCH {
-  width: 100%;
-  margin-right: 0;
-  height: 40px;
-  padding-bottom: 2%;
-}
-
-.bttn {
-  width: auto;
-  height: 40px;
-  background-color: none;
-
-}
-.bttn:hover{
-  background-color: rgb(160, 239, 254);
-  color: black;
-  border-color:rgb(160, 239, 254) ;
-}
-.tableCard {
-  width: 100%;
-}
-.TD,.TD2    {
-  padding: 15px;
-  text-align: left;
-  border-color: rgb(160, 239, 254);
-}
-.TH{
-  padding: 12px;
-  text-align: left;
-}
 .icon{
   width: 30px;
   height: 30px;
@@ -44,28 +7,5 @@
 }
 .TD2:hover{
   background-color: darkgrey;
-}
-
-@media(max-width:745px) {
-  .THEAD {
-    display: none;
-  }
-
-  .TABLE,
-  .TBODY,
-  .TR,
-  .TD,.TD2    {
-    display: block;
-    width: 100%;
-  }
-
-  .TR {
-    margin-bottom: 15px;
-  }
-
-  .TD,.TD2     {
-    text-align: center;
-    position: relative;
-  }
 }
 

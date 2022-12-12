@@ -57,7 +57,7 @@ function AddCompanyBtn(props) {
 	};
 	return (
 		<>
-			<Button  className='bttn' onClick={handleShow} >
+			<Button  className='btn btn-primary bttn' onClick={handleShow} >
 				Add Company
 			</Button>
 

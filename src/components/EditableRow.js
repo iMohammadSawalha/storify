@@ -22,6 +22,7 @@ export const EditableRow = ({ editFormData, handleEditFormChange, handleCancelCl
                 <td className="TD2">
                     <BsFillBookmarkCheckFill onClick={handleEditFromSubmit} />
                 </td>
+
                 <td className="TD2">
                     <MdCancel onClick={handleCancelClick} />
                 </td>
