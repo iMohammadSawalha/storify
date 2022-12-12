@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import { BsFillBackspaceFill } from "react-icons/bs";
-
+import { FaTimes } from "react-icons/fa";
+import './List.css';
 
 function  DeleteWarning({proData,handleDeleteClick}) {
   
@@ -12,7 +12,7 @@ function  DeleteWarning({proData,handleDeleteClick}) {
 
   return (
     <>
-   <BsFillBackspaceFill  onClick={handleShow}/>  
+   <FaTimes  onClick={handleShow} id="deleteBtn"/>  
       <Modal
       show={show} 
       onHide={handleClose}
@@ -24,7 +24,7 @@ function  DeleteWarning({proData,handleDeleteClick}) {
         <Modal.Body>Are you sure you want to delete this product?</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}> Cancel </Button>
-          <Button variant="primary"  onClick={() => handleDeleteClick(proData.id)}>Yes,sure </Button>
+          <Button variant="danger"  onClick={() => handleDeleteClick(proData.id)}>Yes,sure </Button>
         </Modal.Footer>
       </Modal>
     </>

@@ -5,9 +5,11 @@ import './List.css';
 import ReadOnlyRow from './ReadOnlyEditValues';
 import EditRow from './EditRow';
 import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
+import { InputGroup } from 'react-bootstrap';
 import {Table ,Card} from 'react-bootstrap';
 import {TbSortAscendingLetters ,TbSortAscendingNumbers} from "react-icons/tb"
+import {TfiSearch} from "react-icons/tfi"
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 function AddProduct() {
 	const [editFormData, setEditFormData] = useState({
@@ -133,27 +135,30 @@ function AddProduct() {
         <div className='list' >
 		  <Card id='tableCard'>
 		  <Card.Header>
+			
 		  <h1> Products List</h1>
-          <p id="txt"> Dashbourd --- Add Product</p>
+          <Breadcrumb>
+      <Breadcrumb.Item href="#">Dashboard</Breadcrumb.Item>
+      <Breadcrumb.Item active>Add Product</Breadcrumb.Item>
+    </Breadcrumb>
+		  
 		  <section className='listbar'>
           <div className='container-fluid Btns' >
 			<div className='row'>
-				
+			<div className='col lg-8 md-8 sm-8 searchForm'>
+		  <InputGroup className="mb-3" id="searchInput">
+        <InputGroup.Text id="basic-addon1"><TfiSearch/></InputGroup.Text>
+        <Form.Control
+          placeholder="Search product"
+          aria-label="search"
+          aria-describedby="basic-addon1"
+		  onChange={(e) => setSearch(e.target.value)}
+        />
+      </InputGroup>
+			</div>
+
 				<div className='col lg-4 md-4  sm-4 addPro'>
             <Add func={addRows} />
-			</div>
-			
-			<div className='col lg-8 md-8 sm-8 searchForm'>
-            <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Search product..."
-              className="me-2"
-              aria-label="Search"
-			  onChange={(e) => setSearch(e.target.value)}
-            />
-            <Button variant="primary">Search</Button>
-          </Form>
 			</div>
 
 		</div>
@@ -165,7 +170,6 @@ function AddProduct() {
           <Table striped hover className='tab'>
             <thead>
               <tr>
-                <th >#</th>
                 <th>Product  <TbSortAscendingLetters onClick={() => { sorting("name") }}/> </th>
                 <th>Describtion <TbSortAscendingLetters onClick={() => { sorting("desc") }}/></th>
                 <th>Category <TbSortAscendingLetters onClick={() => { sorting("categ") }}/></th>

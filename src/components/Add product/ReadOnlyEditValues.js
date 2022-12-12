@@ -1,16 +1,16 @@
 import React from 'react'
 import { BsFillPenFill } from "react-icons/bs";
 import DeleteWarning from './Warning'
+import './List.css'
 const ReadOnlyRow = ({ proData, handleEditClick, handleDeleteClick }) => {
     return (
         <tr key={proData.id}>
-            <td>{proData.id}</td>
             <td>{proData.name}</td>
             <td>{proData.desc}</td>
             <td>{proData.categ}</td>
             <td>{proData.curr}{proData.price}</td>
             <td>{proData.status}</td>
-            <td><BsFillPenFill onClick={(event) => handleEditClick(event, proData)}/></td>
+            <td><BsFillPenFill className="editBtn" onClick={(event) => handleEditClick(event, proData)}/></td>
             <td><DeleteWarning handleDeleteClick={handleDeleteClick} proData={proData}/></td>
         </tr>
     )
