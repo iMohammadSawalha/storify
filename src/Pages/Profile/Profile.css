@@ -1,7 +1,3 @@
-.form-control:focus {
-    box-shadow: none;
-    border-color: rgb(0, 208, 255);
-}
 
 .profile-button {
     background: rgb(0, 208, 255);
@@ -23,21 +19,9 @@
     box-shadow: none
 }
 
-.back:hover {
-    color: rgb(0, 208, 255);
-    cursor: pointer
-}
-
 .labelscol {
     font-size: 13px;
     color: #29aed6;
-}
-
-.add-experience:hover {
-    background: rgb(0, 208, 255);
-    color: #fff;
-    cursor: pointer;
-    border: solid 1px rgb(0, 208, 255)
 }
 
 input#picture1 {
