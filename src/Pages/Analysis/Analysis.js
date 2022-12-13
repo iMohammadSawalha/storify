@@ -3,7 +3,6 @@ import DoughnutChartCard from '../../Components/Analysis/DoughnutChart';
 import GridTable from '../../Components/Analysis/GridTables/GridTable';
 import RadarChartCard from '../../Components/Analysis/RadarChart';
 import './Analysis.css';
-
 const Analysis = () => {
   return (
     <div className='Analysis'>
@@ -12,7 +11,7 @@ const Analysis = () => {
         <AreaLineChartCard/>
         <RadarChartCard/>
         <div className='row'>
-          <GridTable/>
+         <GridTable/> 
         </div>
       </div>
     </div>
