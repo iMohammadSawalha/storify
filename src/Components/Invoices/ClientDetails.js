@@ -1,34 +1,44 @@
 import React from "react";
 import InvoiceDetails from "./InvoiceDetails";
-// import Data from "../Data.json";
 
 const ClientDetails = ({ data }) => {
+
 
     return (
         <>
             <div className="container-fluid">
                 <div className="row p-4">
-                    <div className="col-4">
+                    <div className="client-column col-4">
                         <p className="ms-3 p-0">Billed to</p>
-                        <h4>{data.Fname}</h4>
+                        <h4>{data.name}</h4>
                         <p className="ms-3 p-0">{data.address}</p>
-                        <p className="ms-3 p-0">{data.mobileNum}</p>
+                        <p className="ms-3 p-0">{data.phone}</p>
                         <p className="ms-3 p-0">{data.email}</p>
                     </div>
-
-                    <InvoiceDetails data={{ dateInvoice: "12/11/2022", invoiceNum: "23332" }} />
-                    <article className="invoice-column col-4">
+                    <InvoiceDetails data={{ dateInvoice: calculateDate(), invoiceNum: randomInvoiceNum() }} />
+                    <div className="invoice-column col-4">
                         <ul>
                             <div className="total">
                                 <li>Invoicer Total</li>
                                 <li className="invoice-total">$1466.99</li>
                             </div>
                         </ul>
-                    </article>
+                    </div>
                 </div>
-            </div >
+            </div>
         </>
     )
 }
 
 export default ClientDetails;
+
+const calculateDate = () => {
+    let currentDate = new Date().toLocaleDateString("de-DE");
+
+    return currentDate;
+}
+
+const randomInvoiceNum = () => {
+    let randomNum = Math.floor(100000 + Math.random() * 900000)
+    return randomNum;
+}

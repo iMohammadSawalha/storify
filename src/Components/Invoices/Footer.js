@@ -11,7 +11,7 @@ const Footer = ({ data }) => {
                 <div className="container-fluid footer">
                     <p className="fw-bold">Sub Total: <span id="sub-total">${data.total}</span> </p>
                     <p className="fw-bold">Tax: <span id="tax">${data.tax}</span> </p>
-                    <Button variant="btn col-1 btn-outline-primary" onClick={btnPrint}>Print</Button>
+                    <Button variant="btn col-1 btn-outline-primary btn-print" onClick={btnPrint}>Print</Button>
                 </div>
             </div>
         </>

@@ -8,14 +8,14 @@ import Sidebar from "./Components/Sidebar/Sidebar";
 import './index.css';
 import Analysis from "./Pages/Analysis/Analysis";
 import Companies from "./Pages/Companies/Companies";
+import Coupons from "./Pages/Coupons/Coupons";
 import Customers from "./Pages/Customers/Customers";
+import Dashboard from './Pages/Dashboard/Dashboard';
+import Discounts from "./Pages/Discounts/Discounts";
 import Home from "./Pages/Home/Home";
 import Invoice from "./Pages/Invoices/Invoices";
 import Products from "./Pages/Products/Products";
 import Profile from "./Pages/Profile/Profile";
-import Coupons from "./Pages/Coupons/Coupons";
-import Discounts from "./Pages/Discounts/Discounts";
-import Dashboard from './Pages/Dashboard/Dashboard';
 
 
 const rootElement = document.getElementById("root");
