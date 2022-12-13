@@ -1,36 +1,47 @@
+import { Avatar } from '@mui/material';
 import Box from '@mui/material/Box';
 import { DataGrid, GridToolbar } from '@mui/x-data-grid';
-import OrdersData from './orders.json';
-
+import LatestOrders from './LatestOrders.json';
 const columns = [
-  { field: 'id', headerName: 'ID', width: 90 ,type: 'number'},
+  { field: 'id', headerName: 'OrderID', width: 90 ,type: 'number'},
   {
-    field: 'name',
-    headerName: 'Customer Name',
+    field: 'user',
+    headerName: 'User Name',
     width: 150,
-    editable: true,
-    flex:1
+    flex:2,
+    renderCell: (params) => {
+      return (
+        <>
+          <Avatar src={params.value.avatar}/>
+            {params.value.username}
+        </>
+      );
+    }
   },
   {
-    field: 'order_total',
+    field: 'item-name',
+    headerName: 'Item Name',
+    width: 110,
+    flex:2
+  },
+  {
+    field: 'quantity',
+    headerName: 'Quantity',
+    width: 110,
+    flex:1,
+  },
+  {
+    field: 'order-total',
     headerName: 'Total',
     width: 110,
-    editable: true,
-    flex:2
+    flex:1
   },
   {
     field: 'date',
     headerName: 'Date',
     width: 150,
-    editable: true,
-    flex:2
+    type:'date',
   },
-  {
-    field: 'country',
-    headerName: 'Country',
-    width: 150,
-    editable: true,
-  }
 ];
 
 const GridTable =() => {
@@ -38,9 +49,7 @@ const GridTable =() => {
     <Box sx={{ height: 400, width: '100%' }}>
       Latest Orders
       <DataGrid
-        rows={OrdersData}
-        disableColumnFilter
-        disableColumnSelector
+        rows={LatestOrders}
         disableDensitySelector
         columns={columns}
         components={{ Toolbar: GridToolbar }}
