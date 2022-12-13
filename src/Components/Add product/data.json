@@ -49,17 +49,17 @@
     "desc":"White mountain And Letter Graphic Drawstring Thermal Lined",
     "categ":"Men",
     "price":"25",
-    "curr":"$",
+    "curr":"€",
     "status":"active"
 } ,
 {
     
     "id":6,
-    "name":"Pants",
-    "desc":"Paperbag Waist Belted Pants",
-    "categ":"Women",
-    "price":"18",
-    "curr":"€",
+    "name":"PlayStation PS5 Console",
+    "desc":"The PS5 is a genuine leap forward for console gaming",
+    "categ":"Technology",
+    "price":"500",
+    "curr":"$",
     "status":"not-active"
 } ,
 {
@@ -100,6 +100,16 @@
     "price":"30",
     "curr":"₪",
     "status":"not-active"
+} ,
+{
+    
+    "id":11,
+    "name":"Gaming Keyboard ",
+    "desc":"9-Color Rainbow LED Backlit ,Fast Keyboard Switches",
+    "categ":"Technology",
+    "price":"78",
+    "curr":"$",
+    "status":"active"
 } 
 
 ]

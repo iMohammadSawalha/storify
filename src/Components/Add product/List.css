@@ -9,18 +9,25 @@
     margin-left: 1%;
     color: gray;
 }
-#search{
-    width: 30%;  
-    margin-left: 70%;
-    padding-bottom: 2%;
+
+#searchInput{
+    width:50%
 }
 
 .bttn{
 width: auto;
 height: 40px;
+margin-left: 75%;
+margin-top: 1%;
 }
 #tableCard{
     width: 100%;
+}
+#deleteBtn{
+color: red;
+}
+.editBtn{
+    color: #72A0C1;
 }
 /*.darkMode{
     background-color: #343434;

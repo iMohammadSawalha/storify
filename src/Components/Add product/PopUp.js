@@ -82,28 +82,29 @@ function Add(props) {
         <div className='formBody'> 
      <form className='form-style'>
        <label className='Labels'> Product title:</label>
-       <input value={name} onChange={changeName} name='title' type="text" id="title" placeholder='Add Title'/>
+       <input className='form-control' value={name} onChange={changeName} name='title' type="text" id="title" placeholder='Add Title'/>
        
        <div className='flex'></div>
        <label className='descLabel'> Describtion:</label>
-       <textarea value={desc} onChange={changeDesc} name="desc" id="desc" placeholder='Type here'></textarea>
+       <textarea className='form-control' value={desc} onChange={changeDesc} name="desc" id="desc" placeholder='Type here'></textarea>
 
        <div className='flex'></div>
         <label htmlFor="cat-select" className='Labels'>Category:</label>
-        <select name="categ" id="categ" value={categ} onChange={changeCateg}>
+        <select className='form-control' name="categ" id="categ" value={categ} onChange={changeCateg}>
             <option value="">Select</option>
-            <option value="women">Women</option>
-            <option value="men">Men</option>
-            <option value="kids">Kids</option>
-            <option value="hime">Home</option>
-            <option value="beauty">Beauty</option>
+            <option value="Women">Women</option>
+            <option value="Men">Men</option>
+            <option value="Kids">Kids</option>
+            <option value="Home">Home</option>
+            <option value="Beauty">Beauty</option>
+            <option value="Technology">Technology</option>
        </select>
 
        <div className='flex'></div>
         <label className='Labels'> price:</label>
         <span>
         <input  value={price} onChange={changePrice} type="text" name="price" id="price"/>
-        <select name="currency" id="currency" value={curr} onChange={changeCurr}>
+        <select  name="currency" id="currency" value={curr} onChange={changeCurr}>
             <option value="$">$</option>
             <option value="₪">₪</option>
             <option value="€">€</option>
@@ -113,7 +114,7 @@ function Add(props) {
        </span>
         <div className='flex'></div>
         <label id='check'> 
-        <input type="checkBox" value ={status}onChange={changeStatus}/>
+        <input  type="checkBox" value ={status}onChange={changeStatus}/>
         Publish On Site </label>
         <div className='flex'></div>
      </form>        

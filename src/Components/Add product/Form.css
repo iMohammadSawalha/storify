@@ -2,7 +2,6 @@
 .formBody{
     width: 100%;
     height: 100%;
-    background-color: whitesmoke;
     display: flex;
     position: relative;
 }
@@ -14,7 +13,7 @@
     width: 100%;
 }
 .flex{
-    height: 30px;
+    height: 20px;
     }
 
 .Labels{
@@ -29,13 +28,11 @@
     width: 70%;
     height: 8%;
     margin-left: 6%;
-    border-radius: 10px;
     border-color: #d3d3d3;
 }
 #desc{
     width: 70%;
     margin-left: 6%;
-    border-radius: 10px;
     border-color: #d3d3d3;
 }
 #pic{
@@ -45,21 +42,18 @@
     width: 30%;
     margin-left: 6%;
     height: 90%;
-    border-radius: 10px;
     border-color: #d3d3d3;
 }
 #currency{
     width: 30%;
     margin-left: 1%;
     height: 110%;
-    border-radius: 10px;
     border-color: #d3d3d3;
 }
 #categ{
     width: 60%;
     height: 8%;
     margin-left: 6%;
-    border-radius: 10px;
     border-color: #d3d3d3;
 }
 #check{
