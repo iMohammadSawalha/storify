@@ -1,44 +1,30 @@
 [
     {
-        "product": "PlayStation PS5 Console",
-        "description": "The PS5 is a genuine leap forward for console gaming",
-        "cost": "559.00",
+        "product": "Hoodie",
+        "description": "White mountain And Letter Graphic Drawstring Thermal Lined",
+        "cost": "25.00",
+        "curr": "$",
         "amount": "1"
-    },
-    {
-        "product": "Logitech G920 Driving Force Racing Wheel",
-        "description": "Steering Wheel Cover for Xbox Series X|S, Xbox One, PC, Mac - Black",
-        "cost": "299.00",
-        "amount": "1"
-    },
-    {
-        "product": "Nintendo Switch Sports - Nintendo Switch",
-        "description": "Swing, kick, spike, and bowl your way to victory in 6 sports",
-        "cost": "49.99",
-        "amount": "2"
     },
     {
         "product": "PlayStation PS5 Console",
         "description": "The PS5 is a genuine leap forward for console gaming",
         "cost": "559.00",
+        "curr": "$",
         "amount": "1"
     },
     {
-        "product": "Nintendo Switch Sports - Nintendo Switch",
-        "description": "Swing, kick, spike, and bowl your way to victory in 6 sports",
-        "cost": "49.99",
+        "product": "Wall Decor",
+        "description": "3pcs Geometric Pattern Unframed Painting",
+        "cost": "60.00",
+        "curr": "$",
         "amount": "2"
     },
     {
-        "product": "Nintendo Switch Sports - Nintendo Switch",
-        "description": "Swing, kick, spike, and bowl your way to victory in 6 sports",
-        "cost": "49.99",
-        "amount": "2"
-    },
-    {
-        "product": "Nintendo Switch Sports - Nintendo Switch",
-        "description": "Swing, kick, spike, and bowl your way to victory in 6 sports",
-        "cost": "49.99",
+        "product": "Gaming Keyboard, 9-Color Rainbow LED Backlit",
+        "description": " Our deiog gaming keyboard is 100% fully designed with 107 keys including numberic keypad and multimedia key",
+        "cost": "98.00",
+        "curr": "$",
         "amount": "2"
     }
 ]

@@ -19,7 +19,7 @@ const InvocieTable = () => {
                             <td id="table-product"> {data.product}
                                 <p className="p-1" id="table-desc">{data.description}</p>
                             </td>
-                            <td id="table-cost">${data.cost}</td>
+                            <td id="table-cost">{data.curr}{data.cost}</td>
                             <td id="table-amount">{data.amount}</td>
                         </tr>
                     ))
