@@ -1,86 +1,105 @@
-import AddHomeOutlinedIcon from '@mui/icons-material/AddHomeOutlined';
-import AddShoppingCartOutlinedIcon from '@mui/icons-material/AddShoppingCartOutlined';
-import AnalyticsOutlinedIcon from '@mui/icons-material/AnalyticsOutlined';
-import BadgeOutlinedIcon from '@mui/icons-material/BadgeOutlined';
-import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
-import DashboardIcon from '@mui/icons-material/Dashboard';
-import PeopleOutlineOutlinedIcon from '@mui/icons-material/PeopleOutlineOutlined';
-import ReceiptLongOutlinedIcon from '@mui/icons-material/ReceiptLongOutlined';
-import SettingsSuggestOutlinedIcon from '@mui/icons-material/SettingsSuggestOutlined';
-import StoreMallDirectoryOutlinedIcon from '@mui/icons-material/StoreMallDirectoryOutlined';
-import "./sidebar.scss";
-
-
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "./Sidebar.css";
 
 const Sidebar = () => {
-  return (
-    <div className='sidebar'>
-        <div className="top">
-            <StoreMallDirectoryOutlinedIcon className="icon-main"/>
-            <span className="logo">Gentlemen's Store</span>
-        </div>
-        <hr />
-        <div className="centre">
-        <ul>
-                <h1 className="title-main">Main Menu</h1>
-                <p className="title">MAIN</p>
+    const [isExpanded, setExpendState] = useState(false);
+	const menuItems = [
+        {
+			text: "Dashboard",
+			icon: require("../../Icons/Sidebar/grid.svg").default,
+			toLink: "/dashboard"
+		},
+		{
+			text: "Products",
+			icon: require("../../Icons/Sidebar/shopping-cart.svg").default,
+			toLink: "/products",
+		},
+		{
+			text: "Customers",
+			icon: require("../../Icons/Sidebar/user.svg").default,
+			toLink: "/customers",
+		},
+		{
+			text: "Analytics",
+			icon: require("../../Icons/Sidebar/pie-chart.svg").default,
+			toLink: "/analysis",
+		},
+		{
+			text: "invoices",
+			icon: require("../../Icons/Sidebar/folder.svg").default,
+			toLink: "/invoices",
+		},
+	
+		{
+			text: "Companies",
+			icon: require("../../Icons/Sidebar/download.svg").default,
+			toLink: "/companies",
+		},
+		{
+			text: "Settings",
+			icon: require("../../Icons/Sidebar/settings.svg").default,
+			toLink: "/settings",
+		},
+	];
+	return (
+		<div
+			className={
+				isExpanded
+					? "side-nav-container"
+					: "side-nav-container side-nav-container-NX"
+			}
+		>
+			<div className="nav-upper">
+				<div className="nav-heading">
+					{isExpanded && (
+						<div className="nav-brand">
+							<img src={require("../../Icons/Sidebar/Logo.svg").default} alt="" />
+							<h2>Storify</h2>
+						</div>
+					)}
+					<button
+						className={
+							isExpanded ? "hamburger hamburger-in" : "hamburger hamburger-out"
+						}
+						onClick={() => setExpendState(!isExpanded)}
+					>
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+				</div>
+				<div className="nav-menu">
+					{menuItems.map(( menuItems ) => (
+						<Link to={menuItems.toLink}>
+							<a className={isExpanded ? "menu-item" : "menu-item menu-item-NX"} >
+								<img className="menu-item-icon" src= {menuItems.icon} alt="" srcSet="" />
+								{isExpanded && <p>{menuItems.text}</p>}
+							</a>
+						</Link>
+					))}
+				</div>
+			</div>
+			<div className="nav-footer">
+				{isExpanded && (
+					<div className="nav-details">
+						<img
+							className="nav-footer-avatar"
+							src={require("../../Icons/Sidebar/admin-avatar.svg").default}
+							alt=""
+							srcSet=""
+						/>
+						<div className="nav-footer-info">
+							<p className="nav-footer-user-name">Ayman S.</p>
+							<p className="nav-footer-user-position">Store admin</p>
+						</div>
+					</div>
+				)}
+				<img className="logout-icon" src={require("../../Icons/Sidebar/logout.svg").default} alt="" srcSet="" />
+			</div>
+		</div>
+	);
+};
 
-                <li>
-                    <AddHomeOutlinedIcon className="icon"/>
-                    <span>Home</span>
-                </li>
-                <li>
-                <DashboardIcon className="icon"/>
-                    <span>Dashbaord</span>
-                </li>
-                <p className="title">SCOPE</p>
-
-                <li>
-                    <AddShoppingCartOutlinedIcon className="icon"/>
-                    <span>Products</span>
-                </li>
-
-
-                <li>
-                        <PeopleOutlineOutlinedIcon className="icon"/>
-                    <span>Customers</span>
-                </li>
-
-                <li>
-                    <CalendarMonthOutlinedIcon className="icon"/>
-                    <span>Calendar</span>
-                </li>
-
-
-            <p className="title">DATA</p>
-
-                <li>
-                    <ReceiptLongOutlinedIcon className="icon"/>
-                    <span>Invoices</span>
-                </li>
-
-                <li>
-                    <AnalyticsOutlinedIcon className="icon"/>
-                    <span>Analysis</span>
-                </li>
-
-            <p className="title">SETTINGS</p>
-
-                <li>
-                    <BadgeOutlinedIcon className="icon"/>
-                    <span>Profile</span>
-                </li>
-                <li>
-                    <SettingsSuggestOutlinedIcon className="icon"/>
-                    <span>Settings</span>
-                </li>
-        </ul>
-           
-        </div>
-    </div>
-
-
-  );
-}
 
 export default Sidebar;

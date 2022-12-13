@@ -1,0 +1,67 @@
+#h2{
+    position: relative;
+    left: 40px;
+}
+.bar{
+    margin-top: 3%;
+}
+.addCus{
+  margin-left: 2%; 
+ margin-top: 5%;
+}
+#parg{
+    position: relative;
+    left: 40px;
+}
+.listC{
+    display:flex;
+    flex-direction: column;
+    margin-top:3%;
+   
+}
+#sort{
+    margin-left: 52px;
+    margin-top: -23px;
+}
+.search{
+    margin-left: 16%;
+    width: 84%;
+}
+#tableCard{
+    width: 105%;
+}
+@media (width:820px)  {
+    #tableCard{
+        width: max-content
+    }
+}
+@media (width:768px) {
+    #tableCard{
+        width: max-content;
+    }
+}
+@media (max-width:654px) {
+    .table thead{
+        display: none;
+    }
+    .table,
+    .table tbody,
+    .table td,
+    .table tr{
+        display: block;
+        width: 100%;
+       
+    }
+    .table tr{
+        margin-bottom: 15 px;
+    }
+    .table td{
+        text-align: center;
+        position: relative;
+       
+    }
+
+}
+        
+    
+

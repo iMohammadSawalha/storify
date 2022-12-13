@@ -1,0 +1,39 @@
+[
+    { "field": "id", "headerName": "ID", "width": 90 ,"type": "number"},
+    {
+      "field": "card-id",
+      "headerName": "Coupon ID",
+      "width": 150,
+      "flex":1.2
+    },
+    {
+      "field": "discount",
+      "headerName": "Discount",
+      "width": 110,
+      "flex":1,
+      "type":"number"
+    },
+    {
+      "field": "starting-date",
+      "headerName": "Starting Date",
+      "width": 150,
+      "flex":1,
+      "type": "date"
+    },
+    {
+      "field": "expiring-date",
+      "headerName": "Expiring Date",
+      "width": 150,
+      "editable": true,
+      "flex":1,
+      "type": "date"
+    },
+    {
+      "field": "remaining-coupons",
+      "headerName": "Remaining Coupons",
+      "width": 150,
+      "editable": true,
+      "flex":1,
+      "type":"number"
+    }
+  ]

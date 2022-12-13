@@ -1,7 +1,7 @@
 import AreaLineChartCard from '../../Components/Analysis/AreaLineChart';
 import DoughnutChartCard from '../../Components/Analysis/DoughnutChart';
+import RBsTable from '../../Components/Analysis/GridTables/GridTable';
 import RadarChartCard from '../../Components/Analysis/RadarChart';
-import RBsTable from '../../Components/Analysis/ReactBSTables/RBsTable';
 import './Analysis.css';
 
 const Analysis = () => {

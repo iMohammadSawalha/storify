@@ -1,20 +1,21 @@
 import Card from 'react-bootstrap/Card';
-import React, { useState } from "react";
+import React from "react";
 import './card.css';
-import DoughtnutChart from './DoughnutChart';
-export default function CardItem({info}) {
+import DashboardCardIcon from './DashboardCardIcon';
+import HomeCardIcon from './HomeCardIcon';
 
+export default function CardItem({info}) {
   return (
     <Card>
-      <Card.Body>
-        <div className='cardBody'>
-          <div className='parentBox'>
-            <h4 id='cardTitle'>{info.title}</h4>
-            <h3 className="mb-2 text-muted">{info.subTitle}</h3>
-            <Card.Link href="#"></Card.Link>
-          </div>
-          <DoughtnutChart dimension={'100px'} />
+      <Card.Body className='d-flex ms-2'>
+        <div className='mainCardBody'>
+          <h5 id='cardTitle'>{info.title}</h5>
+          <Card.Title style={{ fontWeight: '600' }}>{info.data}</Card.Title>
         </div>
+        {info.Dashboard ? 
+        (<DashboardCardIcon options={{ id: info.id }}/> )
+        :
+        (<HomeCardIcon options={{ id: info.id }}/> )}
       </Card.Body>
     </Card>
   );

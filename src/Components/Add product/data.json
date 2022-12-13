@@ -1,0 +1,115 @@
+
+[ 
+    
+ {
+    
+        "id":1,
+        "name":"Trouser",
+        "desc":"High Waisted Ripped Wide Leg Jeans Medium wash",
+        "categ":"Women",
+        "price":"30",
+        "curr":"$",
+        "status":"active"
+ }  ,
+{
+    
+    "id":2,
+    "name":"Glasses",
+    "desc":"Acrylic Frame Fashion Glasses",
+    "categ":"Accessories",
+    "price":"4",
+    "curr":"$",
+    "status":"active"
+} 
+,
+{
+    
+    "id":3,
+    "name":"Hair Band",
+    "desc":" Baby Bow Decor Hair Band",
+    "categ":"Kids",
+    "price":"50",
+    "curr":"₪",
+    "status":"not-active"
+} ,
+{
+    
+    "id":4,
+    "name":"Towel",
+    "desc":"Meteor Embroidery Hair Drying Cap",
+    "categ":"Home",
+    "price":"5",
+    "curr":"¥",
+    "status":"active"
+} ,
+{
+    
+    "id":5,
+    "name":"Hoodie",
+    "desc":"White mountain And Letter Graphic Drawstring Thermal Lined",
+    "categ":"Men",
+    "price":"25",
+    "curr":"€",
+    "status":"active"
+} ,
+{
+    
+    "id":6,
+    "name":"PlayStation PS5 Console",
+    "desc":"The PS5 is a genuine leap forward for console gaming",
+    "categ":"Technology",
+    "price":"500",
+    "curr":"$",
+    "status":"not-active"
+} ,
+{
+    
+    "id":7,
+    "name":"Dress",
+    "desc":"Heather Knit Mini Sweatshirt Dress",
+    "categ":"Women",
+    "price":"10",
+    "curr":"$",
+    "status":"active"
+} ,
+{
+"id":8,
+    "name":"Glasses",
+    "desc":"Men Round Frame Fashion Glasses",
+    "categ":"Accessories",
+    "price":"5",
+    "curr":"£",
+    "status":"active"
+},
+{
+    
+    "id":9,
+    "name":"Dress",
+    "desc":"Toddler Girls Floral Ruffle Trim Swing Dress",
+    "categ":"Kids",
+    "price":"10",
+    "curr":"$",
+    "status":"active"
+} ,
+{
+    
+    "id":10,
+    "name":"Wall Decor",
+    "desc":"3pcs Geometric Pattern Unframed Painting",
+    "categ":"Home",
+    "price":"30",
+    "curr":"₪",
+    "status":"not-active"
+} ,
+{
+    
+    "id":11,
+    "name":"Gaming Keyboard ",
+    "desc":"9-Color Rainbow LED Backlit ,Fast Keyboard Switches",
+    "categ":"Technology",
+    "price":"78",
+    "curr":"$",
+    "status":"active"
+} 
+
+]

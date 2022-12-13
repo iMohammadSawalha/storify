@@ -1,0 +1,59 @@
+.list{
+    display:flex;
+    flex-direction: column;
+    margin-top: 2%;
+    overflow-x: auto;
+}
+#txt{
+    font-size: x-small;
+    margin-left: 1%;
+    color: gray;
+}
+
+#searchInput{
+    width:50%
+}
+
+.bttn{
+width: auto;
+height: 40px;
+margin-left: 75%;
+margin-top: 1%;
+}
+#tableCard{
+    width: 100%;
+}
+#deleteBtn{
+color: red;
+}
+.editBtn{
+    color: #72A0C1;
+}
+/*.darkMode{
+    background-color: #343434;
+}*/
+@media (max-width:654px) {
+    .table thead{
+        display: none;
+    }
+    .table,
+    .table tbody,
+    .table td,
+    .table tr{
+        display: block;
+        width: 100%;
+    }
+    .table tr{
+        margin-bottom: 15 px;
+    }
+    .table td{
+        text-align: center;
+        position: relative;
+    }
+
+}
+
+
+
+
+

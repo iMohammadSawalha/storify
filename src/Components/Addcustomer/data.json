@@ -1,0 +1,71 @@
+[ 
+    {
+    "ind":1,
+    "name":"Ahmed Khaled ",
+    "email":"ahmadKh2@gmail.com",
+    "password":".637ija47396jb",
+    "address":"Ramallah",
+    "phon":"059997552",
+    "city":"Palestine",
+    "gender":"Male"
+    
+    },
+    
+    {
+    "ind":2,
+    "name":"Raghad Zaidan",
+    "email":"raghadZm@gmail.com",
+    "password":".806h972hdaib",
+    "address":"Nablus",
+    "phon":"0595725170",
+    "city":"Palestine",
+    "gender":"Female"
+    
+    },
+    {
+      "ind":3,
+      "name":"Mahmud ibrahim",
+      "email":"Mahmudibrahim@gmail.com",
+      "password":".871a4129qanz",
+      "address":"Nablus",
+      "phon":"0595415542",
+      "city":"Palestine",
+      "gender":"Male"
+      
+      },
+      {
+        "ind":4,
+        "name":"Walid Asi",
+        "email":"Walid_Asi@gmail.com",
+        "password":".f72ef7b2bf6f9",
+        "address":"Amman",
+        "phon":"0785424571",
+        "city":"Jordan",
+        "gender":"Male"
+        
+        },
+        {
+          "ind":5,
+          "name":"Noor Mahmoud",
+          "email":"Noor3Mahmoud@gmail.com",
+          "password":".3dgg12dfb683",
+          "address":"Irbid",
+          "phon":"0785374573",
+          "city":"Jordan",
+          "gender":"Female"
+          
+          },
+  {
+   "ind":6,
+   "name":"Yousef Saeed",
+   "email":"Yousef31@gmail.com",
+   "password":".9dma12dkb347",
+   "address":"Amman",
+   "phon":"0795529888",
+   "city":"Jordan",
+   "gender":"Male"
+  
+  }
+
+
+  ]

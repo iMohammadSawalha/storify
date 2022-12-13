@@ -1,18 +1,18 @@
+
 .card{
     -webkit-box-shadow: 2px 4px 10px 1px rgba(0,0,0,0.47);
     box-shadow: 2px 4px 10px 1px rgba(201,201,201,0.47);
 }
 
 #cardTitle{
+    margin-top:auto;
+    margin-bottom: auto;
     color: #29aed6;
 }
 
-.cardBody{
-    display: flex;
-}
-
-.parentBox{
-    margin-top: auto;
-    margin-bottom: auto;
-    align-items: center;
+#dashboard-icon{
+    margin-top:auto;
+    margin-bottom:auto;
+    margin-left: auto;
+    margin-right: 4%;
 }
