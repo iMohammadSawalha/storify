@@ -1,7 +1,8 @@
 import React from 'react'
-import {MdCancel} from "react-icons/md"
-import {BsFillBookmarkCheckFill} from "react-icons/bs"
-export const EditableRow = ({ editFormData, handleEditFormChange, handleCancelClick,handleEditFromSubmit }) => {
+import { MdCancel } from "react-icons/md"
+import './Style.css';
+import { BsFillBookmarkCheckFill } from "react-icons/bs"
+export const EditableRow = ({ editFormData, handleEditFormChange, handleCancelClick, handleEditFromSubmit }) => {
     return (
         <>
             <tr>
@@ -18,11 +19,14 @@ export const EditableRow = ({ editFormData, handleEditFormChange, handleCancelCl
 
                 <td> <input type="text" name="comptype" defaultValue={editFormData.comptype} onChange={handleEditFormChange} /></td>
 
-                <td>
-                  <BsFillBookmarkCheckFill onClick={handleEditFromSubmit}/>  
-                  <MdCancel onClick={handleCancelClick}/>  
-
+                <td className="TD2">
+                    <BsFillBookmarkCheckFill onClick={handleEditFromSubmit} />
                 </td>
+
+                <td className="TD2">
+                    <MdCancel onClick={handleCancelClick} />
+                </td>
+
             </tr>
         </>
     )

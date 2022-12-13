@@ -1,8 +1,8 @@
 [
     {
       "id": 1,
-      "compname": "ADIDAS", 
-     "email": "ADIDAS@email.com",
+      "compname": "Adidas", 
+     "email": "Adidas@email.com",
       "address": "Germany",
       "phone": "333-962-7516",
       "comptype":"clothes"
