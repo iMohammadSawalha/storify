@@ -3,7 +3,7 @@
 .side-nav-container {
 	background-color: var(--dark);
 	width: 300px;
-	height: 100vh;
+	height: 110vh;
 	position: relative;
 	color: var(--light);
 
@@ -13,33 +13,33 @@
 	width: 95px;
 }
 
-.nav-upper,
-.nav-heading,
-.nav-menu,
-.menu-item,
-.nav-footer {
+.side-nav-upper,
+.side-nav-heading,
+.side-nav-menu,
+.side-menu-item,
+.side-nav-footer {
 	/* border: 2px solid white; */
 	display: grid;
 	
 }
 
-.nav-heading {
+.side-nav-heading {
 	grid-template-columns: 3fr 3fr;
 	grid-template-rows: 1fr;
 	height: 65px;
 	margin-top: -10px;
 }
 
-.nav-brand {
+.side-nav-brand {
 	display: flex;
-	margin-top: 9px;
+	margin-top: 35px;
 	color: var(--light);
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 
 
 }
-.nav-brand img {
-	margin-top: 3px;
+.side-nav-brand img {
+	margin-top: -10px;
 	width: 30px;
 	padding: 0px;
 
@@ -98,58 +98,61 @@
 	transform: translate(14px, -4px) rotate(155deg);
 }
 
-.nav-menu {
-	grid-template-rows: repeat(7, 1fr);
+.side-nav-menu {
+	grid-template-rows: repeat(11, 1fr);
 	margin-top: 60px;
 }
 
-.menu-item {
-	height: 70px;
+.side-menu-item {
+	height: 75px;
 	display: flex;
 	color: var(--light);
 	text-decoration: none;
 	text-transform: uppercase;
-	margin: auto 30px;
+	margin: auto 35px;
 	border-radius: 10px;
-	margin-top: 3px;
+	margin-top: 5px;
 }
 
-.menu-item-NX {
+.side-menu-item-NX {
 	margin: auto;
 }
 
-.menu-item:hover {
+.side-menu-item:hover {
 	background-color: var(--primary);
+
 }
 
-.menu-item img {
+.side-menu-item img {
 	width: 30px;
+	margin-top: -50px;
+	margin-right: 10px;
 	padding: 0px;
 }
 
-.nav-footer {
+.side-nav-footer {
 	width: 100%;
 	height: 100px;
 	position: absolute;
-	bottom: 8%;
+	bottom: 2%;
 	grid-template-rows: 1fr;
 	grid-template-columns: 2fr 1fr;
 }
 
-.nav-details {
+.side-nav-details {
 	display: flex;
 }
-.nav-details img {
+.side-nav-details img {
 	width: 100px;
 	padding: 0 20px;
 }
 
-.nav-footer-user-name {
+.side-nav-footer-user-name {
 	font-size: 18px;
 	font-weight: 900;
 }
 
-.nav-footer-user-position {
+.side-nav-footer-user-position {
 	margin-top: -20px;
 	color: #ffff;
 }
