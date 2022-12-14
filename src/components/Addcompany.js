@@ -5,8 +5,10 @@ import './Style.css';
 import ReadOnlyRow from './ReadOnlyRow';
 import EditableRow from './EditableRow';
 import Form from 'react-bootstrap/Form';
-import { Card, Table } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import { TbSortAscendingLetters, TbSortAscendingNumbers } from "react-icons/tb";
+import MyTable from './MyTable';
+import NewColumn from './NewColumn';
 function AddCompany() {
 	const [editFormData, setEditFormData] = useState({
 		compname: "",
@@ -97,11 +99,50 @@ function AddCompany() {
 
 		setEditFormData(formValues)
 	};
-	const tableRows = companyData.filter((item) => { return (search.toLowerCase() === '') || (search.toUpperCase() === '') ? item : (item.compname.toLowerCase().includes(search)) || (item.compname.toUpperCase().includes(search)) }).map((companyData) => {
+	const tableRows = companyData.filter((item) => {
+		return (search.toLowerCase() === '') || (search.toUpperCase() === '')
+			?
+			item
+			:
+			(item.compname.toLowerCase().includes(search)) || (item.compname.toUpperCase().includes(search))
+	}).map((companyData) => {
 		return (
 			<>
 				<Fragment>
-					{EditcompanyDataId === companyData.id ? (<EditableRow editFormData={editFormData} handleEditFormChange={handleEditFormChange} handleCancelClick={handleCancelClick} handleEditFromSubmit={handleEditFromSubmit} />) : (<ReadOnlyRow companyData={companyData} handleEditClick={handleEditClick} handleDeleteClick={handleDeleteClick} />)}
+					{EditcompanyDataId === companyData.id
+						?
+						(
+							<EditableRow
+								Col1="compname"
+								Col2="email"
+								Col3="address"
+								Col4="phone"
+								Col5="comptype"
+								editFormData1={editFormData.compname}
+								editFormData2={editFormData.email}
+								editFormData3={editFormData.address}
+								editFormData4={editFormData.phone}
+								editFormData5={editFormData.comptype}
+								handleEditFormChange={handleEditFormChange}
+								handleCancelClick={handleCancelClick}
+								handleEditFromSubmit={handleEditFromSubmit}
+							/>
+						)
+						:
+						(
+							<ReadOnlyRow
+								Data1={companyData.compname}
+								Data2={companyData.email}
+								Data3={companyData.address}
+								Data4={companyData.phone}
+								Data5={companyData.comptype}
+								Data={companyData}
+								handleEditClick={handleEditClick}
+								handleDeleteClick={handleDeleteClick}
+							/>
+						)
+					}
+
 				</Fragment>
 			</>
 		);
@@ -143,18 +184,47 @@ function AddCompany() {
 					<br />
 				</Card.Header>
 				<Card.Body>
-					<Table striped className="tab">
-						<thead >
-							<th>Name <TbSortAscendingLetters className='icon' onClick={() => { sorting("compname") }} /></th>
-							<th>Email <TbSortAscendingLetters className='icon' onClick={() => { sorting("email") }} /></th>
-							<th>Address <TbSortAscendingLetters className='icon' onClick={() => { sorting("address") }} /></th>
-							<th>Phone <TbSortAscendingNumbers className='icon' onClick={() => { sorting("phone") }} /></th>
-							<th>Comptype <TbSortAscendingLetters className='icon' onClick={() => { sorting("comptype") }} /></th>
-							<th></th>
-							<th></th>
-						</thead>
-						<tbody>{tableRows}</tbody>
-					</Table>
+					<MyTable
+						striped className="tab"
+						TableRowsFunc={tableRows}>
+						<NewColumn th="Name">
+							<TbSortAscendingLetters
+								className='icon'
+								onClick={() => { sorting("compname") }}
+							/>
+						</NewColumn>
+
+						<NewColumn th="Email ">
+							<TbSortAscendingLetters
+								className='icon'
+								onClick={() => { sorting("email") }}
+							/>
+						</NewColumn>
+
+						<NewColumn th="Address">
+							<TbSortAscendingLetters
+								className='icon'
+								onClick={() => { sorting("address") }}
+							/>
+						</NewColumn>
+
+						<NewColumn th="Phone">
+							<TbSortAscendingNumbers
+								className='icon'
+								onClick={() => { sorting("phone") }}
+							/>
+						</NewColumn>
+
+						<NewColumn th="Comptype">
+							<TbSortAscendingLetters
+								className='icon'
+								onClick={() => { sorting("comptype") }}
+							/>
+						</NewColumn>
+
+						<NewColumn></NewColumn>
+						<NewColumn></NewColumn>
+					</MyTable>
 
 				</Card.Body>
 			</Card>
