@@ -4,7 +4,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
-import Sidebar from "./Components/Sidebar/Sidebar";
+import Sidebar from "./Components/sidebar/Sidebar";
 import './index.css';
 import Analysis from "./Pages/Analysis/Analysis";
 import Companies from "./Pages/Companies/Companies";
@@ -12,6 +12,7 @@ import Coupons from "./Pages/Coupons/Coupons";
 import Customers from "./Pages/Customers/Customers";
 import Dashboard from './Pages/Dashboard/Dashboard';
 import Discounts from "./Pages/Discounts/Discounts";
+import ErrorPage from "./Pages/ErrorPage/ErrorPage";
 import Home from "./Pages/Home/Home";
 import Invoice from "./Pages/Invoices/Invoices";
 import Products from "./Pages/Products/Products";
@@ -29,7 +30,7 @@ root.render(
         <Sidebar/>
           <div className="pageinfo">
             <Routes>        
-              <Route path="/" index element={<Home/>} />
+              <Route path='*' element={<ErrorPage />} />
               <Route path="/home" element={<Home/>} />
               <Route path="/dashboard" index element={<Dashboard/>} />
               <Route path="/analysis" element={<Analysis/>} />
