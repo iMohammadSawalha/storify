@@ -1,4 +1,5 @@
 import { Avatar } from '@mui/material';
+import { Button } from 'react-bootstrap';
 import AreaLineChartCard from '../../Components/Analysis/AreaLineChart';
 import DoughnutChartCard from '../../Components/Analysis/DoughnutChart';
 import GridTable from '../../Components/Analysis/GridTables/GridTable';
@@ -6,11 +7,11 @@ import Orders from '../../Components/Analysis/GridTables/Orders-Latest.json';
 import RadarChartCard from '../../Components/Analysis/RadarChart';
 import './Analysis.css';
 const columns = [
-  { field: 'id', headerName: 'OrderID', width: 90 ,type: 'number'},
+  { field: 'id', headerName: 'OrderID', minWidth: 90 ,type: 'number'},
   {
     field: 'user',
     headerName: 'User Name',
-    width: 150,
+    minWidth: 150,
     flex:2,
     renderCell: (params) => {
       return (
@@ -24,20 +25,20 @@ const columns = [
   {
     field: 'item-name',
     headerName: 'Item Name',
-    width: 110,
+    minWidth: 110,
     flex:2
   },
   {
     field: 'quantity',
     headerName: 'Quantity',
-    width: 110,
+    minWidth: 110,
     flex:1,
     type: 'number'
   },
   {
     field: 'order-total',
     headerName: 'Total',
-    width: 110,
+    minWidth: 110,
     flex:1,
     type: 'number',
     renderCell: (params) => {
@@ -51,8 +52,22 @@ const columns = [
   {
     field: 'date',
     headerName: 'Date',
-    width: 150,
+    minWidth: 160,
     type:'date',
+  },
+  {
+    field: 'status',
+    headerName: 'Status',
+    minWidth: 150,
+    type:'number',
+    renderCell: (params) => {
+      if(params.value == 10)
+              return (<Button variant='btn btn-success btn-radius btn-sm'>Completed</Button>);
+              else if(params.value > 0)
+              return(<Button variant='btn btn-warning btn-radius btn-sm'>Pending</Button>);
+              else if(params.value == 0)
+              return (<Button variant='btn btn-outline-danger btn-radius btn-sm'>Cancelled</Button>)
+    }
   },
 ];
 const Analysis = () => {
