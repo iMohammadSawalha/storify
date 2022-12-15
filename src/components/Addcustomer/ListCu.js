@@ -1,20 +1,19 @@
 
 import { useState ,Fragment} from 'react'
-import './ListStyle.css'
+import './ListStyle.css';
 import PopupCu from './PopupCu';
 import jsonData from './data.json';
 import Form from 'react-bootstrap/Form';
 import EditableRow from './EditableRow';
 import ReadOnlyRow from './ReadOnlyRow';
 import { Table ,Card} from 'react-bootstrap';
+import Button from 'react-bootstrap/Button';
 import { BsSortAlphaUp } from "react-icons/bs";
 import { BsSortAlphaDown } from "react-icons/bs";
   const ListC = () => {
     const [editFormData, setEditFormData] = useState({
-      
         name: "",
         email: "",
-        address: "",
         phon: "",
         city: "",
         gender:"",
@@ -46,11 +45,8 @@ import { BsSortAlphaDown } from "react-icons/bs";
 //delete row:
        const handleDeleteClick = (customerDataId) => {
 		const newCustomerData = [...customerData];
-
 		const index = customerData.findIndex((customerData) => customerData.ind === customerDataId);
-
 		newCustomerData.splice(index, 1);
-
 		setcustomerData(newCustomerData);
 
 	}
@@ -61,7 +57,6 @@ import { BsSortAlphaDown } from "react-icons/bs";
           ind: EditcustomerDataId,
           name: editFormData.name,
           email: editFormData.email,
-          address: editFormData.address,
           phon: editFormData.phon,
           city: editFormData.city,
           gender: editFormData.gender,
@@ -101,7 +96,6 @@ const handleEditFormChange = (event) => {
           name: customerData.name,
           email: customerData.email,
           password: customerData.password,
-          address: customerData.address,
           phon: customerData.phon,
           city: customerData.city,
           gender: customerData.gender
@@ -131,47 +125,47 @@ const handleEditFormChange = (event) => {
   
   return ( 
     <>
-<div className='listC'>
+<div className='list'>
      <Card id='tableCard'>
 		  <Card.Header>
-        <h2 id='h2'>Customer List</h2>
-        <p id='parg'>Dashbourd-- Add Customer</p>
-            <section className='bar'>
-              <div className='container-fluid'>
+        <h1 >Customer List</h1>
+        <p id="txt">Dashbourd-- Add Customer</p>
+            <section className='listbar'>
+              <div className='container-fluid Btns'>
                 <div className='row'>
                  <div className='col lg-3 md-4  sm-4 addCus'>
                    <PopupCu func={addRows} />
        
                    </div>
       
-                   <div className='col lg-9 md-8 sm-8 searchIf'>
-                    <Form className="search ">
-                   <Form.Control
-                     type="search"
-                     placeholder="Search....."
-                     className="me-2"
-                     onChange={(e) => setSearch(e.target.value)}  />       
-                     </Form>
+                   <div className='col lg-9 md-8 sm-8 searchForm'>
+                   <Form className="d-flex">
+            <Form.Control
+              type="search"
+              placeholder="Search ..."
+              className="me-2"
+              aria-label="Search"
+			  onChange={(e) => setSearch(e.target.value)}
+            />
+            <Button variant="primary">Search</Button>
+          </Form>
                </div>
             </div>
           </div>
           </section>
           </Card.Header>
     <Card.Body>
-          <Table striped hover>
+          <Table  className='tab'>
            <thead >
             <tr >
-              <th>#</th>
-              <th >  Name <div id='sort'  onClick={() => setIsActive(!isActive)}>
+              <th > Name <div id='sort'  onClick={() => setIsActive(!isActive)}>
                {isActive ? <BsSortAlphaUp onClick={()=>onSorterDow()}/> :<BsSortAlphaDown onClick={()=>onSorterUp()}/>}</div> </th>
               <th>E-mail</th>
               <th>password</th>
-              <th>City</th>
               <th>phone</th>
-              <th>Addres</th>
+              <th>City</th>
               <th>Gender</th>
-              <th>  </th>
-              <th> </th>
+              <th id='action'>  </th>
                
             </tr>
            </thead>
