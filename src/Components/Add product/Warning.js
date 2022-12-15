@@ -12,11 +12,12 @@ function  DeleteWarning({proData,handleDeleteClick}) {
 
   return (
     <>
-   <FaTimes  onClick={handleShow} id="deleteBtn"/>  
+   <FaTimes id="deleteBtn" onClick={handleShow}/>
       <Modal
       show={show} 
       onHide={handleClose}
-       animation={false}
+      centered
+       animation={true}
        keyboard={false}>
         <Modal.Header closeButton>
           <Modal.Title>Think again...</Modal.Title>

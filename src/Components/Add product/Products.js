@@ -133,41 +133,35 @@ function AddProduct() {
     return (
         <>
         <div className='list' >
-		  <Card id='tableCard'>
-		  <Card.Header>
-			
-		  <h1> Products List</h1>
-          <Breadcrumb>
-      <Breadcrumb.Item href="#">Dashboard</Breadcrumb.Item>
-      <Breadcrumb.Item active>Add Product</Breadcrumb.Item>
-    </Breadcrumb>
+			<Card id='tableCard'>
+			<Card.Header>
+			<h1> Products List</h1>
+			<Breadcrumb>
+				<Breadcrumb.Item href="#">Dashboard</Breadcrumb.Item>
+				<Breadcrumb.Item active>Add Product</Breadcrumb.Item>
+			</Breadcrumb>
 		  
-		  <section className='listbar'>
-          <div className='container-fluid Btns' >
-			<div className='row'>
-			<div className='col lg-8 md-8 sm-8 searchForm'>
-		  <InputGroup className="mb-3" id="searchInput">
-        <InputGroup.Text id="basic-addon1"><TfiSearch/></InputGroup.Text>
-        <Form.Control
-          placeholder="Search product"
-          aria-label="search"
-          aria-describedby="basic-addon1"
-		  onChange={(e) => setSearch(e.target.value)}
-        />
-      </InputGroup>
-			</div>
+				<div className='row'>
+					<div className="col-lg-5 col-md-5 col-sm-5 col-xs-2 searchForm">
+						<InputGroup id="searchInput">
+						<InputGroup.Text id="basic-addon1"><TfiSearch/></InputGroup.Text>
+						<Form.Control 
+						placeholder="Search product"
+						aria-label="search"
+						aria-describedby="basic-addon1"
+						onChange={(e) => setSearch(e.target.value)}/>
+						</InputGroup>
+					</div>
+					<div className="col-lg-5 col-md-3 col-sm-3 col-xs-3 "></div>
+					<div className="col-lg-2 col-md-4 col-sm-4 col-xs-7 addPro">
+						<Add func={addRows} />
+					</div>
 
-				<div className='col lg-4 md-4  sm-4 addPro'>
-            <Add func={addRows} />
-			</div>
-
-		</div>
-        </div>
-		</section>
+				</div>
           <div className='space'></div>
 		  </Card.Header>
 		  <Card.Body>
-          <Table striped hover className='tab'>
+          <Table className='tab'>
             <thead>
               <tr>
                 <th>Product  <TbSortAscendingLetters onClick={() => { sorting("name") }}/> </th>
