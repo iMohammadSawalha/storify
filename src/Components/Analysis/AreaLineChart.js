@@ -35,7 +35,6 @@ import './components.css';
     Tooltip,
     SubTitle
   );
-
   const AreaLineChart = () => {
     const [chartData,setChartData] = useState({
         datasets:[],
@@ -44,35 +43,45 @@ import './components.css';
 
 useEffect(() => {
     setChartData({
-        labels : ['Nov 11','Nov 16','Nov 21','Nov 25','Nov 28','Dec 1'],
+        labels : ['Nov 1','Nov 3','Nov 5','Nov 7','Nov 9','Nov 11','Nov 16','Nov 21','Nov 25','Nov 28','Dec 1'],
         datasets: [{
             type: 'line',
-            label: 'Last Month: $16,218.31',
-            data: [50,80,60,80,65,90],
+            data: [90,170,130,98,60,89,72,82,73,89,211],
             fill: true,
+            label:"Current Year",
             borderColor: 'rgb(168, 172, 241)',
-            backgroundColor: 'rgba(168, 172, 255,0.5)',
+            backgroundColor: 'rgba(168, 172, 255,0.65)',
             order:1
         },
         {
             type: 'line',
-            label: 'Prev Year: $14,823.03',
-            data: [80,40,65,32,55,88],
-            fill: false,
+            data: [70,120,90,76,39,72,51,69,61,120,300],
+            fill: true,
+            label:"Previous Year",
             borderColor: 'rgb(255, 172, 123)',
+            backgroundColor: 'rgba(255, 172, 123,0.2)',
             order:2
         }],
     });
     setChartOptions({
         responsive: true,
-        tension:0.4,
+        animations: {
+          tension: {
+            duration: 1000,
+            easing: 'linear',
+            from: 0.4 ,
+            to: 0.3,
+            loop: true
+
+          }
+        },
+        maintainAspectRatio:false,
   plugins: {
     legend: {
       position: 'top',
     },
     title: {
       display: true,
-      text:'Orders Comparison',
     },
   },
     });
@@ -83,12 +92,8 @@ useEffect(() => {
   }
   const AreaLineChartCard = () => {
     return (
-    <div className='col-lg-6 col-md-8 col-sm-12 col-xs-12 ps-lg-2 mb-3'>
-        <div className='card card-chart card-chart-custom'>
-              <div className='card-body h-100 pe-0'>
+    <div className='col'>
             <AreaLineChart/>
-            </div>
-    </div>
 </div>
     )
 }

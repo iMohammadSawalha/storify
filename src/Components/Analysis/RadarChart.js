@@ -54,13 +54,17 @@ import './components.css';
               pointBackgroundColor: 'rgb(255, 99, 132)',
               pointBorderColor: '#fff',
               pointHoverBackgroundColor: '#fff',
-              pointHoverBorderColor: 'rgb(255, 99, 132)'
+              pointHoverBorderColor: 'rgb(255, 99, 132)',
             },
           ],
         });
         setChartOptions({
+          plugins: {
+            legend: false
+          },
           tension:0.3,
           responsive :true,
+          maintainAspectRatio:false,
         });
         },[])
           return (
@@ -70,12 +74,8 @@ import './components.css';
   
           const RadarChartCard = () => {
               return (
-              <div className='col-lg-3 col-md-6 col-sm-8 col-xs-12 ps-lg-2 mb-3'>
-                  <div className='card card-chart card-chart-custom'>
-                        <div className='card-body h-100 pe-0'>
+              <div className='col'>
                       <RadarChart/>
-                      </div>
-              </div>
           </div>
               );
         }

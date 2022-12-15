@@ -22,21 +22,18 @@ import './components.css';
     labels: ['New Customers','Recurring Customers'],
     datasets: [
       {
-        label: '# of Votes',
-        data: [43, 57],
+        data: [,43, 57],
         backgroundColor: [
-          'rgba(255, 99, 132, 0.5)',
-          'rgba(54, 162, 235, 0.5)',
-          'rgba(255, 206, 86, 0.5)',
-          'rgba(75, 192, 192, 0.5)',
-          'rgba(153, 102, 255, 0.5)',
-          'rgba(255, 159, 64, 0.5)',
+          'rgba(255, 100, 162, 0.8)',
+          'rgba(116, 112, 225, 0.8)',
         ],
+        hoverOffset: 10,
       },
     ],
   });
   setChartOptions({
     responsive :true,
+    maintainAspectRatio:false,
   })
   },[])
     return (
@@ -48,12 +45,8 @@ import './components.css';
 
     return (
 
-            <div className='col-lg-3 col-md-6 col-sm-8 col-xs-12 ps-lg-2 mb-3'>
-                <div className='card card-chart card-chart-custom'>
-                      <div className='card-body h-100 pe-0'>
+            <div className='col'>
                     <DoughnutChart/>
-                    </div>
-            </div>
         </div>
     )
     

@@ -8,14 +8,26 @@ import Orders from './Orders-Latest.json';
 const Analysis = () => {
   return (
     <div className='Analysis'>
-      <div className='row'>
-        <DoughnutChartCard/>
-        <AreaLineChartCard/>
-        <RadarChartCard/>
+      <div className='row row align-items-start'>
+          <div className='row'>
+            <div className='col'>
+            <DoughnutChartCard/>
+            </div>
+          </div>
+          <div className='row'>
+          <div className='col'>
+            <RadarChartCard/>
+            </div>
+          </div>
+          <div className='row'>
+          <div className='col'>
+          <AreaLineChartCard/>
+          </div>
+          </div>
+      </div>
         <div className='row'>
          <GridTable tableTitle={"Latest Orders"} cols={DataGridCol} data={Orders}/> 
         </div>
-      </div>
     </div>
 )}
 export default Analysis;
