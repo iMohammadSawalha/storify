@@ -33,13 +33,23 @@ const Sidebar = () => {
 	
 		{
 			text: "Companies",
-			icon: require("../../Icons/Sidebar/download.svg").default,
+			icon: require("../../Icons/Sidebar/book-open.svg").default,
 			toLink: "/companies",
 		},
 		{
-			text: "Settings",
-			icon: require("../../Icons/Sidebar/settings.svg").default,
-			toLink: "/settings",
+			text: "Discounts",
+			icon: require("../../Icons/Sidebar/percent.svg").default,
+			toLink: "/discounts",
+		},
+		{
+			text: "Coupons",
+			icon: require("../../Icons/Sidebar/credit-card.svg").default,
+			toLink: "/coupons",
+		},
+		{
+			text: "Profile",
+			icon: require("../../Icons/Sidebar/info.svg").default,
+			toLink: "/profile",
 		},
 	];
 	return (
