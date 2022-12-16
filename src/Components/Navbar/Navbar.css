@@ -6,6 +6,7 @@
 }
 .navbar-nav {
     --bs-nav-link-padding-x: 1;
+    
 }
 #profile{
     font-size: 33px;
@@ -14,8 +15,11 @@
     color:gray;
 }
 .iconsColor{
-    color:#29aed6;
+    color:#b9e2f5;
 }
 form.d-flex {
     margin-left: 1%;
+}
+.Navbar{
+    background-color: #29aed6 ;
 }

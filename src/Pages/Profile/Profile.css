@@ -38,7 +38,7 @@ input#picture1 {
     color: rgb(0, 208, 255);
 }
 
-@media (min-width: 322px) {
+@media (min-width: 320px) {
     .custom-profile-col {
         flex: 0 0 auto;
         width: 100%;
@@ -100,7 +100,75 @@ input#picture1 {
         font-size: xx-large;
     }
 }
+@media (min-width: 768px )and (max-width: 991px) {
+    .custom-profile-col {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+    .col-12.col-md-9.col-lg-6 {
+        margin-left: 50px;
+    }
 
+    #firstbox {
+        font-size: large;
+    }
+
+    #secondbox {
+        font-size: large;
+    }
+
+    #thirdbox {
+        font-size: large;
+    }
+
+    #fourthbox {
+        font-size: large;
+    }
+
+    #fifthbox {
+        font-size: large;
+    }
+
+    #sixthbox {
+        font-size: large;
+    }
+
+    #seventhbox {
+        font-size: large;
+    }
+
+    #eighthbox {
+        font-size: large;
+    }
+
+    input#picture1 {
+        font-size: xx-small;
+    }
+
+    #fname {
+        font-size: large;
+    }
+
+    #email {
+        font-size: medium;
+    }
+
+    #number {
+        font-size: medium;
+    }
+
+    .rounded-circle {
+        width: 300px;
+    }
+
+    button.btn.btn-primary.profile-button {
+        font-size: large;
+    }
+
+    #photo_and_its_components {
+        margin: auto;
+    }
+}
 @media (min-width: 992px) {
     .custom-profile-col {
         flex: 0 0 auto;
