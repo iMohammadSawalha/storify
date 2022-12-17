@@ -110,10 +110,11 @@ const handleEditFormChange = (event) => {
       }
 
       const tableRows = customerData.filter((item)=>{
+       
         return (search.toLowerCase() === '') || (search.toUpperCase() === '') ? item : (item.name.toLowerCase().includes(search)) || (item.name.toUpperCase().includes(search)) }).map((customerData) => {
         return (
-<>
-				<Fragment>
+      <>
+				<Fragment  >
 					{EditcustomerDataId === customerData.ind? (<EditableRow editFormData={editFormData} handleEditFormChange={handleEditFormChange} handleCancelClick={handleCancelClick} handleEditFromSubmit={handleEditFromSubmit} />): (<ReadOnlyRow customerData={customerData} handleEditClick={handleEditClick} handleDeleteClick={handleDeleteClick} />)}
 				</Fragment>
 			</>
@@ -169,7 +170,7 @@ const handleEditFormChange = (event) => {
               <th id='action'> Action </th>
             </tr>
            </thead>
-           <tbody>{tableRows}</tbody>
+           <tbody className='table-body'>{tableRows}</tbody>
           </Table>
         </Card.Body>
         </Card>
