@@ -66,7 +66,7 @@ function Add(props) {
   };
   return (
     <>
-      <Button  onClick={handleShow} className='btn btn-primary bttn'>
+      <Button  onClick={handleShow} className='btn btn-primary bttn '>
         + Add Product
       </Button>
       <Modal
@@ -102,16 +102,16 @@ function Add(props) {
 
        <div className='flex'></div>
         <label className='Labels'> price:</label>
-        <span>
-        <input  value={price} onChange={changePrice} type="text" name="price" id="price"/>
-        <select  name="currency" id="currency" value={curr} onChange={changeCurr}>
+        <div className='priceInputFlex'>
+        <input  className='form-control' value={price} onChange={changePrice} type="text" name="price" id="price"/>
+        <select  className='form-control' name="currency" id="currency" value={curr} onChange={changeCurr}>
             <option value="$">$</option>
             <option value="₪">₪</option>
             <option value="€">€</option>
             <option value="£">£</option>
             <option value="¥">¥</option>
        </select>
-       </span>
+       </div>
         <div className='flex'></div>
         <label id='check'> 
         <input  type="checkBox" value ={status}onChange={changeStatus}/>
