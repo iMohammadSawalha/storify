@@ -56,14 +56,14 @@
     border-radius: 10px;
     border-color: #d3d3d3;
 }
-#citty{
-    width: 20%;
+#city{
+    width: 30%;
     height: 8%;
     margin-left: 6%;
     border-radius: 10px;
     border-color: #d3d3d3;
 }
-#phonen{
+#phone{
     width: 40%;
     margin-left: 6%;
     border-radius: 10px;
@@ -87,25 +87,29 @@
 }
 #password{
     width: 40%;
-    margin-left: 6%;
-    border-radius: 10px;
+    margin-left: 7%;
     border-color: #d3d3d3;
+    height: 1%;
+} 
+/*
+.input-group.mb-6.pass{
+    width: 62%;
+    margin-left: 2%;
 }
+*/
 
 #rest{
     width: 20%;
     height: 8%;
     margin-left: 6%;
-    border-radius: 10px;
     border-color: #d3d3d3;
 }
 
 #gen-pass{
-    width:auto;
-    height: 54%;
+    width: 15%;
+    height: 34px;
     font-size: 10px;
-    margin-left: 1%;
-    margin-top: -8px;
+    margin-right: 38%;
 
 }
 
