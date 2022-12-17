@@ -33,13 +33,23 @@ const Sidebar = () => {
 	
 		{
 			text: "Companies",
-			icon: require("../../Icons/Sidebar/download.svg").default,
+			icon: require("../../Icons/Sidebar/book-open.svg").default,
 			toLink: "/companies",
 		},
 		{
-			text: "Settings",
-			icon: require("../../Icons/Sidebar/settings.svg").default,
-			toLink: "/settings",
+			text: "Discounts",
+			icon: require("../../Icons/Sidebar/percent.svg").default,
+			toLink: "/discounts",
+		},
+		{
+			text: "Coupons",
+			icon: require("../../Icons/Sidebar/credit-card.svg").default,
+			toLink: "/coupons",
+		},
+		{
+			text: "Profile",
+			icon: require("../../Icons/Sidebar/info.svg").default,
+			toLink: "/profile",
 		},
 	];
 	return (
@@ -50,12 +60,12 @@ const Sidebar = () => {
 					: "side-nav-container side-nav-container-NX"
 			}
 		>
-			<div className="nav-upper">
-				<div className="nav-heading">
+			<div className="side-nav-upper">
+				<div className="side-nav-heading">
 					{isExpanded && (
-						<div className="nav-brand">
+						<div className="side-nav-brand">
 							<img src={require("../../Icons/Sidebar/Logo.svg").default} alt="" />
-							<h2>Storify</h2>
+							<h1>Storify</h1>
 						</div>
 					)}
 					<button
@@ -69,29 +79,29 @@ const Sidebar = () => {
 						<span></span>
 					</button>
 				</div>
-				<div className="nav-menu">
+				<div className="side-nav-menu">
 					{menuItems.map(( menuItems ) => (
 						<Link to={menuItems.toLink}>
-							<a className={isExpanded ? "menu-item" : "menu-item menu-item-NX"} >
-								<img className="menu-item-icon" src= {menuItems.icon} alt="" srcSet="" />
+							<a className={isExpanded ? "side-menu-item" : "side-menu-item menu-item-NX"} >
+								<img className="side-menu-item-icon" src= {menuItems.icon} alt="" srcSet="" />
 								{isExpanded && <p>{menuItems.text}</p>}
 							</a>
 						</Link>
 					))}
 				</div>
 			</div>
-			<div className="nav-footer">
+			<div className="side-nav-footer">
 				{isExpanded && (
-					<div className="nav-details">
+					<div className="side-nav-details">
 						<img
-							className="nav-footer-avatar"
+							className="side-nav-footer-avatar"
 							src={require("../../Icons/Sidebar/admin-avatar.svg").default}
 							alt=""
 							srcSet=""
 						/>
-						<div className="nav-footer-info">
-							<p className="nav-footer-user-name">Ayman S.</p>
-							<p className="nav-footer-user-position">Store admin</p>
+						<div className="side=nav-footer-info">
+							<p className="side-nav-footer-user-name">Ayman S.</p>
+							<p className="side-nav-footer-user-position">Store admin</p>
 						</div>
 					</div>
 				)}
