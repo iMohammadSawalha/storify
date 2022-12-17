@@ -10,6 +10,11 @@ import { Table ,Card} from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import { BsSortAlphaUp } from "react-icons/bs";
 import { BsSortAlphaDown } from "react-icons/bs";
+import { InputGroup } from 'react-bootstrap';
+import {TbSortAscendingLetters ,TbSortAscendingNumbers} from "react-icons/tb"
+import {TfiSearch} from "react-icons/tfi"
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
+
   const ListC = () => {
     const [editFormData, setEditFormData] = useState({
         name: "",
@@ -129,30 +134,26 @@ const handleEditFormChange = (event) => {
      <Card id='tableCard'>
 		  <Card.Header>
         <h1 >Customer List</h1>
-        <p id="txt">Dashbourd-- Add Customer</p>
-            <section className='listbar'>
-              <div className='container-fluid Btns'>
-                <div className='row'>
-                 <div className='col lg-3 md-4  sm-4 addCus'>
-                   <PopupCu func={addRows} />
-       
-                   </div>
-      
-                   <div className='col lg-9 md-8 sm-8 searchForm'>
-                   <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Search ..."
-              className="me-2"
-              aria-label="Search"
-			  onChange={(e) => setSearch(e.target.value)}
-            />
-            <Button variant="primary">Search</Button>
-          </Form>
-               </div>
-            </div>
-          </div>
-          </section>
+        <Breadcrumb>
+				<Breadcrumb.Item href="#">Dashboard</Breadcrumb.Item>
+				<Breadcrumb.Item active>Add Customer</Breadcrumb.Item>
+			</Breadcrumb>
+      <div className='row'>
+					<div className="col-lg-5 col-md-5 col-sm-5 col-xs-2 searchForm">
+						<InputGroup id="searchInput">
+						<InputGroup.Text id="basic-addon1"><TfiSearch/></InputGroup.Text>
+						<Form.Control 
+						placeholder="Search product"
+						aria-label="search"
+						aria-describedby="basic-addon1"
+						onChange={(e) => setSearch(e.target.value)}/>
+						</InputGroup>
+					</div>
+					<div className="col-lg-5 col-md-3 col-sm-3 col-xs-3 "></div>
+					<div className="col-lg-2 col-md-4 col-sm-4 col-xs-7 addPro">
+						<PopupCu func={addRows} />
+					</div>
+				</div>
           </Card.Header>
     <Card.Body>
           <Table  className='tab'>
@@ -162,14 +163,12 @@ const handleEditFormChange = (event) => {
                {isActive ? <BsSortAlphaUp onClick={()=>onSorterDow()}/> :<BsSortAlphaDown onClick={()=>onSorterUp()}/>}</div> </th>
               <th>E-mail</th>
               <th>password</th>
-              <th>phone</th>
+              <th>Phone</th>
               <th>City</th>
               <th>Gender</th>
-              <th id='action'>  </th>
-               
+              <th id='action'> Action </th>
             </tr>
            </thead>
-           <br/>
            <tbody>{tableRows}</tbody>
           </Table>
         </Card.Body>
