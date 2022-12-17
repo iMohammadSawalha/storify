@@ -82,10 +82,10 @@ const Sidebar = () => {
 				<div className="side-nav-menu">
 					{menuItems.map(( menuItems ) => (
 						<Link to={menuItems.toLink}>
-							<a className={isExpanded ? "side-menu-item" : "side-menu-item menu-item-NX"} >
+							<div className={isExpanded ? "side-menu-item" : "side-menu-item menu-item-NX"} >
 								<img className="side-menu-item-icon" src= {menuItems.icon} alt="" srcSet="" />
 								{isExpanded && <p>{menuItems.text}</p>}
-							</a>
+							</div>
 						</Link>
 					))}
 				</div>

@@ -18,7 +18,7 @@ import { Link } from 'react-router-dom';
 //Function
 const NavBar = () => {
   return (
-    <Navbar expand="lg" bg="light">
+    <Navbar expand="lg" className='navbarbg'>
       <Form className="d-flex">
         <Form.Control
           type="search"

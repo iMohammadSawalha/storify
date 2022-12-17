@@ -1,9 +1,11 @@
 :root {
-	--primary: #b9e2f5;
-	--dark: #29aed6;;
-	--gray: #708090;
+	--primary: #bbb8b8;
+	--dark: #55728f;
+	--gray: #ffffff;
 	--light: #ffffff;
 }
+
+/*  #29aed6;  */ 
 
 body{
   margin: 0;
@@ -18,6 +20,7 @@ body{
   -moz-osx-font-smoothing: grayscale;
     font-family: "Nunito", sans-serif;
     margin: 0;
+    background-color: #f0f0f0;
 }
 
 
