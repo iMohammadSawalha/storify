@@ -36,7 +36,8 @@ import './components.css';
     ],
   });
   setChartOptions({
-    responsive :true,
+    maintainAspectRatio:false,
+    responsive :true
   })
   },[])
     return (
