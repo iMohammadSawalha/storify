@@ -5,3 +5,9 @@
     -webkit-box-shadow: 2px 4px 10px 1px rgba(210, 229, 235,0.5);
     box-shadow: 2px 4px 10px 1px rgba(210, 229, 235,0.5);
 }
+.make-it-relative{
+    position: relative;
+}
+#orderStatisticsChart{
+    min-height: 137.55px;
+}

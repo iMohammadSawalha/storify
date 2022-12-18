@@ -48,7 +48,7 @@ useEffect(() => {
             type: 'line',
             data: [90,170,130,98,60,89,72,82,73,89,211],
             fill: true,
-            label:"Current Year",
+            label:"2022",
             borderColor: 'rgb(168, 172, 241)',
             backgroundColor: 'rgba(168, 172, 255,0.65)',
             order:1
@@ -57,7 +57,7 @@ useEffect(() => {
             type: 'line',
             data: [70,120,90,76,39,72,51,69,61,120,300],
             fill: true,
-            label:"Previous Year",
+            label:"2021",
             borderColor: 'rgb(255, 172, 123)',
             backgroundColor: 'rgba(255, 172, 123,0.2)',
             order:2
@@ -75,14 +75,21 @@ useEffect(() => {
 
           }
         },
-        maintainAspectRatio:false,
+        maintainAspectRatio:true,
   plugins: {
     legend: {
-      position: 'top',
+      position: 'chartArea',
+      align:'start',
+      labels:{
+        padding:5,
+        boxWidth:30,
+        useBorderRadius:true,
+        borderRadius:5,
+      }
     },
-    title: {
-      display: true,
-    },
+    title:{
+      display:false,
+    }
   },
     });
 },[]);
@@ -90,12 +97,4 @@ useEffect(() => {
         <Line options={chartOptions} data={chartData} />
     );
   }
-  const AreaLineChartCard = () => {
-    return (
-    <div className='col'>
-            <AreaLineChart/>
-</div>
-    )
-}
-
-  export default AreaLineChartCard;
+  export default AreaLineChart;

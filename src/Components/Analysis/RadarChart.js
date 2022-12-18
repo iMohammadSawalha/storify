@@ -72,12 +72,5 @@ import './components.css';
       
         )}
   
-          const RadarChartCard = () => {
-              return (
-              <div className='col'>
-                      <RadarChart/>
-          </div>
-              );
-        }
          
-        export default RadarChartCard;
+        export default RadarChart;

@@ -32,8 +32,15 @@ import './components.css';
     ],
   });
   setChartOptions({
+    resizeDelay:30,
     responsive :true,
     maintainAspectRatio:false,
+    plugins: {
+      legend: {
+        display:false,
+
+      },
+    },
   })
   },[])
     return (
@@ -41,15 +48,4 @@ import './components.css';
 
   )}
 
-  const DoughnutChartCard = () => {
-
-    return (
-
-            <div className='col'>
-                    <DoughnutChart/>
-        </div>
-    )
-    
-    }
-
-  export default DoughnutChartCard;
+  export default DoughnutChart;
