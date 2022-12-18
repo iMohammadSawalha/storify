@@ -3,7 +3,8 @@ import DoughnutChartCard from '../../Components/Analysis/DoughnutChart';
 import GridTable from '../../Components/Analysis/GridTables/GridTable';
 import RadarChartCard from '../../Components/Analysis/RadarChart';
 import './Analysis.css';
-
+import DataGridCol from "./DataGridColumn";
+import Orders from './Orders-Latest.json';
 const Analysis = () => {
   return (
     <div className='Analysis'>
@@ -12,7 +13,7 @@ const Analysis = () => {
         <AreaLineChartCard/>
         <RadarChartCard/>
         <div className='row'>
-          <GridTable/>
+         <GridTable tableTitle={"Latest Orders"} cols={DataGridCol} data={Orders}/> 
         </div>
       </div>
     </div>

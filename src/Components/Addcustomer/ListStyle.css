@@ -1,60 +1,35 @@
-.styled-table {
-    border-collapse: collapse;
-    margin: 20px 0;
-    margin-left:20px;
-    font-size: 0.9em;
-    font-family: sans-serif;
-
-
-}
-#h2{
-    position: relative;
-    left: 40px;
-  margin-top: 3%;
-    
-}
-th.listC,td.listC{
-    width: 10px;
-}
-.bar{
-    display:flex;
-    flex-direction: row;
-    height: 75px;}
-
-.Customer{
+.list{
     display:flex;
     flex-direction: column;
-    margin-top: 8%;
+    margin-top: 2%;
     overflow-x: auto;
 }
-#parg{
-    position: relative;
-    left: 40px;
-    
 
-}
-
-.listC{
-    overflow-x: auto;
-}
 #sort{
     margin-left: 52px;
     margin-top: -23px;
 }
-.search{
-    margin-left: 16%;
-    width: 84%;
+.bttn{
+width: auto;
+height: 40px;
 }
 #tableCard{
     width: 100%;
 }
-
-@media only screen and  (width:768px) {
-    #tableCard{
-        width: 135%;
-    }
+#icon{
+  margin-left: 27%; 
 }
-
+#action{
+    width: 9%;
+}
+.editBtn{
+    color: rgb(93, 91, 91);
+  
+}
+.deleteBtn{
+    color: red;
+    margin-left: 27%; 
+    }
 @media (max-width:654px) {
     .table thead{
         display: none;
@@ -65,7 +40,6 @@ th.listC,td.listC{
     .table tr{
         display: block;
         width: 100%;
-       
     }
     .table tr{
         margin-bottom: 15 px;
@@ -73,11 +47,34 @@ th.listC,td.listC{
     .table td{
         text-align: center;
         position: relative;
-       
     }
-   
-
+    #action{
+        width: auto;
+    }
 }
-        
-    
-
+@media (width:820px)  {
+    #tableCard{
+        width: max-content
+    }
+}
+@media (width:768px) {
+    #tableCard{
+        width: max-content;
+    }
+}
+@media (max-width:450px) {
+    #searchInput{
+        width:50%;
+    }
+    .searchForm{
+       height: 2px;
+    }
+    .addPro{
+        width:fit-content;
+        font-size: x-small;
+        margin-left:50%;
+    }
+}
+td,th {
+    height: 3rem !important;
+  }

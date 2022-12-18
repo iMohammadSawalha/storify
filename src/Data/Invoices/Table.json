@@ -1,0 +1,30 @@
+[
+    {
+        "product": "Hoodie",
+        "description": "White mountain And Letter Graphic Drawstring Thermal Lined",
+        "cost": "25.00",
+        "curr": "$",
+        "amount": "1"
+    },
+    {
+        "product": "PlayStation PS5 Console",
+        "description": "The PS5 is a genuine leap forward for console gaming",
+        "cost": "559.00",
+        "curr": "$",
+        "amount": "1"
+    },
+    {
+        "product": "Wall Decor",
+        "description": "3pcs Geometric Pattern Unframed Painting",
+        "cost": "60.00",
+        "curr": "$",
+        "amount": "2"
+    },
+    {
+        "product": "Gaming Keyboard, 9-Color Rainbow LED Backlit",
+        "description": " Our deiog gaming keyboard is 100% fully designed with 107 keys including numberic keypad and multimedia key",
+        "cost": "98.00",
+        "curr": "$",
+        "amount": "2"
+    }
+]

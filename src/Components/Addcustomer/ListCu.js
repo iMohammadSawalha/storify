@@ -1,20 +1,24 @@
 
 import { useState ,Fragment} from 'react'
-import './ListStyle.css'
+import './ListStyle.css';
 import PopupCu from './PopupCu';
 import jsonData from './data.json';
 import Form from 'react-bootstrap/Form';
 import EditableRow from './EditableRow';
 import ReadOnlyRow from './ReadOnlyRow';
 import { Table ,Card} from 'react-bootstrap';
+import Button from 'react-bootstrap/Button';
 import { BsSortAlphaUp } from "react-icons/bs";
 import { BsSortAlphaDown } from "react-icons/bs";
+import { InputGroup } from 'react-bootstrap';
+import {TbSortAscendingLetters ,TbSortAscendingNumbers} from "react-icons/tb"
+import {TfiSearch} from "react-icons/tfi"
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
+
   const ListC = () => {
     const [editFormData, setEditFormData] = useState({
-      
         name: "",
         email: "",
-        address: "",
         phon: "",
         city: "",
         gender:"",
@@ -46,11 +50,8 @@ import { BsSortAlphaDown } from "react-icons/bs";
 //delete row:
        const handleDeleteClick = (customerDataId) => {
 		const newCustomerData = [...customerData];
-
 		const index = customerData.findIndex((customerData) => customerData.ind === customerDataId);
-
 		newCustomerData.splice(index, 1);
-
 		setcustomerData(newCustomerData);
 
 	}
@@ -61,11 +62,10 @@ import { BsSortAlphaDown } from "react-icons/bs";
           ind: EditcustomerDataId,
           name: editFormData.name,
           email: editFormData.email,
-          address: editFormData.address,
           phon: editFormData.phon,
           city: editFormData.city,
           gender: editFormData.gender,
-          password: editFormData.passwor,
+          password: editFormData.password
         }
 
         const newCustomerData = [...customerData];
@@ -100,21 +100,21 @@ const handleEditFormChange = (event) => {
         ind:customerData.ind,
           name: customerData.name,
           email: customerData.email,
-          address: customerData.address,
+          password: customerData.password,
           phon: customerData.phon,
           city: customerData.city,
-          gender: customerData.gender,
-          password: customerData.password
+          gender: customerData.gender
         }
     
         setEditFormData(formValues)
       }
 
       const tableRows = customerData.filter((item)=>{
+       
         return (search.toLowerCase() === '') || (search.toUpperCase() === '') ? item : (item.name.toLowerCase().includes(search)) || (item.name.toUpperCase().includes(search)) }).map((customerData) => {
         return (
-<>
-				<Fragment>
+      <>
+				<Fragment  >
 					{EditcustomerDataId === customerData.ind? (<EditableRow editFormData={editFormData} handleEditFormChange={handleEditFormChange} handleCancelClick={handleCancelClick} handleEditFromSubmit={handleEditFromSubmit} />): (<ReadOnlyRow customerData={customerData} handleEditClick={handleEditClick} handleDeleteClick={handleDeleteClick} />)}
 				</Fragment>
 			</>
@@ -129,62 +129,54 @@ const handleEditFormChange = (event) => {
 		setcustomerData(updatedcustomerData);
 	};
   
-  return (
-    <div className='col lg-3 md-4  sm-4 addCus'>
+  return ( 
+    <>
+<div className='list'>
      <Card id='tableCard'>
 		  <Card.Header>
-        <h2 id='h2'>Customer List</h2>
-        <p id='parg'>Dashbourd-- Add Customer</p>
-        </Card.Header>
-            <section className='Customer'>
-       <div className='container-fluid'>
+        <h1 >Customer List</h1>
+        <Breadcrumb>
+				<Breadcrumb.Item href="#">Dashboard</Breadcrumb.Item>
+				<Breadcrumb.Item active>Add Customer</Breadcrumb.Item>
+			</Breadcrumb>
       <div className='row'>
-        <div className='col lg-3 md-4  sm-4 addCus'>
-       <PopupCu func={addRows} />
-       </div>
-      
-      <div className='col lg-9 md-8 sm-8 searchIf'>
-           <Form className="search ">
-            <Form.Control
-              type="search"
-              placeholder="Search....."
-              className="me-2"
-              aria-label="Search"
-              onChange={(e) => setSearch(e.target.value)}
-            />
-          </Form>
-          </div>
-          </div>
-          </div>
-          </section>
-   
-  
+					<div className="col-lg-5 col-md-5 col-sm-5 col-xs-2 searchForm">
+						<InputGroup id="searchInput">
+						<InputGroup.Text id="basic-addon1"><TfiSearch/></InputGroup.Text>
+						<Form.Control 
+						placeholder="Search product"
+						aria-label="search"
+						aria-describedby="basic-addon1"
+						onChange={(e) => setSearch(e.target.value)}/>
+						</InputGroup>
+					</div>
+					<div className="col-lg-5 col-md-3 col-sm-3 col-xs-3 "></div>
+					<div className="col-lg-2 col-md-4 col-sm-4 col-xs-7 addPro">
+						<PopupCu func={addRows} />
+					</div>
+				</div>
+          </Card.Header>
     <Card.Body>
-          <Table striped bordered hover  className='listC' >
+          <Table  className='tab'>
            <thead >
             <tr >
-             
-              <th>#</th>
-              <th >  Name <div id='sort'  onClick={() => setIsActive(!isActive)}>
-                   {isActive ? <BsSortAlphaUp onClick={()=>onSorterDow()}/> :<BsSortAlphaDown onClick={()=>onSorterUp()}/>}
-              </div> </th>
+              <th > Name <div id='sort'  onClick={() => setIsActive(!isActive)}>
+               {isActive ? <BsSortAlphaUp onClick={()=>onSorterDow()}/> :<BsSortAlphaDown onClick={()=>onSorterUp()}/>}</div> </th>
               <th>E-mail</th>
               <th>password</th>
+              <th>Phone</th>
               <th>City</th>
-              <th>phonne</th>
-              <th>Addres</th>
               <th>Gender</th>
-              <th> Edit </th>
-              <th>Delete </th>
-               
+              <th id='action'> Action </th>
             </tr>
            </thead>
-           <br/>
-           <tbody>{tableRows}</tbody>
+           <tbody className='table-body'>{tableRows}</tbody>
           </Table>
         </Card.Body>
         </Card>
         </div>
+        
+        </>
   );
 }
 

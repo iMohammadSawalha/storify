@@ -1,17 +1,19 @@
 import React from 'react'
-import './ReadOnlyRow.css'
-import { BsFillBackspaceFill,BsFillPenFill } from "react-icons/bs";
-const ReadOnlyRow = ({ companyData, handleEditClick, handleDeleteClick }) => {
+import './Style.css'
+import { BsFillBackspaceFill, BsFillPenFill } from "react-icons/bs";
+const ReadOnlyRow = ({ Data1, Data2, Data3, Data4, Data5, Data, handleEditClick, handleDeleteClick }) => {
     return (
-        <tr key={companyData.id} id="TR">
-            <td data-table="compname"id="TD1" >{companyData.compname}</td>
-            <td data-table="email"id="TD2">{companyData.email}</td>
-            <td data-table="address"id="TD3">{companyData.address}</td>
-            <td data-table="phone"id="TD4">{companyData.phone}</td>
-            <td data-table="comptype"id="TD5">{companyData.comptype}</td>
-            <td data-table="actions" id="TD6">
-            <BsFillPenFill onClick={(event) => handleEditClick(event, companyData)}  />
-            <BsFillBackspaceFill onClick={() => handleDeleteClick(companyData.id)} />
+        <tr key={Data.id}>
+            <td data-table="compname" >{Data1}</td>
+            <td data-table="email" >{Data2}</td>
+            <td data-table="address" >{Data3}</td>
+            <td data-table="phone" >{Data4}</td>
+            <td data-table="comptype" >{Data5}</td>
+            <td data-table="actions" className="TD2">
+                <BsFillPenFill onClick={(event) => handleEditClick(event, Data)} />
+            </td>
+            <td data-table="actions" className="TD2">
+                <BsFillBackspaceFill onClick={() => handleDeleteClick(Data.id)} />
             </td>
         </tr>
     )

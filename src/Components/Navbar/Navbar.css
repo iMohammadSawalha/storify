@@ -3,20 +3,9 @@
 }
 .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
     display: contents;
-    align-items: stretch;
-    justify-content: space-between;
 }
 .navbar-nav {
     --bs-nav-link-padding-x: 1;
-}
-.navbar-brand {
-    padding-top: 0;
-}
-.navbar {
-    --bs-navbar-padding-x: 0;
-}
-input{
-    font-size: 15px;
 }
 #profile{
     font-size: 33px;
@@ -26,4 +15,7 @@ input{
 }
 .iconsColor{
     color:#29aed6;
+}
+form.d-flex {
+    margin-left: 1%;
 }

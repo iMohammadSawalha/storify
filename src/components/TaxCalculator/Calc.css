@@ -1,0 +1,28 @@
+.slider-parent{
+    position:relative;
+  }
+  .sliderLabel{
+    color: #72A0C1;
+  }
+.sliderCard{
+    margin-top: 10%;
+    width: 30%;
+    margin-left: 20%;
+  }
+.flex{
+    height: 20px;
+    }
+.flex2{
+    height: 10px;
+}
+.sliderValue{
+      position: relative;
+      flex: 1 1 auto;
+    }
+.c{
+    display: block;
+    position: absolute;
+    top: 3px;
+    margin-left: 38%;
+    z-index: 99;
+}

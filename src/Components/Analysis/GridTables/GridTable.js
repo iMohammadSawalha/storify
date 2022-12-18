@@ -1,49 +1,23 @@
 import Box from '@mui/material/Box';
 import { DataGrid, GridToolbar } from '@mui/x-data-grid';
-import OrdersData from './orders';
-
-const columns = [
-  { field: 'id', headerName: 'ID', width: 90 ,type: 'number'},
-  {
-    field: 'name',
-    headerName: 'Customer Name',
-    width: 150,
-    editable: true,
-    flex:1
-  },
-  {
-    field: 'order_total',
-    headerName: 'Total',
-    width: 110,
-    editable: true,
-    flex:2
-  },
-  {
-    field: 'date',
-    headerName: 'Date',
-    width: 150,
-    editable: true,
-    flex:2
-  },
-  {
-    field: 'country',
-    headerName: 'Country',
-    width: 150,
-    editable: true,
-  }
-];
-
-const GridTable =() => {
+import { useState } from 'react';
+const GridTable =({tableTitle,cols,data}) => {
+  const [pageSize, setPageSize] = useState(15);
   return (
     <Box sx={{ height: 400, width: '100%' }}>
-      Latest Orders
+      {tableTitle}
       <DataGrid
-        rows={OrdersData}
-        disableColumnFilter
-        disableColumnSelector
+        rows={data}
         disableDensitySelector
-        columns={columns}
+        columns={cols}
         components={{ Toolbar: GridToolbar }}
+        isRowSelectable={(params) => params.row.status > 0}
+        checkboxSelection
+        disableSelectionOnClick
+        pageSize={pageSize}
+        onPageSizeChange={(newPageSize) => setPageSize(newPageSize)}
+        rowsPerPageOptions={[5,10,15,50,100]}
+        pagination
         componentsProps={{
           toolbar: {
             showQuickFilter: true,

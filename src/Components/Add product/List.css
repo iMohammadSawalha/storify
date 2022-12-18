@@ -4,27 +4,34 @@
     margin-top: 2%;
     overflow-x: auto;
 }
-#txt{
-    font-size: x-small;
-    margin-left: 1%;
-    color: gray;
-}
-#search{
-    width: 30%;  
-    margin-left: 70%;
-    padding-bottom: 2%;
-}
 
 .bttn{
-width: auto;
-height: 40px;
+margin-left:auto;
+width:140px;
+}
+.addPro{
+    width: auto;
 }
 #tableCard{
     width: 100%;
 }
+#deleteBtn{
+color: red;
+width: 60%;
+}
+.editBtn{
+    color: gray;
+    width: 60%;
+}
 /*.darkMode{
     background-color: #343434;
 }*/
+.table td{
+    padding: 0.85rem;
+}
+#searchInput{
+    width: auto;
+}
 @media (max-width:654px) {
     .table thead{
         display: none;
@@ -43,9 +50,23 @@ height: 40px;
         text-align: center;
         position: relative;
     }
-
 }
 
+@media (max-width:450px) {
+    #searchInput{
+        width:50%;
+    
+    }
+    .searchForm{
+       height: 2px;
+    }
+    .addPro{
+        width:fit-content;
+        font-size: x-small;
+        margin-left:50%;
+       
+    }
+}
 
 
 

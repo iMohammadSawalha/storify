@@ -36,7 +36,8 @@ import './components.css';
     ],
   });
   setChartOptions({
-    responsive :true,
+    maintainAspectRatio:false,
+    responsive :true
   })
   },[])
     return (
@@ -49,7 +50,7 @@ import './components.css';
     return (
 
             <div className='col-lg-3 col-md-6 col-sm-8 col-xs-12 ps-lg-2 mb-3'>
-                <div className='card card-chart'>
+                <div className='card card-chart card-chart-custom'>
                       <div className='card-body h-100 pe-0'>
                     <DoughnutChart/>
                     </div>

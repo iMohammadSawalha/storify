@@ -64,7 +64,8 @@ useEffect(() => {
         }],
     });
     setChartOptions({
-        responsive: true,
+      maintainAspectRatio:false,
+      responsive :true,
         tension:0.4,
   plugins: {
     legend: {
@@ -84,7 +85,7 @@ useEffect(() => {
   const AreaLineChartCard = () => {
     return (
     <div className='col-lg-6 col-md-8 col-sm-12 col-xs-12 ps-lg-2 mb-3'>
-        <div className='card card-chart'>
+        <div className='card card-chart card-chart-custom'>
               <div className='card-body h-100 pe-0'>
             <AreaLineChart/>
             </div>

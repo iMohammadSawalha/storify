@@ -1,6 +1,6 @@
-import Table from 'react-bootstrap/Table';
 import React from "react";
-import Data from "../../Data/Invoices/Data.json";
+import Table from 'react-bootstrap/Table';
+import Data from "../../Data/Invoices/Table.json";
 
 const InvocieTable = () => {
     return (
@@ -16,11 +16,11 @@ const InvocieTable = () => {
                 <tbody>{
                     Data.map((data, index) => (
                         <tr key={index}>
-                            <td> {data.product}
-                                <p className="p-1">{data.description}</p>
+                            <td id="table-product"> {data.product}
+                                <p className="p-1" id="table-desc">{data.description}</p>
                             </td>
-                            <td id="cost">${data.cost}</td>
-                            <td>{data.amount}</td>
+                            <td id="table-cost">{data.curr}{data.cost}</td>
+                            <td id="table-amount">{data.amount}</td>
                         </tr>
                     ))
                 }
