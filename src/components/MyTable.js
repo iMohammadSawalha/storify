@@ -4,7 +4,7 @@ import { Table } from 'react-bootstrap';
 const MyTable = (props) => {
 
     return (
-        <Table striped className="tab">
+        <Table className="tab">
             <thead>
                 {props.children}
             </thead>

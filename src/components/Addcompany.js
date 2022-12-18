@@ -1,14 +1,17 @@
 import React, { Fragment, useState } from 'react';
 import AddCompanyBtn from './AddCompanyBtn';
 import jsonData from './mock-data.json';
-import './Style.css';
 import ReadOnlyRow from './ReadOnlyRow';
+import { TfiSearch } from "react-icons/tfi"
 import EditableRow from './EditableRow';
 import Form from 'react-bootstrap/Form';
 import { Card } from 'react-bootstrap';
 import { TbSortAscendingLetters, TbSortAscendingNumbers } from "react-icons/tb";
+import { InputGroup } from 'react-bootstrap';
 import MyTable from './MyTable';
 import NewColumn from './NewColumn';
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
+import './Style.css';
 function AddCompany() {
 	const [editFormData, setEditFormData] = useState({
 		compname: "",
@@ -155,33 +158,35 @@ function AddCompany() {
 		setCompanyData(updatedcompanyData);
 	};
 	return (
-		<div className='list'>
-			<Card className='tableCard'>
+		<div className='list' >
+			<Card id='tableCard'>
 				<Card.Header>
-					<h1>
-						Companies
-					</h1>
-					<br />
-					<section className='listbar'>
-						<div className='container-fluclassName Btns' >
-							<div className='row'>
+					<h1> Companies</h1>
+					<Breadcrumb>
+						<Breadcrumb.Item >
+							Dashboard
+						</Breadcrumb.Item>
+						<Breadcrumb.Item active>Add Company</Breadcrumb.Item>
+					</Breadcrumb>
 
-								<div className='col lg-4 md-4  sm-4 addPro'>
-									<AddCompanyBtn name="Add Company" func={addRows} />
-								</div>
-								<div className='col lg-8 md-8 sm-8 searchForm'>
-									<Form.Control
-										type="search"
-										placeholder="search for a company by its name"
-										className="me-2"
-										aria-label="Search"
-										onChange={(e) => setSearch(e.target.value)}
-									/>
-								</div>
-							</div>
+					<div className='row'>
+						<div className="col-lg-5 col-md-5 col-sm-5 col-xs-2 searchForm">
+							<InputGroup id="searchInput">
+								<InputGroup.Text id="basic-addon1"><TfiSearch /></InputGroup.Text>
+								<Form.Control
+									placeholder="Search Company"
+									aria-label="search"
+									aria-describedby="basic-addon1"
+									onChange={(e) => setSearch(e.target.value)} />
+							</InputGroup>
 						</div>
-					</section>
-					<br />
+						<div className="col-lg-5 col-md-3 col-sm-3 col-xs-3 "></div>
+						<div className="col-lg-2 col-md-4 col-sm-4 col-xs-7 addPro">
+							<AddCompanyBtn func={addRows} />
+						</div>
+
+					</div>
+					<div className='space'></div>
 				</Card.Header>
 				<Card.Body>
 					<MyTable
@@ -222,13 +227,13 @@ function AddCompany() {
 							/>
 						</NewColumn>
 
-						<NewColumn></NewColumn>
-						<NewColumn></NewColumn>
+						<NewColumn th="Edit"></NewColumn>
+						<NewColumn th="Delete"></NewColumn>
 					</MyTable>
 
 				</Card.Body>
 			</Card>
-		</div>
+		</div >
 	);
 };
 export default AddCompany;
