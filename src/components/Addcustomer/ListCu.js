@@ -14,6 +14,7 @@ import { InputGroup } from 'react-bootstrap';
 import {TbSortAscendingLetters ,TbSortAscendingNumbers} from "react-icons/tb"
 import {TfiSearch} from "react-icons/tfi"
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
+import { Link } from 'react-router-dom';
 
   const ListC = () => {
     const [editFormData, setEditFormData] = useState({
@@ -136,7 +137,9 @@ const handleEditFormChange = (event) => {
 		  <Card.Header>
         <h1 >Customer List</h1>
         <Breadcrumb>
-				<Breadcrumb.Item href="#">Dashboard</Breadcrumb.Item>
+				<Breadcrumb.Item >
+        <Link to ="/Home">Dashboard</Link>
+        </Breadcrumb.Item>
 				<Breadcrumb.Item active>Add Customer</Breadcrumb.Item>
 			</Breadcrumb>
       <div className='row'>

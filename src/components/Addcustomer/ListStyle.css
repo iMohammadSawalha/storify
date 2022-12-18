@@ -17,18 +17,18 @@ height: 40px;
     width: 100%;
 }
 #icon{
-  margin-left: 27%; 
+  margin-left: 27%;
 }
 #action{
     width: 9%;
 }
-.editBtn{
+.editBtn1{
     color: rgb(93, 91, 91);
-  
+
 }
-.deleteBtn{
+.deleteBtn1{
     color: red;
-    margin-left: 27%; 
+    margin-left: 27%;
     }
 @media (max-width:654px) {
     .table thead{
