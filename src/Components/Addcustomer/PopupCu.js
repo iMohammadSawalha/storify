@@ -8,7 +8,6 @@ const PopupCu =(props)=>{
     const handleShow = () => setShow(true);
     const handleClose = () => setShow(false);
     const [name,setname]=useState('');
-    const [address,setaddress]=useState('');
     const [phon,setphon]=useState('');
     const [city,setcity]=useState('');
     const [email,setemail]=useState('');
@@ -22,14 +21,13 @@ const PopupCu =(props)=>{
 
     const transferValue = (event) => {
       event.preventDefault();
-      if (name===""||email===""||address===""||phon===""||city===""||gender===""||password==="") {
+      if (name===""||email===""||phon===""||city===""||gender===""||password==="") {
         alert("Please enter the information");
       }
       else{
         const val = {
           name,
           email,
-          address,
           phon,
           city,
           gender,
@@ -38,25 +36,22 @@ const PopupCu =(props)=>{
         props.func(val);
         clearState();
       }
-      
     };
     
     const clearState = () => {
       setname('');
-      setaddress('');
       setphon('');
       setcity('');
       setemail('');
       setgender('');
       setpassword('');
-      
       setShow(false);
     };
 
     const generatePassword = () => {
      var length = 12;
-      var result   = '';
-      var characters  = 'ABCDEFGHIJKLMNO_PQRSTUVWXY_Zabcdefghijklm_nopqrstuvwxyz0123_456789_12345_67890';
+      var result = '';
+      var characters = 'ABCDEFGHIJKLMNO_PQRSTUVWXY_Zabcdefghijklm_nopqrstuvwxyz0123_456789_12345_67890';
       var charactersLength = characters.length;
       for ( var i = 0; i < length; i++ ) {
           result += characters.charAt(Math.floor(Math.random() * charactersLength));
@@ -67,7 +62,6 @@ return(
     <>
     <Button  variant="primary" id ="addBTN" onClick={handleShow} >
     Add Customer +</Button>
-
     <Modal className='form'
       show={show}
       onHide={handleClose}
@@ -89,7 +83,7 @@ return(
      <div className='flex'></div>
 
      <div className="form-field mb-3 customer">
-     <label forHtml="user-pass" className='password'> Password :</label>
+     <label htmlFor="user-pass" className='password'> Password :</label>
      <div className='input-group mb-3 pass'>
      <input className="form-control" value={password} onChange={(e)=>setpassword(e.target.value)} name='password' type="text" id="password" placeholder='Type here'/>
     
@@ -102,24 +96,16 @@ return(
      <div className='flex'></div>
      <label className='city'> City :</label>
      <input value={city} className='form-control' onChange={changeCity} placeholder='Type here' name="city" id="city" />
-
-    
-      
      <div className='flex'></div>
       <label htmlFor="gender-select" className='lab' > Gender :</label>
-      <select value={gender} className='form-control' name="rest" id="rest"  onChange={(e)=>setgender(e.target.value)}>
+      <select value={gender} className='form-control' name="rest" id="gender"  onChange={(e)=>setgender(e.target.value)}>
       <option >select</option>
           <option value="Male">Male</option>
           <option value="Female">Female</option>
           </select>
 
-    
-
      <div className='flex'></div>
    </form>        
- 
-  
-
       </Modal.Body>
       <Modal.Footer>
         <Button variant="secondary" onClick={clearState}>
