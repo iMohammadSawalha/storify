@@ -19,14 +19,14 @@ import { Link } from 'react-router-dom';
 const NavBar = () => {
   return (
     <Navbar expand="lg" className='navbarbg'>
-      <Form className="d-flex">
+         <Form className="d-flex">
         <Form.Control
           type="search"
           placeholder="Search..."
           className="me-1"
         />
         <Button variant="outline-dark" className='iconsColor'><SearchOutlined /></Button>
-      </Form>
+      </Form> 
 
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
