@@ -10,6 +10,7 @@ import {Table ,Card} from 'react-bootstrap';
 import {TbSortAscendingLetters ,TbSortAscendingNumbers} from "react-icons/tb"
 import {TfiSearch} from "react-icons/tfi"
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
+import { Link } from 'react-router-dom';
 
 function AddProduct() {
 	const [editFormData, setEditFormData] = useState({
@@ -137,7 +138,7 @@ function AddProduct() {
 			<Card.Header>
 			<h1> Products List</h1>
 			<Breadcrumb>
-				<Breadcrumb.Item href="#">Dashboard</Breadcrumb.Item>
+				<Breadcrumb.Item as={Link} to="/Cards">Dashboard</Breadcrumb.Item>
 				<Breadcrumb.Item active>Add Product</Breadcrumb.Item>
 			</Breadcrumb>
 		  
@@ -152,8 +153,8 @@ function AddProduct() {
 						onChange={(e) => setSearch(e.target.value)}/>
 						</InputGroup>
 					</div>
-					<div className="col-lg-5 col-md-3 col-sm-3 col-xs-3 "></div>
-					<div className="col-lg-2 col-md-4 col-sm-4 col-xs-7 addPro">
+					<div className="col-lg-5 col-md-3 col-sm-3 col-xs-6 "></div>
+					<div className="col-lg-2 col-md-4 col-sm-4 col-xs-4 addPro">
 						<Add func={addRows} />
 					</div>
 
