@@ -43,9 +43,7 @@ height: 40px;
         text-align: center;
         position: relative;
     }
-    #action{
-        width: auto;
-    }
+   
 }
 @media (width:820px)  {
     #tableCard{
@@ -73,6 +71,6 @@ height: 40px;
 td,th {
     height: 3rem !important;
   }
-.table-body{
-    width: auto;
+.icon_{
+    width: 3%;
 }

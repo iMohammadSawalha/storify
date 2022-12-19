@@ -3,11 +3,10 @@ import './ListStyle.css'
 import {MdCancel} from "react-icons/md"
 import {BsFillBookmarkCheckFill} from "react-icons/bs"
 
- const EditableRow = ({ editFormData, handleEditFormChange, handleCancelClick,handleEditFromSubmit }) => {
+ const EditableRow = ({customerData ,editFormData, handleEditFormChange, handleCancelClick,handleEditFromSubmit }) => {
     return (
         <>
-            <tr >
-
+            <tr key={customerData.ind}>
               <td> <input type="text" name="name" defaultValue={editFormData.name} onChange={handleEditFormChange} /></td>
               <td> <input type="text" name="email" defaultValue={editFormData.email} onChange={handleEditFormChange} /></td>
               <td> <input type="text" name="password" defaultValue={editFormData.password} onChange={handleEditFormChange} /></td>

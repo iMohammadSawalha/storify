@@ -109,13 +109,17 @@ const handleEditFormChange = (event) => {
       const tableRows = customerData.filter((item)=>{
        
         return (search.toLowerCase() === '') || (search.toUpperCase() === '') ? item : (item.name.toLowerCase().includes(search)) || (item.name.toUpperCase().includes(search)) }).map((customerData) => {
-        return (
-      <>
-				<Fragment  >
-					{EditcustomerDataId === customerData.ind? (<EditableRow editFormData={editFormData} handleEditFormChange={handleEditFormChange} handleCancelClick={handleCancelClick} handleEditFromSubmit={handleEditFromSubmit} />): (<ReadOnlyRow customerData={customerData} handleEditClick={handleEditClick} handleDeleteClick={handleDeleteClick} />)}
+           
+      return (
+        
+				<Fragment  key={customerData.ind} >
+					{EditcustomerDataId === customerData.ind? (<EditableRow customerData={customerData} editFormData={editFormData} handleEditFormChange={handleEditFormChange} handleCancelClick={handleCancelClick} handleEditFromSubmit={handleEditFromSubmit} />): (<ReadOnlyRow customerData={customerData} handleEditClick={handleEditClick} handleDeleteClick={handleDeleteClick} />)}
 				</Fragment>
-			</>
+      
 		);
+           
+    
+    
 	});
   //addRows
     const addRows = (data) => {
@@ -140,7 +144,7 @@ const handleEditFormChange = (event) => {
 						<InputGroup id="searchInput">
 						<InputGroup.Text id="basic-addon1"><TfiSearch/></InputGroup.Text>
 						<Form.Control 
-						placeholder="Search product"
+						placeholder="Search Customer"
 						aria-label="search"
 						aria-describedby="basic-addon1"
 						onChange={(e) => setSearch(e.target.value)}/>
@@ -163,8 +167,11 @@ const handleEditFormChange = (event) => {
               <th>Phone</th>
               <th>City</th>
               <th>Gender</th>
+           
               <th> Edit </th>
               <th>Delete </th>
+              
+              
             </tr>
            </thead>
            <tbody className='table-body'>{tableRows}</tbody>
