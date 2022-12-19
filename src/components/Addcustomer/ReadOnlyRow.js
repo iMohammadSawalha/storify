@@ -10,9 +10,12 @@ const ReadOnlyRow = ({ customerData, handleEditClick, handleDeleteClick }) => {
             <td>{customerData.phon}</td>
             <td>{customerData.city}</td>
             <td>{customerData.gender}</td>
-            <td>< BsFillPenFill className="editBtn"  onClick={(event) => handleEditClick(event, customerData)}  />
-                <WarningC  handleDeleteClick={handleDeleteClick} customerData={customerData} />
-            </td>
+         <td>< BsFillPenFill className="editBtn1"  onClick={(event) => handleEditClick(event, customerData)}  />            </td>
+         <td>
+         <WarningC  handleDeleteClick={handleDeleteClick} customerData={customerData} />
+         </td>
+                
+        
         </tr>
     )
 }

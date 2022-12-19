@@ -9,7 +9,7 @@ const WarningC = ({customerData,handleDeleteClick}) => {
   const handleShow = () => setShow(true);
   return (
     <>
-   <FaTimes className="deleteBtn" onClick={handleShow}/>  
+   <FaTimes className="deleteBtn1" onClick={handleShow}/>  
       <Modal
       show={show} 
       onHide={handleClose}

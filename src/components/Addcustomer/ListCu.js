@@ -7,15 +7,11 @@ import Form from 'react-bootstrap/Form';
 import EditableRow from './EditableRow';
 import ReadOnlyRow from './ReadOnlyRow';
 import { Table ,Card} from 'react-bootstrap';
-import Button from 'react-bootstrap/Button';
 import { BsSortAlphaUp } from "react-icons/bs";
 import { BsSortAlphaDown } from "react-icons/bs";
 import { InputGroup } from 'react-bootstrap';
-import {TbSortAscendingLetters ,TbSortAscendingNumbers} from "react-icons/tb"
 import {TfiSearch} from "react-icons/tfi"
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
-import { Link } from 'react-router-dom';
-
   const ListC = () => {
     const [editFormData, setEditFormData] = useState({
         name: "",
@@ -137,9 +133,6 @@ const handleEditFormChange = (event) => {
 		  <Card.Header>
         <h1 >Customer List</h1>
         <Breadcrumb>
-				<Breadcrumb.Item >
-        <Link to ="/Home">Dashboard</Link>
-        </Breadcrumb.Item>
 				<Breadcrumb.Item active>Add Customer</Breadcrumb.Item>
 			</Breadcrumb>
       <div className='row'>
@@ -170,7 +163,8 @@ const handleEditFormChange = (event) => {
               <th>Phone</th>
               <th>City</th>
               <th>Gender</th>
-              <th id='action'> Action </th>
+              <th> Edit </th>
+              <th>Delete </th>
             </tr>
            </thead>
            <tbody className='table-body'>{tableRows}</tbody>

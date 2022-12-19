@@ -16,19 +16,14 @@ height: 40px;
 #tableCard{
     width: 100%;
 }
-#icon{
-  margin-left: 27%;
-}
-#action{
-    width: 9%;
-}
+
 .editBtn1{
     color: rgb(93, 91, 91);
 
 }
 .deleteBtn1{
     color: red;
-    margin-left: 27%;
+   
     }
 @media (max-width:654px) {
     .table thead{
@@ -78,3 +73,6 @@ height: 40px;
 td,th {
     height: 3rem !important;
   }
+.table-body{
+    width: auto;
+}
