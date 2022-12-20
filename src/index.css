@@ -1,9 +1,13 @@
 :root {
-	--primary: #b9e2f5;
-	--dark: #29aed6;;
-	--gray: #708090;
+	--primary: #bbb8b8;
+	--dark: #55728f;
+	--gray: #ffffff;
 	--light: #ffffff;
 }
+
+/*  #29aed6;  */ 
+
+
 
 body{
   background-color: #e0eff3;
@@ -21,6 +25,7 @@ body{
   background-color: white;
 }
 
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -29,6 +34,7 @@ code {
     -moz-osx-font-smoothing: grayscale;
 
 }
+
 
 .pageinfo{
   flex:10;
@@ -40,4 +46,13 @@ code {
 
 a:-webkit-any-link {
   text-decoration: none;
+}
+
+footer {
+  position: fixed;
+  bottom: -30px;
+  right: 0px;
+  height: 50px;
+  width: 270px;
+  text-align: left;
 }

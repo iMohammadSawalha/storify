@@ -11,11 +11,15 @@
     font-size: 33px;
 }
 .nameTxt{
-    color:gray;
+    color:rgb(255, 255, 255);
 }
 .iconsColor{
-    color:#29aed6;
+    color:#ffffff;
 }
+.navbarbg{
+    background-color: #55728f
+}
+/* #29aed6; */
 form.d-flex {
     margin-left: 1%;
 }
