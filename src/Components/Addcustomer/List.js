@@ -1,4 +1,5 @@
 
+
 import { Fragment, useState } from 'react';
 import { Card, InputGroup, Table } from 'react-bootstrap';
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
@@ -134,7 +135,7 @@ const handleEditFormChange = (event) => {
 <div className='list'>
      <Card id='tableCard'>
 		  <Card.Header>
-      <h2 id='h2'>Customer List</h2>
+      <h1 >Customer List</h1>
         <Breadcrumb>
 				<Breadcrumb.Item ><Link to ="/Home">Dashboard</Link></Breadcrumb.Item>
 				<Breadcrumb.Item active>Add Customer</Breadcrumb.Item>
@@ -152,10 +153,11 @@ const handleEditFormChange = (event) => {
 						</InputGroup>
 					</div>
 					<div className="col-lg-5 col-md-3 col-sm-3 col-xs-3 "></div>
-					<div className="col-lg-2 col-md-4 col-sm-4 col-xs-7 addPro">
+					<div className="col-lg-2 col-md-4 col-sm-4 col-xs-7 addcustomer">
 						<PopupCustomer func={addRows} />
 					</div>
 				</div>
+        <div className='space'></div>
           </Card.Header>
     <Card.Body>
           <Table  className='tab'>

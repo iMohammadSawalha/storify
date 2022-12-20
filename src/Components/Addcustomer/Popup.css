@@ -74,10 +74,10 @@
     border-color: #d3d3d3;
 }
 #gen-pass{
-    width: 15%;
+    width: 20%;
     height: 34px;
     font-size: 10px;
-    margin-right: 38%;
+    margin-right: 27%;
 }
 .error{
     color: red;
@@ -90,3 +90,9 @@
     color: red;
     margin-left: 6%;
 }
+@media (max-width:450px) {
+#addBTN{
+    width: max-content;
+    font-size: 11px;
+    margin-left: 23%;
+}}
