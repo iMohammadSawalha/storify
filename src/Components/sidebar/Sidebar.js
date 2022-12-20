@@ -102,7 +102,7 @@ const Sidebar = () => {
 							srcSet=""
 						/>
 						<div className="side=nav-footer-info">
-							<p className="side-nav-footer-user-name">Ayman S.</p>
+							<p className="side-nav-footer-user-name">Mohammed</p>
 							<p className="side-nav-footer-user-position">Store admin</p>
 						</div>
 					</div>
