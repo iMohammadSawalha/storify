@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { FaTimes } from "react-icons/fa";
-import './List.css';
 
 function  DeleteWarning({proData,handleDeleteClick}) {
   
@@ -12,7 +11,7 @@ function  DeleteWarning({proData,handleDeleteClick}) {
 
   return (
     <>
-   <FaTimes id="deleteBtn" onClick={handleShow}/>
+   <FaTimes color='red' onClick={handleShow}/>
       <Modal
       show={show} 
       onHide={handleClose}
@@ -22,7 +21,7 @@ function  DeleteWarning({proData,handleDeleteClick}) {
         <Modal.Header closeButton>
           <Modal.Title>Think again...</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Are you sure you want to delete this product?</Modal.Body>
+        <Modal.Body>Are you sure you want to delete ?</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}> Cancel </Button>
           <Button variant="danger"  onClick={() => handleDeleteClick(proData.id)}>Yes,sure </Button>
