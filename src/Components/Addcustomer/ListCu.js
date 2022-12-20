@@ -1,4 +1,3 @@
-
 import { useState ,Fragment} from 'react'
 import './ListStyle.css'
 import PopupCu from './PopupCu';
@@ -9,6 +8,9 @@ import ReadOnlyRow from './ReadOnlyRow';
 import { Table ,Card} from 'react-bootstrap';
 import { BsSortAlphaUp } from "react-icons/bs";
 import { BsSortAlphaDown } from "react-icons/bs";
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
+import { Link } from 'react-router-dom';
+
   const ListC = () => {
     const [editFormData, setEditFormData] = useState({
       
@@ -135,7 +137,11 @@ const handleEditFormChange = (event) => {
      <Card id='tableCard'>
 		  <Card.Header>
         <h2 id='h2'>Customer List</h2>
-        <p id='parg'>Dashbourd-- Add Customer</p>
+        <Breadcrumb>
+				<Breadcrumb.Item ><Link to ="/Home">Dashboard</Link></Breadcrumb.Item>
+				<Breadcrumb.Item active>Add Customer</Breadcrumb.Item>
+			</Breadcrumb>
+
             <section className='bar'>
               <div className='container-fluid'>
                 <div className='row'>
