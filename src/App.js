@@ -1,12 +1,10 @@
 
 
-import ListC from "./components/Addcustomer/ListCu";
+import List from "./components/Addcustomer/List";
 
 function App() {
   return (
-    <ListC/>
-
-
+    <List/>
   );
 }
 

@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { FaTimes } from "react-icons/fa";
 import './ListStyle.css';
-const WarningC = ({customerData,handleDeleteClick}) => {
+const Warning = ({customerData,handleDeleteClick}) => {
     const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -29,4 +29,4 @@ const WarningC = ({customerData,handleDeleteClick}) => {
   )
 }
 
-export default WarningC
+export default Warning

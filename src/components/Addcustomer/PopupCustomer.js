@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import './PopupC.css'
+import './Popup.css'
 
-const PopupCu =(props)=>{
+const PopupCustomer =(props)=>{
     const [show, setShow] = useState(false);
     const handleShow = () => setShow(true);
     const handleClose = () => setShow(false);
@@ -138,4 +138,4 @@ return(
 )
 }
 
-export default PopupCu
+export default PopupCustomer

@@ -1,7 +1,7 @@
 
 import { useState ,Fragment} from 'react'
 import './ListStyle.css';
-import PopupCu from './PopupCu';
+import PopupCustomer from './PopupCustomer';
 import jsonData from './data.json';
 import Form from 'react-bootstrap/Form';
 import EditableRow from './EditableRow';
@@ -12,7 +12,7 @@ import { BsSortAlphaDown } from "react-icons/bs";
 import { InputGroup } from 'react-bootstrap';
 import {TfiSearch} from "react-icons/tfi"
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
-  const ListC = () => {
+  const List = () => {
     const [editFormData, setEditFormData] = useState({
         name: "",
         email: "",
@@ -144,7 +144,7 @@ const handleEditFormChange = (event) => {
 						<InputGroup id="searchInput">
 						<InputGroup.Text id="basic-addon1"><TfiSearch/></InputGroup.Text>
 						<Form.Control 
-						placeholder="Search Customer"
+						placeholder="Search....."
 						aria-label="search"
 						aria-describedby="basic-addon1"
 						onChange={(e) => setSearch(e.target.value)}/>
@@ -152,7 +152,7 @@ const handleEditFormChange = (event) => {
 					</div>
 					<div className="col-lg-5 col-md-3 col-sm-3 col-xs-3 "></div>
 					<div className="col-lg-2 col-md-4 col-sm-4 col-xs-7 addPro">
-						<PopupCu func={addRows} />
+						<PopupCustomer func={addRows} />
 					</div>
 				</div>
           </Card.Header>
@@ -183,6 +183,6 @@ const handleEditFormChange = (event) => {
   );
 }
 
-export default ListC;
+export default List;
 
 

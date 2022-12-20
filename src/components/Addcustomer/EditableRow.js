@@ -13,9 +13,9 @@ import {BsFillBookmarkCheckFill} from "react-icons/bs"
               <td> <input type="text" name="phon" defaultValue={editFormData.phon} onChange={handleEditFormChange} /></td>
               <td> <input type="text" name="city" defaultValue={editFormData.city} onChange={handleEditFormChange} /></td>
               <td> <input type="text" name="gender" defaultValue={editFormData.gender} onChange={handleEditFormChange} /></td>
-               <td><BsFillBookmarkCheckFill className="editBtn1"  onClick={handleEditFromSubmit}/></td>
-               <td> <MdCancel  className="editBtn1" onClick={handleCancelClick}/> </td>
-               </tr>
+              <td><BsFillBookmarkCheckFill className="btn1"  onClick={handleEditFromSubmit}/></td>
+              <td> <MdCancel  className="btn1" onClick={handleCancelClick}/> </td>
+            </tr>
         </>
     )
 }
