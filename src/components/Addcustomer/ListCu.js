@@ -167,7 +167,6 @@ const handleEditFormChange = (event) => {
               <th>Phone</th>
               <th>City</th>
               <th>Gender</th>
-           
               <th> Edit </th>
               <th>Delete </th>
               

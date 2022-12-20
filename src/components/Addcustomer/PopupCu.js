@@ -95,7 +95,7 @@ return(
      <input className="form-control" value={password} onChange={(e)=>setpassword(e.target.value)} name='password' type="text" id="password" placeholder='click on Generate'/>
      <button id="gen-pass" className="btn btn-outline-secondary" type="button" onClick={generatePassword}>Generate</button>
                 {error&&password.length<=0?
-               <label id='errorp'> Password field is required</label>:""}
+               <label id='errorp'> This field is required</label>:""}
        </div>
 
 
@@ -109,7 +109,7 @@ return(
      <label className='city'> City :</label>
      <input value={city} className='form-control' onChange={changeCity} placeholder='Type here' name="city" id="city" />
      {error&&city.length<=0?
-               <label className='error'> City field is required</label>:""}
+               <label className='error'> This field is required</label>:""}
 
 
      <div className='flex'></div>
