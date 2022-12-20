@@ -108,7 +108,7 @@ function AddProduct() {
       (item.name.toLowerCase().includes(search)) || (item.name.toUpperCase().includes(search)) }).map((proData) => {
 		return (
 			<>
-				<Fragment>
+				<Fragment key={proData.id}>
 					{EditproductDataId === proData.id ? (<EditRow editFormData={editFormData}
                      handleEditFormChange={handleEditFormChange} 
                      handleCancelClick={handleCancelClick}
@@ -174,7 +174,6 @@ function AddProduct() {
 				<th>Delete</th>
               </tr>
             </thead>
-            <br />
             <tbody>{tableRows} </tbody>
           </Table>
 		  </Card.Body>

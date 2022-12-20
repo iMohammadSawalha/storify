@@ -63,3 +63,7 @@
    flex-direction:row ;
 
 }
+.errorMSG{
+    color:red;
+    margin-left: 15%;
+}
