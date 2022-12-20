@@ -30,6 +30,7 @@ root.render(
         <Sidebar/>
           <div className="pageinfo">
             <Routes>        
+              <Route path="" index element={<Home/>} />
               <Route path='*' element={<ErrorPage />} />
               <Route path="/home" index element={<Home/>} />
               <Route path="/dashboard" element={<Dashboard/>} />
