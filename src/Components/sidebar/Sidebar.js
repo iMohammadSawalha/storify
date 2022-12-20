@@ -6,47 +6,56 @@ const Sidebar = () => {
     const [isExpanded, setExpendState] = useState(false);
 	const menuItems = [
         {
+			id:0,
 			text: "Dashboard",
 			icon: require("../../Icons/Sidebar/grid.svg").default,
 			toLink: "/dashboard"
 		},
 		{
+			id:1,
 			text: "Products",
 			icon: require("../../Icons/Sidebar/shopping-cart.svg").default,
 			toLink: "/products",
 		},
 		{
+			id:2,
 			text: "Customers",
 			icon: require("../../Icons/Sidebar/user.svg").default,
 			toLink: "/customers",
 		},
 		{
+			id:3,
 			text: "Analytics",
 			icon: require("../../Icons/Sidebar/pie-chart.svg").default,
 			toLink: "/analysis",
 		},
 		{
+			id:4,
 			text: "invoices",
 			icon: require("../../Icons/Sidebar/folder.svg").default,
 			toLink: "/invoices",
 		},
 	
 		{
+			id:5,
 			text: "Companies",
 			icon: require("../../Icons/Sidebar/book-open.svg").default,
 			toLink: "/companies",
 		},
 		{
+			id:6,
 			text: "Discounts",
 			icon: require("../../Icons/Sidebar/percent.svg").default,
 			toLink: "/discounts",
 		},
 		{
+			id:7,
 			text: "Coupons",
 			icon: require("../../Icons/Sidebar/credit-card.svg").default,
 			toLink: "/coupons",
 		},
 		{
+			id:8,
 			text: "Profile",
 			icon: require("../../Icons/Sidebar/info.svg").default,
 			toLink: "/profile",
@@ -81,10 +90,10 @@ const Sidebar = () => {
 				</div>
 				<div className="side-nav-menu">
 					{menuItems.map(( menuItems ) => (
-						<Link to={menuItems.toLink}>
-							<div className={isExpanded ? "side-menu-item" : "side-menu-item menu-item-NX"} >
-								<div className="d-flex my-auto mr-auto">
-									<img className="side-menu-item-icon" src= {menuItems.icon} alt="" srcSet="" />
+						<Link to={menuItems.toLink} key={menuItems.id}>
+							<div key={menuItems.id} className={isExpanded ? "side-menu-item" : "side-menu-item menu-item-NX"}>
+								<div className="d-flex my-auto mr-auto" key={menuItems.id}>
+									<img className="side-menu-item-icon" src= {menuItems.icon} alt="" srcSet="" key={menuItems.id} />
 									{isExpanded && <p className="my-auto">{menuItems.text}</p>}
 								</div>
 							</div>

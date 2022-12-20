@@ -15,11 +15,11 @@ function TaxCalc() {
           <Card.Body>
             <span className='h6'>Amount {Amount}</span>
             <Form.Range 
-            onChange={({ target: { value: radius } }) => { SetAmount(radius); }}
+              onChange={({ target: { value: radius } }) => { SetAmount(radius); }}
             />
             <span className='h6'>Tax Percentage {Percentage}</span>
             <Form.Range 
-            onChange={({ target: { value: radius } }) => { SetPercentage(radius); }}
+              onChange={({ target: { value: radius } }) => { SetPercentage(radius); }}
             />
           </Card.Body>
         </Card>

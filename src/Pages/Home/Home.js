@@ -15,8 +15,8 @@ const Home = () => {
           <Card info={{title:"Hi, Mohammad" , data:"Welcome back to your admin control panel!"}} />
         </Col>
         {cardData.map((cardData)=>
-        <Col xl={2} lg={4} md={6} sm={6} xs={6} xxs={10} className='mb-4'>
-            <Card key={cardData.id} info={cardData} />
+        <Col xl={2} lg={4} md={6} sm={6} xs={6} xxs={10} key={cardData.id} className='mb-4'>
+            <Card info={cardData} key={cardData.id} />
         </Col>)}
         <Col xl={2} lg={4} md={6} sm={6} xs={6} xxs={10} className='mb-4'>
           <TaxCalc/>
