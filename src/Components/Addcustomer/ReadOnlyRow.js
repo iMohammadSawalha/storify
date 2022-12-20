@@ -1,6 +1,6 @@
 import { BsFillPenFill } from "react-icons/bs";
-import WarningC from "./WarningC";
 import './ListStyle.css';
+import Warning from "./Warning";
 const ReadOnlyRow = ({ customerData, handleEditClick, handleDeleteClick }) => {
     return (
         <tr key={customerData.ind}>
@@ -10,9 +10,9 @@ const ReadOnlyRow = ({ customerData, handleEditClick, handleDeleteClick }) => {
             <td>{customerData.phon}</td>
             <td>{customerData.city}</td>
             <td>{customerData.gender}</td>
-            <td>< BsFillPenFill className="editBtn"  onClick={(event) => handleEditClick(event, customerData)}  />
-                <WarningC  handleDeleteClick={handleDeleteClick} customerData={customerData} />
-            </td>
+          <td >< BsFillPenFill className="btn1"  onClick={(event) => handleEditClick(event, customerData)}  /></td>
+          <td ><Warning handleDeleteClick={handleDeleteClick} customerData={customerData} /></td>
+         
         </tr>
     )
 }

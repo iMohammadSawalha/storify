@@ -5,31 +5,20 @@
     overflow-x: auto;
 }
 
-#sort{
-    margin-left: 52px;
-    margin-top: -23px;
-}
 .bttn{
 width: auto;
 height: 40px;
 }
 #tableCard{
-    width: 100%;
+    width: a;
 }
-#icon{
-  margin-left: 27%; 
-}
-#action{
-    width: 9%;
-}
-.editBtn{
+
+.btn1{
     color: rgb(93, 91, 91);
-  
 }
-.deleteBtn{
+.deleteBtn1{
     color: red;
-    margin-left: 27%; 
-    }
+  }
 @media (max-width:654px) {
     .table thead{
         display: none;
@@ -48,9 +37,11 @@ height: 40px;
         text-align: center;
         position: relative;
     }
-    #action{
-        width: auto;
-    }
+   
+}
+#sort{
+    margin-left: 52px;
+    margin-top: -23px;
 }
 @media (width:820px)  {
     #tableCard{
@@ -75,6 +66,7 @@ height: 40px;
         margin-left:50%;
     }
 }
-td,th {
+
+.table-body td,.table-body th {
     height: 3rem !important;
   }

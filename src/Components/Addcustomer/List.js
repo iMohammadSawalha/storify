@@ -1,16 +1,17 @@
+
 import { Fragment, useState } from 'react';
-import { Card, Table } from 'react-bootstrap';
+import { Card, InputGroup, Table } from 'react-bootstrap';
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import Form from 'react-bootstrap/Form';
 import { BsSortAlphaDown, BsSortAlphaUp } from "react-icons/bs";
+import { TfiSearch } from "react-icons/tfi";
 import { Link } from 'react-router-dom';
 import jsonData from './data.json';
 import EditableRow from './EditableRow';
 import './ListStyle.css';
-import PopupCu from './PopupCu';
+import PopupCustomer from './PopupCustomer';
 import ReadOnlyRow from './ReadOnlyRow';
-
-  const ListC = () => {
+  const List = () => {
     const [editFormData, setEditFormData] = useState({
         name: "",
         email: "",
@@ -107,13 +108,17 @@ const handleEditFormChange = (event) => {
       const tableRows = customerData.filter((item)=>{
        
         return (search.toLowerCase() === '') || (search.toUpperCase() === '') ? item : (item.name.toLowerCase().includes(search)) || (item.name.toUpperCase().includes(search)) }).map((customerData) => {
-        return (
-      <>
-				<Fragment  >
-					{EditcustomerDataId === customerData.ind? (<EditableRow editFormData={editFormData} handleEditFormChange={handleEditFormChange} handleCancelClick={handleCancelClick} handleEditFromSubmit={handleEditFromSubmit} />): (<ReadOnlyRow customerData={customerData} handleEditClick={handleEditClick} handleDeleteClick={handleDeleteClick} />)}
+           
+      return (
+        
+				<Fragment  key={customerData.ind} >
+					{EditcustomerDataId === customerData.ind? (<EditableRow customerData={customerData} editFormData={editFormData} handleEditFormChange={handleEditFormChange} handleCancelClick={handleCancelClick} handleEditFromSubmit={handleEditFromSubmit} />): (<ReadOnlyRow customerData={customerData} handleEditClick={handleEditClick} handleDeleteClick={handleDeleteClick} />)}
 				</Fragment>
-			</>
+      
 		);
+           
+    
+    
 	});
   //addRows
     const addRows = (data) => {
@@ -129,32 +134,28 @@ const handleEditFormChange = (event) => {
 <div className='list'>
      <Card id='tableCard'>
 		  <Card.Header>
-        <h2 id='h2'>Customer List</h2>
+      <h2 id='h2'>Customer List</h2>
         <Breadcrumb>
 				<Breadcrumb.Item ><Link to ="/Home">Dashboard</Link></Breadcrumb.Item>
 				<Breadcrumb.Item active>Add Customer</Breadcrumb.Item>
 			</Breadcrumb>
 
-            <section className='bar'>
-              <div className='container-fluid'>
-                <div className='row'>
-                 <div className='col lg-3 md-4  sm-4 addCus'>
-                   <PopupCu func={addRows} />
-       
-                   </div>
-      
-                   <div className='col lg-9 md-8 sm-8 searchIf'>
-                    <Form className="search ">
-                   <Form.Control
-                     type="search"
-                     placeholder="Search....."
-                     className="me-2"
-                     onChange={(e) => setSearch(e.target.value)}  />       
-                     </Form>
-               </div>
-            </div>
-          </div>
-          </section>
+      <div className='row'>
+					<div className="col-lg-5 col-md-5 col-sm-5 col-xs-2 searchForm">
+						<InputGroup id="searchInput">
+						<InputGroup.Text id="basic-addon1"><TfiSearch/></InputGroup.Text>
+						<Form.Control 
+						placeholder="Search....."
+						aria-label="search"
+						aria-describedby="basic-addon1"
+						onChange={(e) => setSearch(e.target.value)}/>
+						</InputGroup>
+					</div>
+					<div className="col-lg-5 col-md-3 col-sm-3 col-xs-3 "></div>
+					<div className="col-lg-2 col-md-4 col-sm-4 col-xs-7 addPro">
+						<PopupCustomer func={addRows} />
+					</div>
+				</div>
           </Card.Header>
     <Card.Body>
           <Table  className='tab'>
@@ -167,7 +168,10 @@ const handleEditFormChange = (event) => {
               <th>Phone</th>
               <th>City</th>
               <th>Gender</th>
-              <th id='action'> Action </th>
+              <th> Edit </th>
+              <th>Delete </th>
+              
+              
             </tr>
            </thead>
            <tbody className='table-body'>{tableRows}</tbody>
@@ -180,6 +184,5 @@ const handleEditFormChange = (event) => {
   );
 }
 
-export default ListC;
-
+export default List;
 
