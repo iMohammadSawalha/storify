@@ -64,7 +64,8 @@ useEffect(() => {
         }],
     });
     setChartOptions({
-        responsive: true,
+      maintainAspectRatio:false,
+      responsive :true,
         tension:0.4,
   plugins: {
     legend: {

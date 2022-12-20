@@ -31,9 +31,10 @@ root.render(
         <Sidebar/>
           <div className="pageinfo">
             <Routes>        
+              <Route path="" index element={<Home/>} />
               <Route path='*' element={<ErrorPage />} />
-              <Route path="/home" element={<Home/>} />
-              <Route path="/dashboard" index element={<Dashboard/>} />
+              <Route path="/home" index element={<Home/>} />
+              <Route path="/dashboard" element={<Dashboard/>} />
               <Route path="/analysis" element={<Analysis/>} />
               <Route path="/invoices" element={<Invoice/>} />
               <Route path="/products" element={<Products/>} />

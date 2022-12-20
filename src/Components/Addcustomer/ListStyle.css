@@ -4,16 +4,7 @@
     margin-top: 2%;
     overflow-x: auto;
 }
-#txt{
-    font-size: x-small;
-    margin-left: 1%;
-    color: gray;
-}
-#search{
-    width: 30%;  
-    margin-left: 70%;
-    padding-bottom: 2%;
-}
+
 #sort{
     margin-left: 52px;
     margin-top: -23px;
@@ -22,32 +13,23 @@
 width: auto;
 height: 40px;
 }
-
-
 #tableCard{
     width: 100%;
-    
 }
-#spacefill{
+#icon{
   margin-left: 27%; 
 }
 #action{
     width: 9%;
 }
-.th,td{
-
-    padding: 0.75 rem !important;
+.editBtn{
+    color: rgb(93, 91, 91);
+  
 }
-@media (width:820px)  {
-    #tableCard{
-        width: max-content
+.deleteBtn{
+    color: red;
+    margin-left: 27%; 
     }
-}
-@media (width:768px) {
-    #tableCard{
-        width: max-content;
-    }
-}
 @media (max-width:654px) {
     .table thead{
         display: none;
@@ -66,7 +48,33 @@ height: 40px;
         text-align: center;
         position: relative;
     }
-
+    #action{
+        width: auto;
+    }
 }
-
-
+@media (width:820px)  {
+    #tableCard{
+        width: max-content
+    }
+}
+@media (width:768px) {
+    #tableCard{
+        width: max-content;
+    }
+}
+@media (max-width:450px) {
+    #searchInput{
+        width:50%;
+    }
+    .searchForm{
+       height: 2px;
+    }
+    .addPro{
+        width:fit-content;
+        font-size: x-small;
+        margin-left:50%;
+    }
+}
+td,th {
+    height: 3rem !important;
+  }

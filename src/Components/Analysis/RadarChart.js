@@ -60,7 +60,8 @@ import './components.css';
         });
         setChartOptions({
           tension:0.3,
-          responsive :true,
+          maintainAspectRatio:false,
+          responsive :true
         });
         },[])
           return (

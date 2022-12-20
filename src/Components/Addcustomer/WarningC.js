@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import { BsFillBackspaceFill } from "react-icons/bs";
+import { FaTimes } from "react-icons/fa";
 import './ListStyle.css';
 const WarningC = ({customerData,handleDeleteClick}) => {
     const [show, setShow] = useState(false);
@@ -9,7 +9,7 @@ const WarningC = ({customerData,handleDeleteClick}) => {
   const handleShow = () => setShow(true);
   return (
     <>
-   <BsFillBackspaceFill  id='spacefill' onClick={handleShow}/>  
+   <FaTimes className="deleteBtn" onClick={handleShow}/>  
       <Modal
       show={show} 
       onHide={handleClose}
