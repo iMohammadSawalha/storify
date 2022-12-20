@@ -1,7 +1,6 @@
 import React from 'react'
-import { MdCancel } from "react-icons/md"
-import './Style.css';
-import { BsFillBookmarkCheckFill } from "react-icons/bs"
+import {MdCancel} from "react-icons/md"
+import {BsFillBookmarkCheckFill} from "react-icons/bs"
 export const EditableRow = ({Col1, Col2,Col3,Col4,Col5,editFormData1,editFormData2,editFormData3,editFormData4,editFormData5,handleEditFormChange, handleCancelClick, handleEditFromSubmit }) => {
     return (
         <>
