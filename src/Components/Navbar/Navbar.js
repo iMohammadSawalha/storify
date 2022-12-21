@@ -16,7 +16,7 @@ import { Link } from 'react-router-dom';
 //Function
 const NavBar = () => {
   return (
-    <Navbar expand="lg" className='navbarbg'>
+    <Navbar expand="lg" className='navbarbg' fixed='top'>
 
 
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />

@@ -27,7 +27,7 @@ root.render(
   <StrictMode>
     <BrowserRouter>
     <Navbar/>
-        <div className="d-flex">
+        <div className="d-flex" >
         <Sidebar/>
           <div className="pageinfo">
             <Routes>        
