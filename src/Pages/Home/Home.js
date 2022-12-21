@@ -5,6 +5,9 @@ import data from "../../Data/Home/data.json";
 import TaxCalc from '../../Components/TaxCalculator/TaxCalc';
 import {Row,Col} from 'react-bootstrap/';
 
+//Todo:
+//Emails, Notifications, Wallet, Feedbacks.
+
 const Home = () => {
   const [cardData,setCardData] = useState(data);
   return (

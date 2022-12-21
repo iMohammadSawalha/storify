@@ -4,7 +4,7 @@
     box-shadow: 2px 4px 10px 1px rgba(201,201,201,0.47);
 }
 
-#cardTitle{
+.cardTitle{
     margin-top:auto;
     margin-bottom: auto;
     color: #29aed6;
@@ -15,4 +15,12 @@
     margin-bottom:auto;
     margin-left: auto;
     margin-right: 4%;
+}
+
+.ordersCardIcon{
+    width:40px;
+    height:40px;
+    border-radius: 30%;
+    border:1px #29aed6;
+    background-color: skyblue;
 }

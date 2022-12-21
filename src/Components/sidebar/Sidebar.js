@@ -93,8 +93,8 @@ const Sidebar = () => {
 						<Link key={menuItems.id} to={menuItems.toLink}>
 							<div key={menuItems.id} className={isExpanded ? "side-menu-item" : "side-menu-item menu-item-NX"}>
 								<div key={menuItems.id} className="d-flex my-auto mr-auto" >
-									<img key={menuItems.id} className="side-menu-item-icon" src= {menuItems.icon} alt="" srcSet=""/>
-									{isExpanded && <p key={menuItems.id} className="my-auto">{menuItems.text}</p>}
+									<img key={menuItems.id+'a'} className="side-menu-item-icon" src= {menuItems.icon} alt="" srcSet=""/>
+									{isExpanded && <p key={menuItems.id+'b'} className="my-auto">{menuItems.text}</p>}
 								</div>
 							</div>
 						</Link>
