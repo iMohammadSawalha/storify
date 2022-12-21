@@ -63,7 +63,7 @@ const PopupCustomer =(props)=>{
 return(
     <>
     <Button  variant="primary" id ="addBTN" onClick={handleShow} >
-    Add Customer +</Button>
+   + Add Customer </Button>
     <Modal className='form'
       show={show}
       onHide={handleClose}

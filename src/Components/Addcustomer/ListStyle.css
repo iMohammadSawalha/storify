@@ -6,11 +6,14 @@
 }
 
 .bttn{
-width: auto;
-height: 40px;
+    margin-left:auto;
+    width:140px;
+}
+.addcustomer{
+    width: auto;
 }
 #tableCard{
-    width: a;
+    width: 100%;
 }
 
 .btn1{
@@ -19,6 +22,10 @@ height: 40px;
 .deleteBtn1{
     color: red;
   }
+  #sort{
+    margin-left: 52px;
+    margin-top: -23px;
+}
 @media (max-width:654px) {
     .table thead{
         display: none;
@@ -37,36 +44,30 @@ height: 40px;
         text-align: center;
         position: relative;
     }
-   
 }
-#sort{
-    margin-left: 52px;
-    margin-top: -23px;
-}
-@media (width:820px)  {
-    #tableCard{
-        width: max-content
+@media (max-width:615px) {
+    .addcustomer{
+        width:fit-content;
+        font-size: x-small;
+        margin-left:47%;
+       
     }
-}
-@media (width:768px) {
-    #tableCard{
-        width: max-content;
+    #searchInput{
+        width:50%;
+    
+    }
+    .searchForm{
+       height: 2px;
     }
 }
 @media (max-width:450px) {
     #searchInput{
         width:50%;
+    
     }
     .searchForm{
        height: 2px;
     }
-    .addPro{
-        width:fit-content;
-        font-size: x-small;
-        margin-left:50%;
-    }
+    
 }
 
-.table-body td,.table-body th {
-    height: 3rem !important;
-  }

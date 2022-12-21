@@ -19,7 +19,7 @@ const Warning = ({customerData,handleDeleteClick}) => {
         <Modal.Header closeButton>
           <Modal.Title>Think again...</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Are you sure you want to delete this Customer ?</Modal.Body>
+        <Modal.Body>Are you sure you want to delete this Customer?</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}> Cancel </Button>
           <Button variant="danger"  onClick={() => handleDeleteClick(customerData.ind)}>Yes,sure </Button>
