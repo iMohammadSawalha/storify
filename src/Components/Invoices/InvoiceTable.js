@@ -7,7 +7,7 @@ const InvocieTable = () => {
         <>
             <Table responsive="sm" className="table-hover p-3 ms-4">
                 <thead>
-                    <tr>
+                    <tr id="table-row">
                         <th>Description</th>
                         <th>Cost</th>
                         <th>Amount</th>

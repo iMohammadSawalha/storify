@@ -27,5 +27,17 @@
 }
 
 .pic {
-    height: 22rem;
+    height: 15rem;
+}
+
+@media screen and (max-width:765px) {
+
+    .pic {
+        display: none;
+    }
+
+    .content-page {
+        padding-top: 7rem;
+    }
+
 }

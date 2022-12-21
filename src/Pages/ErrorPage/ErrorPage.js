@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import "./styleErrorPage.css"
+
 const ErrorPage = () => {
     return (
         <>
+
             <div className="container">
                 <div className="row error-page">
                     <div className="col-md-6">
@@ -16,8 +18,7 @@ const ErrorPage = () => {
 
                     <div className="col-md-6">
                         <div>
-                            <img src="https://img.freepik.com/free-vector/404-error-abstract-concept-illustration_335657-2243.jpg?w
-                            =740&t=st=1670975082~exp=1670975682~hmac=e89e62da81bcd1a8575c45628bf6a63aa241bb8ddadfe59173f4bb531d0787f9" alt="Error Picture" className="pic" />
+                            <img src="https://cdn-icons-png.flaticon.com/512/645/645881.png?w=740&t=st=1671470989~exp=1671471589~hmac=2e78e65de93a6cf779cb4feb492d6ba519e3ffcb566f12fea22e1a2ca0cdacc5" alt="Error Picture" className="pic" />
                         </div>
                     </div>
                 </div>
