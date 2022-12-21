@@ -15,13 +15,8 @@ width:140px;
 #tableCard{
     width: 100%;
 }
-#deleteBtn{
-color: red;
-width: 60%;
-}
 .editBtn{
     color: gray;
-    width: 60%;
 }
 /*.darkMode{
     background-color: #343434;
@@ -51,7 +46,21 @@ width: 60%;
         position: relative;
     }
 }
-
+@media (max-width:615px) {
+    .addPro{
+        width:fit-content;
+        font-size: x-small;
+        margin-left:47%;
+       
+    }
+    #searchInput{
+        width:50%;
+    
+    }
+    .searchForm{
+       height: 2px;
+    }
+}
 @media (max-width:450px) {
     #searchInput{
         width:50%;
@@ -63,7 +72,7 @@ width: 60%;
     .addPro{
         width:fit-content;
         font-size: x-small;
-        margin-left:50%;
+        margin-left:47%;
        
     }
 }

@@ -15,6 +15,7 @@ function Add(props) {
   const [price, setPrice] = useState('');
   const [curr, setCurr] = useState('');
   const [status, setStatus] = useState('');
+  const [error , setError]= useState(false)
   const changeStatus=(event)=>{
        if(event.target.checked){
         setStatus('active')
@@ -39,11 +40,10 @@ function Add(props) {
   };
   const transferValue = (event) => {
     event.preventDefault();
-    //if no values entered:
-    if(name===''||desc===''||categ===''||price===''){
-      alert('PLEASE ENTER VALUES');
-    }
-   else{ const val = {
+    if(name.length==0||desc.length==0||categ===''||price===''){
+      setError(true)
+  }
+   else{const val = {
       name,
       desc,
       categ,
@@ -63,6 +63,7 @@ function Add(props) {
     setCurr('');
     setStatus('');
     setShow(false)
+    setError(false)
   };
   return (
     <>
@@ -83,10 +84,12 @@ function Add(props) {
      <form className='form-style'>
        <label className='Labels'> Product title:</label>
        <input className='form-control' value={name} onChange={changeName} name='title' type="text" id="title" placeholder='Add Title'/>
-       
+       {error && name.length<=0? <label className='errorMSG'>This field is requierd</label>:""}
+
        <div className='flex'></div>
        <label className='descLabel'> Describtion:</label>
        <textarea className='form-control' value={desc} onChange={changeDesc} name="desc" id="desc" placeholder='Type here'></textarea>
+       {error && desc.length<=0? <label className='errorMSG'>This field is requierd</label>:""}
 
        <div className='flex'></div>
         <label htmlFor="cat-select" className='Labels'>Category:</label>
@@ -99,6 +102,7 @@ function Add(props) {
             <option value="Beauty">Beauty</option>
             <option value="Technology">Technology</option>
        </select>
+       {error && categ.length<=0? <label className='errorMSG'>This field is requierd</label>:""}
 
        <div className='flex'></div>
         <label className='Labels'> price:</label>
@@ -112,6 +116,8 @@ function Add(props) {
             <option value="¥">¥</option>
        </select>
        </div>
+       {error && price.length<=0? <label className='errorMSG'>This field is requierd</label>:""}
+
         <div className='flex'></div>
         <label id='check'> 
         <input  type="checkBox" value ={status}onChange={changeStatus}/>

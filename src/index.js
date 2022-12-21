@@ -4,7 +4,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
-import Sidebar from "./Components/Sidebar/Sidebar";
+import Sidebar from "./Components/sidebar/Sidebar";
 import './index.css';
 import Analysis from "./Pages/Analysis/Analysis";
 import Companies from "./Pages/Companies/Companies";
@@ -17,6 +17,7 @@ import Home from "./Pages/Home/Home";
 import Invoice from "./Pages/Invoices/Invoices";
 import Products from "./Pages/Products/Products";
 import Profile from "./Pages/Profile/Profile";
+
 
 
 const rootElement = document.getElementById("root");

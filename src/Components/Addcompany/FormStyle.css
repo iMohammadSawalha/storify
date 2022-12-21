@@ -1,12 +1,11 @@
 
-/* .body{
+.body{
     width: 100%;
     height: 100%;
     background-color: whitesmoke;
     display: flex;
     position: relative;
-} */
-
+}
 .form-style{
     display: flex;
     flex-direction: column;

@@ -1,21 +1,18 @@
 
-import { useState ,Fragment} from 'react'
-import './ListStyle.css';
-import PopupCu from './PopupCu';
-import jsonData from './data.json';
-import Form from 'react-bootstrap/Form';
-import EditableRow from './EditableRow';
-import ReadOnlyRow from './ReadOnlyRow';
-import { Table ,Card} from 'react-bootstrap';
-import Button from 'react-bootstrap/Button';
-import { BsSortAlphaUp } from "react-icons/bs";
-import { BsSortAlphaDown } from "react-icons/bs";
-import { InputGroup } from 'react-bootstrap';
-import {TbSortAscendingLetters ,TbSortAscendingNumbers} from "react-icons/tb"
-import {TfiSearch} from "react-icons/tfi"
-import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
-  const ListC = () => {
+import { Fragment, useState } from 'react';
+import { Card, InputGroup, Table } from 'react-bootstrap';
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
+import Form from 'react-bootstrap/Form';
+import { BsSortAlphaDown, BsSortAlphaUp } from "react-icons/bs";
+import { TfiSearch } from "react-icons/tfi";
+import { Link } from 'react-router-dom';
+import jsonData from './data.json';
+import EditableRow from './EditableRow';
+import './ListStyle.css';
+import PopupCustomer from './PopupCustomer';
+import ReadOnlyRow from './ReadOnlyRow';
+  const List = () => {
     const [editFormData, setEditFormData] = useState({
         name: "",
         email: "",
@@ -112,13 +109,17 @@ const handleEditFormChange = (event) => {
       const tableRows = customerData.filter((item)=>{
        
         return (search.toLowerCase() === '') || (search.toUpperCase() === '') ? item : (item.name.toLowerCase().includes(search)) || (item.name.toUpperCase().includes(search)) }).map((customerData) => {
-        return (
-      <>
-				<Fragment  >
-					{EditcustomerDataId === customerData.ind? (<EditableRow editFormData={editFormData} handleEditFormChange={handleEditFormChange} handleCancelClick={handleCancelClick} handleEditFromSubmit={handleEditFromSubmit} />): (<ReadOnlyRow customerData={customerData} handleEditClick={handleEditClick} handleDeleteClick={handleDeleteClick} />)}
+           
+      return (
+        
+				<Fragment  key={customerData.ind} >
+					{EditcustomerDataId === customerData.ind? (<EditableRow customerData={customerData} editFormData={editFormData} handleEditFormChange={handleEditFormChange} handleCancelClick={handleCancelClick} handleEditFromSubmit={handleEditFromSubmit} />): (<ReadOnlyRow customerData={customerData} handleEditClick={handleEditClick} handleDeleteClick={handleDeleteClick} />)}
 				</Fragment>
-			</>
+      
 		);
+           
+    
+    
 	});
   //addRows
     const addRows = (data) => {
@@ -134,27 +135,29 @@ const handleEditFormChange = (event) => {
 <div className='list'>
      <Card id='tableCard'>
 		  <Card.Header>
-        <h1 >Customer List</h1>
+      <h1 >Customer List</h1>
         <Breadcrumb>
-				<Breadcrumb.Item href="#">Dashboard</Breadcrumb.Item>
+				<Breadcrumb.Item ><Link to ="/Home">Dashboard</Link></Breadcrumb.Item>
 				<Breadcrumb.Item active>Add Customer</Breadcrumb.Item>
 			</Breadcrumb>
+
       <div className='row'>
 					<div className="col-lg-5 col-md-5 col-sm-5 col-xs-2 searchForm">
 						<InputGroup id="searchInput">
 						<InputGroup.Text id="basic-addon1"><TfiSearch/></InputGroup.Text>
 						<Form.Control 
-						placeholder="Search product"
+						placeholder="Search....."
 						aria-label="search"
 						aria-describedby="basic-addon1"
 						onChange={(e) => setSearch(e.target.value)}/>
 						</InputGroup>
 					</div>
 					<div className="col-lg-5 col-md-3 col-sm-3 col-xs-3 "></div>
-					<div className="col-lg-2 col-md-4 col-sm-4 col-xs-7 addPro">
-						<PopupCu func={addRows} />
+					<div className="col-lg-2 col-md-4 col-sm-4 col-xs-7 addcustomer">
+						<PopupCustomer func={addRows} />
 					</div>
 				</div>
+        <div className='space'></div>
           </Card.Header>
     <Card.Body>
           <Table  className='tab'>
@@ -167,7 +170,10 @@ const handleEditFormChange = (event) => {
               <th>Phone</th>
               <th>City</th>
               <th>Gender</th>
-              <th id='action'> Action </th>
+              <th> Edit </th>
+              <th>Delete </th>
+              
+              
             </tr>
            </thead>
            <tbody className='table-body'>{tableRows}</tbody>
@@ -180,6 +186,5 @@ const handleEditFormChange = (event) => {
   );
 }
 
-export default ListC;
-
+export default List;
 

@@ -1,21 +1,31 @@
 .dropdown-toggle::after{
-    content: none;
+   content: none;
 }
 .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
-    display: contents;
+   display: contents;
 }
 .navbar-nav {
-    --bs-nav-link-padding-x: 1;
+   --bs-nav-link-padding-x: 1;
 }
 #profile{
-    font-size: 33px;
+   font-size: 33px;
+}
+.nameTxtmain{
+   color:rgb(255, 255, 255);
+}
+.iconsColormain{
+   color:#ffffff;
 }
 .nameTxt{
-    color:gray;
+   color:#55728f;
 }
 .iconsColor{
-    color:#29aed6;
+   color:#55728f;
 }
+.navbarbg{
+   background-color: #55728f
+}
+/* #29aed6; */
 form.d-flex {
-    margin-left: 1%;
+   margin-left: 1%;
 }
