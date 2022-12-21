@@ -3,6 +3,8 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import './FormStyle.css';
 function AddCompanyBtn(props) {
+	const [error, setError] = useState(false);
+
 	const [show, setShow] = useState(false);
 
 	const handleClose = () => setShow(false);
@@ -30,11 +32,10 @@ function AddCompanyBtn(props) {
 	};
 	const transferValue = (event) => {
 		event.preventDefault();
-		if (compname === "") alert("enter company name"); 
-		else if (email === "") alert("enter company email"); 
-		else if (address === "") alert("enter company address"); 
-		else if (phone === "")alert("enter company phone");
-		else if( comptype === "") alert("enter company type");
+
+		if (compname === "" || email === "" || phone === "" || address === "" || comptype === "")
+			setError(true);
+
 		else {
 			const val = {
 				compname,
@@ -53,10 +54,12 @@ function AddCompanyBtn(props) {
 		setAddress('');
 		setPhone('');
 		setComptype('');
+		setError(false);
+		setShow(false);
 	};
 	return (
 		<>
-			<Button  className='btn btn-primary bttn' onClick={handleShow} >
+			<Button className='btn btn-primary bttn' id="Btnn" onClick={handleShow} >
 				+ Add Company
 			</Button>
 
@@ -66,28 +69,63 @@ function AddCompanyBtn(props) {
 				</Modal.Header>
 				<Modal.Body>
 					<label className='lab'>Name :</label>
-					<br />
-					<input type="text" placeholder="enter the company name" value={compname} onChange={changeCompname} className="FormInput" /><br /><br /><br />
-
+					<div className='flex'></div>
+					<input type="text" placeholder="enter the company name" value={compname} onChange={changeCompname} className="FormInput" />
+					{
+						(error && (compname.length <= 0))
+							?
+							<label className='error'>please enter the name</label>
+							:
+							" "
+					}
+					<div className='flex'></div>
 					<label className='lab'>E-mail:</label>
-					<br />
-					<input type="email" placeholder="name@example.com" value={email} onChange={changeEmail} className="FormInput" /><br /><br /><br />
+					<div className='flex'></div>
+					<input type="email" placeholder="name@example.com" value={email} onChange={changeEmail} className="FormInput" />
+					{
 
+						(error && email.length <= 0)
+							?
+							<label className='error'>please enter the email</label>
+							:
+							""
+					}
+					<div className='flex'></div>
 					<label className='lab'>Address:</label>
-					<br />
-					<input type="text" placeholder="enter the company address" value={address} onChange={changeAddress} className="FormInput" /><br /><br /><br />
-
+					<div className='flex'></div>
+					<input type="text" placeholder="enter the company address" value={address} onChange={changeAddress} className="FormInput" />
+					{
+						(error && address.length <= 0)
+							?
+							<label className='error'>please enter the address</label>
+							:
+							""
+					}
+					<div className='flex'></div>
 					<label className='lab'>Phone Number:</label>
-					<br />
-					<input type="text" placeholder="enter the company phone" value={phone} onChange={changePhone} className="FormInput" /><br /><br /><br />
-
+					<div className='flex'></div>
+					<input type="text" placeholder="enter the company phone" value={phone} onChange={changePhone} className="FormInput" />
+					{
+						(error && phone.length <= 0)
+							?
+							<label className='error'>please enter the phone number</label>
+							:
+							""
+					}
+					<div className='flex'></div>
 					<label className='lab'> Company Type:</label>
-					<br />
-					<input type="text" placeholder="enter the company type" value={comptype} onChange={changeComptype} className="FormInput" /><br /><br /><br />
-
+					<div className='flex'></div>
+					<input type="text" placeholder="enter the company type" value={comptype} onChange={changeComptype} className="FormInput" />
+					{
+						(error && comptype.length <= 0)
+							?
+							<label className='error'>please enter the company type</label>
+							:
+							""
+					}
 				</Modal.Body>
 				<Modal.Footer>
-					<Button variant="outline-dark" onClick={handleClose}>
+					<Button variant="secondary"  onClick={handleClose}>
 						Close
 					</Button>
 					<Button className='bttn' onClick={transferValue}>
