@@ -1,19 +1,29 @@
 import React, { useState } from 'react';
 import './Dashboard.css';
 import Card from "../../Components/Cards/CardItem";
-import data from "../../Data/Dashboard/data.json";
+import cardData from "../../Data/Dashboard/data.json";
+import statisticCardData from "../../Data/Dashboard/statisticCardData.json"
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import StatisticCard from '../../Components/Cards/StatisticCard';
 
 const Dashboard = () => {
-  const [cardData,setCardData] = useState(data);
+  //Todo:
+  //Order statistics
   return (
     <>
-      <div className='row dashboardBox'>
+      <Row className='dashboardBox'>
         {cardData.map((cardData)=>
-          <div className='col-lg-3 col-md-6 col-sm-9 col-xs-12 ps-lg-2 mb-3'>
+          <Col lg={3} md={6} sm={9} xs={12} key={cardData.id}  className='mb-3'>
             <Card key={cardData.id} info={cardData} />
-          </div>
+          </Col>
         )}
-      </div>
+        {statisticCardData.map((statisticCardData)=>
+          <Col key={statisticCardData.id} lg={3} md={6} sm={9} xs={12} className='mb-3'>
+            <StatisticCard key={statisticCardData.id} info={statisticCardData} data={statisticCardData.data}/>
+          </Col>
+        )}
+      </Row>
     </>
   )
 }
