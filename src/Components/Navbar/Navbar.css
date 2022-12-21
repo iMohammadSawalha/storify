@@ -1,35 +1,50 @@
-.dropdown-toggle::after{
+.dropdown-toggle::after {
    content: none;
 }
-.navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
+
+.navbar>.container,
+.navbar>.container-fluid,
+.navbar>.container-lg,
+.navbar>.container-md,
+.navbar>.container-sm,
+.navbar>.container-xl,
+.navbar>.container-xxl {
    display: contents;
 }
+
 .navbar-nav {
    --bs-nav-link-padding-x: 1;
 }
-#profile{
+
+#profile {
    font-size: 33px;
 }
-.nameTxtmain{
-   color:rgb(255, 255, 255);
+
+.nameTxtmain {
+   color: rgb(255, 255, 255);
 }
-.iconsColormain{
-   color:#ffffff;
+
+.iconsColormain {
+   color: #ffffff;
 }
-.nameTxt{
-   color:#55728f;
+
+.nameTxt {
+   color: #55728f;
 }
-.iconsColor{
-   color:#55728f;
+
+.iconsColor {
+   color: #55728f;
 }
-.navbarbg{
+
+.navbarbg {
    background-color: #55728f;
 }
+
 /* #29aed6; */
 form.d-flex {
    margin-left: 1%;
 }
+
 button.navbar-toggler.collapsed {
    margin-left: 20px;
 }
-

@@ -4,24 +4,24 @@
     border: none
 }
 
+
 .profile-button:hover {
     background: #55728f;
 }
+
 
 .profile-button:focus {
     background: #55728f;
     box-shadow: none
 }
 
+
 .profile-button:active {
     background: #55728f;
     box-shadow: none
 }
 
-.labelscol {
-    font-size: 13px;
-    color: #55728f;
-}
+
 
 input#picture1 {
     font-size: 8px;
@@ -29,219 +29,344 @@ input#picture1 {
     padding-left: 60px;
 }
 
+
 .d-flex.flex-column.align-items-center.text-center.p-3.py-5 {
     margin-right: 150px;
 }
+
 
 #titlecol {
     color: #55728f;
     font-size: xx-large;
 }
 
+
 @media (min-width: 320px) {
+    .labelscol {
+        font-size: 21px;
+        color: #55728f;
+        padding-top: 10px;
+    }
+
     .custom-profile-col {
         flex: 0 0 auto;
         width: 100%;
     }
 
+
     #firstbox {
-        font-size: xxx-large;
+        font-size: xx-large;
         color: gray;
     }
+
 
     #secondbox {
-        font-size: xxx-large;
-        
+        font-size: xx-large;
+        color: gray;
     }
+
 
     #thirdbox {
-        font-size: xxx-large;
+        font-size: xx-large;
         color: gray;
     }
+
 
     #fourthbox {
-        font-size: xxx-large;
+        font-size: xx-large;
         color: gray;
     }
 
+
     #fifthbox {
-        font-size: xxx-large;
+        font-size: xx-large;
+        color: gray;
     }
+
 
     #sixthbox {
-        font-size: xxx-large;
+        font-size: xx-large;
+        color: gray;
     }
+
 
     #seventhbox {
-        font-size: xxx-large;
+        font-size: xx-large;
+        color: gray;
     }
 
+
     #eighthbox {
-        font-size: xxx-large;
+        font-size: xx-large;
+        color: gray;
     }
+
 
     input#picture1 {
         font-size: small;
     }
 
+
     #fname {
         font-size: large;
     }
+
 
     #email {
         font-size: large;
     }
 
+
     #number {
         font-size: large;
     }
+
 
     .rounded-circle {
         width: 350px;
     }
 
+
     button.btn.btn-primary.profile-button {
         font-size: xx-large;
     }
+
+
+    input#picture1 {
+        font-size: 17px;
+        padding-bottom: 10px;
+    }
+
+    h4#titlecol {
+        padding-top: 30px;
+    }
 }
-@media (min-width: 768px )and (max-width: 991px) {
+
+
+@media (min-width: 768px)and (max-width: 991px) {
+    .labelscol {
+        font-size: 13px;
+        color: #55728f;
+    }
+
+
     .custom-profile-col {
         flex: 0 0 auto;
         width: 100%;
     }
+
+
     .col-12.col-md-9.col-lg-6 {
         margin-left: 50px;
     }
+
 
     #firstbox {
         font-size: large;
         color: gray;
     }
 
+
     #secondbox {
         font-size: large;
+        color: gray;
     }
+
 
     #thirdbox {
         font-size: large;
         color: gray;
     }
 
+
     #fourthbox {
         font-size: large;
         color: gray;
     }
 
+
     #fifthbox {
         font-size: large;
+        color: gray;
     }
+
 
     #sixthbox {
         font-size: large;
+        color: gray;
     }
+
 
     #seventhbox {
         font-size: large;
+        color: gray;
     }
+
 
     #eighthbox {
         font-size: large;
+        color: gray;
     }
+
 
     input#picture1 {
         font-size: xx-small;
     }
 
+
     #fname {
         font-size: large;
     }
+
 
     #email {
         font-size: medium;
     }
 
+
     #number {
         font-size: medium;
     }
+
 
     .rounded-circle {
         width: 300px;
     }
 
+
     button.btn.btn-primary.profile-button {
         font-size: large;
     }
 
+
     #photo_and_its_components {
         margin: auto;
     }
+
+
+    input#picture1 {
+        font-size: 15px;
+        padding-bottom: 13px;
+    }
+
+    h4#titlecol {
+        padding-top: 30px;
+    }
 }
+
+
 @media (min-width: 992px) {
+    .labelscol {
+        font-size: 13px;
+        color: #55728f;
+    }
+
+
     .custom-profile-col {
         flex: 0 0 auto;
         width: 50%;
     }
 
+
     #firstbox {
         font-size: large;
         color: gray;
     }
 
+
     #secondbox {
         font-size: large;
+        color: gray;
     }
+
 
     #thirdbox {
         font-size: large;
         color: gray;
     }
 
+
     #fourthbox {
         font-size: large;
         color: gray;
     }
 
+
     #fifthbox {
         font-size: large;
+        color: gray;
     }
+
 
     #sixthbox {
         font-size: large;
+        color: gray;
     }
+
 
     #seventhbox {
         font-size: large;
+        color: gray;
     }
+
 
     #eighthbox {
         font-size: large;
+        color: gray;
     }
+
 
     input#picture1 {
         font-size: xx-small;
     }
 
+
     #fname {
         font-size: large;
     }
+
 
     #email {
         font-size: medium;
     }
 
+
     #number {
         font-size: medium;
     }
 
+
     .rounded-circle {
-        width: 300px;
+        width: 250px;
     }
+
 
     button.btn.btn-primary.profile-button {
         font-size: large;
     }
 
+
     #photo_and_its_components {
         margin: auto;
+    }
+
+
+    input#picture1 {
+        font-size: 14px;
+        padding-bottom: 10px;
+    }
+
+
+    h4#titlecol {
+        padding-top: 25px;
+    }
+
+    .picture {
+        position: relative;
+        bottom: 35px;
+    }
+
+    .profie-content {
+        padding-top: 40px;
     }
 }
