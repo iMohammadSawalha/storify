@@ -28,7 +28,7 @@
 .side-nav-heading {
 	grid-template-columns: 3fr 3fr;
 	grid-template-rows: 1fr;
-	height: 250px;
+	height: 120px;
 	
 }
 
@@ -38,7 +38,7 @@
 	margin-top: 15px;
 	color: var(--light);
 	margin-bottom: 20px;
-	margin-top: 20px;
+	margin-top: 60px;
 	
 
 
@@ -46,7 +46,6 @@
 .side-nav-brand img {
 	margin-top: -10px;
 	width: 50px;
-	margin-bottom: 150px;
 	margin-right: 10px;
 	
 }
@@ -55,9 +54,9 @@
 	background: none;
 	cursor: pointer;
 	margin: auto;
-	margin-top: 20px;
+	margin-top: 70px;
 	border: none;
-	margin-top: 25px;
+
 	
 }
 
@@ -112,7 +111,7 @@
 
 .side-nav-menu {
 	grid-template-rows: repeat(11, 1fr);
-	margin-top: -85px;
+	margin-top: 25px;
 	
 
 }
