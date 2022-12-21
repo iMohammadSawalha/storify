@@ -45,34 +45,34 @@ const Profile = () => {
                 <span className="text-black-50" id="email">{updatedemail}</span>
                 <span className="text-black-50" id="number">{updatedphone}</span>
               </div>
+            </div>
 
-              <div className="col-12 col-md-9 col-lg-6 ">
-                <div className="p-3 py-5">
+            <div className="col-12 col-md-9 col-lg-6 ">
+              <div className="p-3 py-5">
 
-                  <div className="d-flex justify-content-between align-items-center mb-3">
-                    <h4 id='titlecol'>Profile Settings</h4>
-                  </div>
-                  <div className="row">
-                    <div className="col-12 col-md-9 col-lg-6"><label className="labelscol">Name</label><input type="text" className="form-control" id="firstbox" placeholder="Mohammed" onChange={handleChange1} value={name} /></div>
-                    <div className="col-12 col-md-9 col-lg-6"><label className="labelscol">Surname</label><input type="text" className="form-control" id="secondbox" placeholder="AbuZahra" /></div>
-                  </div>
-
-                  <div className="col-12 col-md-9 col-lg-6"><label className="labelscol">Mobile Number</label><input type="text" className="form-control" id="thirdbox" placeholder="(+970)" onChange={handleChange2} value={phone} /></div>
-                  <div className="col-12 col-md-9 col-lg-6"><label className="labelscol">Email </label><input type="text" className="form-control" id="fourthbox" placeholder="Mohammed@info.com" onChange={handleChange3} value={email} /></div>
-
-                  <div className="row">
-                    <div className="col-12 col-md-9 col-lg-6"><label className="labelscol">Date of Birth</label><input type="text" className="form-control" id="fifthbox" placeholder="dd/dd/yyyy" /></div>
-                    <div className="col-12 col-md-9 col-lg-6"><label className="labelscol">Password</label><input type="text" className="form-control" id="sixthbox" placeholder="*********" /></div>
-                  </div>
-
-                  <div className="row">
-                    <div className="col-12 col-md-9 col-lg-6"><label className="labelscol">Country</label><input type="text" className="form-control" id="seventhbox" placeholder="Palestine" /></div>
-                    <div className="col-12 col-md-9 col-lg-6"><label className="labelscol">City</label><input type="text" className="form-control" id="eighthbox" placeholder="Nablus" />
-                    </div>
-                  </div>
-
-                  <div className="mt-5 text-center"><button className="btn btn-primary profile-button" type="submit" onClick={handleClick}>Save</button></div>
+                <div className="d-flex justify-content-between align-items-center mb-3">
+                  <h4 id='titlecol'>Profile Settings</h4>
                 </div>
+                <div className="row">
+                  <div className="col-12 col-md-9 col-lg-6"><label className="labelscol">Name</label><input type="text" className="form-control" id="firstbox" placeholder="Mohammed" onChange={handleChange1} value={name} /></div>
+                  <div className="col-12 col-md-9 col-lg-6"><label className="labelscol">Surname</label><input type="text" className="form-control" id="secondbox" placeholder="AbuZahra" /></div>
+                </div>
+
+                <div className="col-12 col-md-9 col-lg-6"><label className="labelscol">Mobile Number</label><input type="text" className="form-control" id="thirdbox" placeholder="(+970)" onChange={handleChange2} value={phone} /></div>
+                <div className="col-12 col-md-9 col-lg-6"><label className="labelscol">Email </label><input type="text" className="form-control" id="fourthbox" placeholder="Mohammed@info.com" onChange={handleChange3} value={email} /></div>
+
+                <div className="row">
+                  <div className="col-12 col-md-9 col-lg-6"><label className="labelscol">Date of Birth</label><input type="text" className="form-control" id="fifthbox" placeholder="dd/dd/yyyy" /></div>
+                  <div className="col-12 col-md-9 col-lg-6"><label className="labelscol">Password</label><input type="text" className="form-control" id="sixthbox" placeholder="*********" /></div>
+                </div>
+
+                <div className="row">
+                  <div className="col-12 col-md-9 col-lg-6"><label className="labelscol">Country</label><input type="text" className="form-control" id="seventhbox" placeholder="Palestine" /></div>
+                  <div className="col-12 col-md-9 col-lg-6"><label className="labelscol">City</label><input type="text" className="form-control" id="eighthbox" placeholder="Nablus" />
+                  </div>
+                </div>
+
+                <div className="mt-5 text-center"><button className="btn btn-primary profile-button" type="submit" onClick={handleClick}>Save</button></div>
               </div>
             </div>
           </div>
@@ -83,4 +83,4 @@ const Profile = () => {
   );
 }
 
-export default Profile;            
+export default Profile;    
