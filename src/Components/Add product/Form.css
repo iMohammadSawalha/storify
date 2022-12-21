@@ -67,3 +67,16 @@
     color:red;
     margin-left: 15%;
 }
+@media (max-width:450px) {
+    .bttn {
+        margin-left: 24%;
+        width: 99px;
+        font-size: 11px;
+    } 
+}
+@media (max-width:350px){
+
+    .bttn{
+        margin-left: 4%;
+    }
+}

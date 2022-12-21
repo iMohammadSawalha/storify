@@ -108,7 +108,9 @@ function AddProduct() {
 		return (
 			<>
 				<Fragment key={proData.id}>
-					{EditproductDataId === proData.id ? (<EditRow editFormData={editFormData}
+					{EditproductDataId === proData.id ? (<EditRow 
+					proData={proData}
+					editFormData={editFormData}
                      handleEditFormChange={handleEditFormChange} 
                      handleCancelClick={handleCancelClick}
                       handleEditFromSubmit={handleEditFromSubmit} />) : 
@@ -146,7 +148,7 @@ function AddProduct() {
 						<InputGroup id="searchInput">
 						<InputGroup.Text id="basic-addon1"><TfiSearch/></InputGroup.Text>
 						<Form.Control 
-						placeholder="Search product"
+						placeholder="Search....."
 						aria-label="search"
 						aria-describedby="basic-addon1"
 						onChange={(e) => setSearch(e.target.value)}/>

@@ -3,10 +3,10 @@ import {BsFillBookmarkCheckFill} from "react-icons/bs"
 import './List.css'
 
 
-const EditRow = ({ editFormData, handleEditFormChange, handleCancelClick,handleEditFromSubmit }) => {
+const EditRow = ({proData, editFormData, handleEditFormChange, handleCancelClick,handleEditFromSubmit }) => {
     return (
         <>
-            <tr>
+            <tr key={proData.id}>
                 <td> <input type="text" name="name" defaultValue={editFormData.name} onChange={handleEditFormChange}/></td>
                 <td> <input type="text" name="desc" value={editFormData.desc} onChange={handleEditFormChange}/></td>
                 <td> <input type="text" name="categ" value={editFormData.categ} onChange={handleEditFormChange}/></td>
