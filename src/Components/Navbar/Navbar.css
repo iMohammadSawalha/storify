@@ -29,3 +29,7 @@
 form.d-flex {
    margin-left: 1%;
 }
+button.navbar-toggler.collapsed {
+   margin-left: 20px;
+}
+
