@@ -6,9 +6,7 @@
 	height:auto;
 	position: relative;
 	color: var(--light);
-	margin-top: -60px;
 	transition: 0.4s;
-	
 }
 .side-nav-container-NX {
 	width: 95px;
@@ -25,11 +23,10 @@
 	display: grid;
 }
 
+
 .side-nav-heading {
 	grid-template-columns: 3fr 3fr;
 	grid-template-rows: 1fr;
-	height: 120px;
-	
 }
 
 
