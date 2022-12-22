@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import './Style.css';
 import './FormStyle.css';
 function AddCompanyBtn(props) {
 	const [show, setShow] = useState(false);
@@ -58,7 +57,7 @@ function AddCompanyBtn(props) {
 	return (
 		<>
 			<Button  className='btn btn-primary bttn' onClick={handleShow} >
-				Add Company
+				+ Add Company
 			</Button>
 
 			<Modal show={show} onHide={handleClose}>
@@ -100,4 +99,3 @@ function AddCompanyBtn(props) {
 	)
 }
 export default AddCompanyBtn;
-

@@ -19,6 +19,7 @@ import Products from "./Pages/Products/Products";
 import Profile from "./Pages/Profile/Profile";
 
 
+
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 
@@ -26,13 +27,14 @@ root.render(
   <StrictMode>
     <BrowserRouter>
     <Navbar/>
-        <div className="d-flex">
+        <div className="d-flex" >
         <Sidebar/>
           <div className="pageinfo">
             <Routes>        
+              <Route path="" index element={<Home/>} />
               <Route path='*' element={<ErrorPage />} />
-              <Route path="/home" element={<Home/>} />
-              <Route path="/dashboard" index element={<Dashboard/>} />
+              <Route path="/home" index element={<Home/>} />
+              <Route path="/dashboard" element={<Dashboard/>} />
               <Route path="/analysis" element={<Analysis/>} />
               <Route path="/invoices" element={<Invoice/>} />
               <Route path="/products" element={<Products/>} />

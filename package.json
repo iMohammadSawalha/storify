@@ -12,21 +12,17 @@
     "@emotion/styled": "^11.10.5",
     "@mui/icons-material": "5.10.9",
     "@mui/material": "^5.10.13",
+    "@mui/x-data-grid": "^5.17.16",
     "bootstrap": "^5.2.2",
     "chart.js": "^4.0.1",
-    "mdb-react-ui-kit": "5.0.0",
     "react": "18.2.0",
     "react-bootstrap": "^2.6.0",
-    "react-bootstrap-table-next": "^4.0.3",
-    "react-bootstrap-table2-editor": "^1.4.0",
-    "react-bootstrap-table2-paginator": "^2.1.2",
     "react-chartjs-2": "^5.0.1",
     "react-dom": "18.2.0",
     "react-icons": "4.6.0",
     "react-router-dom": "^6.4.3",
     "react-scripts": "^5.0.1",
-    "react-to-print": "^2.14.10",
-    "sass": "^1.56.1"
+    "react-to-print": "^2.14.10"
   },
   "devDependencies": {
     "@babel/runtime": "7.13.8",

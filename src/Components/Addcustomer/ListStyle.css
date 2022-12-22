@@ -1,44 +1,30 @@
-#h2{
-    position: relative;
-    left: 40px;
-}
-.bar{
-    margin-top: 3%;
-}
-.addCus{
-  margin-left: 2%; 
- margin-top: 5%;
-}
-#parg{
-    position: relative;
-    left: 40px;
-}
-.listC{
+.list{
     display:flex;
     flex-direction: column;
-    margin-top:3%;
-   
+    margin-top: 2%;
+    overflow-x: auto;
 }
-#sort{
-    margin-left: 52px;
-    margin-top: -23px;
+
+.bttn{
+    margin-left:auto;
+    width:140px;
 }
-.search{
-    margin-left: 16%;
-    width: 84%;
+.addcustomer{
+    width: auto;
 }
 #tableCard{
-    width: 105%;
+    width: 100%;
 }
-@media (width:820px)  {
-    #tableCard{
-        width: max-content
-    }
+
+.btn1{
+    color: rgb(93, 91, 91);
 }
-@media (width:768px) {
-    #tableCard{
-        width: max-content;
-    }
+.deleteBtn1{
+    color: red;
+  }
+  #sort{
+    margin-left: 52px;
+    margin-top: -23px;
 }
 @media (max-width:654px) {
     .table thead{
@@ -50,7 +36,6 @@
     .table tr{
         display: block;
         width: 100%;
-       
     }
     .table tr{
         margin-bottom: 15 px;
@@ -58,10 +43,31 @@
     .table td{
         text-align: center;
         position: relative;
+    }
+}
+@media (max-width:615px) {
+    .addcustomer{
+        width:fit-content;
+        font-size: x-small;
+        margin-left:47%;
        
     }
-
-}
-        
+    #searchInput{
+        width:50%;
     
+    }
+    .searchForm{
+       height: 2px;
+    }
+}
+@media (max-width:450px) {
+    #searchInput{
+        width:50%;
+    
+    }
+    .searchForm{
+       height: 2px;
+    }
+    
+}
 

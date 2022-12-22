@@ -12,7 +12,6 @@ ul {
 /* End of public */
 
 
-
 /* Main Part - Client Details */
 .total {
     justify-content: center;
@@ -37,11 +36,10 @@ ul {
 }
 
 #table-amount {
-    padding-left: 2erm;
+    padding-left: 2rem;
 }
 
 /* End of Client Details */
-
 
 
 /* Footer */
@@ -52,20 +50,17 @@ ul {
 
 .btn-print {
     width: auto;
+    position: relative;
+    bottom: 4.6rem;
+    left: 3rem;
 }
 
 /* End of footer */
 
 
-
 /* Responsive */
 
 @media screen and (max-width:650px) {
-
-    .total {
-        position: relative;
-        left: 3rem;
-    }
 
     .invoice-column {
         margin-bottom: 0.1rem;
@@ -82,33 +77,26 @@ ul {
 
 @media screen and (max-width:650px) {
 
-    Table thead {
-        display: flex;
-    }
-
-    table,
-    tbody,
-    tr,
-    #table-product,
     #table-product,
     #table-cost,
     #table-amount {
         display: block;
         width: 100%;
-    }
-
-    tr {
-        margin-top: 20px;
-        justify-content: center;
-        display: flex;
-    }
-
-    #table-product,
-    #table-product,
-    #table-cost,
-    #table-amount {
         text-align: center;
         position: relative;
+    }
+
+    #table-row {
+        display: none;
+    }
+
+    #table-amount {
+        padding-left: 0;
+    }
+
+    .btn-print {
+        margin-left: 6rem;
+        margin-top: 3rem;
     }
 }
 

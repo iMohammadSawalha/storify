@@ -4,34 +4,29 @@
     margin-top: 2%;
     overflow-x: auto;
 }
-#txt{
-    font-size: x-small;
-    margin-left: 1%;
-    color: gray;
-}
-
-#searchInput{
-    width:50%
-}
 
 .bttn{
-width: auto;
-height: 40px;
-margin-left: 75%;
-margin-top: 1%;
+margin-left:auto;
+width:140px;
+}
+.addPro{
+    width: auto;
 }
 #tableCard{
     width: 100%;
 }
-#deleteBtn{
-color: red;
-}
 .editBtn{
-    color: #72A0C1;
+    color: gray;
 }
 /*.darkMode{
     background-color: #343434;
 }*/
+.table td{
+    padding: 0.85rem;
+}
+#searchInput{
+    width: auto;
+}
 @media (max-width:654px) {
     .table thead{
         display: none;
@@ -50,9 +45,37 @@ color: red;
         text-align: center;
         position: relative;
     }
-
 }
-
+@media (max-width:615px) {
+    .addPro{
+        width:fit-content;
+        font-size: x-small;
+        margin-left:47%;
+       
+    }
+    #searchInput{
+        width:50%;
+    
+    }
+    .searchForm{
+       height: 2px;
+    }
+}
+@media (max-width:450px) {
+    #searchInput{
+        width:50%;
+    
+    }
+    .searchForm{
+       height: 2px;
+    }
+    .addPro{
+        width:fit-content;
+        font-size: x-small;
+        margin-left:47%;
+       
+    }
+}
 
 
 

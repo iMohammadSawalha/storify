@@ -65,17 +65,7 @@ useEffect(() => {
     });
     setChartOptions({
         responsive: true,
-        animations: {
-          tension: {
-            duration: 1000,
-            easing: 'linear',
-            from: 0.4 ,
-            to: 0.3,
-            loop: true
-
-          }
-        },
-        maintainAspectRatio:true,
+        tension:0.4,
   plugins: {
     legend: {
       position: 'chartArea',

@@ -30,7 +30,7 @@
     "categ":"Kids",
     "price":"50",
     "curr":"₪",
-    "status":"not-active"
+    "status":"not active"
 } ,
 {
     
@@ -60,7 +60,7 @@
     "categ":"Technology",
     "price":"500",
     "curr":"$",
-    "status":"not-active"
+    "status":"not active"
 } ,
 {
     
@@ -99,7 +99,7 @@
     "categ":"Home",
     "price":"30",
     "curr":"₪",
-    "status":"not-active"
+    "status":"not active"
 } ,
 {
     

@@ -1,12 +1,16 @@
 import React, { Fragment, useState } from 'react';
-import AddCompanyBtn from './AddCompanyBtn';
-import jsonData from './mock-data.json';
-import './Style.css';
-import ReadOnlyRow from './ReadOnlyRow';
-import EditableRow from './EditableRow';
+import { Card, InputGroup } from 'react-bootstrap';
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import Form from 'react-bootstrap/Form';
-import { Card, Table } from 'react-bootstrap';
 import { TbSortAscendingLetters, TbSortAscendingNumbers } from "react-icons/tb";
+import { TfiSearch } from "react-icons/tfi";
+import AddCompanyBtn from './AddCompanyBtn';
+import EditableRow from './EditableRow';
+import jsonData from './mock-data.json';
+import MyTable from './MyTable';
+import NewColumn from './NewColumn';
+import ReadOnlyRow from './ReadOnlyRow';
+import './Style.css';
 function AddCompany() {
 	const [editFormData, setEditFormData] = useState({
 		compname: "",
@@ -97,11 +101,50 @@ function AddCompany() {
 
 		setEditFormData(formValues)
 	};
-	const tableRows = companyData.filter((item) => { return (search.toLowerCase() === '') || (search.toUpperCase() === '') ? item : (item.compname.toLowerCase().includes(search)) || (item.compname.toUpperCase().includes(search)) }).map((companyData) => {
+	const tableRows = companyData.filter((item) => {
+		return (search.toLowerCase() === '') || (search.toUpperCase() === '')
+			?
+			item
+			:
+			(item.compname.toLowerCase().includes(search)) || (item.compname.toUpperCase().includes(search))
+	}).map((companyData) => {
 		return (
 			<>
 				<Fragment>
-					{EditcompanyDataId === companyData.id ? (<EditableRow editFormData={editFormData} handleEditFormChange={handleEditFormChange} handleCancelClick={handleCancelClick} handleEditFromSubmit={handleEditFromSubmit} />) : (<ReadOnlyRow companyData={companyData} handleEditClick={handleEditClick} handleDeleteClick={handleDeleteClick} />)}
+					{EditcompanyDataId === companyData.id
+						?
+						(
+							<EditableRow
+								Col1="compname"
+								Col2="email"
+								Col3="address"
+								Col4="phone"
+								Col5="comptype"
+								editFormData1={editFormData.compname}
+								editFormData2={editFormData.email}
+								editFormData3={editFormData.address}
+								editFormData4={editFormData.phone}
+								editFormData5={editFormData.comptype}
+								handleEditFormChange={handleEditFormChange}
+								handleCancelClick={handleCancelClick}
+								handleEditFromSubmit={handleEditFromSubmit}
+							/>
+						)
+						:
+						(
+							<ReadOnlyRow
+								Data1={companyData.compname}
+								Data2={companyData.email}
+								Data3={companyData.address}
+								Data4={companyData.phone}
+								Data5={companyData.comptype}
+								Data={companyData}
+								handleEditClick={handleEditClick}
+								handleDeleteClick={handleDeleteClick}
+							/>
+						)
+					}
+
 				</Fragment>
 			</>
 		);
@@ -114,51 +157,82 @@ function AddCompany() {
 		setCompanyData(updatedcompanyData);
 	};
 	return (
-		<div className='list'>
-			<Card className='tableCard'>
+		<div className='list' >
+			<Card id='tableCard'>
 				<Card.Header>
-					<h1>
-						Companies
-					</h1>
-					<br />
-					<section className='listbar'>
-						<div className='container-fluclassName Btns' >
-							<div className='row'>
+					<h1> Companies</h1>
+					<Breadcrumb>
+						<Breadcrumb.Item >
+							Dashboard
+						</Breadcrumb.Item>
+						<Breadcrumb.Item active>Add Company</Breadcrumb.Item>
+					</Breadcrumb>
 
-								<div className='col lg-4 md-4  sm-4 addPro'>
-									<AddCompanyBtn name="Add Company" func={addRows} />
-								</div>
-								<div className='col lg-8 md-8 sm-8 searchForm'>
-									<Form.Control
-										type="search"
-										placeholder="search for a company by its name"
-										className="me-2"
-										aria-label="Search"
-										onChange={(e) => setSearch(e.target.value)}
-									/>
-								</div>
-							</div>
+					<div className='row'>
+						<div className="col-lg-5 col-md-5 col-sm-5 col-xs-2 searchForm">
+							<InputGroup id="searchInput">
+								<InputGroup.Text id="basic-addon1"><TfiSearch /></InputGroup.Text>
+								<Form.Control
+									placeholder="Search Company"
+									aria-label="search"
+									aria-describedby="basic-addon1"
+									onChange={(e) => setSearch(e.target.value)} />
+							</InputGroup>
 						</div>
-					</section>
-					<br />
+						<div className="col-lg-5 col-md-3 col-sm-3 col-xs-3 "></div>
+						<div className="col-lg-2 col-md-4 col-sm-4 col-xs-7 addPro">
+							<AddCompanyBtn func={addRows} />
+						</div>
+
+					</div>
+					<div className='space'></div>
 				</Card.Header>
 				<Card.Body>
-					<Table striped className="tab">
-						<thead >
-							<th>Name <TbSortAscendingLetters className='icon' onClick={() => { sorting("compname") }} /></th>
-							<th>Email <TbSortAscendingLetters className='icon' onClick={() => { sorting("email") }} /></th>
-							<th>Address <TbSortAscendingLetters className='icon' onClick={() => { sorting("address") }} /></th>
-							<th>Phone <TbSortAscendingNumbers className='icon' onClick={() => { sorting("phone") }} /></th>
-							<th>Comptype <TbSortAscendingLetters className='icon' onClick={() => { sorting("comptype") }} /></th>
-							<th></th>
-							<th></th>
-						</thead>
-						<tbody>{tableRows}</tbody>
-					</Table>
+					<MyTable
+						striped className="tab"
+						TableRowsFunc={tableRows}>
+						<NewColumn th="Name">
+							<TbSortAscendingLetters
+								className='icon'
+								onClick={() => { sorting("compname") }}
+							/>
+						</NewColumn>
+
+						<NewColumn th="Email ">
+							<TbSortAscendingLetters
+								className='icon'
+								onClick={() => { sorting("email") }}
+							/>
+						</NewColumn>
+
+						<NewColumn th="Address">
+							<TbSortAscendingLetters
+								className='icon'
+								onClick={() => { sorting("address") }}
+							/>
+						</NewColumn>
+
+						<NewColumn th="Phone">
+							<TbSortAscendingNumbers
+								className='icon'
+								onClick={() => { sorting("phone") }}
+							/>
+						</NewColumn>
+
+						<NewColumn th="Comptype">
+							<TbSortAscendingLetters
+								className='icon'
+								onClick={() => { sorting("comptype") }}
+							/>
+						</NewColumn>
+
+						<NewColumn th="Edit"></NewColumn>
+						<NewColumn th="Delete"></NewColumn>
+					</MyTable>
 
 				</Card.Body>
 			</Card>
-		</div>
+		</div >
 	);
 };
 export default AddCompany;

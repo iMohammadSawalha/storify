@@ -1,5 +1,6 @@
 import "./Profile.css"
 import React, { useState } from 'react';
+import { Card } from "react-bootstrap";
 
 const Profile = () => {
 
@@ -32,6 +33,7 @@ const Profile = () => {
 
   return (
     <>
+    <Card>
       <div className="container">
         <div className="container-fluid">
           <div className="row">
@@ -76,8 +78,9 @@ const Profile = () => {
           </div>
         </div>
       </div>
+      </Card>
     </>
   );
 }
 
-export default Profile;            
+export default Profile;    

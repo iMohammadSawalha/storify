@@ -22,25 +22,22 @@ import './components.css';
     labels: ['New Customers','Recurring Customers'],
     datasets: [
       {
-        data: [,43, 57],
+        label: '# of Votes',
+        data: [43, 57],
         backgroundColor: [
-          'rgba(255, 100, 162, 0.8)',
-          'rgba(116, 112, 225, 0.8)',
+          'rgba(255, 99, 132, 0.5)',
+          'rgba(54, 162, 235, 0.5)',
+          'rgba(255, 206, 86, 0.5)',
+          'rgba(75, 192, 192, 0.5)',
+          'rgba(153, 102, 255, 0.5)',
+          'rgba(255, 159, 64, 0.5)',
         ],
-        hoverOffset: 10,
       },
     ],
   });
   setChartOptions({
-    resizeDelay:30,
-    responsive :true,
     maintainAspectRatio:false,
-    plugins: {
-      legend: {
-        display:false,
-
-      },
-    },
+    responsive :true
   })
   },[])
     return (
@@ -48,4 +45,19 @@ import './components.css';
 
   )}
 
-  export default DoughnutChart;
+  const DoughnutChartCard = () => {
+
+    return (
+
+            <div className='col-lg-3 col-md-6 col-sm-8 col-xs-12 ps-lg-2 mb-3'>
+                <div className='card card-chart card-chart-custom'>
+                      <div className='card-body h-100 pe-0'>
+                    <DoughnutChart/>
+                    </div>
+            </div>
+        </div>
+    )
+    
+    }
+
+  export default DoughnutChartCard;

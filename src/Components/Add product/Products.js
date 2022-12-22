@@ -1,15 +1,15 @@
 import React, { Fragment, useState } from 'react';
-import Add from './PopUp';
-import jsonData from './data.json';
-import './List.css';
-import ReadOnlyRow from './ReadOnlyEditValues';
-import EditRow from './EditRow';
-import Form from 'react-bootstrap/Form';
-import { InputGroup } from 'react-bootstrap';
-import {Table ,Card} from 'react-bootstrap';
-import {TbSortAscendingLetters ,TbSortAscendingNumbers} from "react-icons/tb"
-import {TfiSearch} from "react-icons/tfi"
+import { Card, InputGroup, Table } from 'react-bootstrap';
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
+import Form from 'react-bootstrap/Form';
+import { TbSortAscendingLetters, TbSortAscendingNumbers } from "react-icons/tb";
+import { TfiSearch } from "react-icons/tfi";
+import { Link } from 'react-router-dom';
+import jsonData from './data.json';
+import EditRow from './EditRow';
+import './List.css';
+import Add from './PopUp';
+import ReadOnlyRow from './ReadOnlyEditValues';
 
 function AddProduct() {
 	const [editFormData, setEditFormData] = useState({
@@ -107,7 +107,7 @@ function AddProduct() {
       (item.name.toLowerCase().includes(search)) || (item.name.toUpperCase().includes(search)) }).map((proData) => {
 		return (
 			<>
-				<Fragment>
+				<Fragment key={proData.id}>
 					{EditproductDataId === proData.id ? (<EditRow editFormData={editFormData}
                      handleEditFormChange={handleEditFormChange} 
                      handleCancelClick={handleCancelClick}
@@ -133,41 +133,35 @@ function AddProduct() {
     return (
         <>
         <div className='list' >
-		  <Card id='tableCard'>
-		  <Card.Header>
-			
-		  <h1> Products List</h1>
-          <Breadcrumb>
-      <Breadcrumb.Item href="#">Dashboard</Breadcrumb.Item>
-      <Breadcrumb.Item active>Add Product</Breadcrumb.Item>
-    </Breadcrumb>
+			<Card id='tableCard'>
+			<Card.Header>
+			<h1> Products List</h1>
+			<Breadcrumb>
+				<Breadcrumb.Item > <Link to ="/Home">Dashboard</Link></Breadcrumb.Item>
+				<Breadcrumb.Item active>Add Product</Breadcrumb.Item>
+			</Breadcrumb>
 		  
-		  <section className='listbar'>
-          <div className='container-fluid Btns' >
-			<div className='row'>
-			<div className='col lg-8 md-8 sm-8 searchForm'>
-		  <InputGroup className="mb-3" id="searchInput">
-        <InputGroup.Text id="basic-addon1"><TfiSearch/></InputGroup.Text>
-        <Form.Control
-          placeholder="Search product"
-          aria-label="search"
-          aria-describedby="basic-addon1"
-		  onChange={(e) => setSearch(e.target.value)}
-        />
-      </InputGroup>
-			</div>
+				<div className='row'>
+					<div className="col-lg-5 col-md-5 col-sm-5 col-xs-2 searchForm">
+						<InputGroup id="searchInput">
+						<InputGroup.Text id="basic-addon1"><TfiSearch/></InputGroup.Text>
+						<Form.Control 
+						placeholder="Search product"
+						aria-label="search"
+						aria-describedby="basic-addon1"
+						onChange={(e) => setSearch(e.target.value)}/>
+						</InputGroup>
+					</div>
+					<div className="col-lg-5 col-md-3 col-sm-3 col-xs-6 "></div>
+					<div className="col-lg-2 col-md-4 col-sm-4 col-xs-4 addPro">
+						<Add func={addRows} />
+					</div>
 
-				<div className='col lg-4 md-4  sm-4 addPro'>
-            <Add func={addRows} />
-			</div>
-
-		</div>
-        </div>
-		</section>
+				</div>
           <div className='space'></div>
 		  </Card.Header>
 		  <Card.Body>
-          <Table striped hover className='tab'>
+          <Table className='tab'>
             <thead>
               <tr>
                 <th>Product  <TbSortAscendingLetters onClick={() => { sorting("name") }}/> </th>
@@ -179,7 +173,6 @@ function AddProduct() {
 				<th>Delete</th>
               </tr>
             </thead>
-            <br />
             <tbody>{tableRows} </tbody>
           </Table>
 		  </Card.Body>

@@ -28,12 +28,10 @@
     width: 70%;
     height: 8%;
     margin-left: 6%;
-    border-color: #d3d3d3;
 }
 #desc{
     width: 70%;
     margin-left: 6%;
-    border-color: #d3d3d3;
 }
 #pic{
     margin-left: 6%;
@@ -42,19 +40,16 @@
     width: 30%;
     margin-left: 6%;
     height: 90%;
-    border-color: #d3d3d3;
 }
 #currency{
-    width: 30%;
+    width: 10%;
     margin-left: 1%;
-    height: 110%;
-    border-color: #d3d3d3;
+    height: 36px;
 }
 #categ{
     width: 60%;
     height: 8%;
     margin-left: 6%;
-    border-color: #d3d3d3;
 }
 #check{
     width: 45%;
@@ -62,4 +57,13 @@
 }
 .space{
     height: 20px;
+}
+.priceInputFlex{
+   display: flex;
+   flex-direction:row ;
+
+}
+.errorMSG{
+    color:red;
+    margin-left: 15%;
 }
