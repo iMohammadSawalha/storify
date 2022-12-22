@@ -5,6 +5,7 @@ import GridTable from '../../Components/Analysis/GridTables/GridTable';
 import LargeCard from '../../Components/Analysis/LDashCards';
 import LineChart from '../../Components/Analysis/LineChart';
 import MiniCards from "../../Components/Analysis/MiniDashCards";
+import PieChart from '../../Components/Analysis/PieChart';
 import PolarChart from '../../Components/Analysis/PolarChart';
 import CardItem from "../../Components/Cards/CardItem";
 import './Analysis.css';
@@ -49,14 +50,14 @@ const Analysis = () => {
                     </div>
         </div>
         <div className='row'>
-          <div className='col-md-6 col-lg-4 col-xl-4 order-0 mb-4'>
+          <div className='col-md-6 col-lg-5 col-sm-8 col-xl-4 order-0 mb-4'>
           <LargeCard title={"Order Statistics"} subtitle={"42.82k Total Sales"} data={"8,258"} datatitle={"Total Orders"} chart={<div className='wrapper'><DoughnutChart/></div>}/>
           </div>
-          <div className='col-md-6 col-lg-4 order-1 mb-4'>
+          <div className='col-md-6 col-lg-5 col-sm-8 col-xl-4 order-1 mb-4'>
           <LargeCard title={"Traffic Source"} subtitle={"3.2k Visits last month"} data={"143"} datatitle={"Today"} chart={<div className='wrapper'><PolarChart/></div>}/>
           </div>
-          <div className='col-md-6 col-lg-4 order-2 mb-4'>
-          <LargeCard title={"Most Ordered"} subtitle={"Electronic"} data={"82.5k"} datatitle={"Total Orders"} chart={<div className='wrapper'><DoughnutChart/></div>}/>
+          <div className='col-md-6 col-lg-5 col-sm-8 col-xl-4 order-2 mb-4'>
+          <LargeCard title={"Most Sold"} subtitle={"Electronic 82.5k"} data={"155.4k"} datatitle={"Total Sold"} chart={<div className='wrapper'><PieChart /></div>}/>
           </div>
         </div>
         <div className='row'>
