@@ -1,11 +1,13 @@
-import Box from '@mui/material/Box';
 import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 import { useState } from 'react';
+import { Card } from 'react-bootstrap';
 const GridTable =({tableTitle,cols,data}) => {
   const [pageSize, setPageSize] = useState(15);
   return (
-    <Box sx={{ height: 400, width: '100%' }}>
+    <Card style={{ height: 400, width: '100%' }}>
+      <div className = "h4 mt-1">
       {tableTitle}
+      </div>
       <DataGrid
         rows={data}
         disableDensitySelector
@@ -26,7 +28,7 @@ const GridTable =({tableTitle,cols,data}) => {
         }}
         experimentalFeatures={{ newEditingApi: true }}
       />
-    </Box>
+    </Card>
   );
 }
 

@@ -43,7 +43,7 @@ import './components.css';
 
 useEffect(() => {
     setChartData({
-        labels : ['Nov 1','Nov 3','Nov 5','Nov 7','Nov 9','Nov 11','Nov 16','Nov 21','Nov 25','Nov 28','Dec 1'],
+        labels : ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov'],
         datasets: [{
             type: 'line',
             data: [90,170,130,98,60,89,72,82,73,89,211],
@@ -65,13 +65,33 @@ useEffect(() => {
     });
     setChartOptions({
         responsive: true,
-        tension:0.4,
+        pointRadius: 5,
+        pointHoverRadius: 7,
+        scales: {
+          y: {
+            display: false,
+          },
+          x: {
+            display: false,
+          }
+        },
+        animations: {
+          tension: {
+            duration: 1000,
+            easing: 'linear',
+            from: 0.4 ,
+            to: 0.3,
+            loop: true
+
+          }
+        },
+        maintainAspectRatio:false,
   plugins: {
     legend: {
       position: 'chartArea',
       align:'start',
       labels:{
-        padding:5,
+        padding:10,
         boxWidth:30,
         useBorderRadius:true,
         borderRadius:5,
