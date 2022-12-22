@@ -4,8 +4,6 @@ import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import Form from 'react-bootstrap/Form';
 import { TbSortAscendingLetters, TbSortAscendingNumbers } from "react-icons/tb";
 import { TfiSearch } from "react-icons/tfi";
-import {IoIosArrowBack,IoIosArrowForward} from 'react-icons/io'
-import {TiArrowUnsorted} from 'react-icons/ti'
 import { Link } from 'react-router-dom';
 import jsonData from './data.json';
 import EditRow from './EditRow';
@@ -154,7 +152,7 @@ function AddProduct() {
 				<Breadcrumb.Item > <Link to ="/Home">Dashboard</Link></Breadcrumb.Item>
 				<Breadcrumb.Item active>Add Product</Breadcrumb.Item>
 			</Breadcrumb>
-		                <div className='searchForm'>
+		                <div id='searchForm'>
 						<InputGroup id="searchInput">
 						<InputGroup.Text id="basic-addon1"><TfiSearch/></InputGroup.Text>
 						<Form.Control 

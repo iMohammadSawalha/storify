@@ -16,7 +16,7 @@ flex-direction: row;
 .secCont{
     width: 20%;
 }
-.searchForm{
+#searchForm{
     width: fit-content;
     order: 3;
 }
@@ -26,7 +26,7 @@ flex-direction: row;
 #toDash{
     order: 2;
 }
-.bttn{
+#bttn{
 float: right;
 margin-top: 93px;
 width:140px;
@@ -34,7 +34,7 @@ background-color: #55728f;
 border: #55728f;
 color: aliceblue;
 }
-.bttn:hover{
+#bttn:hover{
     background-color: #55728f;
     color:aliceblue;
 }
@@ -100,7 +100,7 @@ color: aliceblue;
         padding-top: 48px;
         width: 2%;
        }
-       .bttn{
+       #bttn{
         margin-bottom: 8px;
         margin-right: 24px;
        }
