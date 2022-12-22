@@ -18,11 +18,9 @@
 
 .Labels{
     padding-left: 6%;
-    color: gray;
 }
 .descLabel{
     padding-left: 6%;
-    color: gray;
 }
 #title{
     width: 70%;
@@ -63,20 +61,11 @@
    flex-direction:row ;
 
 }
+#submitBtn{
+background-color: #55728f;
+border: #55728f;
+}
 .errorMSG{
     color:red;
     margin-left: 15%;
-}
-@media (max-width:450px) {
-    .bttn {
-        margin-left: 24%;
-        width: 99px;
-        font-size: 11px;
-    } 
-}
-@media (max-width:350px){
-
-    .bttn{
-        margin-left: 4%;
-    }
 }

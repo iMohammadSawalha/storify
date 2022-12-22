@@ -4,12 +4,15 @@ import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import Form from 'react-bootstrap/Form';
 import { TbSortAscendingLetters, TbSortAscendingNumbers } from "react-icons/tb";
 import { TfiSearch } from "react-icons/tfi";
+import {IoIosArrowBack,IoIosArrowForward} from 'react-icons/io'
+import {TiArrowUnsorted} from 'react-icons/ti'
 import { Link } from 'react-router-dom';
 import jsonData from './data.json';
 import EditRow from './EditRow';
 import './List.css';
 import Add from './PopUp';
 import ReadOnlyRow from './ReadOnlyEditValues';
+import Pagination from 'react-bootstrap/Pagination';
 
 function AddProduct() {
 	const [editFormData, setEditFormData] = useState({
@@ -128,23 +131,30 @@ function AddProduct() {
 		setproData(updatedProductData);
 	}; //addRows
 
-  /* const dark=()=>{
-	var element = document.body;
-	element.classList.toggle("darkMode");
-   } in return:<Button variant="primary" onClick={dark}>dark</Button>*/
+
+   let active = 1;
+   let items = [];
+   for (let number = 1; number <= 5; number++) {
+  items.push(
+    <Pagination.Item key={number} active={number === active}>
+      {number}
+    </Pagination.Item>,
+             );
+        }
+
     return (
         <>
         <div className='list' >
 			<Card id='tableCard'>
-			<Card.Header>
-			<h1> Products List</h1>
-			<Breadcrumb>
+			<Card.Header id='cardH'>
+				<div className='headerCont'>
+		<div className='firstCont'>
+			<h1 id='productH'> Products List</h1>
+			<Breadcrumb id='toDash'>
 				<Breadcrumb.Item > <Link to ="/Home">Dashboard</Link></Breadcrumb.Item>
 				<Breadcrumb.Item active>Add Product</Breadcrumb.Item>
 			</Breadcrumb>
-		  
-				<div className='row'>
-					<div className="col-lg-5 col-md-5 col-sm-5 col-xs-2 searchForm">
+		                <div className='searchForm'>
 						<InputGroup id="searchInput">
 						<InputGroup.Text id="basic-addon1"><TfiSearch/></InputGroup.Text>
 						<Form.Control 
@@ -153,29 +163,33 @@ function AddProduct() {
 						aria-describedby="basic-addon1"
 						onChange={(e) => setSearch(e.target.value)}/>
 						</InputGroup>
-					</div>
-					<div className="col-lg-5 col-md-3 col-sm-3 col-xs-6 "></div>
-					<div className="col-lg-2 col-md-4 col-sm-4 col-xs-4 addPro">
-						<Add func={addRows} />
-					</div>
+						</div>
+		</div>
 
-				</div>
+        <div className='secCont'>
+			<Add func={addRows} />
+        </div>
+						</div>
+
           <div className='space'></div>
 		  </Card.Header>
 		  <Card.Body>
           <Table className='tab'>
             <thead>
               <tr>
-                <th>Product  <TbSortAscendingLetters onClick={() => { sorting("name") }}/> </th>
-                <th>Describtion <TbSortAscendingLetters onClick={() => { sorting("desc") }}/></th>
-                <th>Category <TbSortAscendingLetters onClick={() => { sorting("categ") }}/></th>
-                <th>Price <TbSortAscendingNumbers onClick={() => { sorting("price") }}/></th>
-                <th>Status <TbSortAscendingLetters onClick={() => { sorting("status") }}/></th>
+                <th onClick={() => { sorting("name") }}>Product  <TbSortAscendingLetters onClick={() => { sorting("name") }}/> </th>
+                <th onClick={() => { sorting("desc") }}>Describtion <TbSortAscendingLetters onClick={() => { sorting("desc") }}/></th>
+                <th onClick={() => { sorting("categ") }}>Category <TbSortAscendingLetters onClick={() => { sorting("categ") }}/></th>
+                <th onClick={() => { sorting("price") }}>Price <TbSortAscendingNumbers onClick={() => { sorting("price") }}/></th>
+                <th onClick={() => { sorting("status") }}>Status <TbSortAscendingLetters onClick={() => { sorting("status") }}/></th>
 				<th>Edit</th>
 				<th>Delete</th>
               </tr>
             </thead>
-            <tbody>{tableRows} </tbody>
+            <tbody>
+				{tableRows} 
+			    <div><Pagination size="sm">{items}</Pagination></div>
+			</tbody>
           </Table>
 		  </Card.Body>
           </Card>
