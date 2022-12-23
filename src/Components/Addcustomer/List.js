@@ -1,5 +1,3 @@
-
-
 import { Fragment, useState } from 'react';
 import { Card, InputGroup, Table } from 'react-bootstrap';
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
@@ -12,6 +10,7 @@ import EditableRow from './EditableRow';
 import './ListStyle.css';
 import PopupCustomer from './PopupCustomer';
 import ReadOnlyRow from './ReadOnlyRow';
+import Pagination from 'react-bootstrap/Pagination';
   const List = () => {
     const [editFormData, setEditFormData] = useState({
         name: "",
@@ -26,23 +25,25 @@ import ReadOnlyRow from './ReadOnlyRow';
       const [CustomerDataLength, setCustomerDataLength] = useState(customerData.length + 1);
       const [search, setSearch] = useState('');
       const [isActive, setIsActive] = useState(true);
+      const [order, setOrder] = useState("ASC");
 
+      const sorting = (col) => {
+      if (order === "ASC") {
+        const sorted = [...customerData].sort((a, b) =>
+          a[col].toLowerCase() > b[col].toLowerCase() ? 1 : -1
+        );
+        setcustomerData(sorted);
+        setOrder("DSC");
+      }
+      if (order === "DSC") {
+        const sorted = [...customerData].sort((a, b) =>
+          a[col].toLowerCase() < b[col].toLowerCase() ? 1 : -1
+        );
+        setcustomerData(sorted);
+        setOrder("ASC");
+      }
+    }
 
-      // sort......
-      const onSorterDow =(e)=>{
-    
-        const sortedData=[...customerData]
-          sortedData.sort((a,b)=>a.name < b.name ? 1 : -1)
-        setcustomerData(sortedData);
-     
-       };
-       const onSorterUp =(e)=>{
-       
-        const sortedData=[...customerData]
-          sortedData.sort((a,b)=>a.name < b.name ? -1 : 1)
-        setcustomerData(sortedData);
-    
-       };
        
 //delete row:
        const handleDeleteClick = (customerDataId) => {
@@ -92,7 +93,7 @@ const handleEditFormChange = (event) => {
     const handleEditClick = (event, customerData) => {
         event.preventDefault();
     
-        setEditcustomerDataId(customerData.ind);
+        setEditcustomerDataId(customerData.id);
         const formValues = {
         id:customerData.id,
           name: customerData.name,
@@ -112,7 +113,7 @@ const handleEditFormChange = (event) => {
            
       return (
         
-				<Fragment  key={customerData.ind} >
+				<Fragment  key={customerData.id} >
 					{EditcustomerDataId === customerData.id? (<EditableRow customerData={customerData} editFormData={editFormData} handleEditFormChange={handleEditFormChange} handleCancelClick={handleCancelClick} handleEditFromSubmit={handleEditFromSubmit} />): (<ReadOnlyRow customerData={customerData} handleEditClick={handleEditClick} handleDeleteClick={handleDeleteClick} />)}
 				</Fragment>
       
@@ -130,19 +131,30 @@ const handleEditFormChange = (event) => {
 		setcustomerData(updatedcustomerData);
 	};
   
+  let active = 1;
+   let items = [];
+   for (let number = 1; number <= 5; number++) {
+  items.push(
+    <Pagination.Item key={number} active={number === active}>
+      {number}
+    </Pagination.Item>,
+             );
+        }
+
   return ( 
     <>
 <div className='list'>
      <Card id='tableCard'>
-		  <Card.Header>
-      <h1 >Customer List</h1>
-        <Breadcrumb>
-				<Breadcrumb.Item ><Link to ="/Home">Dashboard</Link></Breadcrumb.Item>
-				<Breadcrumb.Item active>Add Customer</Breadcrumb.Item>
-			</Breadcrumb>
+		  <Card.Header id='cardH'>
+      <div className='headerCont'>
+      <div className='firstCont'>
+          <h1 id='customerH'>Customer List</h1>
 
-      <div className='row'>
-					<div className="col-lg-5 col-md-5 col-sm-5 col-xs-2 searchForm">
+               <Breadcrumb id='toDash'>
+				             <Breadcrumb.Item ><Link to ="/Home">Dashboard</Link></Breadcrumb.Item>
+				             <Breadcrumb.Item active>Add Customer</Breadcrumb.Item>
+			          </Breadcrumb>
+          <div id='searchForm'>
 						<InputGroup id="searchInput">
 						<InputGroup.Text id="basic-addon1"><TfiSearch/></InputGroup.Text>
 						<Form.Control 
@@ -151,33 +163,39 @@ const handleEditFormChange = (event) => {
 						aria-describedby="basic-addon1"
 						onChange={(e) => setSearch(e.target.value)}/>
 						</InputGroup>
-					</div>
-					<div className="col-lg-5 col-md-3 col-sm-3 col-xs-3 "></div>
-					<div className="col-lg-2 col-md-4 col-sm-4 col-xs-7 addcustomer">
+          </div>
+     </div>
+          
+            <div className='secCont'>
 						<PopupCustomer func={addRows} />
-					</div>
-				</div>
-        <div className='space'></div>
+            </div>
+            </div>
+          <div className='space'></div>
           </Card.Header>
-    <Card.Body>
+       <Card.Body>
           <Table  className='tab'>
            <thead >
             <tr >
-              <th > Name <div id='sort'  onClick={() => setIsActive(!isActive)}>
-               {isActive ? <BsSortAlphaUp onClick={()=>onSorterDow()}/> :<BsSortAlphaDown onClick={()=>onSorterUp()}/>}</div> </th>
+            <th onClick={() => { sorting("name"), setIsActive(!isActive)}}>
+              Name 
+            <div id='sort'  onClick={() => setIsActive(!isActive)}>
+            {isActive ? <BsSortAlphaUp onClick={() => { sorting("name") }}/> :<BsSortAlphaDown onClick={() => { sorting("name") }}/>}</div> </th>    
               <th>E-mail</th>
               <th>password</th>
               <th>Phone</th>
-              <th>City</th>
+              <th onClick={() => { sorting("city"), setIsActive(!isActive)}}>
+              City
+             <div id='sort'  onClick={() => setIsActive(!isActive)}>
+            {isActive ? <BsSortAlphaUp onClick={() => { sorting("city") }}/> :<BsSortAlphaDown onClick={() => { sorting("city") }}/>}</div> </th>
               <th>Gender</th>
               <th> Edit </th>
               <th>Delete </th>
-              
-              
-            </tr>
-           </thead>
-           <tbody className='table-body'>{tableRows}</tbody>
-          </Table>
+             </tr>
+            </thead>
+            <tbody className='table-body'>{tableRows}
+            <div><Pagination size="sm">{items}</Pagination></div>
+           </tbody>
+           </Table>
         </Card.Body>
         </Card>
         </div>

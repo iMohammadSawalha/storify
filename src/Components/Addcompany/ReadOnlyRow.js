@@ -1,6 +1,7 @@
 import React from 'react'
 import { BsFillPenFill } from "react-icons/bs";
-import DeleteWarning from './Warning';
+import DeleteWarning from '../Add product/Warning';
+
 const ReadOnlyRow = ({Data, handleEditClick, handleDeleteClick }) => {
     return (
         <tr>
@@ -11,7 +12,7 @@ const ReadOnlyRow = ({Data, handleEditClick, handleDeleteClick }) => {
             <td>{Data.comptype}</td>
             <td><BsFillPenFill onClick={(event) => handleEditClick(event, Data)} /></td>
             <td>
-                <DeleteWarning handleDeleteClick={handleDeleteClick} Data={Data} />
+                <DeleteWarning handleDeleteClick={handleDeleteClick} data={Data} />
             </td>
         </tr>
     )

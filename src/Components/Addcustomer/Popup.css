@@ -90,9 +90,8 @@
     color: red;
     margin-left: 6%;
 }
-@media (max-width:450px) {
-#addBTN{
-    width: max-content;
-    font-size: 11px;
-    margin-left: 23%;
-}}
+#savetBtn{
+    background-color: #55728f;
+border: #55728f;
+}
+

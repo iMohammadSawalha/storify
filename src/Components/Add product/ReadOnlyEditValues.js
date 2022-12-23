@@ -11,7 +11,7 @@ const ReadOnlyRow = ({ proData, handleEditClick, handleDeleteClick }) => {
             <td>{proData.curr}{proData.price}</td>
             <td>{proData.status}</td>
             <td><a><BsFillPenFill className="editBtn" onClick={(event) => handleEditClick(event, proData)}/></a></td>
-            <td><DeleteWarning handleDeleteClick={handleDeleteClick} proData={proData}/></td>
+            <td><DeleteWarning handleDeleteClick={handleDeleteClick} data={proData}/></td>
         </tr>
     )
 }
