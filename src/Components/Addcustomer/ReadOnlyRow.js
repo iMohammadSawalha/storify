@@ -3,7 +3,7 @@ import './ListStyle.css';
 import Warning from "./Warning";
 const ReadOnlyRow = ({ customerData, handleEditClick, handleDeleteClick }) => {
     return (
-        <tr key={customerData.ind}>
+        <tr key={customerData.id}>
             <td>{customerData.name}</td>
             <td>{customerData.email}</td>
             <td>{customerData.password}</td>

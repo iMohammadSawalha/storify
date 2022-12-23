@@ -6,7 +6,7 @@ import './ListStyle.css'
  const EditableRow = ({customerData ,editFormData, handleEditFormChange, handleCancelClick,handleEditFromSubmit }) => {
     return (
         <>
-            <tr key={customerData.ind}>
+            <tr key={customerData.id}>
               <td> <input type="text" name="name" defaultValue={editFormData.name} onChange={handleEditFormChange} /></td>
               <td> <input type="text" name="email" defaultValue={editFormData.email} onChange={handleEditFormChange} /></td>
               <td> <input type="text" name="password" defaultValue={editFormData.password} onChange={handleEditFormChange} /></td>

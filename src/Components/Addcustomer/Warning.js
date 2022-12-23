@@ -22,7 +22,7 @@ const Warning = ({customerData,handleDeleteClick}) => {
         <Modal.Body>Are you sure you want to delete this Customer?</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}> Cancel </Button>
-          <Button variant="danger"  onClick={() => handleDeleteClick(customerData.ind)}>Yes,sure </Button>
+          <Button variant="danger"  onClick={() => handleDeleteClick(customerData.id)}>Yes,sure </Button>
         </Modal.Footer>
       </Modal>
     </>
