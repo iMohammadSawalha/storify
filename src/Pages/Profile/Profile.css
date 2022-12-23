@@ -101,6 +101,16 @@ input#picture1 {
         color: gray;
     }
 
+    #ninthbox {
+        font-size: xx-large;
+        color: gray;
+    }
+
+    #tenthbox {
+        font-size: xx-large;
+        color: gray;
+    }
+
 
     input#picture1 {
         font-size: small;
@@ -140,6 +150,11 @@ input#picture1 {
     h4#titlecol {
         padding-top: 30px;
     }
+
+    .mt-5.text-center {
+        padding-bottom: 33px;
+    }
+
 }
 
 
@@ -208,6 +223,16 @@ input#picture1 {
         color: gray;
     }
 
+    #ninthbox {
+        font-size: large;
+        color: gray;
+    }
+
+    #tenthbox {
+        font-size: large;
+        color: gray;
+    }
+
 
     input#picture1 {
         font-size: xx-small;
@@ -252,6 +277,11 @@ input#picture1 {
     h4#titlecol {
         padding-top: 30px;
     }
+
+    .mt-5.text-center {
+        padding-bottom: 33px;
+    }
+
 }
 
 
@@ -315,6 +345,16 @@ input#picture1 {
         color: gray;
     }
 
+    #ninthbox {
+        font-size: large;
+        color: gray;
+    }
+
+    #tenthbox {
+        font-size: large;
+        color: gray;
+    }
+
 
     input#picture1 {
         font-size: xx-small;
@@ -363,10 +403,14 @@ input#picture1 {
 
     .picture {
         position: relative;
-        bottom: 35px;
+        bottom: 15px;
     }
 
     .profie-content {
         padding-top: 40px;
+    }
+
+    .mt-5.text-center {
+        padding-bottom: 33px;
     }
 }
