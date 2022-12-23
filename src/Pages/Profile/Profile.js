@@ -61,15 +61,17 @@ const Profile = () => {
                     <div className="col-12 col-md-9 col-lg-6"><label className="labelscol">Surname</label><input type="text" className="form-control" id="secondbox" placeholder="AbuZahra" /></div>
                   </div>
                   <div className="row">
-                    <div className="col-12 col-md-9 col-lg-6"><label className="labelscol">Mobile Number</label><input type="text" className="form-control" id="thirdbox" placeholder="(+970)" onChange={handleChange2} value={phone} /></div>
                     <div className="col-12 col-md-9 col-lg-6"><label className="labelscol">Email </label><input type="email" className="form-control" id="fourthbox" placeholder="Mohammed@info.com" onChange={handleChange3} value={email} /></div>
+                    <div className="col-12 col-md-9 col-lg-6"><label className="labelscol">Mobile Number</label><input type="text" className="form-control" id="thirdbox" placeholder="(+970)" onChange={handleChange2} value={phone} /></div>
                   </div>
                   <div className="row">
                     <div className="col-12 col-md-9 col-lg-6"><label className="labelscol">Date of Birth</label><input type="date" className="form-control" id="fifthbox" /></div>
-                    <div className="col-12 col-md-9 col-lg-6"><label className="labelscol">Password</label><input type="password" className="form-control" id="sixthbox" placeholder="*********" /></div>
+                    <div className="col-12 col-md-9 col-lg-6"><label className="labelscol">Gender</label><input type="text" className="form-control" id="ninthbox" placeholder="Male" /></div>
                   </div>
-
-
+                  <div className="row">
+                    <div className="col-12 col-md-9 col-lg-6"><label className="labelscol">Password</label><input type="password" className="form-control " id="sixthbox" placeholder="*********" /></div>
+                    <div className="col-12 col-md-9 col-lg-6"><label className="labelscol">ZIP</label><input type="text" className="form-control" id="tenthbox" placeholder="ZIP" /></div>
+                  </div>
                   <div className="row">
                     <div className="col-12 col-md-9 col-lg-6"><label className="labelscol">Country</label><input type="text" className="form-control" id="seventhbox" placeholder="Palestine" /></div>
                     <div className="col-12 col-md-9 col-lg-6"><label className="labelscol">City</label><input list="Cities" name="City" className="form-control" id="eighthbox" placeholder="City" />

@@ -48,3 +48,18 @@ form.d-flex {
 button.navbar-toggler.collapsed {
    margin-left: 20px;
 }
+
+@media (min-width: 320px)and (max-width: 767px) {
+   p.nameTxtmain {
+      position: relative;
+      margin-left: 5px;
+      top: 10px;
+  }
+   svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.iconsColormain.css-i4bv87-MuiSvgIcon-root {
+      font-size: 40px;
+   }
+
+   svg#profile {
+      font-size: 41px;
+   }
+}
