@@ -18,11 +18,9 @@
 
 .Labels{
     padding-left: 6%;
-    color: gray;
 }
 .descLabel{
     padding-left: 6%;
-    color: gray;
 }
 #title{
     width: 70%;
@@ -62,6 +60,10 @@
    display: flex;
    flex-direction:row ;
 
+}
+#submitBtn{
+background-color: #55728f;
+border: #55728f;
 }
 .errorMSG{
     color:red;

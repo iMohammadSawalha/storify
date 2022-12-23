@@ -4,11 +4,41 @@
     margin-top: 2%;
     overflow-x: auto;
 }
-
-.bttn{
-margin-left:auto;
-width:140px;
+.headerCont{
+display: flex;
+flex-direction: row;
 }
+.firstCont{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+.secCont{
+    width: 20%;
+}
+#searchForm{
+    width: fit-content;
+    order: 3;
+}
+#productH{
+    order: 1;
+}
+#toDash{
+    order: 2;
+}
+#bttn{
+float: right;
+margin-top: 93px;
+width:140px;
+background-color: #55728f;
+border: #55728f;
+color: aliceblue;
+}
+#bttn:hover{
+    background-color: #55728f;
+    color:aliceblue;
+}
+
 .addPro{
     width: auto;
 }
@@ -17,6 +47,7 @@ width:140px;
 }
 .editBtn{
     color: gray;
+    cursor: pointer;
 }
 /*.darkMode{
     background-color: #343434;
@@ -27,6 +58,19 @@ width:140px;
 #searchInput{
     width: auto;
 }
+#deleteBtn{
+    cursor: pointer;
+}
+
+.arrow{
+
+    width: 30px;
+    height: 40px;
+}
+
+
+
+
 @media (max-width:654px) {
     .table thead{
         display: none;
@@ -46,37 +90,22 @@ width:140px;
         position: relative;
     }
 }
-@media (max-width:615px) {
-    .addPro{
-        width:fit-content;
-        font-size: x-small;
-        margin-left:47%;
-       
-    }
-    #searchInput{
-        width:50%;
-    
-    }
-    .searchForm{
-       height: 2px;
-    }
-}
-@media (max-width:450px) {
-    #searchInput{
-        width:50%;
-    
-    }
-    .searchForm{
-       height: 2px;
-    }
-    .addPro{
-        width:fit-content;
-        font-size: x-small;
-        margin-left:47%;
-       
-    }
-}
 
+@media (max-width:620px){
+       
+       #cardH{
+        padding-bottom: 3px;
+       }
+       .secCont{
+        padding-top: 48px;
+        width: 2%;
+       }
+       #bttn{
+        margin-bottom: 8px;
+        margin-right: 24px;
+       }
+
+}
 
 
 

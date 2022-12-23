@@ -67,9 +67,9 @@ function Add(props) {
   };
   return (
     <>
-      <Button  onClick={handleShow} className='btn btn-primary bttn '>
+      <button  onClick={handleShow} className='btn' id='bttn'>
         + Add Product
-      </Button>
+      </button>
       <Modal
         show={show}
         onHide={clearState}
@@ -131,7 +131,7 @@ function Add(props) {
             Close
 
           </Button>
-          <Button variant="primary" onClick={transferValue}>Submit item</Button>
+          <Button id='submitBtn' onClick={transferValue}>Submit item</Button>
         </Modal.Footer>
       </Modal>
     </>

@@ -11,7 +11,7 @@ function  DeleteWarning({proData,handleDeleteClick}) {
 
   return (
     <>
-   <FaTimes color='red' onClick={handleShow}/>
+   <FaTimes color='red' id='deleteBtn'  onClick={handleShow}/>
       <Modal
       show={show} 
       onHide={handleClose}
