@@ -12,7 +12,6 @@ import { TfiSearch } from "react-icons/tfi";
 import { Link } from 'react-router-dom';
 import Pagination from 'react-bootstrap/Pagination';
 function AddCompany() {
-
 	const [companyData, setCompanyData] = useState(jsonData);
 	const [EditcompanyDataId, setEditcompanyDataId] = useState(null);
 	const [companyDataLength, setCompanyDataLength] = useState(companyData.length + 1);
@@ -202,6 +201,7 @@ function AddCompany() {
 											onClick={() => { sorting("email") }}
 										/>
 
+		
 									</th>
 
 									<th className="cursorFix"
