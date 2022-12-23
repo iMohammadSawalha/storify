@@ -1,29 +1,30 @@
 import React, { Fragment, useState } from 'react';
-import { Card, InputGroup } from 'react-bootstrap';
-import Breadcrumb from 'react-bootstrap/Breadcrumb';
-import Form from 'react-bootstrap/Form';
-import { TbSortAscendingLetters, TbSortAscendingNumbers } from "react-icons/tb";
-import { TfiSearch } from "react-icons/tfi";
 import AddCompanyBtn from './AddCompanyBtn';
-import EditableRow from './EditableRow';
 import jsonData from './mock-data.json';
-import MyTable from './MyTable';
-import NewColumn from './NewColumn';
 import ReadOnlyRow from './ReadOnlyRow';
+import { TfiSearch } from "react-icons/tfi"
+import EditableRow from './EditableRow';
+import Form from 'react-bootstrap/Form';
+import { Card, Table } from 'react-bootstrap';
+import { TbSortAscendingLetters, TbSortAscendingNumbers } from "react-icons/tb";
+import { InputGroup } from 'react-bootstrap';
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import './Style.css';
 function AddCompany() {
+	
+	const [companyData, setCompanyData] = useState(jsonData);
+	const [EditcompanyDataId, setEditcompanyDataId] = useState(null);
+	const [companyDataLength, setCompanyDataLength] = useState(companyData.length + 1);
+	const [search, setSearch] = useState('');
+	const [order, setOrder] = useState("ASC");
 	const [editFormData, setEditFormData] = useState({
+		id: companyData.id,
 		compname: "",
 		email: "",
 		address: "",
 		phone: "",
 		comptype: ""
 	})
-	const [companyData, setCompanyData] = useState(jsonData);
-	const [EditcompanyDataId, setEditcompanyDataId] = useState(null);
-	const [companyDataLength, setCompanyDataLength] = useState(companyData.length + 1);
-	const [search, setSearch] = useState('');
-	const [order, setOrder] = useState("ASC");
 	const sorting = (col) => {
 		if (order === "ASC") {
 			const sorted = [...companyData].sort((a, b) =>
@@ -60,18 +61,13 @@ function AddCompany() {
 			phone: editFormData.phone,
 			comptype: editFormData.comptype
 		};
-		if (editFormData.compname === "") alert("enter company name");
-		else if (editFormData.email === "") alert("enter company email");
-		else if (editFormData.address === "") alert("enter company address");
-		else if (editFormData.phone === "") alert("enter company phone");
-		else if (editFormData.comptype === "") alert("enter company type");
-		else {
-			const newCompanyData = [...companyData]
-			const index = companyData.findIndex((companyData) => companyData.id === EditcompanyDataId);
-			newCompanyData[index] = editedCompanyData;
-			setCompanyData(newCompanyData);
-			setEditcompanyDataId(null);
-		}
+
+		const newCompanyData = [...companyData]
+		const index = companyData.findIndex((companyData) => companyData.id === EditcompanyDataId);
+		newCompanyData[index] = editedCompanyData;
+		setCompanyData(newCompanyData);
+		setEditcompanyDataId(null);
+
 	}
 	const handleCancelClick = () => {
 		setEditcompanyDataId(null);
@@ -110,21 +106,12 @@ function AddCompany() {
 	}).map((companyData) => {
 		return (
 			<>
-				<Fragment>
+				<Fragment key={companyData.id}>
 					{EditcompanyDataId === companyData.id
 						?
 						(
-							<EditableRow
-								Col1="compname"
-								Col2="email"
-								Col3="address"
-								Col4="phone"
-								Col5="comptype"
-								editFormData1={editFormData.compname}
-								editFormData2={editFormData.email}
-								editFormData3={editFormData.address}
-								editFormData4={editFormData.phone}
-								editFormData5={editFormData.comptype}
+							<EditableRow 
+								editFormData={editFormData}
 								handleEditFormChange={handleEditFormChange}
 								handleCancelClick={handleCancelClick}
 								handleEditFromSubmit={handleEditFromSubmit}
@@ -132,12 +119,7 @@ function AddCompany() {
 						)
 						:
 						(
-							<ReadOnlyRow
-								Data1={companyData.compname}
-								Data2={companyData.email}
-								Data3={companyData.address}
-								Data4={companyData.phone}
-								Data5={companyData.comptype}
+							<ReadOnlyRow 
 								Data={companyData}
 								handleEditClick={handleEditClick}
 								handleDeleteClick={handleDeleteClick}
@@ -165,7 +147,7 @@ function AddCompany() {
 						<Breadcrumb.Item >
 							Dashboard
 						</Breadcrumb.Item>
-						<Breadcrumb.Item active>Add Company</Breadcrumb.Item>
+						<Breadcrumb.Item active> Companies </Breadcrumb.Item>
 					</Breadcrumb>
 
 					<div className='row'>
@@ -181,55 +163,27 @@ function AddCompany() {
 						</div>
 						<div className="col-lg-5 col-md-3 col-sm-3 col-xs-3 "></div>
 						<div className="col-lg-2 col-md-4 col-sm-4 col-xs-7 addPro">
-							<AddCompanyBtn func={addRows} />
+							<AddCompanyBtn name="Add"  func={addRows} />
 						</div>
 
 					</div>
 					<div className='space'></div>
 				</Card.Header>
 				<Card.Body>
-					<MyTable
-						striped className="tab"
-						TableRowsFunc={tableRows}>
-						<NewColumn th="Name">
-							<TbSortAscendingLetters
-								className='icon'
-								onClick={() => { sorting("compname") }}
-							/>
-						</NewColumn>
-
-						<NewColumn th="Email ">
-							<TbSortAscendingLetters
-								className='icon'
-								onClick={() => { sorting("email") }}
-							/>
-						</NewColumn>
-
-						<NewColumn th="Address">
-							<TbSortAscendingLetters
-								className='icon'
-								onClick={() => { sorting("address") }}
-							/>
-						</NewColumn>
-
-						<NewColumn th="Phone">
-							<TbSortAscendingNumbers
-								className='icon'
-								onClick={() => { sorting("phone") }}
-							/>
-						</NewColumn>
-
-						<NewColumn th="Comptype">
-							<TbSortAscendingLetters
-								className='icon'
-								onClick={() => { sorting("comptype") }}
-							/>
-						</NewColumn>
-
-						<NewColumn th="Edit"></NewColumn>
-						<NewColumn th="Delete"></NewColumn>
-					</MyTable>
-
+					<Table className='tab'>
+						<thead>
+							<tr >
+								<th>Name<TbSortAscendingLetters onClick={() => { sorting("compname") }} /></th>
+								<th>Email<TbSortAscendingLetters onClick={() => { sorting("email") }} /></th>
+								<th>Address<TbSortAscendingLetters onClick={() => { sorting("address") }} /></th>
+								<th>Phone number<TbSortAscendingNumbers onClick={() => { sorting("phone") }} /></th>
+								<th>Company type<TbSortAscendingLetters onClick={() => { sorting("comptype") }} /></th>
+								<th>Edit</th>
+								<th>Delete</th>
+							</tr>
+						</thead>
+						<tbody className='tab'>{tableRows}</tbody>
+					</Table>
 				</Card.Body>
 			</Card>
 		</div >
