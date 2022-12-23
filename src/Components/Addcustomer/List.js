@@ -47,7 +47,7 @@ import ReadOnlyRow from './ReadOnlyRow';
 //delete row:
        const handleDeleteClick = (customerDataId) => {
 		const newCustomerData = [...customerData];
-		const index = customerData.findIndex((customerData) => customerData.ind === customerDataId);
+		const index = customerData.findIndex((customerData) => customerData.id === customerDataId);
 		newCustomerData.splice(index, 1);
 		setcustomerData(newCustomerData);
 
@@ -56,7 +56,7 @@ import ReadOnlyRow from './ReadOnlyRow';
     const handleEditFromSubmit = (event) => {
         event.preventDefault();
         const editedcustomerData = {
-          ind: EditcustomerDataId,
+          id: EditcustomerDataId,
           name: editFormData.name,
           email: editFormData.email,
           phon: editFormData.phon,
@@ -66,7 +66,7 @@ import ReadOnlyRow from './ReadOnlyRow';
         }
 
         const newCustomerData = [...customerData];
-      const index = customerData.findIndex((customerData) => customerData.ind === EditcustomerDataId);
+      const index = customerData.findIndex((customerData) => customerData.id === EditcustomerDataId);
       newCustomerData[index] = editedcustomerData;
       setcustomerData(newCustomerData);
       setEditcustomerDataId(null);
@@ -94,7 +94,7 @@ const handleEditFormChange = (event) => {
     
         setEditcustomerDataId(customerData.ind);
         const formValues = {
-        ind:customerData.ind,
+        id:customerData.id,
           name: customerData.name,
           email: customerData.email,
           password: customerData.password,
@@ -113,7 +113,7 @@ const handleEditFormChange = (event) => {
       return (
         
 				<Fragment  key={customerData.ind} >
-					{EditcustomerDataId === customerData.ind? (<EditableRow customerData={customerData} editFormData={editFormData} handleEditFormChange={handleEditFormChange} handleCancelClick={handleCancelClick} handleEditFromSubmit={handleEditFromSubmit} />): (<ReadOnlyRow customerData={customerData} handleEditClick={handleEditClick} handleDeleteClick={handleDeleteClick} />)}
+					{EditcustomerDataId === customerData.id? (<EditableRow customerData={customerData} editFormData={editFormData} handleEditFormChange={handleEditFormChange} handleCancelClick={handleCancelClick} handleEditFromSubmit={handleEditFromSubmit} />): (<ReadOnlyRow customerData={customerData} handleEditClick={handleEditClick} handleDeleteClick={handleDeleteClick} />)}
 				</Fragment>
       
 		);
@@ -124,7 +124,7 @@ const handleEditFormChange = (event) => {
   //addRows
     const addRows = (data) => {
 		setCustomerDataLength(CustomerDataLength + 1);
-		data.ind = CustomerDataLength;
+		data.id = CustomerDataLength;
 		const updatedcustomerData = [...customerData];
 		updatedcustomerData.push(data);
 		setcustomerData(updatedcustomerData);
