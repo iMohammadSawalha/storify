@@ -1,11 +1,10 @@
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { useState } from "react";
-import { Card } from "react-bootstrap";
 const GridTable = ({ tableTitle, cols, data }) => {
   const [pageSize, setPageSize] = useState(15);
   return (
     <>
-      <div className="h4 mt-1 p-1">{tableTitle}</div>
+      <span className="h2 mt-1 p-1 ">{tableTitle}</span>
       <DataGrid
         rows={data}
         disableDensitySelector
