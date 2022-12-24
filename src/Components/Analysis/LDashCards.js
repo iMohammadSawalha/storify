@@ -1,7 +1,7 @@
 import "./components.css";
 const LargeCard = ({ title, subtitle, data, datatitle, chart }) => {
   return (
-    <div className="card h-100">
+    <div className="card h-100 border-0">
       <div className="card-header d-flex align-items-center justify-content-between pb-0 card-header-clean">
         <div className="card-title mb-0">
           <h5 className="m-0 me-2">{title}</h5>
@@ -13,7 +13,7 @@ const LargeCard = ({ title, subtitle, data, datatitle, chart }) => {
           <h2 className="mb-2">{data}</h2>
           <span>{datatitle}</span>
         </div>
-        <div className="wrapper">{chart}</div>
+        <div>{chart}</div>
       </div>
     </div>
   );

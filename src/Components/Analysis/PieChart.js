@@ -27,7 +27,6 @@ const PieChart = () => {
       ],
     });
     setChartOptions({
-      resizeDelay: 30,
       responsive: true,
       maintainAspectRatio: false,
       plugins: {

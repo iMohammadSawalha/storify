@@ -25,7 +25,6 @@ const DoughnutChart = () => {
       ],
     });
     setChartOptions({
-      resizeDelay: 30,
       responsive: true,
       maintainAspectRatio: false,
       plugins: {

@@ -1,5 +1,6 @@
 import AreaLineChart from "../../Components/Analysis/AreaLineChart";
 import ArrowUp from "../../Components/Analysis/ArrowUp";
+import TabsCards from "../../Components/Analysis/TabsCards";
 import DoughnutChart from "../../Components/Analysis/DoughnutChart";
 import GridTable from "../../Components/Analysis/GridTables/GridTable";
 import LargeCard from "../../Components/Analysis/LDashCards";
@@ -33,7 +34,7 @@ const Analysis = () => {
               <div className="col-lg-6 col-md-12 col-6 mb-4">
                 <MiniCards
                   title={"Profit"}
-                  data={"$12,689"}
+                  data={"$9,689"}
                   subdata={<ArrowUp Percentage={71.2} />}
                   img={require("../../Icons/Dashboard/profit.svg").default}
                   imgw={"30"}
@@ -73,7 +74,7 @@ const Analysis = () => {
               <div className="col-6 mb-4">
                 <MiniCards
                   title={"Transactions"}
-                  data={"$13,813"}
+                  data={"$8,913"}
                   subdata={<ArrowUp Percentage={21.93} />}
                   img={require("../../Icons/Dashboard/card.svg").default}
                   imgw={"30"}
@@ -93,32 +94,8 @@ const Analysis = () => {
           </div>
         </div>
         <div className="row">
-          <div className="col-md-6 col-lg-5 col-sm-8 col-xl-4 order-0 mb-4">
-            <LargeCard
-              title={"Order Statistics"}
-              subtitle={"42.82k Total Sales"}
-              data={"8,258"}
-              datatitle={"Total Orders"}
-              chart={<DoughnutChart />}
-            />
-          </div>
-          <div className="col-md-6 col-lg-5 col-sm-8 col-xl-4 order-1 mb-4">
-            <LargeCard
-              title={"Traffic Source"}
-              subtitle={"3.2k Visits last month"}
-              data={"143"}
-              datatitle={"Today"}
-              chart={<PolarChart />}
-            />
-          </div>
-          <div className="col-md-6 col-lg-5 col-sm-8 col-xl-4 order-2 mb-4">
-            <LargeCard
-              title={"Most Sold"}
-              subtitle={"Electronic 82.5k"}
-              data={"155.4k"}
-              datatitle={"Total Sold"}
-              chart={<PieChart />}
-            />
+          <div className="col-12 col-md-8 col-lg-8 col-xl-6">
+            <TabsCards />
           </div>
         </div>
         <div className="row">
