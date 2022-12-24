@@ -6,7 +6,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
 import Sidebar from "./Components/sidebar/Sidebar";
 import "./index.css";
-import Analysis from "./Pages/Analysis/Analysis";
+import Orders from "./Pages/Orders/Orders";
 import Companies from "./Pages/Companies/Companies";
 import Coupons from "./Pages/Coupons/Coupons";
 import Customers from "./Pages/Customers/Customers";
@@ -31,7 +31,7 @@ root.render(
             <Route path="" index element={<Dashboard />} />
             <Route path="*" element={<ErrorPage />} />
             <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/analysis" element={<Analysis />} />
+            <Route path="/analysis" element={<Orders />} />
             <Route path="/invoices" element={<Invoice />} />
             <Route path="/products" element={<Products />} />
             <Route path="/companies" element={<Companies />} />
