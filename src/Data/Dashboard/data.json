@@ -2,25 +2,29 @@
     {
         "id":1,
         "title":"Sales",
-        "Dashboard":true,
-        "data":"$27027"
+        "data":"$27027",
+        "color":"#82AAE3",
+        "border":"#82AAE3"
     },
     {
         "id":2,
         "title":"Profits",
-        "Dashboard":true,
-        "data":"$6020"
+        "data":"$6020",
+        "color":"#27496D",
+        "border":"#27496D"
     },
     {
         "id":3,
         "title":"New Customers",
-        "Dashboard":true,
-        "data":"192"
+        "data":"192",
+        "color":"#0C7B93",
+        "border":"#0C7B93"
     },
     {
         "id":4,
         "title":"Growth",
-        "Dashboard":true,
-        "data":"49%"
+        "data":"49%",
+        "color":"#00A8CC",
+        "border":"#00A8CC"
     }
 ]

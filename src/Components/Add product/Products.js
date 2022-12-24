@@ -4,7 +4,6 @@ import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import Form from 'react-bootstrap/Form';
 import { TbSortAscendingLetters, TbSortAscendingNumbers } from "react-icons/tb";
 import { TfiSearch } from "react-icons/tfi";
-import { Link } from 'react-router-dom';
 import jsonData from './data.json';
 import EditRow from './EditRow';
 import './List.css';

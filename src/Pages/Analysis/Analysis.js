@@ -17,18 +17,6 @@ const Analysis = () => {
     <div className="content-wrapper">
       <div className="container-xxl flex-grow-1 container-p-y">
         <div className="row">
-          <div className="col-lg-8 mb-4 order-0">
-            <CardItem
-              info={{
-                title: "Good Morning Obada",
-                data: (
-                  <div className="h4">
-                    Guess What ! , Today you made 81% More Sales.
-                  </div>
-                ),
-              }}
-            />
-          </div>
           <div className="col-lg-4 col-md-4 order-1">
             <div className="row">
               <div className="col-lg-6 col-md-12 col-6 mb-4">

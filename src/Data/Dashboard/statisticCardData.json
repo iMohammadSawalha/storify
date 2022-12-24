@@ -23,35 +23,17 @@
         "title":"Most selling products",
         "data":[{
             "id":1,
-            "name":"Electronics",
-            "sales":"9.89k"
+            "name":"iPhone 11",
+            "sales":"989"
         },
         {
             "id":2,
-            "name":"Fashion",
-            "sales":"4.57k"
+            "name":"AirPods Gen 2",
+            "sales":"457"
         },
         {
            "id":3,
-            "name":"Furniture",
-            "sales":"527"
-        }]    },
-    {
-        "id":3,
-        "title":"Payments",
-        "data":[{
-            "id":1,
-            "name":"Electronics",
-            "sales":"9.89k"
-        },
-        {
-            "id":2,
-            "name":"Fashion",
-            "sales":"4.57k"
-        },
-        {
-           "id":3,
-            "name":"Furniture",
-            "sales":"527"
+            "name":"Steampunk Hoodie",
+            "sales":"89"
         }]    }
 ]
