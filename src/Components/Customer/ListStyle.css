@@ -55,6 +55,7 @@
   #sort{
     margin-left: 52px;
     margin-top: -23px;
+    cursor: pointer;
 }
 @media (max-width:654px) {
     .table thead{
