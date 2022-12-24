@@ -73,6 +73,7 @@ const Dashboard = () => {
             ))}
             <Col
               xl={{ span: 6 }}
+              md={{ span: 6 }}
               xs={{ span: 12 }}
               sm={{ span: 10 }}
               className="mb-4"
@@ -81,6 +82,7 @@ const Dashboard = () => {
             </Col>
             <Col
               xl={{ span: 6 }}
+              md={{ span: 6 }}
               xs={{ span: 12 }}
               sm={{ span: 10 }}
               className="mb-4"
@@ -89,7 +91,7 @@ const Dashboard = () => {
                 title={"Orders"}
                 subtitle={"42.82k Total Sales"}
                 chart={
-                  <div className="wrapper">
+                  <div className="wrapper" style={{ height: 100, width: 200 }}>
                     <LineChart GlobalData={GlobalData} />
                   </div>
                 }
@@ -107,7 +109,7 @@ const Dashboard = () => {
         >
           <Card>
             <span className="h4 fw-semibold d-block p-4">Total Revenue</span>
-            <div className="Wrapper">
+            <div style={{ height: 350 }}>
               <AreaLineChart GlobalData={GlobalData} />
             </div>
           </Card>

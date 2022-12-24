@@ -25,9 +25,8 @@ const PolarChart = ({ GlobalData }) => {
       ],
     });
     setChartOptions({
-      aspectRatio: 1,
       responsive: true,
-      maintainAspectRatio: true,
+      maintainAspectRatio: false,
       scales: {
         r: {
           display: false,
