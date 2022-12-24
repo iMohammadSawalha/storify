@@ -59,7 +59,7 @@ function AddCompanyBtn(props) {
 	};
 	return (
 		<>
-			<Button className='btn btn-primary bttn' id="Btnn" onClick={handleShow} >
+			<Button className='btn' id='bttn' onClick={handleShow} >
 				+ Add Company
 			</Button>
 
@@ -129,7 +129,7 @@ function AddCompanyBtn(props) {
 						Close
 					</Button>
 					<Button className='bttn' onClick={transferValue}>
-						{props.name}
+						Add
 					</Button>
 				</Modal.Footer>
 			</Modal>

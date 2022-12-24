@@ -22,5 +22,51 @@
        "address": "NY",
        "phone": "123-665-7345",
        "comptype":"clothes"   
+     },
+     {
+      "id": 4,
+      "compname": "Apple", 
+      "email": "Apple@yahoo.com",
+       "address": "US",
+       "phone": "345-666-7698",
+       "comptype":"Electronics"   
+     },
+     {
+      "id": 5,
+      "compname": "Nike", 
+      "email": "Nike@hotmail.com",
+       "address": "US",
+       "phone": "627-112-9032",
+       "comptype":"clothes"   
+     },
+     {
+      "id": 6,
+      "compname": "Coupang", 
+      "email": "Coupang@gmail.com",
+       "address": "US",
+       "phone": "123-665-7345",
+       "comptype":"clothes"   
+     },
+     {
+      "id": 7,
+      "compname": "Huawei", 
+      "email": "Huawei@hotmail.com",
+       "address": "China",
+       "phone": "657-882-1562",
+       "comptype":"Electronics"   
+     },{
+      "id": 8,
+      "compname": "Sony", 
+      "email": "Sony@hotmail.com",
+       "address": "Japan",
+       "phone": "554-087-0087",
+       "comptype":"Electronics"   
+     },{
+      "id": 9,
+      "compname": "Epic Games", 
+      "email": "EpicGames@hotmail.com",
+       "address": "US",
+       "phone": "444-543-6654",
+       "comptype":"Games Store"   
      }
   ]
