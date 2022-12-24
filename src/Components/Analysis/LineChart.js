@@ -61,6 +61,7 @@ const LineChart = () => {
         },
       },
       maintainAspectRatio: true,
+      aspectRatio: 1.8,
       plugins: {
         legend: {
           display: false,

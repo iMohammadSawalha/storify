@@ -2,7 +2,7 @@ import AreaLineChart from "../../Components/Analysis/AreaLineChart";
 import ArrowUp from "../../Components/Analysis/ArrowUp";
 import TabsCards from "../../Components/Analysis/TabsCards";
 import DoughnutChart from "../../Components/Analysis/DoughnutChart";
-import GridTable from '../../Components/Shared/GridTable';
+import GridTable from "../../Components/Analysis/GridTables/GridTable";
 import LargeCard from "../../Components/Analysis/LDashCards";
 import LineChart from "../../Components/Analysis/LineChart";
 import MiniCards from "../../Components/Analysis/MiniDashCards";
@@ -10,7 +10,8 @@ import PieChart from "../../Components/Analysis/PieChart";
 import PolarChart from "../../Components/Analysis/PolarChart";
 import CardItem from "../../Components/Cards/CardItem";
 import "./Analysis.css";
-
+import DataGridCol from "./DataGridColumn";
+import Orders from "./Orders-Latest.json";
 const Analysis = () => {
   return (
     <div className="content-wrapper">
@@ -85,13 +86,13 @@ const Analysis = () => {
             <TabsCards />
           </div>
         </div>
-          <div style={{height:400}}>
-            <GridTable
-              tableTitle={"Latest Orders"}
-              cols={DataGridCol}
-              data={Orders}
-            />
-          </div>
+        <div className="row">
+          <GridTable
+            tableTitle={"Latest Orders"}
+            cols={DataGridCol}
+            data={Orders}
+          />
+        </div>
       </div>
     </div>
   );

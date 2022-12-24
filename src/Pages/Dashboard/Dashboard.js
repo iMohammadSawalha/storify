@@ -76,14 +76,40 @@ const Dashboard = () => {
                 <CardItem key={cardData.id} info={cardData} />
               </Col>
             ))}
-            <Col xs={{ span: 12 }} sm={{ span: 10 }} className="mb-4">
+            <Col
+              xl={{ span: 6 }}
+              xs={{ span: 12 }}
+              sm={{ span: 10 }}
+              className="mb-4"
+            >
               <TaxCalc />
+            </Col>
+            <Col
+              xl={{ span: 6 }}
+              xs={{ span: 12 }}
+              sm={{ span: 10 }}
+              className="mb-4"
+            >
+              <LargeCard
+                title={"Orders"}
+                subtitle={"42.82k Total Sales"}
+                chart={
+                  <div className="wrapper">
+                    <LineChart />
+                  </div>
+                }
+              />
             </Col>
           </Row>
         </Col>
       </Row>
-      <Row className="mt-4 mb-4">
-        <Col xl={{ span: 6 }} lg={{ span: 6 }} className="mb-4">
+      <Row className="mt-4 mb-4 d-flex justify-content-center">
+        <Col
+          xl={{ span: 6 }}
+          lg={{ span: 6 }}
+          md={{ span: 6 }}
+          className="mb-4"
+        >
           <Card>
             <span className="h4 fw-semibold d-block p-4">Total Revenue</span>
             <div className="Wrapper">
@@ -91,7 +117,12 @@ const Dashboard = () => {
             </div>
           </Card>
         </Col>
-        <Col xl={{ span: 4 }} lg={{ span: 6 }} className="mb-4">
+        <Col
+          xl={{ span: 4 }}
+          lg={{ span: 6 }}
+          md={{ span: 6 }}
+          className="mb-4"
+        >
           <LargeCard
             title={"Traffic Source"}
             subtitle={"3.2k Visits last month"}
@@ -100,7 +131,7 @@ const Dashboard = () => {
             chart={<PolarChart />}
           />
         </Col>
-        <Col xl={{ span: 6 }} className="mb-4">
+        <Col xl={{ span: 6 }} md={{ span: 6 }} className="mb-4">
           <LargeCard
             title={"Order Statistics"}
             subtitle={"42.82k Total Orders"}
@@ -109,7 +140,7 @@ const Dashboard = () => {
             chart={<DoughnutChart />}
           />
         </Col>
-        <Col xl={{ span: 4 }} className="mb-4">
+        <Col xl={{ span: 4 }} md={{ span: 6 }} className="mb-4">
           <LargeCard
             title={"Most Sold"}
             subtitle={"Electronic 82.5k"}
