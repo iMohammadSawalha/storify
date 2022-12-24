@@ -4,8 +4,10 @@ const GridTable = ({ tableTitle, cols, data }) => {
   const [pageSize, setPageSize] = useState(15);
   return (
     <>
-      <span style={{color:"var(--dark)"}} className="h4 m-3">{tableTitle}</span>
+      <span className="h3 m-3">{tableTitle}</span>
       <DataGrid
+      style={{height:"90%"}}
+        className="mt-2"
         rows={data}
         disableDensitySelector
         columns={cols}

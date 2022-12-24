@@ -110,10 +110,10 @@ function AddCompany() {
     })
     .map((companyData) => {
       return (
-        <>
           <Fragment key={companyData.id}>
             {EditcompanyDataId === companyData.id ? (
               <EditableRow
+                key={companyData.id}
                 Data={companyData}
                 editFormData={editFormData}
                 handleEditFormChange={handleEditFormChange}
@@ -122,13 +122,13 @@ function AddCompany() {
               />
             ) : (
               <ReadOnlyRow
+                key={companyData.id}
                 Data={companyData}
                 handleEditClick={handleEditClick}
                 handleDeleteClick={handleDeleteClick}
               />
             )}
           </Fragment>
-        </>
       );
     });
   const addRows = (data) => {
@@ -157,10 +157,7 @@ function AddCompany() {
               <div className="firstCont">
                 <h1 id="productH"> Companies </h1>
                 <Breadcrumb id="toDash">
-                  <Breadcrumb.Item>
-                    {" "}
-                    <Link to="/Home">Dashboard</Link>
-                  </Breadcrumb.Item>
+                  <Breadcrumb.Item href="/dashboard">Dashboard</Breadcrumb.Item>
                   <Breadcrumb.Item active>Add Company</Breadcrumb.Item>
                 </Breadcrumb>
                 <div id="searchForm">
@@ -271,11 +268,11 @@ function AddCompany() {
               </thead>
               <tbody>
                 {tableRows}
-                <div>
-                  <Pagination size="sm">{items}</Pagination>
-                </div>
               </tbody>
             </Table>
+              <div>
+                <Pagination size="sm">{items}</Pagination>
+              </div>
           </Card.Body>
         </Card>
       </div>

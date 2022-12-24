@@ -10,7 +10,7 @@ const ErrorPage = () => {
                             <h1 className="content-title text-uppercase">Storify</h1>
                             <h2>Page Note Found</h2>
                             <p><span className="text-danger">Sorry</span>, The page you’re looking for doesn’t exist.</p>
-                            <Link to="/dashboard"> <button className="btn btn-primary home-btn">Go Home</button></Link>
+                            <Link to="/dashboard"> <button className="btn btn-primary home-btn" style={{backgroundColor:"var(--dark)",borderColor:"var(--dark)"}}>Go Home</button></Link>
                         </div>
                     </div>
 
