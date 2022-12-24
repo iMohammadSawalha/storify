@@ -10,8 +10,6 @@ import {
 } from "chart.js";
 import React, { useEffect, useState } from "react";
 import { Line } from "react-chartjs-2";
-import "./components.css";
-import GlobalData from "./ChartData.json";
 
 Chart.register(
   ArcElement,
@@ -22,7 +20,7 @@ Chart.register(
   Title,
   PointElement
 );
-const AreaLineChart = () => {
+const AreaLineChart = ({ GlobalData }) => {
   const [chartData, setChartData] = useState({
     datasets: [],
   });

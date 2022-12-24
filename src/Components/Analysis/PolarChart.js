@@ -7,10 +7,9 @@ import {
 } from "chart.js";
 import React, { useEffect, useState } from "react";
 import { PolarArea } from "react-chartjs-2";
-import GlobalData from "./ChartData.json";
 ChartJS.register(RadialLinearScale, ArcElement, Tooltip, Legend);
 
-const PolarChart = () => {
+const PolarChart = ({ GlobalData }) => {
   const [chartData, setChartData] = useState({ datasets: [] });
   const [chartOptions, setChartOptions] = useState({});
 

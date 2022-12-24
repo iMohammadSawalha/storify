@@ -1,11 +1,10 @@
 import { ArcElement, Chart, Legend, Tooltip } from "chart.js";
 import React, { useEffect, useState } from "react";
 import { Pie } from "react-chartjs-2";
-import "./components.css";
-import GlobalData from "./ChartData.json";
+
 Chart.register(ArcElement, Tooltip, Legend);
 
-const PieChart = () => {
+const PieChart = ({ GlobalData }) => {
   const [chartData, setChartData] = useState({
     datasets: [],
   });

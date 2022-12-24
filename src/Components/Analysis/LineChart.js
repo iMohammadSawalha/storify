@@ -10,8 +10,6 @@ import {
 } from "chart.js";
 import React, { useEffect, useState } from "react";
 import { Line } from "react-chartjs-2";
-import "./components.css";
-import GlobalData from "./ChartData.json";
 Chart.register(
   LineElement,
   LineController,
@@ -21,7 +19,7 @@ Chart.register(
   Tooltip,
   SubTitle
 );
-const LineChart = () => {
+const LineChart = ({ GlobalData }) => {
   const [chartData, setChartData] = useState({
     datasets: [],
   });

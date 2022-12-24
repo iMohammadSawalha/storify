@@ -1,11 +1,9 @@
 import { ArcElement, Chart, Legend, Tooltip } from "chart.js";
 import React, { useEffect, useState } from "react";
 import { Doughnut } from "react-chartjs-2";
-import "./components.css";
-import GlobalData from "./ChartData.json";
 Chart.register(ArcElement, Tooltip, Legend);
 
-const DoughnutChart = () => {
+const DoughnutChart = ({ GlobalData }) => {
   const [chartData, setChartData] = useState({
     datasets: [],
   });

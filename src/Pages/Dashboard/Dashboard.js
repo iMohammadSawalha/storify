@@ -14,6 +14,7 @@ import Col from "react-bootstrap/Col";
 import StatisticCard from "../../Components/Cards/StatisticCard";
 import TaxCalc from "../../Components/TaxCalculator/TaxCalc";
 import { Card } from "react-bootstrap";
+import GlobalData from "./ChartData.json";
 
 const Dashboard = () => {
   //Todo:
@@ -89,7 +90,7 @@ const Dashboard = () => {
                 subtitle={"42.82k Total Sales"}
                 chart={
                   <div className="wrapper">
-                    <LineChart />
+                    <LineChart GlobalData={GlobalData} />
                   </div>
                 }
               />
@@ -107,7 +108,7 @@ const Dashboard = () => {
           <Card>
             <span className="h4 fw-semibold d-block p-4">Total Revenue</span>
             <div className="Wrapper">
-              <AreaLineChart />
+              <AreaLineChart GlobalData={GlobalData} />
             </div>
           </Card>
         </Col>
@@ -122,7 +123,7 @@ const Dashboard = () => {
             subtitle={"3.2k Visits last month"}
             data={"143"}
             datatitle={"Today"}
-            chart={<PolarChart />}
+            chart={<PolarChart GlobalData={GlobalData} />}
           />
         </Col>
         <Col xl={{ span: 6 }} md={{ span: 6 }} className="mb-4">
@@ -131,7 +132,7 @@ const Dashboard = () => {
             subtitle={"42.82k Total Orders"}
             data={"8,258"}
             datatitle={"Total Orders"}
-            chart={<DoughnutChart />}
+            chart={<DoughnutChart GlobalData={GlobalData} />}
           />
         </Col>
         <Col xl={{ span: 4 }} md={{ span: 6 }} className="mb-4">
@@ -140,7 +141,7 @@ const Dashboard = () => {
             subtitle={"Electronic 82.5k"}
             data={"155.4k"}
             datatitle={"Total Sold"}
-            chart={<PieChart />}
+            chart={<PieChart GlobalData={GlobalData} />}
           />
         </Col>
       </Row>
