@@ -2,38 +2,56 @@
     {
         "id":1,
         "title":"Order Statistics",
+        "orderIcon":true,
         "data":[{
             "id":1,
             "name":"Electronics",
-            "sales":"9.89k"
+            "sales":"9.89k",
+            "border":"#144272",
+            "background":"#2C74B3"
         },
         {
             "id":2,
             "name":"Fashion",
-            "sales":"4.57k"
+            "sales":"4.57k",
+            "border":"#A555EC",
+            "background":"#D09CFA"
+
         },
         {
            "id":3,
             "name":"Furniture",
-            "sales":"527"
+            "sales":"527",
+            "border":"#38E54D",
+            "background":"#9CFF2E"
+
         }]
     },
     {
         "id":2,
         "title":"Most selling products",
+        "orderIcon":false,
         "data":[{
             "id":1,
             "name":"iPhone 11",
-            "sales":"989"
+            "sales":"989",
+            "border":"#FF597B",
+            "background":"#F9B5D0"
+
         },
         {
             "id":2,
             "name":"AirPods Gen 2",
-            "sales":"457"
+            "sales":"457",
+            "border":"#2A7886",
+            "background":"#79BAC1"
         },
         {
            "id":3,
             "name":"Steampunk Hoodie",
-            "sales":"89"
-        }]    }
+            "sales":"89",
+            "border":"#AA8B56",
+            "background":"#F0EBCE"
+        }]    
+    }
 ]

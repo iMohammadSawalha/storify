@@ -4,9 +4,9 @@ import CheckroomIcon from '@mui/icons-material/Checkroom';
 
 const HomeCardIcon=({options}) => {
     const icons=[
-        <DevicesIcon className='ms-2 me-auto mt-auto mb-auto'/>,
-        <CheckroomIcon className='ms-2 me-auto mt-auto mb-auto'/>,
-        <ChairIcon className='ms-2 me-auto mt-auto mb-auto'/>,
+        <DevicesIcon style={{color:(options.color)}} className='m-auto'/>,
+        <CheckroomIcon style={{color:(options.color)}} className='m-auto'/>,
+        <ChairIcon style={{color:(options.color)}} className='m-auto'/>,
     ];
   return (
     icons[options.id-1]

@@ -1,4 +1,4 @@
-import GridTable from '../../Components/Analysis/GridTables/GridTable';
+import GridTable from '../../Components/Shared/GridTable';
 import columns from '../../Data/Discounts/columns.json';
 import data from '../../Data/Discounts/data.json';
 
