@@ -6,6 +6,7 @@ import statisticCardData from "../../Data/Dashboard/statisticCardData.json"
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import StatisticCard from '../../Components/Cards/StatisticCard';
+import TaxCalc from '../../Components/TaxCalculator/TaxCalc';
 
 const Dashboard = () => {
   //Todo:
@@ -33,6 +34,7 @@ const Dashboard = () => {
             )}
           </Row>
         </Col>
+        <TaxCalc/>
       </Row>
     </>
   )
