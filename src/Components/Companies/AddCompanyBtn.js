@@ -68,58 +68,64 @@ function AddCompanyBtn(props) {
 					<Modal.Title>Company Info</Modal.Title>
 				</Modal.Header>
 				<Modal.Body>
-					<label className='lab'>Name :</label>
-					<div className='flex'></div>
-					<input type="text" placeholder="enter the company name" value={compname} onChange={changeCompname} className="FormInput" />
+					<label className='m-2'>Name :</label>
+					<input type="text" placeholder="enter the company name" value={compname} onChange={changeCompname} className="form-control mb-2"  style={{width:"60%"}}/>
 					{
 						(error && (compname.length <= 0))
 							?
-							<label className='error'>please enter the name</label>
+							<>
+								<label className='error'>Please enter the name<br/></label>
+								<br></br>
+							</>
 							:
 							" "
 					}
-					<div className='flex'></div>
-					<label className='lab'>E-mail:</label>
-					<div className='flex'></div>
-					<input type="email" placeholder="name@example.com" value={email} onChange={changeEmail} className="FormInput" />
+					<label className='m-2'>E-mail:</label>
+					<input type="email" placeholder="name@example.com" value={email} onChange={changeEmail} className="form-control mb-2"  style={{width:"60%"}} />
 					{
 
 						(error && email.length <= 0)
 							?
-							<label className='error'>please enter the email</label>
+							<>
+								<label className='error'>Please enter the email</label>
+								<br></br>
+							</>
 							:
 							""
 					}
-					<div className='flex'></div>
-					<label className='lab'>Address:</label>
-					<div className='flex'></div>
-					<input type="text" placeholder="enter the company address" value={address} onChange={changeAddress} className="FormInput" />
+					<label className='m-2'>Address:</label>
+					<input type="text" placeholder="enter the company address" value={address} onChange={changeAddress} className="form-control mb-2"  style={{width:"60%"}}/>
 					{
 						(error && address.length <= 0)
 							?
-							<label className='error'>please enter the address</label>
+							<>
+							<label className='error'>Please enter the address</label>
+							<br></br>
+							</>
 							:
 							""
 					}
-					<div className='flex'></div>
-					<label className='lab'>Phone Number:</label>
-					<div className='flex'></div>
-					<input type="text" placeholder="enter the company phone" value={phone} onChange={changePhone} className="FormInput" />
+					<label className='m-2'>Phone Number:</label>
+					<input type="text" placeholder="enter the company phone" value={phone} onChange={changePhone} className="form-control mb-2"  style={{width:"60%"}}/>
 					{
 						(error && phone.length <= 0)
 							?
-							<label className='error'>please enter the phone number</label>
+							<>
+							<label className='error'>Please enter the phone number</label>
+							<br></br>
+							</>
 							:
 							""
 					}
-					<div className='flex'></div>
-					<label className='lab'> Company Type:</label>
-					<div className='flex'></div>
-					<input type="text" placeholder="enter the company type" value={comptype} onChange={changeComptype} className="FormInput" />
+					<label className='m-2'> Company Type:</label>
+					<input type="text" placeholder="enter the company type" value={comptype} onChange={changeComptype} className="form-control mb-2" style={{width:"60%"}} />
 					{
 						(error && comptype.length <= 0)
 							?
-							<label className='error'>please enter the company type</label>
+							<>
+							<label className='error'>Please enter the company type</label>
+							<br></br>
+							</>
 							:
 							""
 					}
@@ -128,7 +134,7 @@ function AddCompanyBtn(props) {
 					<Button variant="secondary"  onClick={handleClose}>
 						Close
 					</Button>
-					<Button className='bttn' onClick={transferValue}>
+					<Button className='bttn' style={{backgroundColor:"var(--dark)",borderColor:"var(--dark)"}} onClick={transferValue}>
 						Add
 					</Button>
 				</Modal.Footer>

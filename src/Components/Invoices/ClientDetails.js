@@ -5,7 +5,6 @@ const ClientDetails = ({ data }) => {
 
 
     return (
-        <>
             <div className="container-fluid">
                 <div className="row p-4">
                     <div className="client-column col-4">
@@ -26,7 +25,6 @@ const ClientDetails = ({ data }) => {
                     </div>
                 </div>
             </div>
-        </>
     )
 }
 

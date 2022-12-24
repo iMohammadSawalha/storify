@@ -6,12 +6,10 @@
 	height:auto;
 	position: relative;
 	color: var(--light);
-	transition: 0.4s;
+	transition: 0.8s;
 }
 .side-nav-container-NX {
 	width: 95px;
-	
-	
 }
 
 .side-nav-upper,
@@ -35,8 +33,7 @@
 	margin-top: 15px;
 	color: var(--light);
 	margin-bottom: 20px;
-	margin-top: 80px;
-	
+	margin-top: 80px;	
 }
 .side-nav-brand img {
 	margin-top: -10px;
@@ -62,7 +59,7 @@
 	border-radius: 10px;
 	height: 5px;
 	width: 35px;
-	transition: 0.4s;
+	transition: 0.8s;
 }
 
 .hamburger:hover span {

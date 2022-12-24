@@ -92,10 +92,7 @@
 
 }
 @media (max-width:450px) {
-    #searchInput{
-        width:50%;
-    
-    }
+
     .searchForm{
        height: 2px;
     }
