@@ -1,23 +1,22 @@
-
-.card{
-    -webkit-box-shadow: 2px 4px 10px 1px rgba(0,0,0,0.47);
-    box-shadow: 2px 4px 10px 1px rgba(201,201,201,0.47);
+.card {
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+  box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
 }
 
-.cardTitle{
-    margin-top:auto;
-    margin-bottom: auto;
+.cardTitle {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
-#dashboard-icon{
-    margin-top:auto;
-    margin-bottom:auto;
-    margin-left: auto;
-    margin-right: 4%;
+#dashboard-icon {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: 4%;
 }
 
-.ordersCardIcon{
-    width:40px;
-    height:40px;
-    border-radius: 30%;
+.ordersCardIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 30%;
 }
