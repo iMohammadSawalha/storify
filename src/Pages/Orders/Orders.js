@@ -1,4 +1,5 @@
-import GridTable from "../../Components/Analysis/GridTables/GridTable";
+import GridTable from "../../Components/Shared/GridTable";
+
 import DataGridCol from "../../Data/Orders/DataGridColumn";
 import OrdersData from "../../Data/Orders/Orders-Latest.json";
 const Orders = () => {

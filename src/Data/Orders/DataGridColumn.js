@@ -1,4 +1,3 @@
-import { Avatar } from "@mui/material";
 import { Button } from "react-bootstrap";
 
 const Cols = [
@@ -11,7 +10,7 @@ const Cols = [
     renderCell: (params) => {
       return (
         <>
-          <Avatar src={params.value.avatar} />
+          <img src={params.value.avatar} />
           {params.value.username}
         </>
       );
@@ -54,15 +53,19 @@ const Cols = [
     renderCell: (params) => {
       if (params.value == 10)
         return (
-          <Button variant="btn btn-success btn-radius btn-sm">Completed</Button>
+          <Button variant="btn btn-success btn-radius btn-sm" disabled>
+            Completed
+          </Button>
         );
       else if (params.value > 0)
         return (
-          <Button variant="btn btn-warning btn-radius btn-sm">Pending</Button>
+          <Button variant="btn btn-warning btn-radius btn-sm" disabled>
+            Pending
+          </Button>
         );
       else if (params.value == 0)
         return (
-          <Button variant="btn btn-outline-danger btn-radius btn-sm">
+          <Button variant="btn btn-outline-danger btn-radius btn-sm" disabled>
             Cancelled
           </Button>
         );
