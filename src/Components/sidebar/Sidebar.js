@@ -25,9 +25,9 @@ const Sidebar = () => {
 		},
 		{
 			id:3,
-			text: "Analytics",
+			text: "Orders",
 			icon: require("../../Icons/Sidebar/pie-chart.svg").default,
-			toLink: "/analysis",
+			toLink: "/orders",
 		},
 		{
 			id:4,

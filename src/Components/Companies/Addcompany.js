@@ -1,5 +1,5 @@
 import AddCompanyBtn from "./AddCompanyBtn";
-import jsonData from "./mock-data.json";
+import jsonData from "../../Data/Companies/mock-data.json";
 import ReadOnlyRow from "./ReadOnlyRow";
 import EditableRow from "./EditableRow";
 import "../Products/List.css";
@@ -9,7 +9,6 @@ import Breadcrumb from "react-bootstrap/Breadcrumb";
 import Form from "react-bootstrap/Form";
 import { TbSortAscendingLetters, TbSortAscendingNumbers } from "react-icons/tb";
 import { TfiSearch } from "react-icons/tfi";
-import { Link } from "react-router-dom";
 import Pagination from "react-bootstrap/Pagination";
 function AddCompany() {
   const [companyData, setCompanyData] = useState(jsonData);

@@ -1,4 +1,4 @@
-import List from "../../Components/Customer/List";
+import List from "../../Components/Customers/List";
 
 
 const Customers = () => {

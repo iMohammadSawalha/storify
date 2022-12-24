@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route,Routes} from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
 import Sidebar from "./Components/Sidebar/Sidebar";
 import "./index.css";
@@ -31,7 +31,7 @@ root.render(
             <Route path="" index element={<Dashboard />} />
             <Route path="*" element={<ErrorPage />} />
             <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/analysis" element={<Orders />} />
+            <Route path="/orders" element={<Orders />} />
             <Route path="/invoices" element={<Invoice />} />
             <Route path="/products" element={<Products />} />
             <Route path="/companies" element={<Companies />} />
