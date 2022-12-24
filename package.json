@@ -1,10 +1,10 @@
 {
-  "name": "react",
-  "version": "1.0.0",
-  "description": "React example starter project",
+  "name": "storify",
+  "version": "1.0",
+  "description": "Storify Admin Dashboard",
   "keywords": [
-    "react",
-    "starter"
+    "Storify",
+    "Admin"
   ],
   "main": "src/index.js",
   "dependencies": {

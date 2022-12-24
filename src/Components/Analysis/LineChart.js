@@ -11,7 +11,7 @@ import {
 import React, { useEffect, useState } from "react";
 import { Line } from "react-chartjs-2";
 import "./components.css";
-
+import GlobalData from "./ChartData.json";
 Chart.register(
   LineElement,
   LineController,
@@ -29,13 +29,13 @@ const LineChart = () => {
 
   useEffect(() => {
     setChartData({
-      labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+      labels: GlobalData.LineChart.labels,
       datasets: [
         {
           type: "line",
-          data: [110, 270, 145, 245, 205, 285],
+          data: GlobalData.LineChart.data,
           fill: false,
-          borderColor: "rgb(168, 172, 241)",
+          borderColor: GlobalData.LineChart.bordercolor,
         },
       ],
     });
