@@ -10,8 +10,7 @@ import PieChart from "../../Components/Analysis/PieChart";
 import PolarChart from "../../Components/Analysis/PolarChart";
 import CardItem from "../../Components/Cards/CardItem";
 import "./Analysis.css";
-import DataGridCol from "./DataGridColumn";
-import Orders from "./Orders-Latest.json";
+
 const Analysis = () => {
   return (
     <div className="content-wrapper">

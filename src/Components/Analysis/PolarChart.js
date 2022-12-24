@@ -31,8 +31,9 @@ const PolarChart = () => {
       ],
     });
     setChartOptions({
+      aspectRatio: 1,
       responsive: true,
-      maintainAspectRatio: false,
+      maintainAspectRatio: true,
       scales: {
         r: {
           display: false,

@@ -8,12 +8,12 @@ const LargeCard = ({ title, subtitle, data, datatitle, chart }) => {
           <small className="text-muted">{subtitle}</small>
         </div>
       </div>
-      <div className="card-body d-flex flex-column justify-content-around">
+      <div className="card-body d-flex flex-column align-items-center">
+        <div>{chart}</div>
         <div className="d-flex align-items-center gap-1">
           <h2 className="mb-2">{data}</h2>
           <span>{datatitle}</span>
         </div>
-        <div>{chart}</div>
       </div>
     </div>
   );
