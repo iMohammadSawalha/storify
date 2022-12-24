@@ -1,9 +1,4 @@
-.card-chart-custom {
-    border: 1px solid;
-    border-radius: 0.5rem;
-    border-color:rgb(224, 223, 223);
-    -webkit-box-shadow: 2px 4px 10px 1px rgba(210, 229, 235,0.5);
-    box-shadow: 2px 4px 10px 1px rgba(210, 229, 235,0.5);
-
-    
+.card-header-clean {
+  background-color: white;
+  border-bottom: 0;
 }
