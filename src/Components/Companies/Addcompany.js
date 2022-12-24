@@ -2,7 +2,7 @@ import AddCompanyBtn from "./AddCompanyBtn";
 import jsonData from "./mock-data.json";
 import ReadOnlyRow from "./ReadOnlyRow";
 import EditableRow from "./EditableRow";
-import "../Add product/List.css";
+import "../Products/List.css";
 import React, { Fragment, useState } from "react";
 import { Card, InputGroup, Table } from "react-bootstrap";
 import Breadcrumb from "react-bootstrap/Breadcrumb";

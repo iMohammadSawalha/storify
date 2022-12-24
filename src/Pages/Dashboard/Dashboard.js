@@ -14,7 +14,7 @@ import Col from "react-bootstrap/Col";
 import StatisticCard from "../../Components/Cards/StatisticCard";
 import TaxCalc from "../../Components/TaxCalculator/TaxCalc";
 import { Card } from "react-bootstrap";
-import GlobalData from "./ChartData.json";
+import GlobalData from "../../Data/Dashboard/ChartData.json";
 
 const Dashboard = () => {
   //Todo:

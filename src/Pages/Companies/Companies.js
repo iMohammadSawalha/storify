@@ -1,12 +1,11 @@
-import AddCompany from '../../Components/Addcompany/Addcompany';
-
+import AddCompany from "../../Components/Companies/Addcompany";
 
 const Companies = () => {
   return (
     <>
-        <AddCompany/>
+      <AddCompany />
     </>
   );
-}
+};
 
 export default Companies;

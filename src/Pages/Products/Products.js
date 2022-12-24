@@ -1,12 +1,11 @@
-import ProductsComponent from '../../Components/Add product/Products';
-
+import ProductsComponent from "../../Components/Products/Products";
 
 const Products = () => {
   return (
     <>
-        <ProductsComponent/>
+      <ProductsComponent />
     </>
   );
-}
+};
 
 export default Products;
