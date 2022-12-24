@@ -32,7 +32,7 @@
     ]
   },
   "DoughnutChart": {
-    "labels": ["New Customers", "Recurring Customers"],
+    "labels": ["From New Customers", "From Recurring Customers"],
     "data": [43, 57],
     "bgcolor": ["rgba(255, 100, 162, 0.8)", "rgba(116, 112, 225, 0.8)"]
   },
