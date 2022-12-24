@@ -35,10 +35,8 @@
 	margin-top: 15px;
 	color: var(--light);
 	margin-bottom: 20px;
-	margin-top: 60px;
+	margin-top: 80px;
 	
-
-
 }
 .side-nav-brand img {
 	margin-top: -10px;
@@ -51,7 +49,7 @@
 	background: none;
 	cursor: pointer;
 	margin: auto;
-	margin-top: 70px;
+	margin-top: 85px;
 	border: none;
 
 	
@@ -123,7 +121,7 @@
 	text-transform: uppercase;
 	margin: auto 23px;
 	border-radius: 20px;
-	margin-top: 8px;
+	margin-top: 9px;
 	padding-left: 10px;
 	
 	
@@ -139,6 +137,7 @@
 .side-menu-item:hover {
 	background-color: var(--primary);
 	color: #ffff;
+	transition: 0.4s;
 	
 
 }
@@ -160,6 +159,7 @@
 	bottom: 1%;
 	grid-template-rows: 1fr;
 	grid-template-columns: 2fr 1fr;
+	
 }
 
 .side-nav-details {
@@ -175,18 +175,22 @@
 .side-nav-footer-user-name {
 	font-size: 18px;
 	font-weight: 900;
+	margin-left: -15px;
+
 }
 
 .side-nav-footer-user-position {
 	margin-top: -10px;
 	color: #ffff;
+	margin-left: -15px;
+
 }
 .logout-icon {
 	width: 70px;
 	margin: auto;
 	border-radius: 90px;
 	padding: 10px;
-	margin-left: 10px;
+	margin-left: 15px;
 	margin-top: -10px;
 }
 .logout-icon:hover {
