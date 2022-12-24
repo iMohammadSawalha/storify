@@ -1,61 +1,26 @@
 import {
   ArcElement,
-  BarController,
-  BarElement,
-  BubbleController,
   CategoryScale,
   Chart,
-  Decimation,
-  DoughnutController,
   Filler,
   Legend,
-  LinearScale,
-  LineController,
   LineElement,
-  LogarithmicScale,
-  PieController,
   PointElement,
-  PolarAreaController,
-  RadarController,
-  RadialLinearScale,
-  ScatterController,
-  SubTitle,
-  TimeScale,
-  TimeSeriesScale,
   Title,
-  Tooltip,
 } from "chart.js";
 import React, { useEffect, useState } from "react";
 import { Line } from "react-chartjs-2";
-import "./components.css";
 
 Chart.register(
   ArcElement,
   LineElement,
-  BarElement,
-  PointElement,
-  BarController,
-  BubbleController,
-  DoughnutController,
-  LineController,
-  PieController,
-  PolarAreaController,
-  RadarController,
-  ScatterController,
   CategoryScale,
-  LinearScale,
-  LogarithmicScale,
-  RadialLinearScale,
-  TimeScale,
-  TimeSeriesScale,
-  Decimation,
   Filler,
   Legend,
   Title,
-  Tooltip,
-  SubTitle
+  PointElement
 );
-const AreaLineChart = () => {
+const AreaLineChart = ({ GlobalData }) => {
   const [chartData, setChartData] = useState({
     datasets: [],
   });
@@ -63,36 +28,24 @@ const AreaLineChart = () => {
 
   useEffect(() => {
     setChartData({
-      labels: [
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Oct",
-        "Nov",
-      ],
+      labels: GlobalData.AreaLineChart["Labels"],
       datasets: [
         {
           type: "line",
-          data: [90, 170, 130, 98, 60, 89, 72, 82, 73, 89, 211],
+          data: GlobalData.AreaLineChart["First"][0].data,
           fill: true,
-          label: "2022",
-          borderColor: "rgb(168, 172, 241)",
-          backgroundColor: "rgba(168, 172, 255,0.65)",
+          label: GlobalData.AreaLineChart["First"][0].label,
+          borderColor: GlobalData.AreaLineChart["First"][0].borderColor,
+          backgroundColor: GlobalData.AreaLineChart["First"][0].bgcolor,
           order: 1,
         },
         {
           type: "line",
-          data: [70, 120, 90, 76, 39, 72, 51, 69, 61, 120, 300],
+          data: GlobalData.AreaLineChart["Second"][0].data,
           fill: true,
-          label: "2021",
-          borderColor: "rgb(255, 172, 123)",
-          backgroundColor: "rgba(255, 172, 123,0.2)",
+          label: GlobalData.AreaLineChart["Second"][0].label,
+          borderColor: GlobalData.AreaLineChart["Second"][0].borderColor,
+          backgroundColor: GlobalData.AreaLineChart["Second"][0].bgcolor,
           order: 2,
         },
       ],

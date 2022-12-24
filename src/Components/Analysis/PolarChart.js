@@ -7,32 +7,27 @@ import {
 } from "chart.js";
 import React, { useEffect, useState } from "react";
 import { PolarArea } from "react-chartjs-2";
-
 ChartJS.register(RadialLinearScale, ArcElement, Tooltip, Legend);
 
-const PolarChart = () => {
+const PolarChart = ({ GlobalData }) => {
   const [chartData, setChartData] = useState({ datasets: [] });
   const [chartOptions, setChartOptions] = useState({});
 
   useEffect(() => {
     setChartData({
-      labels: ["Organic Search", "Social", "Paid Search", "Referral"],
+      labels: GlobalData.PolarChart.labels,
       datasets: [
         {
-          data: [32, 26, 17, 25],
-          backgroundColor: [
-            "rgba(255, 99, 132, 0.8)",
-            "rgba(54, 162, 235, 0.8)",
-            "rgba(255, 206, 86, 0.8)",
-            "rgba(75, 192, 192, 0.8)",
-          ],
+          data: GlobalData.PolarChart.data,
+          backgroundColor: GlobalData.PolarChart.bgcolor,
           hoverOffset: 20,
         },
       ],
     });
     setChartOptions({
+      aspectRatio: 1,
       responsive: true,
-      maintainAspectRatio: false,
+      maintainAspectRatio: true,
       scales: {
         r: {
           display: false,

@@ -6,14 +6,13 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
 import Sidebar from "./Components/sidebar/Sidebar";
 import "./index.css";
-import Analysis from "./Pages/Analysis/Analysis";
+import Orders from "./Pages/Orders/Orders";
 import Companies from "./Pages/Companies/Companies";
 import Coupons from "./Pages/Coupons/Coupons";
 import Customers from "./Pages/Customers/Customers";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import Discounts from "./Pages/Discounts/Discounts";
 import ErrorPage from "./Pages/ErrorPage/ErrorPage";
-import Home from "./Pages/Home/Home";
 import Invoice from "./Pages/Invoices/Invoices";
 import Products from "./Pages/Products/Products";
 import Profile from "./Pages/Profile/Profile";
@@ -29,11 +28,10 @@ root.render(
         <Sidebar />
         <div className="pageinfo">
           <Routes>
-            <Route path="" index element={<Home />} />
+            <Route path="" index element={<Dashboard />} />
             <Route path="*" element={<ErrorPage />} />
-            <Route path="/home" index element={<Home />} />
             <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/analysis" element={<Analysis />} />
+            <Route path="/analysis" element={<Orders />} />
             <Route path="/invoices" element={<Invoice />} />
             <Route path="/products" element={<Products />} />
             <Route path="/companies" element={<Companies />} />

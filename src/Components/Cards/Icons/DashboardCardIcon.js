@@ -5,10 +5,10 @@ import { BsReceiptCutoff } from 'react-icons/bs';
 
 function CardIcon({options}) {
     const icons=[
-        <BsReceiptCutoff size='30px' color='skyblue' className='ms-auto me-3 mt-auto mb-auto'/>,
-        <FaDollarSign size='30px' color='skyblue' className='ms-auto me-3 mt-auto mb-auto'/>,
-        <FiPackage size='30px' color='skyblue' className='ms-auto me-3 mt-auto mb-auto'/>,
-        <FiArrowUp size='30px' color='skyblue' className='ms-auto me-3 mt-auto mb-auto'/>
+        <BsReceiptCutoff size='30px' style={{color:(options.color)}} className='ms-auto me-3 mt-auto mb-auto'/>,
+        <FaDollarSign size='30px' style={{color:(options.color)}} className='ms-auto me-3 mt-auto mb-auto'/>,
+        <FiPackage size='30px' style={{color:(options.color)}} className='ms-auto me-3 mt-auto mb-auto'/>,
+        <FiArrowUp size='30px' style={{color:(options.color)}} className='ms-auto me-3 mt-auto mb-auto'/>
     ];
   return (
     icons[options.id-1]

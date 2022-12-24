@@ -3,8 +3,6 @@ import "./styleErrorPage.css"
 
 const ErrorPage = () => {
     return (
-        <>
-
             <div className="container">
                 <div className="row error-page">
                     <div className="col-md-6">
@@ -12,7 +10,7 @@ const ErrorPage = () => {
                             <h1 className="content-title text-uppercase">Storify</h1>
                             <h2>Page Note Found</h2>
                             <p><span className="text-danger">Sorry</span>, The page you’re looking for doesn’t exist.</p>
-                            <Link to="/Home"> <button className="btn btn-primary home-btn">Go Home</button></Link>
+                            <Link to="/dashboard"> <button className="btn btn-primary home-btn">Go Home</button></Link>
                         </div>
                     </div>
 
@@ -23,7 +21,6 @@ const ErrorPage = () => {
                     </div>
                 </div>
             </div>
-        </>
     )
 }
 

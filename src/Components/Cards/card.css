@@ -7,7 +7,6 @@
 .cardTitle{
     margin-top:auto;
     margin-bottom: auto;
-    color: #29aed6;
 }
 
 #dashboard-icon{
@@ -21,6 +20,4 @@
     width:40px;
     height:40px;
     border-radius: 30%;
-    border:1px #29aed6;
-    background-color: skyblue;
 }

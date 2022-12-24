@@ -4,8 +4,8 @@ import { Card } from "react-bootstrap";
 const GridTable = ({ tableTitle, cols, data }) => {
   const [pageSize, setPageSize] = useState(15);
   return (
-    <Card style={{ height: 400, width: "100%" }}>
-      <div className="h4 mt-1">{tableTitle}</div>
+    <>
+      <div className="h4 mt-1 p-1">{tableTitle}</div>
       <DataGrid
         rows={data}
         disableDensitySelector
@@ -26,7 +26,7 @@ const GridTable = ({ tableTitle, cols, data }) => {
         }}
         experimentalFeatures={{ newEditingApi: true }}
       />
-    </Card>
+    </>
   );
 };
 

@@ -108,19 +108,12 @@ const handleEditFormChange = (event) => {
       }
 
       const tableRows = customerData.filter((item)=>{
-       
         return (search.toLowerCase() === '') || (search.toUpperCase() === '') ? item : (item.name.toLowerCase().includes(search)) || (item.name.toUpperCase().includes(search)) }).map((customerData) => {
-           
       return (
-        
 				<Fragment  key={customerData.id} >
 					{EditcustomerDataId === customerData.id? (<EditableRow customerData={customerData} editFormData={editFormData} handleEditFormChange={handleEditFormChange} handleCancelClick={handleCancelClick} handleEditFromSubmit={handleEditFromSubmit} />): (<ReadOnlyRow customerData={customerData} handleEditClick={handleEditClick} handleDeleteClick={handleDeleteClick} />)}
 				</Fragment>
-      
-		);
-           
-    
-    
+		);   
 	});
   //addRows
     const addRows = (data) => {
@@ -142,65 +135,66 @@ const handleEditFormChange = (event) => {
         }
 
   return ( 
-    <>
-<div className='list'>
-     <Card id='tableCard'>
-		  <Card.Header id='cardH'>
-      <div className='headerCont'>
-      <div className='firstCont'>
-          <h1 id='customerH'>Customer List</h1>
-
-               <Breadcrumb id='toDash'>
-				             <Breadcrumb.Item ><Link to ="/Home">Dashboard</Link></Breadcrumb.Item>
-				             <Breadcrumb.Item active>Add Customer</Breadcrumb.Item>
-			          </Breadcrumb>
-          <div id='searchForm'>
-						<InputGroup id="searchInput">
-						<InputGroup.Text id="basic-addon1"><TfiSearch/></InputGroup.Text>
-						<Form.Control 
-						placeholder="Search....."
-						aria-label="search"
-						aria-describedby="basic-addon1"
-						onChange={(e) => setSearch(e.target.value)}/>
-						</InputGroup>
-          </div>
-     </div>
-          
-            <div className='secCont'>
-						<PopupCustomer func={addRows} />
-            </div>
-            </div>
-          <div className='space'></div>
-          </Card.Header>
-       <Card.Body>
-          <Table  className='tab'>
-           <thead >
-            <tr >
-            <th onClick={() => { sorting("name"), setIsActive(!isActive)}}>
-              Name 
-            <div id='sort'  onClick={() => setIsActive(!isActive)}>
-            {isActive ? <BsSortAlphaUp onClick={() => { sorting("name") }}/> :<BsSortAlphaDown onClick={() => { sorting("name") }}/>}</div> </th>    
-              <th>E-mail</th>
-              <th>password</th>
-              <th>Phone</th>
-              <th onClick={() => { sorting("city"), setIsActive(!isActive)}}>
-              City
-             <div id='sort'  onClick={() => setIsActive(!isActive)}>
-            {isActive ? <BsSortAlphaUp onClick={() => { sorting("city") }}/> :<BsSortAlphaDown onClick={() => { sorting("city") }}/>}</div> </th>
-              <th>Gender</th>
-              <th> Edit </th>
-              <th>Delete </th>
-             </tr>
-            </thead>
-            <tbody className='table-body'>{tableRows}
-            <div><Pagination size="sm">{items}</Pagination></div>
-           </tbody>
-           </Table>
+      <div className='list'>
+        <Card id='tableCard'>
+		      <Card.Header id='cardH'>
+            <div className='headerCont'>
+              <div className='firstCont'>
+                <h1 id='customerH'>Customer List</h1>
+                    <Breadcrumb id='toDash'>
+				              <Breadcrumb.Item href='/dashboard' >Dashboard</Breadcrumb.Item>
+				              <Breadcrumb.Item active>Add Customer</Breadcrumb.Item>
+			              </Breadcrumb>
+                    <div id='searchForm'>
+                      <InputGroup id="searchInput">
+                        <InputGroup.Text id="basic-addon1"><TfiSearch/></InputGroup.Text>
+                        <Form.Control 
+                          placeholder="Search....."
+                          aria-label="search"
+                          aria-describedby="basic-addon1"
+                          onChange={(e) => setSearch(e.target.value)}
+                        />
+                      </InputGroup>
+                    </div>
+                  </div>
+                  <div className='secCont'>
+                    <PopupCustomer func={addRows} />
+                  </div>
+                </div>
+                <div className='space'></div>
+              </Card.Header>
+              <Card.Body>
+              <Table  className='tab'>
+                <thead>
+                  <tr>
+                    <th onClick={() => { sorting("name"), setIsActive(!isActive)}}>
+                      Name 
+                      <div id='sort'  onClick={() => setIsActive(!isActive)}>
+                        {isActive ? <BsSortAlphaUp onClick={() => { sorting("name") }}/> :<BsSortAlphaDown onClick={() => { sorting("name") }}/>}
+                      </div> 
+                    </th>    
+                    <th>E-mail</th>
+                    <th>password</th>
+                    <th>Phone</th>
+                    <th onClick={() => { sorting("city"), setIsActive(!isActive)}}>
+                      City
+                      <div id='sort'  onClick={() => setIsActive(!isActive)}>
+                        {isActive ? <BsSortAlphaUp onClick={() => { sorting("city") }}/> :<BsSortAlphaDown onClick={() => { sorting("city") }}/>}
+                      </div>
+                    </th>
+                    <th>Gender</th>
+                    <th> Edit </th>
+                    <th>Delete </th>
+                  </tr>
+                </thead>
+              <tbody className='table-body'>
+                {tableRows}
+            </tbody>
+          </Table>
+          <div><Pagination size="sm">{items}</Pagination></div>
         </Card.Body>
-        </Card>
-        </div>
-        
-        </>
+      </Card>
+    </div>
   );
 }
 

@@ -105,30 +105,29 @@ function AddCompany() {
 			(item.compname.toLowerCase().includes(search)) || (item.compname.toUpperCase().includes(search))
 	}).map((companyData) => {
 		return (
-			<>
-				<Fragment key={companyData.id}>
-					{EditcompanyDataId === companyData.id
-						?
-						(
-							<EditableRow 
-								editFormData={editFormData}
-								handleEditFormChange={handleEditFormChange}
-								handleCancelClick={handleCancelClick}
-								handleEditFromSubmit={handleEditFromSubmit}
-							/>
-						)
-						:
-						(
-							<ReadOnlyRow 
-								Data={companyData}
-								handleEditClick={handleEditClick}
-								handleDeleteClick={handleDeleteClick}
-							/>
-						)
-					}
-
-				</Fragment>
-			</>
+			<Fragment key={companyData.id}>
+				{EditcompanyDataId === companyData.id
+					?
+					(
+						<EditableRow 
+							key={companyData.id}
+							editFormData={editFormData}
+							handleEditFormChange={handleEditFormChange}
+							handleCancelClick={handleCancelClick}
+							handleEditFromSubmit={handleEditFromSubmit}
+						/>
+					)
+					:
+					(
+						<ReadOnlyRow 
+							key={companyData.id}
+							Data={companyData}
+							handleEditClick={handleEditClick}
+							handleDeleteClick={handleDeleteClick}
+						/>
+					)
+				}
+			</Fragment>
 		);
 	});
 	const addRows = (data) => {
@@ -144,12 +143,9 @@ function AddCompany() {
 				<Card.Header>
 					<h1> Companies</h1>
 					<Breadcrumb>
-						<Breadcrumb.Item >
-							Dashboard
-						</Breadcrumb.Item>
-						<Breadcrumb.Item active> Companies </Breadcrumb.Item>
+						<Breadcrumb.Item href='/dashboard'>Dashboard</Breadcrumb.Item>
+						<Breadcrumb.Item active>Companies</Breadcrumb.Item>
 					</Breadcrumb>
-
 					<div className='row'>
 						<div className="col-lg-5 col-md-5 col-sm-5 col-xs-2 searchForm">
 							<InputGroup id="searchInput">

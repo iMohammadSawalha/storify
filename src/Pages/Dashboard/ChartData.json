@@ -1,0 +1,64 @@
+{
+  "AreaLineChart": {
+    "Labels": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov"
+    ],
+
+    "First": [
+      {
+        "data": [90, 170, 130, 98, 60, 89, 72, 82, 73, 89, 211],
+        "label": "2022",
+        "borderColor": "rgb(168, 172, 241)",
+        "bgcolor": "rgba(168, 172, 255,0.65)"
+      }
+    ],
+    "Second": [
+      {
+        "data": [70, 120, 90, 76, 39, 72, 51, 69, 61, 120, 300],
+        "label": "2021",
+        "borderColor": "rgb(255, 172, 123)",
+        "bgcolor": "rgba(255, 172, 123,0.2)"
+      }
+    ]
+  },
+  "DoughnutChart": {
+    "labels": ["New Customers", "Recurring Customers"],
+    "data": [43, 57],
+    "bgcolor": ["rgba(255, 100, 162, 0.8)", "rgba(116, 112, 225, 0.8)"]
+  },
+  "PieChart": {
+    "labels": ["Electronic", "Fashion", "Decor", "Sports"],
+    "data": [82.5, 23.8, 49, 99],
+    "bgcolor": [
+      "rgba(255, 99, 132, 0.8)",
+      "rgba(54, 162, 235, 0.8)",
+      "rgba(255, 206, 86, 0.8)",
+      "rgba(75, 192, 192, 0.8)"
+    ]
+  },
+  "PolarChart": {
+    "labels": ["Organic Search", "Social", "Paid Search", "Referral"],
+    "data": [32, 26, 17, 25],
+    "bgcolor": [
+      "rgba(255, 99, 132, 0.8)",
+      "rgba(54, 162, 235, 0.8)",
+      "rgba(255, 206, 86, 0.8)",
+      "rgba(75, 192, 192, 0.8)"
+    ]
+  },
+  "LineChart": {
+    "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    "data": [110, 270, 145, 245, 205, 285],
+    "bordercolor": "rgb(168, 172, 241)"
+  }
+}

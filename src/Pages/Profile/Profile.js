@@ -35,9 +35,7 @@ const Profile = () => {
 
 
   return (
-    <>
-      <Card>
-        <div className="container">
+      <Card className="container">
           <div className="container-fluid">
             <div className="row">
               <div><h4 id='titlecol'>Profile Settings</h4></div>
@@ -93,9 +91,7 @@ const Profile = () => {
               </div>
             </div>
           </div>
-        </div>
       </Card>
-    </>
   );
 }
 
