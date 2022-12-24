@@ -7,13 +7,13 @@
     },
     {
         "id":2,
-        "title":"Earnings",
+        "title":"Profits",
         "Dashboard":true,
         "data":"$6020"
     },
     {
         "id":3,
-        "title":"Orders",
+        "title":"New Customers",
         "Dashboard":true,
         "data":"192"
     },

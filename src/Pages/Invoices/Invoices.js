@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { Card } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
 import ReactToPrint from "react-to-print";
 import ClientDetails from '../../Components/Invoices/ClientDetails';
@@ -10,10 +11,7 @@ export default function PrintComponent() {
   let componentRef = useRef();
 
   return (
-    <>
-      {/* button to trigger printing of target component */}
-
-      {/* component to be printed */}
+    <Card className="container">
       <div className='container h-50 p-3 printData'>
         <div ref={(el) => (componentRef = el)} >
           <ClientDetails data={{ name: "Client Name", email: "example@gmail.com", phone: "+972-000-0000", address: "Nablus, Rafydia St", total: 1466.99 }} />
@@ -25,7 +23,7 @@ export default function PrintComponent() {
           content={() => componentRef}
         />
       </div>
-    </>
+    </Card>
   );
 }
 

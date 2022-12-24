@@ -6,7 +6,7 @@ import HomeCardIcon from './Icons/HomeCardIcon';
 
 const CardItem=({info}) => {
   return (
-    <Card>
+    <Card style={{borderLeft:"5px solid skyblue"}}>
       <Card.Body className='d-flex ms-2'>
         <div>
           <h5 className='cardTitle'>{info.title}</h5>

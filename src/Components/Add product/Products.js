@@ -107,17 +107,16 @@ function AddProduct() {
      { return (search.toLowerCase() === '') || (search.toUpperCase() === '') ? item :
       (item.name.toLowerCase().includes(search)) || (item.name.toUpperCase().includes(search)) }).map((proData) => {
 		return (
-			<>
 				<Fragment key={proData.id}>
 					{EditproductDataId === proData.id ? (<EditRow 
+					key={proData.id}
 					proData={proData}
 					editFormData={editFormData}
                      handleEditFormChange={handleEditFormChange} 
                      handleCancelClick={handleCancelClick}
                       handleEditFromSubmit={handleEditFromSubmit} />) : 
-                      (<ReadOnlyRow proData={proData} handleEditClick={handleEditClick} handleDeleteClick={handleDeleteClick} />)}
+                      (<ReadOnlyRow key={proData.id} proData={proData} handleEditClick={handleEditClick} handleDeleteClick={handleDeleteClick} />)}
 				</Fragment>
-			</>
 		);
 	}); //tableRows
 
@@ -140,59 +139,58 @@ function AddProduct() {
              );
         }
 
-    return (
-        <>
-        <div className='list' >
-			<Card id='tableCard'>
-			<Card.Header id='cardH'>
-				<div className='headerCont'>
-		<div className='firstCont'>
-			<h1 id='productH'> Products List</h1>
-			<Breadcrumb id='toDash'>
-				<Breadcrumb.Item > <Link to ="/Home">Dashboard</Link></Breadcrumb.Item>
-				<Breadcrumb.Item active>Add Product</Breadcrumb.Item>
-			</Breadcrumb>
-		                <div id='searchForm'>
-						<InputGroup id="searchInput">
-						<InputGroup.Text id="basic-addon1"><TfiSearch/></InputGroup.Text>
-						<Form.Control 
-						placeholder="Search....."
-						aria-label="search"
-						aria-describedby="basic-addon1"
-						onChange={(e) => setSearch(e.target.value)}/>
-						</InputGroup>
+	return (
+		<>
+			<div className='list' >
+				<Card id='tableCard'>
+					<Card.Header id='cardH'>
+						<div className='headerCont'>
+							<div className='firstCont'>
+								<h1 id='productH'> Products List</h1>
+								<Breadcrumb id='toDash'>
+									<Breadcrumb.Item href='/dashboard'>Dashboard</Breadcrumb.Item>
+									<Breadcrumb.Item active>Add Product</Breadcrumb.Item>
+								</Breadcrumb>
+								<div id='searchForm'>
+									<InputGroup id="searchInput">
+										<InputGroup.Text id="basic-addon1"><TfiSearch/></InputGroup.Text>
+										<Form.Control 
+											placeholder="Search....."
+											aria-label="search"
+											aria-describedby="basic-addon1"
+											onChange={(e) => setSearch(e.target.value)}
+										/>
+									</InputGroup>
+								</div>
+							</div>
+							<div className='secCont'>
+								<Add func={addRows} />
+							</div>
 						</div>
-		</div>
-
-        <div className='secCont'>
-			<Add func={addRows} />
-        </div>
-						</div>
-
-          <div className='space'></div>
-		  </Card.Header>
-		  <Card.Body>
-          <Table className='tab'>
-            <thead>
-              <tr>
-                <th onClick={() => { sorting("name") }}>Product  <TbSortAscendingLetters onClick={() => { sorting("name") }}/> </th>
-                <th onClick={() => { sorting("desc") }}>Describtion <TbSortAscendingLetters onClick={() => { sorting("desc") }}/></th>
-                <th onClick={() => { sorting("categ") }}>Category <TbSortAscendingLetters onClick={() => { sorting("categ") }}/></th>
-                <th onClick={() => { sorting("price") }}>Price <TbSortAscendingNumbers onClick={() => { sorting("price") }}/></th>
-                <th onClick={() => { sorting("status") }}>Status <TbSortAscendingLetters onClick={() => { sorting("status") }}/></th>
-				<th>Edit</th>
-				<th>Delete</th>
-              </tr>
-            </thead>
-            <tbody>
-				{tableRows} 
-			    <div><Pagination size="sm">{items}</Pagination></div>
-			</tbody>
-          </Table>
-		  </Card.Body>
-          </Card>
-        </div>
-      </>
+						<div className='space'></div>
+					</Card.Header>
+					<Card.Body>
+						<Table className='tab'>
+							<thead>
+								<tr>
+									<th onClick={() => { sorting("name") }}>Product  <TbSortAscendingLetters onClick={() => { sorting("name") }}/> </th>
+									<th onClick={() => { sorting("desc") }}>Describtion <TbSortAscendingLetters onClick={() => { sorting("desc") }}/></th>
+									<th onClick={() => { sorting("categ") }}>Category <TbSortAscendingLetters onClick={() => { sorting("categ") }}/></th>
+									<th onClick={() => { sorting("price") }}>Price <TbSortAscendingNumbers onClick={() => { sorting("price") }}/></th>
+									<th onClick={() => { sorting("status") }}>Status <TbSortAscendingLetters onClick={() => { sorting("status") }}/></th>
+									<th>Edit</th>
+									<th>Delete</th>
+								</tr>
+							</thead>
+							<tbody>
+								{tableRows} 
+							</tbody>
+						</Table>
+						<div><Pagination size="sm">{items}</Pagination></div>
+					</Card.Body>
+				</Card>
+			</div>
+		</>
 	);
 }
 export default AddProduct;
