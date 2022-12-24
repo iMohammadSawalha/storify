@@ -1,60 +1,54 @@
 :root {
-	--primary: #bbb8b8;
-	--dark: #55728f;
-	--gray: #ffffff;
-	--light: #ffffff;
-  --blue: #55728f;
+  --primary: #bbb8b8;
+  --dark: #55728f;
+  --gray: #ffffff;
+  --light: #ffffff;
 }
 
-/*  #29aed6;  */ 
+/*  #29aed6;  */
 
 body{
   background-color: #e0eff3;
   padding:0;
   width: 100%;
   height: 100%;
-  font-family: 'Nunito', sans-serif ;
+  font-family: "Nunito", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
 }
 
-.MuiDataGrid-root{
+.MuiDataGrid-root {
   background-color: white;
   padding:5px;
 }
 
-
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-
-.pageinfo{
-  flex:10;
+.pageinfo {
+  flex: 10;
   align-items: center;
-  margin-top:6%;
+  margin-top: 6%;
   padding-left: 2%;
   padding-right: 1%;
 }
-@media (max-width:767px) {
-  .pageinfo{
-    margin-top:20% !important
+@media (max-width: 767px) {
+  .pageinfo {
+    margin-top: 20% !important;
   }
 }
 
-@media (max-width:768px) {
-  .pageinfo{
-    margin-top:10%;
+@media (max-width: 768px) {
+  .pageinfo {
+    margin-top: 10%;
   }
 }
-
-
 
 a:-webkit-any-link {
   text-decoration: none;

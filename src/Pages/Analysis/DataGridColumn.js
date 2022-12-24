@@ -1,69 +1,73 @@
-import { Avatar } from '@mui/material';
-import { Button } from 'react-bootstrap';
+import { Avatar } from "@mui/material";
+import { Button } from "react-bootstrap";
 
 const Cols = [
-  { field: 'id', headerName: 'OrderID', minWidth: 90 ,type: 'number'},
+  { field: "id", headerName: "OrderID", minWidth: 90, type: "number" },
   {
-    field: 'user',
-    headerName: 'User Name',
+    field: "user",
+    headerName: "User Name",
     minWidth: 150,
-    flex:2,
+    flex: 2,
     renderCell: (params) => {
       return (
         <>
-          <Avatar src={params.value.avatar}/>
-            {params.value.username}
+          <Avatar src={params.value.avatar} />
+          {params.value.username}
         </>
       );
-    }
+    },
   },
   {
-    field: 'item-name',
-    headerName: 'Item Name',
+    field: "item-name",
+    headerName: "Item Name",
     minWidth: 110,
-    flex:2
+    flex: 2,
   },
   {
-    field: 'quantity',
-    headerName: 'Quantity',
+    field: "quantity",
+    headerName: "Quantity",
     minWidth: 110,
-    flex:1,
-    type: 'number'
+    flex: 1,
+    type: "number",
   },
   {
-    field: 'order-total',
-    headerName: 'Total',
+    field: "order-total",
+    headerName: "Total",
     minWidth: 110,
-    flex:1,
-    type: 'number',
+    flex: 1,
+    type: "number",
     renderCell: (params) => {
-      return (
-        <>
-            ${params.value}
-        </>
-      );
-    }
+      return <>${params.value}</>;
+    },
   },
   {
-    field: 'date',
-    headerName: 'Date',
+    field: "date",
+    headerName: "Date",
     minWidth: 160,
-    type:'date',
+    type: "date",
   },
   {
-    field: 'status',
-    headerName: 'Status',
+    field: "status",
+    headerName: "Status",
     minWidth: 150,
-    type:'number',
+    type: "number",
     renderCell: (params) => {
-      if(params.value == 10)
-              return (<Button variant='btn btn-success btn-radius btn-sm'>Completed</Button>);
-              else if(params.value > 0)
-              return(<Button variant='btn btn-warning btn-radius btn-sm'>Pending</Button>);
-              else if(params.value == 0)
-              return (<Button variant='btn btn-outline-danger btn-radius btn-sm'>Cancelled</Button>)
-    }
+      if (params.value == 10)
+        return (
+          <Button variant="btn btn-success btn-radius btn-sm">Completed</Button>
+        );
+      else if (params.value > 0)
+        return (
+          <Button variant="btn btn-warning btn-radius btn-sm">Pending</Button>
+        );
+      else if (params.value == 0)
+        return (
+          <Button variant="btn btn-outline-danger btn-radius btn-sm">
+            Cancelled
+          </Button>
+        );
+    },
   },
-]
+];
 
 export default Cols;

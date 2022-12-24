@@ -1,24 +1,26 @@
 import { ArcElement, Chart, Legend, Tooltip } from "chart.js";
 import React, { useEffect, useState } from "react";
-import { Doughnut } from "react-chartjs-2";
+import { Pie } from "react-chartjs-2";
 import "./components.css";
 
 Chart.register(ArcElement, Tooltip, Legend);
 
-const DoughnutChart = () => {
+const PieChart = () => {
   const [chartData, setChartData] = useState({
     datasets: [],
   });
   const [chartOptions, setChartOptions] = useState({});
   useEffect(() => {
     setChartData({
-      labels: ["New Customers", "Recurring Customers"],
+      labels: ["Electronic", "Fashion", "Decor", "Sports"],
       datasets: [
         {
-          data: [43, 57],
+          data: [82.5, 23.8, 49, 99],
           backgroundColor: [
-            "rgba(255, 100, 162, 0.8)",
-            "rgba(116, 112, 225, 0.8)",
+            "rgba(255, 99, 132, 0.8)",
+            "rgba(54, 162, 235, 0.8)",
+            "rgba(255, 206, 86, 0.8)",
+            "rgba(75, 192, 192, 0.8)",
           ],
           hoverOffset: 10,
         },
@@ -34,7 +36,7 @@ const DoughnutChart = () => {
       },
     });
   }, []);
-  return <Doughnut options={chartOptions} data={chartData} />;
+  return <Pie options={chartOptions} data={chartData} />;
 };
 
-export default DoughnutChart;
+export default PieChart;
